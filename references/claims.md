@@ -18,7 +18,7 @@ An independent reviewer can make a weak assessment. A detailed self-report can s
 Use stable local identifiers when several claims/sources must be cross-referenced. Do not require a database or published schema.
 
 - Claim statement and type; subject/person/project and the individual's actual role.
-- Relevant group, scope and time period; denominator and missingness for counts where relevant.
+- Relevant group, scope and time period; the measured quantity's definition, numerator, denominator and missingness for counts/rates where relevant.
 - Evidence identifiers, descriptions, source/observation dates and what was actually inspected.
 - Provenance and access limits: supplied account, observed source content, corroboration or unavailable material.
 - Support assessment, reasoning, contradictory evidence and uncertainty.
@@ -40,6 +40,14 @@ Do not expose private source identifiers or sensitive evidence links in a public
 8. What evidence would make the claim weaker or change the plan? Do not discard it to improve fundraising copy.
 
 If the decision does not justify more evidence, preserve uncertainty rather than expanding collection. Strong causal/financial/legal claims may require qualified review outside this skill's capacity.
+
+## Derived measures must retain their definitions
+
+Before calculating a rate, complement or change, establish what the source actually counts, the numerator/denominator, the periods compared, and how missing, cancelled, duplicate or unclassified records are handled. Keep that definition in the conclusion. Correct arithmetic does not establish a different outcome category or causal meaning.
+
+For example, scheduled appointments minus recorded completions yields appointments **not recorded as completed**, not necessarily missed appointments or no-shows. Cancellations, rescheduling and recording gaps may be included unless the source defines otherwise. Report the recorded completion measure, or its explicitly labelled complement, and leave the unmeasured classification unknown. Likewise, nonresponse is not proof of an unmet need or a negative outcome.
+
+Distinguish a percentage-point difference from a relative percentage change, retain changed denominators and comparison limits, and do not turn either into an attributable effect. Avoid unnecessary derived figures when the source counts communicate the useful finding more clearly.
 
 ## What verification can and cannot establish
 

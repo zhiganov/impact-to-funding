@@ -34,7 +34,7 @@ What is being attempted, the person's actual contribution, what is supported, wh
 
 Use separate rows for materially different claims; an evidence register can remain private.
 
-| Claim ID and exact statement | Type, scope and period | Evidence IDs; dates and actual access | Support and reasoning | Alternatives, limitations and other contributors | Actual review provenance; version/date | Disclosure/correction status |
+| Claim ID and exact statement | Type, measure definition, scope and period | Evidence IDs; dates and actual access | Support and reasoning | Alternatives, limitations and other contributors | Actual review provenance; version/date | Disclosure/correction status |
 |---|---|---|---|---|---|---|
 | C1 | Observation/proposal/etc. | E1; distinguish supplied versus inspected | No automatic certification | Include conflicting evidence and missingness | None if no actual review | Private/public candidate; permission basis |
 
