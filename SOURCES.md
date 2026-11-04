@@ -16,6 +16,8 @@ The original skill, templates, synthetic examples, documentation and package che
 
 Users' project records and generated outputs are not automatically covered by this repository's software/documentation licence. Consent, confidentiality and other rights remain separate.
 
+The [release-preparation review](docs/release-readiness-2026-11-04.md) records the current material classes and compatibility/disclosure boundaries. It is a content review, not a legal opinion or a claim of rights over linked works. See [contribution guidance](CONTRIBUTING.md) before adding source-derived material.
+
 ## Private and external material
 
 Private SENRI evidence was used in a separate private assessment, not copied into this distributable skill, templates or synthetic example. The preserved design-scope document describes product requirements and boundaries; it is not a private evidence export. Its earlier unselected-work and licence-pending wording is historical; see the current README and licence for present package status.

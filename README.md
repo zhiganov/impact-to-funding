@@ -16,6 +16,8 @@ It does not rank people, award verified-impact badges, promise donations, publis
 
 ## Try it locally
 
+Start with the [usage guide](docs/usage.md) for minimal inputs, four practical prompts and how to handle missing evidence. Read the [privacy guidance](PRIVACY.md) before providing real project material: a file on your machine may still enter a remote model's context through your agent.
+
 The skill entry point is [SKILL.md](SKILL.md). Use an agent that can read it and its relative references. For a manual trial, ask:
 
 > Read SKILL.md and follow it. Help me assess the following project and prepare a funding brief. Use only the material I supply; keep the result private and mark missing evidence explicitly.
@@ -56,6 +58,8 @@ These checks cover package structure, the deliberately simple frontmatter format
 - [Assessment packet](assets/assessment.md) and [report template](assets/report.md): optional output structures.
 - [Sources and rights](SOURCES.md): attribution and redistribution boundaries.
 - [Development validation](docs/validation-2026-11-04.md): trial procedure, observed finding, repair/recheck and limits.
+- [Usage](docs/usage.md), [privacy](PRIVACY.md) and [contributing](CONTRIBUTING.md): practical use, disclosure boundaries and safe improvements.
+- [Release-preparation review](docs/release-readiness-2026-11-04.md): current documentation/example/source-rights boundary and remaining installation/distribution checks.
 - `docs/design-scope-2026-11-04.md`: preserved historical scope snapshot; its original unselected-work status is not a statement that this implementation does not exist.
 
 Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, funding/report manifests, automatic allocation and an MCP interface are separate potential extensions, not implemented features or first-release dependencies.
