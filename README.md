@@ -26,7 +26,7 @@ Or:
 
 > Read SKILL.md and follow it. Review this report against my earlier theory of change. What changed, what is supported, and what should I do differently?
 
-For an Agent Skills-compatible host, install this directory under the name `impact-to-funding` using that host's documented local-skill mechanism. It needs the references and assets, not just SKILL.md. No host installation has been performed or verified by this prototype. Reading the file manually is not a test of automatic skill discovery.
+For an Agent Skills-compatible host, the intended package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. Native discovery and activation are not verified: isolated OpenCode v2.2.5 checks returned an empty registry with both project-local discovery and an explicit source setting. See the [installation-check record](docs/installation-check-2026-11-04.md). Use manual file-reading without claiming automatic discovery or install-tested support; other hosts remain untested.
 
 No application runtime, network, account or dependency installation is required by the skill itself. Document/image/audio access depends on the actual host tools; the skill does not supply those capabilities. A link to unavailable evidence is not evidence that has been inspected.
 
@@ -60,6 +60,7 @@ These checks cover package structure, the deliberately simple frontmatter format
 - [Development validation](docs/validation-2026-11-04.md): trial procedure, observed finding, repair/recheck and limits.
 - [Usage](docs/usage.md), [privacy](PRIVACY.md) and [contributing](CONTRIBUTING.md): practical use, disclosure boundaries and safe improvements.
 - [Release-preparation review](docs/release-readiness-2026-11-04.md): current documentation/example/source-rights boundary and remaining installation/distribution checks.
+- [Installation-check record](docs/installation-check-2026-11-04.md): unsuccessful bounded OpenCode discovery probes, isolation, limits and unresolved release decision.
 - `docs/design-scope-2026-11-04.md`: preserved historical scope snapshot; its original unselected-work status is not a statement that this implementation does not exist.
 
 Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, funding/report manifests, automatic allocation and an MCP interface are separate potential extensions, not implemented features or first-release dependencies.
