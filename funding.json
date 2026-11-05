@@ -1,0 +1,51 @@
+{
+  "$schema": "https://fundingjson.org/schema/v1.1.0.json",
+  "version": "itf-inactive-1",
+  "entity": {
+    "type": "individual",
+    "role": "maintainer",
+    "name": "Artem Zhiganov",
+    "email": "artem.zhiganov@newspeak.house",
+    "description": "Maintainer of Impact to Funding, an experimental open-source skill for theories of change, contribution assessment and honest fundraising. No institutional affiliation or endorsement is asserted by the contact address.",
+    "webpageUrl": {
+      "url": "https://github.com/zhiganov"
+    }
+  },
+  "projects": [
+    {
+      "guid": "impact-to-funding",
+      "name": "Impact to Funding",
+      "description": "Experimental MIT-licensed instructions, references, templates and examples for individual and project theories of change, evidence-backed contribution assessment and honest funding briefs or reports. Manual use only; native activation, human usefulness and fundraising effectiveness remain unestablished. Not an impact certification service.",
+      "webpageUrl": {
+        "url": "https://github.com/zhiganov/impact-to-funding"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/zhiganov/impact-to-funding"
+      },
+      "licenses": ["spdx:MIT"],
+      "tags": ["theory-of-change", "impact-assessment", "fundraising", "agent-skills"]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "citizeninfra-kofi",
+        "type": "payment-provider",
+        "address": "https://ko-fi.com/citizeninfra",
+        "description": "User-supplied public Ko-fi page labelled Citizen Infrastructure, not an ItF-exclusive destination. Account ownership, earmarking and checkout currency have not been independently verified."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "itf-voluntary-support",
+        "status": "inactive",
+        "name": "Voluntary support associated with Impact to Funding",
+        "description": "One-time voluntary maintainer support in EUR. Amount 0 means any amount, not a costed budget or zero need. No exclusive allocation, delivery commitment or impact return is promised. Published as an inactive plan, not an active funding request; no payment integration is implied.",
+        "amount": 0,
+        "currency": "EUR",
+        "frequency": "one-time",
+        "channels": ["citizeninfra-kofi"]
+      }
+    ]
+  }
+}
