@@ -4,6 +4,7 @@
 
 ## Profile and decision
 
+- Assessment subject: individual, project or selected contribution portfolio:
 - Person/chosen identity and project(s):
 - Actual role and other contributors:
 - Stage and current decision:
@@ -29,6 +30,17 @@ What is being attempted, the person's actual contribution, what is supported, wh
 - Other contributors and plausible counterfactual:
 - Harms, burden, exclusion, agency and missing perspectives:
 - Evidence that would change the theory or justify stopping:
+
+## Contributions and portfolio, if relevant
+
+Use the [contribution guidance](../references/contributions.md). Omit this section when it adds no decision value; project-only assessment does not require personal theories. Keep shared project theories at their source and personal rationale voluntary/private.
+
+| Project/theory reference and version, if available | Actual/proposed role and period | Mechanism, dependencies and capacity limits | Claim/evidence references; shared work and uncertainty | Next decision or learning |
+|---|---|---|---|---|
+| Mark unknown/restricted without leaking a locator | Do not turn a plan into work done | No invented allocation or partner agreement | Reuse references, not outcome credit or prior reviews | Retain uncertain fit and conflicting commitments |
+
+- Personal pathway/fit, only if useful and voluntarily supplied:
+- Reinforcing work, capacity conflicts and overlap in work/costs across the selected contributions:
 
 ## Claims and evidence
 

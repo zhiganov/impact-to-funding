@@ -10,6 +10,10 @@
 
 The useful change expected, activities/milestones, dependencies and assumptions. Separate delivery targets from intended outcomes.
 
+## Contribution view, if relevant
+
+Use the [contribution guidance](../references/contributions.md) for a personal or selected-portfolio report. Reference the relevant shared project theories/versions and actual role/period rather than copying each theory. Note changed fit, capacity conflicts, shared work and evidence limits; personal motivations are optional/private. Omit this section for project-only reporting when unnecessary.
+
 ## What happened and what did not
 
 | Prior intention | Observed result/failure/unknown | Evidence ID, date and inspection limits | Outcome versus output; other contributors and alternatives | Implication for the next decision |

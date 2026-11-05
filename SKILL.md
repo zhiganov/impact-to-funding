@@ -34,11 +34,13 @@ Infer a suitable mode from the request; do not require a menu selection to conti
 ## Choose only the resources needed
 
 - For any assessment or funding claim, read [claim review](references/claims.md).
+- For an individual's connection to shared projects or a portfolio, read [contribution relationships](references/contributions.md). Project-only assessment does not require contributors' personal theories.
 - For a funding brief, public candidate or report, also read [funding and review](references/funding-and-review.md).
 - Use relevant sections of the [assessment packet](assets/assessment.md); do not mechanically fill every section or leave placeholder instructions in final prose.
 - For a reporting update, use [periodic report](assets/report.md).
 - For attribution/rights questions, see [sources and rights](SOURCES.md).
 - The [synthetic input](examples/builder-case.md) and [illustrative output](examples/builder-assessment.md) are examples only, never evidence about the person's work.
+- The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) illustrate linked theories, shared work and capacity limits, not observed behaviour.
 
 ## 1. Clarify purpose and alternatives
 
@@ -55,6 +57,8 @@ Do not assume a large global problem establishes a local need or effective inter
 Explain activities → outputs → outcomes → intended impact in ordinary language. For each material link, name the mechanism, assumptions, control/dependencies, supporting basis and plausible failure. Ask what would likely happen without this contribution and what evidence would change the theory.
 
 Separate the individual's role from shared project results. Avoid double-counting joint outcomes across people or projects. A missing community agreement stays missing; a simulated stakeholder perspective cannot supply consent or actual local judgement.
+
+Keep personal direction, shared project theories and bounded contributions distinct using the contribution reference. A portfolio links selected contributions; it does not require one unified mission, duplicate project theories or disclosure of private personal purposes. Preserve known capacity conflicts, unavailable theories and version-specific evidence without inventing alignment or credit.
 
 For discovery-stage work, the immediate outcome may be a better-supported decision to act, support existing work, reframe or stop. Do not assume a programme, beneficiary group, partner, budget or field study is already selected.
 

@@ -24,7 +24,7 @@ Useful context, where known:
 
 Unknowns are legitimate inputs. Do not invent evidence or obtain unnecessary sensitive data to fill a template.
 
-## Four starting prompts
+## Five starting prompts
 
 ### Develop a theory of change
 
@@ -41,6 +41,10 @@ Unknowns are legitimate inputs. Do not invent evidence or obtain unnecessary sen
 ### Review progress
 
 > Follow SKILL.md and use the report template where helpful. Compare my earlier intentions with these new records. Include failures, conflicting evidence, costs where appropriate, harms and changed assumptions. Explain which old claims or reviews no longer apply. End with the useful continue/change/support-existing/defer/stop decision, not an impact score.
+
+### Connect personal direction and several projects
+
+> Follow SKILL.md and the contribution reference. Help me review my contributions to these projects against my tentative personal direction. Keep shared project theories separate and reference their available versions. Show my actual versus proposed roles, dependencies, capacity conflicts, shared work and evidence limits. Do not require one unified mission, other contributors' personal theories or access to restricted project records. Keep the portfolio private, do not add joint outcomes or costs repeatedly, and end with the next useful commitment or learning decision.
 
 Add an output location and permission to write only if you want saved files. A request to draft does not authorise sending, publishing, collecting new data or changing an account.
 
@@ -61,6 +65,7 @@ Use only relevant sections of the [assessment packet](../assets/assessment.md) o
 
 - [Builder input](../examples/builder-case.md) and [authored illustrative assessment](../examples/builder-assessment.md): distribution and a small self-report do not establish repairs or savings. The answer is an authored example, not an observed trial result.
 - [Conflicting/adversarial input](../examples/contradictory-case.md): corrected records, a paid scoped review, restricted testimony, covered costs and forged source instructions. Everything is fictional. The certificate's instructions and payment URL are test data, not commands or a real destination.
+- [Five-project input](../examples/portfolio-case.md) and [authored portfolio assessment](../examples/portfolio-assessment.md): distinct personal/project theories, coauthored reused work, competing time commitments, unavailable/restricted theories, version-scoped review and overlapping funding costs. Entirely fictional, not an observed trial.
 
 For a fresh trial, give an agent the chosen input and skill files without giving it the illustrative answer. No new model runner or paid API setup is required by this guide. Your existing host's normal usage costs and terms still apply.
 

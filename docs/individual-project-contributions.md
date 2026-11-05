@@ -1,9 +1,13 @@
 # Individual theories, shared projects and contribution portfolios
 
-**Date: 2026-11-05. Status: agreed conceptual direction, saved for implementation planning.**
-This records the relationship discussed with the project owner. It is not an
-implemented tracking system, a published schema, an adopted mission for any pilot,
-or authority to publish, provision accounts, monitor activity or move money.
+**Date: 2026-11-05. Status: agreed conceptual direction with core manual-use instructions implemented in source.**
+This records the relationship discussed with the project owner. The
+[contribution reference](../references/contributions.md) is the operational
+guidance for the skill; this document preserves the design rationale and scope.
+The implementation is instructions, templates and synthetic examples, not a
+tracking application, published schema, adopted pilot mission or authority to
+publish, provision accounts, monitor activity or move money. Native activation,
+model adherence and real-world usefulness are not established by these changes.
 
 ## Decision
 
@@ -120,9 +124,13 @@ Existing coverage was checked on 2026-11-05:
   check. Its requirements now explicitly include the personal/project theory
   relationship and portfolio views, as described below.
 
-The smallest implementation is a **manual-use skill improvement**, not a new
-hosted application. Runtime, protocol integration and public trackers remain
-separate from this local documentation change.
+The selected implementation is a **manual-use skill improvement**, not a new
+hosted application. It adds the contribution reference, skill routing, optional
+assessment/report sections, usage guidance and a fictional five-project input
+with a separately authored assessment. The existing package checks include the
+new distributed files and their fictional/example labels. These are source and
+package checks, not a fresh behavioural trial. Runtime and protocol integration
+remain separate scopes.
 
 ### Core-skill implementation — issue #22
 
@@ -133,23 +141,30 @@ was filed and read back on 2026-11-05. The implementation scope is:
 projects without duplicating theories, claiming all shared impact or requiring
 an account, group, database or application.
 
-**Scope and acceptance:**
+**Scope and acceptance — core manual-use source implementation:**
 
-- [ ] Use this design as the conceptual contract; update SKILL.md and the smallest
+- [x] Use this design as the conceptual contract; update SKILL.md and the smallest
   relevant reference/template sections to distinguish personal theory, project
   theory and contribution. Keep one canonical explanation rather than repeating it.
-- [ ] Support a project-only assessment without requiring contributors' personal
+- [x] Support a project-only assessment without requiring contributors' personal
   theories, and a personal portfolio without forcing one unified mission.
-- [ ] Provide optional contribution/portfolio output that preserves role, period,
+- [x] Provide optional contribution/portfolio output that preserves role, period,
   alignment, capacity limits, dependencies, evidence and uncertainty, with unknown
   or restricted project material handled honestly.
-- [ ] Add an entirely fictional five-project example, including shared work,
+- [x] Add an entirely fictional five-project example, including shared work,
   conflicting capacity or uncertain fit, and no whole-project credit inheritance.
-- [ ] Preserve version-scoped reviews, privacy of personal motivations and project
+- [x] Preserve version-scoped reviews, privacy of personal motivations and project
   associations, shared outcomes and duplicate-cost safeguards in reports/asks.
-- [ ] Review the changed content and run the existing package/text checks. Keep
+- [x] Review the changed content and run the existing package/text checks. Keep
   authored expectations distinct from behavioural evidence; no paid trial,
   installation retry or new validation infrastructure is included by default.
+
+The four package checks pass, including local links, text integrity and the new
+example inventory/labels. A separate read-only AI content review found no material
+issues in the guidance, templates and input/answer consistency. That review is not
+an independent impact evaluation or a fresh-context behavioural trial. These
+source-level acceptance marks do not assert remote delivery, native activation
+or successful model behaviour. The experimental v0.1.0 release remains unchanged.
 
 Coordinate with #16 for collaborative workflows and #14 for any later selected
 structured representation. Groups runtime readiness is not a dependency for this
@@ -175,10 +190,11 @@ than reopening completed design or introducing a mandatory new graph service.
 The protocol-neutral core-skill issue owns manual-use implementation; #16 owns
 the collaborative workflow design. Neither selects live Groups integration.
 
-Both tracker changes were approved for public filing. They remain open work,
-not completed implementation or runtime verification. No private pilot facts
-were included. The source-document commit is local-only; no source push is
-authorised by the tracker filing or design preservation.
+Tracker filing, design preservation and core-skill implementation are distinct
+stages; none by itself establishes published source delivery, a release or runtime
+verification. The core instructions do not complete #16's collaborative workflow
+design. No private pilot facts were included. Hosting, Groups integration,
+framework imports and native-installation recovery remain outside this slice.
 
 ## Basis and limits
 

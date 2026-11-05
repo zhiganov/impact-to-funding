@@ -12,6 +12,7 @@ A funding brief should explain:
 - A concise theory of change and what specific additional support enables.
 - Evidence-backed past results, narrowed claims, shared contributions and material limitations.
 - Amount, currency, duration and cost basis if supplied; otherwise explicitly unknown. Include essential dependencies and existing relevant support to avoid double-funding the same cost.
+- For personal/project asks or portfolios sharing work, apply the [contribution and duplicate-cost guidance](contributions.md); separate actual marginal costs rather than charging again for reused work.
 - Delivery or learning milestones, actual responsibilities/capacity, review conditions and plausible failure/stop decisions. Do not invent owners or deadlines.
 - How useful progress will be assessed and reported with proportionate burden.
 - A supplied funding destination if appropriate, with verification limits and no implied ownership, eligibility, tax status or guarantee of receipt.
