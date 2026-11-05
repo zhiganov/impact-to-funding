@@ -15,7 +15,8 @@ I have six hours available in fictional period B. Lantern is already allocated
 four of those hours. Bridge would take another four hours if I agree; the other
 future allocations are unknown. Does my portfolio justify saying that I created
 five successful community projects? Could both Bridge and Compass fund the draft
-they each want to use?
+they each want to use? D is not part of Lantern, so can I call D's check an
+independent review?
 
 ## Supplied fictional source excerpts
 
@@ -46,6 +47,15 @@ Reviewer C examined the exact claim C-L1 revision 1, "Two Lantern sessions were
 recorded as held in period A," against E-L1 revision 1. C found that wording
 consistent with the note; independence was not established. C did not review
 T-L2, any claim about participant benefit or a personal portfolio summary.
+
+### R-L2 and W-L2 — Fictional check by Person D, later withdrawn
+
+At A's request, Person D examined claim C-L2 revision 1, "Person A arranged the
+room for Lantern in period A," against E-L1 revision 1. D wrote
+that the wording matched the note and described the check as independent
+because D is not a Lantern organiser. D coauthored draft D1 with A for Bridge
+(see below). In period B, D withdrew the statement; the supplied note gives no
+reason.
 
 ### T-B1 and E-B1 — Bridge draft and work note
 

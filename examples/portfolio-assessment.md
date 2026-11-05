@@ -56,6 +56,15 @@ period-A session-count wording within that fictional review's limits. It does
 not review Lantern's revised theory T-L2, the new format's effects, A's causal
 contribution or this portfolio. Independence remains unestablished.
 
+R-L2 should not be called independent. Being outside Lantern is not enough: D
+coauthored D1 with A, so D shares work and credit with the person whose claim was
+checked. At most it was a partner check, with that relationship disclosed. D has
+also withdrawn it, so it is no longer current support: mark it withdrawn and do
+not cite it in a report or funding ask. The withdrawal does not show C-L2 is
+false. E-L1 itself still records that A arranged the room, so C-L2 stays
+supported within that note's scope, as supplied evidence without a current
+review.
+
 Retain T-L1 as the earlier intention, T-L2 as the changed plan, and the uncertainty
 about access. A changed project pathway can prompt A to reconsider fit and venue
 responsibility; it does not rewrite past work or imply A endorsed every revision.
@@ -72,7 +81,8 @@ unknown. This is cost analysis, not permission to coordinate or submit asks.
 A project report could reference D1 as coauthored material and any documented
 reuse; A's report could reference that same contribution without multiplying
 creation or outcomes. Keep material limitations beside each claim. Neither view
-inherits R-L1 or the project's funding authority by association.
+inherits R-L1 or the project's funding authority by association, and neither
+cites the withdrawn R-L2.
 
 ## Disclosure and next decision
 
