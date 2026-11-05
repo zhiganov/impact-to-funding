@@ -35,6 +35,7 @@ Infer a suitable mode from the request; do not require a menu selection to conti
 
 - For any assessment or funding claim, read [claim review](references/claims.md).
 - For an individual's connection to shared projects or a portfolio, read [contribution relationships](references/contributions.md). Project-only assessment does not require contributors' personal theories.
+- Only when useful to the decision or requested, read [optional framework lenses](references/frameworks.md) for selection, source-linked Planetary Boundaries/Doughnut notes and scale limits. No named framework, personal-purpose disclosure or framework score is required.
 - For a funding brief, public candidate or report, also read [funding and review](references/funding-and-review.md).
 - Use relevant sections of the [assessment packet](assets/assessment.md); do not mechanically fill every section or leave placeholder instructions in final prose.
 - For a reporting update, use [periodic report](assets/report.md).

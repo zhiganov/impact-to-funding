@@ -10,6 +10,26 @@
 
 The claim types, support labels, funding workflow, review conventions, templates, synthetic case and package checks are original project choices. They are not attributed to Rutger Bregman as a proprietary methodology, a validated impact scale or an accreditation system. No books or third-party evaluation worksheets are bundled.
 
+## Optional framework references
+
+The [framework starter](references/frameworks.md) contains original selection notes,
+factual source references and ItF prompts, not imported diagrams, datasets, stories
+or adapted source worksheets. These are optional lenses, not complete framework
+assessments, a maintained authoritative library or source-author endorsements.
+
+| Source checked 2026-11-05 | Use here | Rights and inspection limits |
+|---|---|---|
+| [Stockholm Resilience Centre — Planetary Boundaries](https://www.stockholmresilience.org/research/planetary-boundaries.html) | Global Earth-system context, interdependence and limits on unsupported personal/local translation. | The inspected page's 2026 graphics are credited to Azote for Stockholm Resilience Centre and marked CC BY-NC-ND 3.0. No graphics are copied, redrawn or relicensed as MIT. Linked studies/data have their own rights and were not all inspected. |
+| [DEAL — Principles & Guidelines](https://doughnuteconomics.org/principles-and-guidelines) | Social/ecological integrity, context-specific guidance and reuse/branding boundaries. | Platform tools are generally CC BY-SA 4.0 with stated scope/exceptions; external content and stories are not automatically covered. Names/logos/trademarks have separate restrictions. The page asks users not to generate Doughnut diagrams with AI. No assets or tool adaptations are bundled. |
+| [DEAL — The Evolving Doughnut](https://doughnuteconomics.org/tools/the-evolving-doughnut) | Source-edition awareness and social foundation/ecological ceiling context. | Page describes the 2025 report/iteration and shows web update 2026-10-20; these are not observation dates or interchangeable versions. Diagrams have specific CC BY-SA 4.0 credits. The page was read; the linked report/data/diagrams were not imported or exhaustively inspected. |
+| [DEAL — Doughnut Unrolled: Dimensions of the four lenses](https://doughnuteconomics.org/tools/doughnut-unrolled-dimensions-of-the-four-lenses) | Reference to an existing place-based local/global and social/ecological approach, not an ItF invention. | Page description inspected through search results only; linked slide decks/canvases were not inspected or copied. Check exact material and applicable terms before any adaptation. |
+
+No source licence is transferred to unrelated material. A future actual adaptation
+must preserve its applicable attribution/share-alike or other terms and remain
+distinguishable from ItF's original MIT material; a paraphrase is not automatically
+an independent work. Linking these sources establishes neither conformance with
+their methods nor permission to imply affiliation. These notes are not legal advice.
+
 ## Original material and licence
 
 The original skill, templates, synthetic examples, documentation and package checks are licensed under [MIT](LICENSE), selected by Artem for public source publication. This grant does not relicense linked third-party works, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.

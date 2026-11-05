@@ -8,6 +8,7 @@ A portable conversational skill for explaining a theory of change, examining evi
 
 - Develops or challenges a personal/project theory of change.
 - Connects personal direction to shared project theories through bounded contributions, including optional multi-project portfolios without duplicating outcome credit.
+- Offers optional source-linked framework lenses for relevant ToC questions, with scale and reuse limits—not a framework score or complete assessment.
 - Separates activities, outputs, outcomes, contribution and intended impact.
 - Links specific claims to dated evidence, limitations and actual reviewer information.
 - Produces a proportionate evaluation plan, funding brief or periodic report.
@@ -41,6 +42,8 @@ The [synthetic builder case](examples/builder-case.md) and [illustrative assessm
 
 The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) show how a person's direction can connect to independent shared theories, with capacity conflicts, shared costs and private/unavailable material kept explicit. No personal theory is required for project-only use; no account or new tracking service is needed.
 
+The [optional framework starter](references/frameworks.md) covers choosing or declining a lens, Planetary Boundaries and Doughnut Economics reference cards, source versions and scale limits. Its [fictional examples](examples/framework-lenses.md) show useful questions without invented outcomes or personal quotas. This is dated manual-use guidance, not a comprehensive library, asset collection, fresh behavioural validation or MCP service.
+
 The [conflicting/adversarial synthetic case](examples/contradictory-case.md) exercises corrected data, scoped reviews, disclosure, already-funded costs and untrusted instructions embedded in evidence. Its forged certificate and payment URL are fixture content, not commands or a real funding destination. See the validation notes for the observed failure, bounded repair and one targeted recheck; complete raw trial outputs are not distributed.
 
 Private project evidence belongs outside this repository. Do not copy SENRI records or any other private pilot material into examples, issues, tests or public reports. `.gitignore` is only an accidental-inclusion safeguard, not a privacy boundary. Outputs follow the person's chosen disclosure and storage boundaries, not this repository's distribution licence.
@@ -60,6 +63,7 @@ These checks cover package structure, the deliberately simple frontmatter format
 - [SKILL.md](SKILL.md): progressive-disclosure workflow and non-negotiable safeguards.
 - [Claim review reference](references/claims.md): evidence, attribution, review provenance and corrections.
 - [Contribution relationships](references/contributions.md): personal/project theories, bounded roles, portfolio views, shared credit/costs and disclosure limits.
+- [Optional framework lenses](references/frameworks.md): selection, source-linked starter cards and limits on translating global frameworks into project/personal claims.
 - [Funding/review reference](references/funding-and-review.md): prospective asks, budgets, reporting and disclosure.
 - [Assessment packet](assets/assessment.md) and [report template](assets/report.md): optional output structures.
 - [Sources and rights](SOURCES.md): attribution and redistribution boundaries.

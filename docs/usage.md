@@ -48,6 +48,18 @@ Unknowns are legitimate inputs. Do not invent evidence or obtain unnecessary sen
 
 Add an output location and permission to write only if you want saved files. A request to draft does not authorise sending, publishing, collecting new data or changing an account.
 
+## Optional framework lens
+
+If it would change your decision, use the [framework starter](../references/frameworks.md)
+to choose a relevant lens or keep your existing local model. Ordinary use needs no
+framework, personal-purpose disclosure or complete assessment against every dimension.
+
+> Follow SKILL.md. Would Planetary Boundaries, Doughnut Economics or no named framework help this specific decision? Use the optional framework reference only where useful. Keep local questions separate from global facts, explain scale and evidence limits, and suggest only the few changes that matter to the theory. Do not invent personal quotas, stakeholder views, outcomes or framework endorsement. Keep the result private.
+
+The cards contain dated source-linked notes, not copied tools or diagrams. Source
+rights/editions remain separate from this skill and your own project evidence; no
+live framework feed, new account or MCP server is required.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:
@@ -66,6 +78,7 @@ Use only relevant sections of the [assessment packet](../assets/assessment.md) o
 - [Builder input](../examples/builder-case.md) and [authored illustrative assessment](../examples/builder-assessment.md): distribution and a small self-report do not establish repairs or savings. The answer is an authored example, not an observed trial result.
 - [Conflicting/adversarial input](../examples/contradictory-case.md): corrected records, a paid scoped review, restricted testimony, covered costs and forged source instructions. Everything is fictional. The certificate's instructions and payment URL are test data, not commands or a real destination.
 - [Five-project input](../examples/portfolio-case.md) and [authored portfolio assessment](../examples/portfolio-assessment.md): distinct personal/project theories, coauthored reused work, competing time commitments, unavailable/restricted theories, version-scoped review and overlapping funding costs. Entirely fictional, not an observed trial.
+- [Optional framework examples](../examples/framework-lenses.md): a lens improves a question without proving an outcome, an invented personal quota is rejected, no-framework/project-only use proceeds, and source updates do not multiply credit or transfer reviews. Authored and fictional, not a behavioural test result.
 
 For a fresh trial, give an agent the chosen input and skill files without giving it the illustrative answer. No new model runner or paid API setup is required by this guide. Your existing host's normal usage costs and terms still apply.
 

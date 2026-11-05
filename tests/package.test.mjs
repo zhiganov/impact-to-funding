@@ -55,13 +55,17 @@ test('text files have final newlines and no trailing whitespace or local-machine
 test('package includes workflow, templates, provenance and clearly labelled synthetic examples', () => {
   for (const relative of [
     'README.md', 'LICENSE', 'SOURCES.md', 'references/claims.md', 'references/contributions.md',
-    'references/funding-and-review.md', 'assets/assessment.md', 'assets/report.md',
+    'references/funding-and-review.md', 'references/frameworks.md',
+    'assets/assessment.md', 'assets/report.md',
     'examples/builder-case.md', 'examples/builder-assessment.md',
     'examples/portfolio-case.md', 'examples/portfolio-assessment.md',
+    'examples/framework-lenses.md',
     'docs/design-scope-2026-11-04.md',
   ]) assert.ok(statSync(path.join(root, relative)).isFile(), relative);
   assert.match(readFileSync(path.join(root, 'examples/builder-case.md'), 'utf8'), /Entirely fictional/);
   assert.match(readFileSync(path.join(root, 'examples/builder-assessment.md'), 'utf8'), /not a behavioural test result/);
   assert.match(readFileSync(path.join(root, 'examples/portfolio-case.md'), 'utf8'), /Entirely fictional/);
   assert.match(readFileSync(path.join(root, 'examples/portfolio-assessment.md'), 'utf8'), /not a behavioural test result/);
+  assert.match(readFileSync(path.join(root, 'examples/framework-lenses.md'), 'utf8'), /Entirely fictional/);
+  assert.match(readFileSync(path.join(root, 'examples/framework-lenses.md'), 'utf8'), /not a behavioural test result/);
 });
