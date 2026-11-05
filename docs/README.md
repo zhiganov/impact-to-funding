@@ -1,5 +1,11 @@
 # Design context
 
+[Voluntary user-feedback guide](user-feedback.md) and
+[initial-user learning plan](user-learning-plan.md) prepare one-task manual use,
+optional feedback and an explicit artifact/access assessment. The packet pins
+post-release source `90e96a9`, not the older `v0.1.0` archive. Recruitment, response
+collection and exact invitation approval remain separate from preparation.
+
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,
 tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22)

@@ -19,6 +19,8 @@ It does not rank people, award verified-impact badges, promise donations, publis
 
 Start with the [usage guide](docs/usage.md) for minimal inputs, five practical prompts and how to handle missing evidence. Read the [privacy guidance](PRIVACY.md) before providing real project material: a file on your machine may still enter a remote model's context through your agent.
 
+For voluntary early feedback, the [one-task guide](docs/user-feedback.md) identifies a pinned post-release source revision, optional questions and privacy limits. No recruitment, telemetry or feedback collection is launched by these documents; the [learning plan](docs/user-learning-plan.md) records readiness and the remaining consent/outreach boundaries.
+
 The skill entry point is [SKILL.md](SKILL.md). Use an agent that can read it and its relative references. For a manual trial, ask:
 
 > Read SKILL.md and follow it. Help me assess the following project and prepare a funding brief. Use only the material I supply; keep the result private and mark missing evidence explicitly.
