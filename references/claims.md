@@ -13,6 +13,8 @@ This is an original proposed review convention, not an accredited standard or an
 
 An independent reviewer can make a weak assessment. A detailed self-report can support a narrow observation. Neither reviewer identity nor label automatically establishes causal validity. Where independence, authenticity or identity is unknown, say so.
 
+Call a review independent only with a recorded basis that the reviewer is separate from the reviewed work and its material interests: authorship or coauthorship (including on another project sharing the work), team or close ties, who funds or selects the reviewer, and outcome-contingent payment. Being outside the project under review is not enough. Otherwise record partner review or independence unknown.
+
 ## Minimum useful claim record
 
 Use stable local identifiers when several claims/sources must be cross-referenced. Do not require a database or published schema.
@@ -62,6 +64,8 @@ Distinguish a percentage-point difference from a relative percentage change, ret
 ## Updates, reviews and disputes
 
 Tie each actual review to the precise claim and evidence version it examined. A changed claim does not inherit a prior attestation. Retain the previous claim and explain a correction/supersession when relevant; do not rewrite history to hide failure.
+
+A withdrawn review or withdrawn evidence permission is not current support. Mark it withdrawn, stop new use and narrow dependent claims, without implying the claim was false.
 
 No response to a review request means no attestation, not implicit approval. Do not contact a reviewer without authorisation. Distinguish a public source from permission to represent someone as endorsing a project.
 
