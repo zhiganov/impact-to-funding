@@ -23,6 +23,9 @@ complete portfolio or personal theory to assess one contribution.
 
 Reuse an existing shared project theory at its source. Refer to its relevant
 version or dated supplied excerpt rather than copying it into each assessment.
+If the source has no stable version, record the dated excerpt actually relied
+on within permitted retention, or state that the reference may have changed; a
+live link alone is not a version.
 Identify supplied versus inspected material and provisional versus approved text.
 If no project theory is available, describe the known role and mark the pathway
 unknown; a clearly labelled provisional hypothesis can help if requested, but
@@ -68,8 +71,9 @@ neither a portfolio link nor permission to publish establishes financial authori
 
 ## Preserve versions, dissent and disclosure
 
-Personal and project reports can reference the same evidence while making
-different, bounded claims. Apply the [claim rules](claims.md): an actual review
+Personal and project reports can reference the same evidence, within the uses
+its custodian has permitted for each report, while making different, bounded
+claims. Apply the [claim rules](claims.md): an actual review
 remains bound to the exact claim and evidence version examined. A revised theory,
 reused output or new portfolio summary does not inherit that review. Preserve
 earlier intentions and explain what changed rather than rewriting past alignment.
