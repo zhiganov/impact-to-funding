@@ -65,7 +65,11 @@ Distinguish a percentage-point difference from a relative percentage change, ret
 
 Tie each actual review to the precise claim and evidence version it examined. A changed claim does not inherit a prior attestation. Retain the previous claim and explain a correction/supersession when relevant; do not rewrite history to hide failure.
 
-A withdrawn review or withdrawn evidence permission is not current support. Mark it withdrawn, stop new use and narrow dependent claims, without implying the claim was false.
+Distinguish a withdrawn review from a change in permission to use evidence. Mark a withdrawn review as such and do not present it as a current endorsement. Withdrawal alone does not make the underlying claim false or remove support from other permitted evidence; reassess support if new contrary evidence is supplied.
+
+For changed evidence permissions, establish which material, audience and use are affected. Stop affected uses while the actual permission/retention basis is checked; do not assume all uses or historical records are revoked. Narrow or omit a dependent claim where the remaining permitted evidence cannot support its wording for that audience. Permission for private assessment is not permission for public quotation, export or fundraising.
+
+Retain only authorised historical review/correction information, with withdrawal and version limits explicit. A permitted historical reference is not a current endorsement or permission to reproduce restricted material. Do not erase legitimate history by default, retain prohibited content for an audit trail, or imply that local correction removes others' copies.
 
 No response to a review request means no attestation, not implicit approval. Do not contact a reviewer without authorisation. Distinguish a public source from permission to represent someone as endorsing a project.
 

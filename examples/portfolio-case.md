@@ -55,7 +55,8 @@ room for Lantern in period A," against E-L1 revision 1. D wrote
 that the wording matched the note and described the check as independent
 because D is not a Lantern organiser. D coauthored draft D1 with A for Bridge
 (see below). In period B, D withdrew the statement; the supplied note gives no
-reason.
+reason. A minimal private history note recording the withdrawal remains permitted
+in this fictional case; reuse as a current endorsement does not.
 
 ### T-B1 and E-B1 — Bridge draft and work note
 
@@ -64,6 +65,14 @@ A. Bridge theory T-B1 revision 1 is an unapproved proposal: clearer materials
 might help people participate in meetings. No usability or participation result
 was observed. A's next four-hour adaptation is an invitation, not an accepted
 commitment. Draft D1 is also the source of Compass's proposed reuse.
+
+### W-B1 — Fictional change in permission to use E-B1
+
+Within this fictional case, D is authorised to set the permitted uses of the
+E-B1 work note. In period B, D withdraws permission for public quotations from
+that note. Use for this private assessment and retention of a minimal private
+correction note remain permitted. No broader public-summary or fundraising use
+is authorised. This is a permission change, not a retraction of the drafting facts.
 
 ### T-S1 and E-S1 — Seed plan and inventory note
 

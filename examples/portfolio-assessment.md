@@ -59,11 +59,20 @@ contribution or this portfolio. Independence remains unestablished.
 R-L2 should not be called independent. Being outside Lantern is not enough: D
 coauthored D1 with A, so D shares work and credit with the person whose claim was
 checked. At most it was a partner check, with that relationship disclosed. D has
-also withdrawn it, so it is no longer current support: mark it withdrawn and do
-not cite it in a report or funding ask. The withdrawal does not show C-L2 is
-false. E-L1 itself still records that A arranged the room, so C-L2 stays
-supported within that note's scope, as supplied evidence without a current
-review.
+also withdrawn it: mark it withdrawn and do not cite it as a current endorsement
+in a report or funding ask. W-L2 permits a minimal private history note recording
+the withdrawal, not unrestricted reproduction of the statement. The withdrawal
+does not show C-L2 is false. E-L1 itself still records that A arranged the room,
+so C-L2 stays supported within that note's scope, as supplied evidence without
+a current review.
+
+W-B1 is different: it changes the permitted use of E-B1, not the review status
+or truth of the drafting facts. Stop public quotations from E-B1; its use in this
+private assessment and a minimal private correction note remain permitted. Do
+not erase the private coauthorship finding or infer that public summaries or
+fundraising reuse are allowed. For another audience, narrow or omit a dependent
+claim if the remaining permitted evidence cannot support its wording. No public
+candidate is approved here.
 
 Retain T-L1 as the earlier intention, T-L2 as the changed plan, and the uncertainty
 about access. A changed project pathway can prompt A to reconsider fit and venue
@@ -82,7 +91,8 @@ A project report could reference D1 as coauthored material and any documented
 reuse; A's report could reference that same contribution without multiplying
 creation or outcomes. Keep material limitations beside each claim. Neither view
 inherits R-L1 or the project's funding authority by association, and neither
-cites the withdrawn R-L2.
+relies on R-L2 as a current endorsement. A permitted private history note may
+still identify its withdrawal without reproducing restricted material.
 
 ## Disclosure and next decision
 
