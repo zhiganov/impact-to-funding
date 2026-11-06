@@ -24,6 +24,8 @@ Use the [contribution guidance](../references/contributions.md) for a personal o
 
 Material claims, their support and limitations, actual reviewer/version/date if a review exists, contrary evidence and missing perspectives. No response is not approval. Identify claims superseded or corrected since the previous report. For each review, show its route (solicited or existing evaluation), review status, evidence-use limits and current claim support separately; a reviewer's withdrawal and a change in permission to use evidence are different events (see [claim review](../references/claims.md)).
 
+After a challenge to a cited finding is acknowledged, show "challenged, unresolved" only to a permitted audience where that disclosure is safe. Qualify or omit dependent claims as appropriate; do not disclose the raiser or allegation, or even the challenge's existence where that could reveal protected information. An unresolved challenge does not by itself make a claim false; update the challenge status only when its actual outcome is recorded.
+
 ## Resources, costs and funding
 
 Record expenditure information, funding received and remaining needs only where known and appropriate. Explain cost basis, existing support and actual funding-destination limits. Do not equate fundraising with social benefit or invent a return on donations.
