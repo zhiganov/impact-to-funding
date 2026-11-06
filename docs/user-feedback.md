@@ -10,11 +10,13 @@ This is not certification, a funding application or a promise of support.
 ## Which version to use
 
 For this learning packet, use the published source revision
-[`90e96a9`](https://github.com/zhiganov/impact-to-funding/tree/90e96a9346439e6aef29f4b20a86da38eeee6474):
-[download the complete source folder](https://github.com/zhiganov/impact-to-funding/archive/90e96a9346439e6aef29f4b20a86da38eeee6474.zip).
+[`87e515a`](https://github.com/zhiganov/impact-to-funding/tree/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b):
+[download the complete source folder](https://github.com/zhiganov/impact-to-funding/archive/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b.zip).
 This is **post-release source**, not a new release or the unchanged `v0.1.0`
-archive. It includes the later contribution-portfolio and review-rule changes.
-This guide was prepared separately and is not bundled in that pinned archive.
+archive. It includes the later contribution-portfolio and review-rule changes and
+the report template's prompt to keep review status separate from evidence-use limits.
+The archive also contains an earlier copy of this guide that pins `90e96a9`;
+follow this copy.
 
 If you already used `v0.1.0` or another revision, that feedback is welcome too:
 record the actual version, or "unknown". Do not relabel an earlier attempt as a
@@ -25,7 +27,7 @@ trial of the newer instructions.
 - Use an AI assistant you already have that can read local Markdown files. Keep
   the whole source folder, including `references/` and `assets/`, together.
   Ask it to read `SKILL.md`; automatic installation/discovery is not verified.
-- Read the [privacy guidance for this source revision](https://github.com/zhiganov/impact-to-funding/blob/90e96a9346439e6aef29f4b20a86da38eeee6474/PRIVACY.md).
+- Read the [privacy guidance for this source revision](https://github.com/zhiganov/impact-to-funding/blob/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b/PRIVACY.md).
   Local files can reach your model provider and remain in its history. Normal
   host costs and terms apply; this guide supplies no account or free model usage.
 - Choose a small task and an effort limit that suits you. Public, fictional or
