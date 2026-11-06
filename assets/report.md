@@ -22,7 +22,7 @@ Use the [contribution guidance](../references/contributions.md) for a personal o
 
 ## Evidence and actual review
 
-Material claims, their support and limitations, actual reviewer/version/date if a review exists, contrary evidence and missing perspectives. No response is not approval. Identify claims superseded or corrected since the previous report.
+Material claims, their support and limitations, actual reviewer/version/date if a review exists, contrary evidence and missing perspectives. No response is not approval. Identify claims superseded or corrected since the previous report. For each review, show its route (solicited or existing evaluation), review status, evidence-use limits and current claim support separately; a reviewer's withdrawal and a change in permission to use evidence are different events (see [claim review](../references/claims.md)).
 
 ## Resources, costs and funding
 
