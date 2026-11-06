@@ -19,15 +19,16 @@ repair, new runner, application, MCP service or fresh release is required.
 
 ## Artifact and access readiness
 
-Primary learning source: `90e96a9346439e6aef29f4b20a86da38eeee6474`, the published
-revision containing contribution portfolios and the withdrawal clarification.
+Primary learning source: `87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b`, the published
+revision containing contribution portfolios, the withdrawal clarification and the
+report template's review-status prompt.
 It is post-release source, not a renamed `v0.1.0`. Choosing it avoids knowingly
 asking first users to evaluate an older rule set while silently crediting later
 improvements. Record existing release users separately, not as a comparison group.
 
 | Surface | Observed readiness and limits |
 |---|---|
-| Published source | Remote `main` was checked at `90e96a9` during preparation. The immutable source archive URL returned HTTP 200 to a metadata request. This was not a new archive-content or model-behaviour test. |
+| Published source | Remote `main` was checked at `87e515a` on 2026-11-06, after the pin moved from `90e96a9`. The immutable source archive URL returned HTTP 200 to a metadata request. This was not a new archive-content or model-behaviour test. |
 | Source contents | The Git tree at that revision contains `SKILL.md`, privacy/usage guidance, references, templates and fictional inputs. The guide uses the whole folder, not a bare skill file. |
 | Existing prerelease | `v0.1.0` still resolves to `be02ef1a8852ccea80951ca6bb12932eb6206974`; its experimental manual-only release notes remain unchanged. Do not claim it includes the later portfolio/review changes. |
 | End-to-end invocation | Download/open the pinned folder in an existing file-reading assistant, supply the guide's one-task prompt and permitted input, inspect the output, optionally answer a few questions. The guide gives a fictional-input alternative. No automatic skill discovery is involved. |
@@ -99,7 +100,7 @@ this as a request to return feedback. No recipients or distribution list are sto
 > Would you be interested in trying Impact to Funding on one small task of your
 > choice, such as clarifying a theory of change or reviewing a funding draft?
 > It is experimental, not certification or a promise of funding. The trial uses
-> published source revision 90e96a9 with an AI assistant you already use that can
+> published source revision 87e515a with an AI assistant you already use that can
 > read local files; automatic installation is not verified and your host's normal
 > costs and privacy terms apply. You can use fictional material, skip questions
 > or stop at any time. The guide has optional questions about usefulness, effort,
@@ -109,7 +110,7 @@ this as a request to return feedback. No recipients or distribution list are sto
 > retain it until [agreed point], with [actual correction/withdrawal route].
 > Nothing will be quoted publicly and no follow-up contact will occur without
 > your separate permission. The source folder is available at:
-> https://github.com/zhiganov/impact-to-funding/archive/90e96a9346439e6aef29f4b20a86da38eeee6474.zip
+> https://github.com/zhiganov/impact-to-funding/archive/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b.zip
 
 This invitation is separate from any Moral Ambition community introduction or
 partnership outreach. Approval of this plan does not approve either activity.
