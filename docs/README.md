@@ -1,5 +1,13 @@
 # Design context
 
+The [audience and positioning note](audience-and-positioning.md) identifies agent-native
+builders as the agreed initial primary audience while preserving broader users,
+roles and lifecycle needs. Job loss and difficulty getting hired are one
+important job to be done, not a universal audience condition. The intended
+value also includes meaningful contribution, verifiable impact, peer/community
+connections and potential financial support; these are not claims of existing
+matching or funding services. Demand and usefulness remain unvalidated.
+
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is
 design only, not an exporter or publication trial; funding.json stays unchanged
