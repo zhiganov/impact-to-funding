@@ -22,7 +22,9 @@ Use the [contribution guidance](../references/contributions.md) for a personal o
 
 ## Evidence and actual review
 
-Material claims, their support and limitations, actual reviewer/version/date if a review exists, contrary evidence and missing perspectives. No response is not approval. Identify claims superseded or corrected since the previous report. For each review, show its route (solicited or existing evaluation), review status, evidence-use limits and current claim support separately; a reviewer's withdrawal and a change in permission to use evidence are different events (see [claim review](../references/claims.md)). If a cited review has been challenged, show only "challenged, unresolved" until an outcome is recorded; do not describe the challenge, the person who raised it or the allegation.
+Material claims, their support and limitations, actual reviewer/version/date if a review exists, contrary evidence and missing perspectives. No response is not approval. Identify claims superseded or corrected since the previous report. For each review, show its route (solicited or existing evaluation), review status, evidence-use limits and current claim support separately; a reviewer's withdrawal and a change in permission to use evidence are different events (see [claim review](../references/claims.md)).
+
+After a challenge to a cited finding is acknowledged, show "challenged, unresolved" only to a permitted audience where that disclosure is safe. Qualify or omit dependent claims as appropriate; do not disclose the raiser or allegation, or even the challenge's existence where that could reveal protected information. An unresolved challenge does not by itself make a claim false; update the challenge status only when its actual outcome is recorded.
 
 ## Resources, costs and funding
 
