@@ -1,5 +1,10 @@
 # Design context
 
+[Optional Standard.site publishing and discovery](standard-site-publishing.md)
+maps approved public reports to existing publication metadata and tools. It is
+design only, not an exporter or publication trial; funding.json stays unchanged
+and the skill remains usable through ordinary Markdown/manual reading.
+
 [Voluntary user-feedback guide](user-feedback.md) and
 [initial-user learning plan](user-learning-plan.md) prepare one-task manual use,
 optional feedback and an explicit artifact/access assessment. The packet pins
