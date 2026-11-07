@@ -70,6 +70,16 @@ accounts and appropriate human conversations remain alternatives to optional
 Harmonica facilitation; declining or not responding is valid. No real collection,
 service privacy configuration or native integration has been tested by this guide.
 
+## Optional claim-specific expert review
+
+The [manual review-request/session guide](expert-review.md) and
+[fictional walkthrough](../examples/expert-review.md) show how to ask a bounded
+question, distinguish acceptance from a finding, preserve conflicts and exact
+versions, or reference an existing evaluation without inventing participation.
+Document exchange remains valid; Harmonica is optional and no available reviewer,
+real review or live privacy configuration is established. A review request does
+not authorise contact or evidence transfer, and a finding is not certification.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:

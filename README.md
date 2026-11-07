@@ -77,6 +77,8 @@ The [optional framework starter](references/frameworks.md) covers choosing or de
 
 The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
 
+The [optional expert-review guide](docs/expert-review.md) and [fictional review walkthrough](examples/expert-review.md) cover a bounded request, conflicts, permitted evidence, reviewer-authored findings and reuse of existing evaluations. No reviewer pool, matching, actual review or impact certification is supplied.
+
 The [conflicting/adversarial synthetic case](examples/contradictory-case.md) exercises corrected data, scoped reviews, disclosure, already-funded costs and untrusted instructions embedded in evidence. Its forged certificate and payment URL are fixture content, not commands or a real funding destination. See the validation notes for the observed failure, bounded repair and one targeted recheck; complete raw trial outputs are not distributed.
 
 Private project evidence belongs outside this repository. Do not copy SENRI records or any other private pilot material into examples, issues, tests or public reports. `.gitignore` is only an accidental-inclusion safeguard, not a privacy boundary. Outputs follow the person's chosen disclosure and storage boundaries, not this repository's distribution licence.
