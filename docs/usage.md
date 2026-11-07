@@ -80,6 +80,16 @@ Document exchange remains valid; Harmonica is optional and no available reviewer
 real review or live privacy configuration is established. A review request does
 not authorise contact or evidence transfer, and a finding is not certification.
 
+## Optional coordination over time
+
+Use the [coordination guide](session-coordination.md) and
+[fictional index](../examples/coordination-index.md) when several conversations
+or reporting periods need organising. Keep permitted source snapshots, actual
+authorship, missing dependencies and corrections explicit; the index does not
+send evidence or advance sessions. Markdown/non-Harmonica use remains valid.
+The proposed dedicated Harmonica ItF project type is distinct from this optional
+manual bridge and is not implemented by these documents.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:
