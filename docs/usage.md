@@ -60,6 +60,16 @@ The cards contain dated source-linked notes, not copied tools or diagrams. Sourc
 rights/editions remain separate from this skill and your own project evidence; no
 live framework feed, new account or MCP server is required.
 
+## Optional accounts from people affected by the work
+
+Use the [manual account guide/session brief](beneficiary-accounts.md) when an
+experience could change a specific decision. It covers neutral initial questions,
+recap correction, permission-bounded handoff and report revision, with a
+[fictional library walkthrough](../examples/beneficiary-accounts.md). Written
+accounts and appropriate human conversations remain alternatives to optional
+Harmonica facilitation; declining or not responding is valid. No real collection,
+service privacy configuration or native integration has been tested by this guide.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:
