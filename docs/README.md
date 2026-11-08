@@ -8,6 +8,12 @@ value also includes meaningful contribution, verifiable impact, peer/community
 connections and potential financial support; these are not claims of existing
 matching or funding services. Demand and usefulness remain unvalidated.
 
+[A case-grounded pattern language with framework lenses](pattern-language-design.md)
+proposes linked cases, contextual patterns, optional lenses and private local
+applications across open-ended domains. It is a design, not a curated collection,
+validated pattern language, database or implemented skill feature. Broad case
+collection and systems/complexity instruction changes remain separate scopes.
+
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is
 design only, not an exporter or publication trial; funding.json stays unchanged

@@ -101,6 +101,12 @@ The [five-project input](examples/portfolio-case.md) and [authored portfolio](ex
 
 The [optional framework starter](references/frameworks.md) covers choosing or declining a lens, Planetary Boundaries and Doughnut Economics reference cards, source versions and scale limits. Its [fictional examples](examples/framework-lenses.md) show useful questions without invented outcomes or personal quotas. This is dated manual-use guidance, not a comprehensive library, asset collection, fresh behavioural validation or MCP service.
 
+The [pattern-language design](docs/pattern-language-design.md) proposes a future
+library linking real cases, contextual patterns, framework lenses and private
+local applications across open-ended domains. Its worked example is fictional;
+the design supplies no curated case collection, validated patterns, database,
+new retrieval feature or change to the installed skill.
+
 The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
 
 The [optional expert-review guide](docs/expert-review.md) and [fictional review walkthrough](examples/expert-review.md) cover a bounded request, conflicts, permitted evidence, reviewer-authored findings and reuse of existing evaluations. No reviewer pool, matching, actual review or impact certification is supplied.

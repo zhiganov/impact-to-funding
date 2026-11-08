@@ -30,6 +30,22 @@ distinguishable from ItF's original MIT material; a paraphrase is not automatica
 an independent work. Linking these sources establishes neither conformance with
 their methods nor permission to imply affiliation. These notes are not legal advice.
 
+## Pattern-language design references
+
+The [library design](docs/pattern-language-design.md) uses the sources below for
+conceptual distinctions, not as a seed collection of real theories of change or
+evidence for the fictional candidate pattern. DEAL's guidelines above were also
+reread on 2026-11-08; no tools, diagrams or stories were imported or adapted.
+
+| Source read 2026-11-08 | Use here | Inspection and rights limits |
+|---|---|---|
+| [Doug Lea — Christopher Alexander: An Introduction for Object-Oriented Designers](https://www.patternlanguage.com/bios/douglea.htm), last content change 1993, reformatted 1997 | Contextual patterns, forces, relationships and adaptation. | A secondary account hosted by PatternLanguage.com, not an inspection of Alexander's books. No book patterns, text or diagrams are bundled; public access is not an open licence. |
+| [Dave Snowden — Systems thinking & complexity](https://thecynefin.co/systems-thinking-complexity/), 2017-06-21 | Distinguishing method boundaries rather than a universal ranking of systems thinking and complexity approaches. | Source-author position, not a consensus claim, Cynefin implementation, endorsement or licence to reproduce diagrams/method materials. No assets or method text are bundled. |
+
+The proposed record conventions, linking rules and fictional walkthrough are
+original ItF design choices. They do not claim that the referenced authors
+validate this library, its future patterns or any local theory of change.
+
 ## Original material and licence
 
 The original skill, templates, synthetic examples, documentation and package checks are licensed under [MIT](LICENSE), selected by Artem for public source publication. This grant does not relicense linked third-party works, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
