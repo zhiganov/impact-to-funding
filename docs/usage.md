@@ -1,6 +1,6 @@
 # Using the skill
 
-Install ItF using the [native OpenCode instructions](../README.md#install-and-use-in-opencode), then invoke `@impact-to-funding` in that project. Native discovery, activation and bundled-reference access were checked in OpenCode v2.2.5 at library-enabled source `3ebefeb`; other hosts, reliable model routing and user usefulness remain unverified. See the [library-source check](installation-check-2026-11-04.md#reference-library-integration-verification--2026-11-08) and [behavioural validation limits](validation-2026-11-04.md). Manual file-reading remains an optional alternative, not the normal skill invocation below.
+Install ItF using the [native OpenCode instructions](../README.md#install-and-use-in-opencode), then invoke `@impact-to-funding` in that project. Native discovery, activation and bundled-reference access were checked in OpenCode v2.2.5 at source `fbb8993`, including the optional systems/complexity guidance; other hosts, reliable model routing and user usefulness remain unverified. See the [systems-source check](installation-check-2026-11-04.md#systemscomplexity-guidance-verification--2026-11-09) and [behavioural validation limits](validation-2026-11-04.md). Manual file-reading remains an optional alternative, not the normal skill invocation below.
 
 ## Before you start
 

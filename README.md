@@ -6,7 +6,7 @@ Impact to Funding (ItF) is an open-source agent skill for developers, maintainer
 
 It helps you explore where your skills and experience could be useful, develop contributions with others, learn what difference the work makes, and explain what support would help it continue. You can arrive without a predefined decision, project or fundraising goal.
 
-**Experimental v0:** native installation, discovery, activation and bundled-reference access were checked in OpenCode v2.2.5 at library-enabled source revision `3ebefeb`. Human usefulness, reliable model routing, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
+**Experimental v0:** native installation, discovery, activation and bundled-reference access were checked in OpenCode v2.2.5 at source revision `fbb8993`, including the optional systems/complexity guidance. Human usefulness, reliable model routing, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
 
 ## Is this for me?
 
@@ -50,7 +50,7 @@ native project skill path. These commands require Git and an unused destination:
 
 ```sh
 git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
-git -C .opencode/skills/impact-to-funding checkout --detach 3ebefebf0ccdab12c6a2752aa4fce122c41129a0
+git -C .opencode/skills/impact-to-funding checkout --detach fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b
 ```
 
 This installs only for that project; it does not change global configuration.
@@ -61,11 +61,11 @@ In OpenCode for the same project, invoke the skill normally:
 You do not need to open or read the skill's Markdown source. Read the
 [privacy guidance](PRIVACY.md) before providing real material; your host's normal
 costs and privacy terms apply. The native registry and skill tool loaded the exact
-revised body, and host file reads accessed the installed library index, a pattern
-and a linked case. All bundled library files matched the selected source. These
+revised body, and a host file read accessed the installed systems/complexity
+reference. All 14 bundled reference files matched the selected source. These
 were loading/access checks, not human usability or model-routing trials,
 interactive TUI tests, or tests of the Vercel Skills CLI. See the
-[library-source check](docs/installation-check-2026-11-04.md#reference-library-integration-verification--2026-11-08)
+[systems-source check](docs/installation-check-2026-11-04.md#systemscomplexity-guidance-verification--2026-11-09)
 and [earlier installation follow-up](docs/installation-check-2026-11-04.md#successful-follow-up--2026-11-08).
 
 ## Optional manual use
@@ -138,7 +138,7 @@ Private project evidence belongs outside this repository. Do not copy SENRI reco
 
 Limited fresh-context development trials are recorded in the [validation notes](docs/validation-2026-11-04.md). They do not establish independent validation, human usefulness, fundraising effectiveness or reliable behaviour in another host. The example prompts above are authored starting points, not observed model results.
 
-For an Agent Skills-compatible host, the package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. Native OpenCode v2.2.5 discovery, activation and reference access for library-enabled source `3ebefeb` were verified on 2026-11-08; earlier successful checks used `666f8f8` and `22d4c8d`. Earlier empty API registries did not establish an installation failure: that version's skill-list endpoint does not await plugin loading. The [installation-check record](docs/installation-check-2026-11-04.md) preserves the unsuccessful probes and the successive successful checks. Other hosts and reliable model selection of references remain untested; no new release was made.
+For an Agent Skills-compatible host, the package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. Native OpenCode v2.2.5 discovery, activation and reference access for source `fbb8993` were verified on 2026-11-09; earlier successful checks used `3ebefeb`, `666f8f8` and `22d4c8d`. Earlier empty API registries did not establish an installation failure: that version's skill-list endpoint does not await plugin loading. The [installation-check record](docs/installation-check-2026-11-04.md) preserves the unsuccessful probes and the successive successful checks. Other hosts and reliable model selection of references remain untested; no new release was made.
 
 ItF does not rank people, award verified-impact badges, promise donations, publish records, contact funders or distribute money. A request to draft does not authorise sending or publishing. The skill is informed by the School for Moral Ambition's public principles, not affiliated with or endorsed by the School or Rutger Bregman. See [sources and rights](SOURCES.md).
 

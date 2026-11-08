@@ -1,8 +1,30 @@
 # OpenCode installation check — 2026-11-04
 
+## Systems/complexity guidance verification — 2026-11-09
+
+**Latest checked skill source: `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.**
+The published change adds an optional systems/complexity reference, selective
+core-skill routing, a fictional illustration and source/rights notes. It covers
+causal hypotheses, feedback, emergence and adaptive learning without a required
+framework, system map or maturity ladder. It does not implement a detailed Cynefin
+workflow or establish model conformance with that method.
+
+The existing global OpenCode v2.2.5 installation was updated to that exact source.
+The readiness-aware registry returned the exact revised body, and the native skill
+tool loaded it in the current session. All 14 bundled reference files matched the
+source bytes. A host read tool accessed the installed systems/complexity reference.
+No restart, global-settings change or additional source retrieval was needed.
+
+Four package checks and independent read-only content review passed for the
+five-file source change. Hard boundaries, claim guidance, financial fields,
+templates and library records were unchanged. These checks establish instruction
+loading and reference access, not reliable model selection or human usefulness.
+No fresh behavioural trial, paid evaluation, new release or outreach occurred.
+Earlier checks below retain their own revisions and limits.
+
 ## Reference-library integration verification — 2026-11-08
 
-**Latest checked skill source: `3ebefebf0ccdab12c6a2752aa4fce122c41129a0`.**
+**Reference-library integration check source: `3ebefebf0ccdab12c6a2752aa4fce122c41129a0`.**
 The published integration adds conditional instructions for reading the library
 index and relevant case/pattern/lens notes, not a database or live retrieval
 service. The existing global OpenCode installation was updated to that exact
