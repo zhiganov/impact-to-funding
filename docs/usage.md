@@ -90,6 +90,16 @@ send evidence or advance sessions. Markdown/non-Harmonica use remains valid.
 The proposed dedicated Harmonica ItF project type is distinct from this optional
 manual bridge and is not implemented by these documents.
 
+## Optional enrichment from supplied records
+
+Use the [supplied-signal guide](signal-enrichment.md) and
+[fictional cases](../examples/signal-enrichment.md) to revisit one claim or
+contribution using deliberately selected, permitted social/forge/app material.
+Keep source assertions, analyst proposals and accepted report changes separate;
+preserve missing context, shared credit, duplication and exact versions. No
+discovery integration, personal profile, actual data collection or public post
+is required or authorised by the guide.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:
