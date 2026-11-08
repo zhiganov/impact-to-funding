@@ -39,6 +39,9 @@ Infer a suitable mode from the request; do not require a menu selection to conti
 - For a funding brief, public candidate or report, also read [funding and review](references/funding-and-review.md).
 - Use relevant sections of the [assessment packet](assets/assessment.md); do not mechanically fill every section or leave placeholder instructions in final prose.
 - For a reporting update, use [periodic report](assets/report.md).
+- When planning bounded discovery of project/contribution signals, read [signal discovery](docs/signal-discovery.md). This is source-selection guidance, not permission to retrieve records or monitor accounts.
+- When revising a private claim/report from deliberately supplied social, forge or app records, read [signal enrichment](docs/signal-enrichment.md). Discovery tooling is not a prerequisite.
+- When drafting a Bluesky publication or correction plan, read [Bluesky publishing](docs/bluesky-publishing.md). Planning does not authorise posting, notifications, account setup or removal.
 - For attribution/rights questions, see [sources and rights](SOURCES.md).
 - The [synthetic input](examples/builder-case.md) and [illustrative output](examples/builder-assessment.md) are examples only, never evidence about the person's work.
 - The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) illustrate linked theories, shared work and capacity limits, not observed behaviour.
