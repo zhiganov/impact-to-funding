@@ -1,6 +1,7 @@
 # Initial-user learning plan
 
 **Prepared 2026-11-05. Scope: feedback preparation and readiness assessment only.**
+Source choice and readiness notes updated 2026-11-08; this is not a new release.
 No participants are claimed, no invitation has been sent and no responses have
 been collected through this plan. It does not launch recruitment, monitoring,
 data collection, model trials or a paid evaluation programme.
@@ -19,30 +20,32 @@ repair, new runner, application, MCP service or fresh release is required.
 
 ## Artifact and access readiness
 
-Primary learning source: `87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b`, the published
-revision containing contribution portfolios, the withdrawal clarification and the
-report template's review-status prompt.
+Primary learning source: `22d4c8d31aa32e98609341eb7fd4eadc85a8608a`, explicitly
+selected on 2026-11-08. It contains contribution portfolios, the withdrawal
+clarification, the report template's review-status and confidential-challenge
+safeguards, and conditional routing to the optional signal guides.
 It is post-release source, not a renamed `v0.1.0`. Choosing it avoids knowingly
 asking first users to evaluate an older rule set while silently crediting later
 improvements. Record existing release users separately, not as a comparison group.
 
 | Surface | Observed readiness and limits |
 |---|---|
-| Published source | Remote `main` was checked at `87e515a` on 2026-11-06, after the pin moved from `90e96a9`. The immutable source archive URL returned HTTP 200 to a metadata request. This was not a new archive-content or model-behaviour test. |
+| Published source | Remote `main` was checked at `22d4c8d` on 2026-11-08, before updating this packet. Its immutable source archive URL returned HTTP 200 to a metadata request. This was not an archive-content or new model-behaviour test. The previous packet pinned `87e515a`; record attempts against their actual revision. |
 | Source contents | The Git tree at that revision contains `SKILL.md`, privacy/usage guidance, references, templates and fictional inputs. The guide uses the whole folder, not a bare skill file. |
-| Existing prerelease | `v0.1.0` still resolves to `be02ef1a8852ccea80951ca6bb12932eb6206974`; its experimental manual-only release notes remain unchanged. Do not claim it includes the later portfolio/review changes. |
+| Existing prerelease | The previously verified `v0.1.0` source is `be02ef1a8852ccea80951ca6bb12932eb6206974`; this packet neither changes the prerelease nor supplies a fresh release/tag check. Do not claim it includes the later portfolio/review changes. |
 | End-to-end invocation | Download/open the pinned folder in an existing file-reading assistant, supply the guide's one-task prompt and permitted input, inspect the output, optionally answer a few questions. The guide gives a fictional-input alternative. No automatic skill discovery is involved. |
 | Evidence for that method | Earlier limited fresh-context manual trials are recorded in [validation notes](validation-2026-11-04.md), with their exact older source and limits. They do not prove behaviour at this newer revision or in a participant's host. No new model trial was run for this plan. |
-| Participant guide | Prepared for owner review. Its publication or exact private distribution needs applicable approval; preparing it does not establish participant receipt. It is separate from the pinned source archive. |
+| Participant guide | Published in the repository and updated for this source choice. Send the current guide alongside the pinned folder: the archived guide still names the previous pin. Public availability does not establish participant receipt or approve an invitation. |
 | Actual participant host | Not established. A participant may check that their existing assistant can read the files before giving it real material. Inability to do so is useful access feedback, not a requirement to build a new host or reopen stopped installation routes. |
-| Feedback collection | No real collection owner/channel/access/retention arrangement is established by this plan. Resolve those facts before requesting returned responses; do not substitute a public issue or claim confidentiality by default. |
-| Outreach | No recipients, channel or exact invitation are approved here. The draft below is not send-ready while collection details are unresolved. |
+| Feedback collection | A proposed owner/channel and handling terms were selected separately on 2026-11-08. Operational account/recipient details and the exact notice/invitation are not approved here; no returned-response intake has started. Keep those details outside this public document and make service-processing limits explicit before requesting feedback. |
+| Outreach | No sender account, recipient/conversation or exact invitation is approved here. The public template below is not a send-ready request. |
 
 The packet is usable for review without recruiting anyone. The finite path to a
-first returned response is: approve publishing or privately distributing the
-guide; agree an actual collection owner/channel/use/retention arrangement; approve
-the exact invitation and destination; let a willing person try one task and
-choose whether to respond. No additional technical preparation is selected.
+first returned response is: supply the current guide and pinned source folder;
+finalise the actual response route and notice, including service-processing
+limits; approve the exact invitation, sender and recipient/conversation; let a
+willing person try one task and choose whether to respond. No additional
+technical preparation is selected.
 
 ## Collection agreement before recruitment
 
@@ -100,7 +103,7 @@ this as a request to return feedback. No recipients or distribution list are sto
 > Would you be interested in trying Impact to Funding on one small task of your
 > choice, such as clarifying a theory of change or reviewing a funding draft?
 > It is experimental, not certification or a promise of funding. The trial uses
-> published source revision 87e515a with an AI assistant you already use that can
+> published source revision 22d4c8d with an AI assistant you already use that can
 > read local files; automatic installation is not verified and your host's normal
 > costs and privacy terms apply. You can use fictional material, skip questions
 > or stop at any time. The guide has optional questions about usefulness, effort,
@@ -110,7 +113,7 @@ this as a request to return feedback. No recipients or distribution list are sto
 > retain it until [agreed point], with [actual correction/withdrawal route].
 > Nothing will be quoted publicly and no follow-up contact will occur without
 > your separate permission. The source folder is available at:
-> https://github.com/zhiganov/impact-to-funding/archive/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b.zip
+> https://github.com/zhiganov/impact-to-funding/archive/22d4c8d31aa32e98609341eb7fd4eadc85a8608a.zip
 
 This invitation is separate from any Moral Ambition community introduction or
 partnership outreach. Approval of this plan does not approve either activity.

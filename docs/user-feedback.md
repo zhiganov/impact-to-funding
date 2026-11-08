@@ -10,13 +10,14 @@ This is not certification, a funding application or a promise of support.
 ## Which version to use
 
 For this learning packet, use the published source revision
-[`87e515a`](https://github.com/zhiganov/impact-to-funding/tree/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b):
-[download the complete source folder](https://github.com/zhiganov/impact-to-funding/archive/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b.zip).
+[`22d4c8d`](https://github.com/zhiganov/impact-to-funding/tree/22d4c8d31aa32e98609341eb7fd4eadc85a8608a):
+[download the complete source folder](https://github.com/zhiganov/impact-to-funding/archive/22d4c8d31aa32e98609341eb7fd4eadc85a8608a.zip).
 This is **post-release source**, not a new release or the unchanged `v0.1.0`
-archive. It includes the later contribution-portfolio and review-rule changes and
-the report template's prompt to keep review status separate from evidence-use limits.
-The archive also contains an earlier copy of this guide that pins `90e96a9`;
-follow this copy.
+archive. It includes contribution-portfolio and review-rule changes, the report
+template's separate review/use states and confidential-challenge safeguard, and
+conditional links to optional signal guides. Those extra guides are not required
+for this one-task exercise. The archive contains an earlier copy of this guide
+that pins `87e515a`; follow this separately supplied current copy.
 
 If you already used `v0.1.0` or another revision, that feedback is welcome too:
 record the actual version, or "unknown". Do not relabel an earlier attempt as a
@@ -27,7 +28,7 @@ trial of the newer instructions.
 - Use an AI assistant you already have that can read local Markdown files. Keep
   the whole source folder, including `references/` and `assets/`, together.
   Ask it to read `SKILL.md`; automatic installation/discovery is not verified.
-- Read the [privacy guidance for this source revision](https://github.com/zhiganov/impact-to-funding/blob/87e515a9f9e5bc23193f82e2e6eb4c3781ec8d9b/PRIVACY.md).
+- Read the [privacy guidance for this source revision](https://github.com/zhiganov/impact-to-funding/blob/22d4c8d31aa32e98609341eb7fd4eadc85a8608a/PRIVACY.md).
   Local files can reach your model provider and remain in its history. Normal
   host costs and terms apply; this guide supplies no account or free model usage.
 - Choose a small task and an effort limit that suits you. Public, fictional or
