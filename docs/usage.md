@@ -102,6 +102,22 @@ New research and consequential external actions still need the applicable scope;
 the library supplies no automatic data collection or source-access permission.
 Local theories/applications remain private unless separately cleared for sharing.
 
+## Learn when conditions and relationships change
+
+The optional [systems/complexity reference](../references/systems-and-complexity.md)
+helps examine causal hypotheses, feedback dynamics, emergence and adaptive learning
+when those perspectives matter. You do not need to choose a framework, produce a
+system map or complete an evaluation. You can also continue without this reference.
+
+> @impact-to-funding Help me understand how this contribution could help while other people and conditions are changing. Consider relevant feedback, delays and unexpected effects without inventing them. Keep hypotheses separate from observations, and help me identify what learning could change our approach. Do not collect data, run experiments or contact anyone.
+
+The intended behaviour is selective inquiry, not automatic whole-project analysis:
+an ordinary information gap need not become a complexity label, and a proposed
+feedback loop is not an observed finding. The fictional illustration in the
+reference is an authored example, not a model-trial result. Cynefin is a distinct,
+optional source perspective; no detailed Cynefin workflow, maturity ladder or
+reliable model application of it has been established.
+
 ## Optional framework lens
 
 If it would help you understand or develop the work, use the [framework starter](../references/frameworks.md)

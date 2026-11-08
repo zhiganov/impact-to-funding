@@ -46,6 +46,25 @@ The proposed record conventions, linking rules and fictional walkthrough are
 original ItF design choices. They do not claim that the referenced authors
 validate this library, its future patterns or any local theory of change.
 
+## Systems and complexity references
+
+The [optional learning reference](references/systems-and-complexity.md) contains
+original ItF questions and a wholly fictional illustration. It also uses the
+Snowden article above as an attributed perspective on method boundaries, not a
+universal definition, a detailed Cynefin implementation or a maturity ladder.
+The following sources were inspected during the 2026-11-08 assessment; the note
+was prepared 2026-11-09. Retrieval dates do not establish source editions or
+observed project outcomes.
+
+| Source | Use here | Inspection and rights limits |
+|---|---|---|
+| [CECAN / HM Treasury / Evaluation Task Force — Supplementary Guide: Handling complexity in policy evaluation](https://www.gov.uk/government/publications/the-magenta-book/supplementary-guide-handling-complexity-in-policy-evaluation-html), HTML updated 2026-05-15 | Interactions, feedback, emergence, revisable theories and adaptive learning, particularly sections 1.1, 3.2 and 4. | The HTML guidance was inspected; its linked studies and example findings were not independently verified. The page states Open Government Licence v3.0 with third-party exceptions. No diagrams, tables, source case stories or evaluation tools are bundled; the sources are not relicensed MIT. Government evaluation arrangements are not imposed on every builder. |
+| [The Cynefin Company — The Cynefin Framework overview](https://thecynefin.co/about-us/about-cynefin-framework/) | Context-appropriate sense-making as an optional, distinct perspective. | Introductory prose inspected, not a full assessment of the video, diagram or courses. Exact page edition is not established. No method assets, branding, conformance claim or author endorsement is supplied; public access is not a general reuse licence. |
+
+These source-informed notes are not a hybrid named method, empirical validation
+of ItF or proof that a model applies the perspectives reliably. No source assets,
+live monitoring, paid model evaluation or detailed Cynefin workflow are supplied.
+
 ## Original material and licence
 
 The [seed reference collection](references/library/README.md) contains original

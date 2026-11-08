@@ -160,6 +160,7 @@ These checks cover package structure, the deliberately simple frontmatter format
 - [Claim review reference](references/claims.md): evidence, attribution, review provenance and corrections.
 - [Contribution relationships](references/contributions.md): personal/project theories, bounded roles, portfolio views, shared credit/costs and disclosure limits.
 - [Optional framework lenses](references/frameworks.md): selection, source-linked starter cards and limits on translating global frameworks into project/personal claims.
+- [Optional systems/complexity guidance](references/systems-and-complexity.md): revisable causal hypotheses, feedback, emergence and adaptive learning; no mandatory framework or complete Cynefin method.
 - [Funding/review reference](references/funding-and-review.md): prospective asks, budgets, reporting and disclosure.
 - [Assessment packet](assets/assessment.md) and [report template](assets/report.md): optional output structures.
 - [Sources and rights](SOURCES.md): attribution and redistribution boundaries.

@@ -45,6 +45,7 @@ Infer a suitable approach from the context; do not require a menu selection or w
 - For exploring an individual's contribution, working with others or connecting shared projects in a portfolio, read [contribution relationships](references/contributions.md). Project-only work does not require contributors' personal theories.
 - Only when useful to the person's exploration/work or requested, read [optional framework lenses](references/frameworks.md) for selection, source-linked Planetary Boundaries/Doughnut notes and scale limits. No named framework, personal-purpose disclosure or framework score is required.
 - When concrete examples or reusable patterns would help, or the person asks for them, read the [reference-library index](references/library/README.md), then only the case, pattern or lens notes relevant to the current work. Do not load the collection on every invocation or require an external example before helping.
+- When interactions, delays, changing conditions or unexpected effects materially affect the work, or the person asks for this perspective, read relevant parts of [systems and complexity](references/systems-and-complexity.md). This is optional support for inquiry and learning, not a required map, framework classification or maturity ladder.
 - For a funding brief, public candidate or report, also read [funding and review](references/funding-and-review.md).
 - Use relevant sections of the [assessment packet](assets/assessment.md); do not mechanically fill every section or leave placeholder instructions in final prose.
 - For a reporting update, use [periodic report](assets/report.md).
@@ -90,6 +91,8 @@ Keep personal direction, shared project theories and bounded contributions disti
 Use a theory of change when it helps explain or examine the work, not as an entry requirement or mandatory form.
 
 Explain activities → outputs → outcomes → intended impact in ordinary language. For each material link, name the mechanism, assumptions, control/dependencies, supporting basis and plausible failure. Ask what would likely happen without this contribution and what evidence would change the theory.
+
+Treat the pathway as a partial, revisable hypothesis, not a promise or necessarily a one-way chain. Allow branching, feedback and effects outside the original plan; leave unknown relationships unknown rather than forcing a complete explanation.
 
 Separate the individual's role from shared project results. Avoid double-counting joint outcomes across people or projects. A missing community agreement stays missing; a simulated stakeholder perspective cannot supply consent or actual local judgement.
 
