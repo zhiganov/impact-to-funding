@@ -10,28 +10,50 @@ Install ItF using the [native OpenCode instructions](../README.md#install-and-us
 
 The skill has no application runtime, accounts, telemetry service or payment integration. Node.js is needed only for development package checks, not for the conversational workflow. Network, audio, image and document capabilities depend on your host; the skill does not supply them.
 
-## Start with the decision, not a form
+## Start wherever you are, not with a form
 
-You can start with a few sentences, existing notes, a theory of change or a report. You do not need a complete budget, legal identity, public profile, donation account or demonstrated past impact.
+You can start with a few sentences about your interests, capabilities, current work or what is difficult. Existing notes, a theory of change or a report can also be useful. You do not need a predefined decision, project, life mission, complete budget, legal identity, public profile, donation account or demonstrated past impact. Exploration and continuing work are valid uses, not just preparation for a report or funding ask.
+
+If you invoke only `@impact-to-funding`, the agent should reuse relevant context or ask one open question about your situation and the help you want. It should not demand a decision or start filling an assessment template. For example:
+
+> What have you been working on or caring about lately, and where would you like some help?
+
+That is an illustrative opening, not a fixed script or an observed behavioural result.
 
 Useful context, where known:
 
 - What you or the project are trying to change, and for whom.
 - Your actual role and other contributors.
-- The current stage and decision: explore, continue, change, fund or stop.
+- What you would like to explore, develop, understand or sustain; a particular decision only if relevant.
 - Existing evidence, its dates and limits, and what may be shared.
 - What additional support might enable; distinguish an idea from an agreed cost.
 
 Unknowns are legitimate inputs. Do not invent evidence or obtain unnecessary sensitive data to fill a template.
 
-## Five starting prompts
+## Explore contributions, relationships and support
+
+These authored examples describe intended help, not measured results or new live trials:
+
+| Starting point | Useful help | What not to impose |
+|---|---|---|
+| "I use coding agents, but I don't know where my skills could help." | Explore capabilities, interests, constraints and possible contributions to real needs, including existing efforts; keep unverified needs and opportunities explicit. | A ready-made decision, life mission, startup or assessment packet. |
+| "I maintain something people rely on, but it is getting hard to keep going." | Understand the work, other contributors, what it enables, capacity limits and what support could make participation sustainable. | A new project, an income guarantee, assumed unpaid capacity or proof of impact before discussing support. |
+| "I'd like to contribute with other people rather than alone." | Explore known communities and relationships, possible roles and shared interests; distinguish possibilities from invitations or agreed commitments. | A promised match, automatic contact, a scraped roster or invented community agreement. |
+
+You can use any of these as a prompt after `@impact-to-funding`. Relationships,
+belonging and shared learning can matter independently of funding. Discussing a
+possibility does not authorise searching for people, contacting them or creating
+accounts. A clearer understanding or a useful conversation may be enough; no
+document or immediate commitment is required.
+
+## More focused prompts
 
 These prompts use OpenCode's skill mention. For deliberately chosen manual use,
 replace `@impact-to-funding` with a request to read and follow `SKILL.md`.
 
 ### Develop a theory of change
 
-> @impact-to-funding Help me develop a provisional theory of change for the description below. Identify the actual decision, assumptions, alternatives and whose perspective is missing. Use only the material I supply. Keep the result private and concise; mark unknowns rather than asking me to complete every field.
+> @impact-to-funding Help me understand how the contribution described below could help. Develop a provisional theory of change where useful, with assumptions, alternatives and missing perspectives explicit. Use only the material I supply. Keep the result private and concise; mark unknowns rather than asking me to complete every field.
 
 ### Examine an existing claim
 
@@ -43,21 +65,21 @@ replace `@impact-to-funding` with a request to read and follow `SKILL.md`.
 
 ### Review progress
 
-> @impact-to-funding Compare my earlier intentions with these new records, using the report template where helpful. Include failures, conflicting evidence, costs where appropriate, harms and changed assumptions. Explain which old claims or reviews no longer apply. End with the useful continue/change/support-existing/defer/stop decision, not an impact score.
+> @impact-to-funding Compare my earlier intentions with these new records, using the report template where helpful. Include failures, conflicting evidence, costs where appropriate, harms and changed assumptions. Explain which old claims or reviews no longer apply, what I can learn and what could help the contribution continue or change. Include any actual decision needed, not an impact score or a forced commitment.
 
 ### Connect personal direction and several projects
 
-> @impact-to-funding Help me review my contributions to these projects against my tentative personal direction, using the contribution reference. Keep shared project theories separate and reference their available versions. Show my actual versus proposed roles, dependencies, capacity conflicts, shared work and evidence limits. Do not require one unified mission, other contributors' personal theories or access to restricted project records. Keep the portfolio private, do not add joint outcomes or costs repeatedly, and end with the next useful commitment or learning decision.
+> @impact-to-funding Help me understand how my contributions to these projects connect with my tentative personal direction, using the contribution reference. Keep shared project theories separate and reference their available versions. Show my actual versus proposed roles, relationships, dependencies, capacity conflicts, shared work and evidence limits. Do not require one unified mission, other contributors' personal theories or access to restricted project records. Keep the portfolio private and do not add joint outcomes or costs repeatedly. Help me see what fits, what I am learning and where support or a change might help; do not invent commitments.
 
 Add an output location and permission to write only if you want saved files. A request to draft does not authorise sending, publishing, collecting new data or changing an account.
 
 ## Optional framework lens
 
-If it would change your decision, use the [framework starter](../references/frameworks.md)
+If it would help you understand or develop the work, use the [framework starter](../references/frameworks.md)
 to choose a relevant lens or keep your existing local model. Ordinary use needs no
 framework, personal-purpose disclosure or complete assessment against every dimension.
 
-> @impact-to-funding Would Planetary Boundaries, Doughnut Economics or no named framework help this specific decision? Use the optional framework reference only where useful. Keep local questions separate from global facts, explain scale and evidence limits, and suggest only the few changes that matter to the theory. Do not invent personal quotas, stakeholder views, outcomes or framework endorsement. Keep the result private.
+> @impact-to-funding Would Planetary Boundaries, Doughnut Economics or no named framework help me understand this contribution? Use the optional framework reference only where useful. Keep local questions separate from global facts, explain scale and evidence limits, and suggest only the few changes that matter to the theory. Do not invent personal quotas, stakeholder views, outcomes or framework endorsement. Keep the result private.
 
 The cards contain dated source-linked notes, not copied tools or diagrams. Source
 rights/editions remain separate from this skill and your own project evidence; no
@@ -125,14 +147,17 @@ separate actual actions with their applicable authority.
 
 ## What a useful result looks like
 
-A concise profile or assessment should make clear:
+A useful result can be conversational exploration, a possible contribution,
+understanding of relationships or support needs, learning, a particular decision
+or a requested profile/report. It need not be a document. Where relevant, keep clear:
 
-- The causal pathway and the person's real contribution, not just project activity.
+- The person's emerging direction, contribution or question; a causal pathway where useful, not just project activity.
+- Actual versus possible relationships, roles, capacity and support; no invented agreements or offers.
 - What is observed, self-reported, proposed, assumed, disputed or unknown.
 - Sources, measurement definitions, dates, other contributors and limitations.
 - Actual reviewer information if a review exists; no invented certification.
 - A proportionate learning or funding plan where requested.
-- The next material decision, and disclosure boundaries.
+- Useful learning, open questions or next steps without a forced decision or commitment, and disclosure boundaries.
 
 Use only relevant sections of the [assessment packet](../assets/assessment.md) or [report template](../assets/report.md). One useful page can be better than six documents. The skill may narrow a claim, recommend supporting existing work, or conclude there is no justified new funding amount yet.
 

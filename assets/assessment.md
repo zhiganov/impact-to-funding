@@ -1,20 +1,20 @@
 # Assessment packet template
 
-**Template instructions:** use only the sections needed for the requested decision. Replace placeholders with sourced information or explicit unknowns; do not leave these instructions in the output. Default to a private draft. This template is not a verified-impact certificate.
+**Template instructions:** use this optional template when an assessment is useful or requested, not as the default output of an exploratory conversation. Select only the sections needed for the person's current purpose, question or contribution. Replace placeholders with sourced information or explicit unknowns; do not leave these instructions in the output. Default to a private draft. This template is not a verified-impact certificate.
 
-## Profile and decision
+## Profile and purpose
 
 - Assessment subject: individual, project or selected contribution portfolio:
 - Person/chosen identity and project(s):
 - Actual role and other contributors:
-- Stage and current decision:
+- Stage and current focus; a particular decision only if relevant:
 - Reporting/assessment period and preparation date:
 - Intended beneficiaries and who defines success:
 - Disclosure status and permitted audience:
 
 ### Plain-language summary
 
-What is being attempted, the person's actual contribution, what is supported, what is uncertain, and the decision this assessment helps make. Keep aspirations separate from observed results.
+What is being attempted, the person's actual contribution, what is supported, what is uncertain, and what this assessment helps the person understand or develop. Include a particular decision if relevant. Keep aspirations separate from observed results.
 
 ## Theory of change
 
@@ -33,7 +33,7 @@ What is being attempted, the person's actual contribution, what is supported, wh
 
 ## Contributions and portfolio, if relevant
 
-Use the [contribution guidance](../references/contributions.md). Omit this section when it adds no decision value; project-only assessment does not require personal theories. Keep shared project theories at their source and personal rationale voluntary/private.
+Use the [contribution guidance](../references/contributions.md). Omit this section when it does not help the current work; project-only assessment does not require personal theories. Keep shared project theories at their source and personal rationale voluntary/private.
 
 | Project/theory reference and version, if available | Actual/proposed role and period | Mechanism, dependencies and capacity limits | Claim/evidence references; shared work and uncertainty | Next decision or learning |
 |---|---|---|---|---|
@@ -70,10 +70,10 @@ For each evidence ID: source/owner, what was supplied or inspected, relevant obs
 - Material risks, failure/stop decisions and progress-reporting plan:
 - Person-supplied funding destination, if any; ownership/eligibility limits:
 
-## Review and next decision
+## Review, learning and continuation
 
 - Supported conclusions versus proposals and unknowns:
 - Material correction/dispute or change from earlier reports:
-- Smallest next decision or missing fact; no automatic outreach/collection:
+- Useful learning, open question or next step; a decision if needed, with no automatic outreach/collection:
 - Private details excluded from any public candidate:
 - Actual approvals and their limits, or explicitly not approved:

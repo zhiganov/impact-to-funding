@@ -4,7 +4,7 @@
 
 Impact to Funding (ItF) is an open-source agent skill for developers, maintainers and independent builders who already work with AI agents and want to turn their capabilities into meaningful contributions.
 
-It helps you explore what is worth working on, explain how your contribution could help, examine the evidence, and prepare an honest case for the resources needed to continue.
+It helps you explore where your skills and experience could be useful, develop contributions with others, learn what difference the work makes, and explain what support would help it continue. You can arrive without a predefined decision, project or fundraising goal.
 
 **Experimental v0:** native installation, discovery and activation were checked in OpenCode v2.2.5 at source revision `22d4c8d`. Human usefulness, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
 
@@ -24,14 +24,16 @@ Community organisers, small project teams and facilitators may also find the wor
 
 ## What can it help me do today?
 
-- **Choose or challenge a direction.** Examine a real need, assumptions and alternatives, including supporting existing work, changing the plan or stopping.
+- **Explore where you could contribute.** Connect your interests, capabilities and circumstances with real needs; no predefined project, decision or life mission is required. Consider supporting existing work as well as a new effort.
+- **Develop a contribution with others.** Clarify possible roles, existing relationships, shared interests and capacity without inventing invitations, agreements or access to collaborators.
 - **Explain how your contribution could help.** Connect activities to intended outcomes while distinguishing your role from the results of a shared project.
 - **Examine what the evidence supports.** Separate outputs, observed changes, plausible contributions and expected impact; retain dated sources, uncertainty and contrary evidence.
 - **Plan proportionate learning.** Identify the smallest useful way to learn whether the work helps, without inventing stakeholder views or collecting unnecessary data.
+- **Explore sustainable participation.** Understand time, income, collaborators and other resources needed to continue, without assuming unpaid capacity or promising support.
 - **Prepare an honest case for support.** Explain what additional resources would enable, the cost basis where known, dependencies and how progress could be reported.
 - **Review what changed.** Compare intentions with results, including failures and changed assumptions, and decide what to do differently.
 
-Optional resources support personal/project theories of change, multi-project contribution portfolios, and source-linked framework lenses. They are supporting methods, not required forms or scores. Project-only work does not require a personal theory; a prospective proposal does not require pretending that future outcomes have already happened.
+Decisions and documents support this work; they are not required entry points or the endpoint of every conversation. Optional resources support personal/project theories of change, multi-project contribution portfolios, and source-linked framework lenses. They are supporting methods, not required forms or scores. Project-only work does not require a personal theory; a prospective proposal does not require pretending that future outcomes have already happened.
 
 ## The larger vision
 
