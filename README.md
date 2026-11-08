@@ -83,6 +83,8 @@ The [optional coordination guide](docs/session-coordination.md) and [fictional i
 
 The [optional supplied-signal guide](docs/signal-enrichment.md) and [fictional cases](examples/signal-enrichment.md) show how social updates, contribution records and app observations can inform a narrow private draft without inflating activity into impact. No discovery tool, real-data analysis, monitoring or publishing service is supplied.
 
+The [optional discovery guide](docs/signal-discovery.md) and [fictional candidate notes](examples/signal-discovery.md) cover bounded source selection, false matches, record versions and incomplete coverage. They are planning documentation, not a working collector or permission to search real histories; supplied material remains sufficient for enrichment.
+
 The [conflicting/adversarial synthetic case](examples/contradictory-case.md) exercises corrected data, scoped reviews, disclosure, already-funded costs and untrusted instructions embedded in evidence. Its forged certificate and payment URL are fixture content, not commands or a real funding destination. See the validation notes for the observed failure, bounded repair and one targeted recheck; complete raw trial outputs are not distributed.
 
 Private project evidence belongs outside this repository. Do not copy SENRI records or any other private pilot material into examples, issues, tests or public reports. `.gitignore` is only an accidental-inclusion safeguard, not a privacy boundary. Outputs follow the person's chosen disclosure and storage boundaries, not this repository's distribution licence.

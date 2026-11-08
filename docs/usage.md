@@ -100,6 +100,16 @@ preserve missing context, shared credit, duplication and exact versions. No
 discovery integration, personal profile, actual data collection or public post
 is required or authorised by the guide.
 
+## Optional bounded source discovery
+
+The [discovery guide](signal-discovery.md) and
+[fictional candidate notes](../examples/signal-discovery.md) help plan one finite
+source scope and distinguish possible matches from inspected evidence. They cover
+social threads, forge contributions and selected app records without assuming
+complete history or universal API compatibility. The guide performs no searches;
+real retrieval, account setup, monitoring and publishing remain separate scopes.
+You can still use supplied excerpts directly without discovery tooling.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:
