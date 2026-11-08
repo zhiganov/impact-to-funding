@@ -6,7 +6,7 @@ Impact to Funding (ItF) is an open-source agent skill for developers, maintainer
 
 It helps you explore where your skills and experience could be useful, develop contributions with others, learn what difference the work makes, and explain what support would help it continue. You can arrive without a predefined decision, project or fundraising goal.
 
-**Experimental v0:** native installation, discovery and activation were checked in OpenCode v2.2.5 at source revision `22d4c8d`. Human usefulness, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
+**Experimental v0:** native installation, discovery and activation were checked in OpenCode v2.2.5 at purpose-aligned source revision `666f8f8`. Human usefulness, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
 
 ## Is this for me?
 
@@ -50,7 +50,7 @@ native project skill path. These commands require Git and an unused destination:
 
 ```sh
 git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
-git -C .opencode/skills/impact-to-funding checkout --detach 22d4c8d31aa32e98609341eb7fd4eadc85a8608a
+git -C .opencode/skills/impact-to-funding checkout --detach 666f8f8060276cebc3bc14f632676035cc831579
 ```
 
 This installs only for that project; it does not change global configuration.
@@ -60,10 +60,12 @@ In OpenCode for the same project, invoke the skill normally:
 
 You do not need to open or read the skill's Markdown source. Read the
 [privacy guidance](PRIVACY.md) before providing real material; your host's normal
-costs and privacy terms apply. The native API check loaded the exact skill body
-and read supporting files without generating a model response. It was not a
-human usability or model-behaviour trial, an interactive TUI test, or a test of
-the Vercel Skills CLI. See the [installation-check follow-up](docs/installation-check-2026-11-04.md#successful-follow-up--2026-11-08).
+costs and privacy terms apply. The native registry and skill tool loaded the exact
+revised body; an earlier native API check also read supporting files without
+generating a model response. These were not human usability or model-behaviour
+trials, interactive TUI tests, or tests of the Vercel Skills CLI. See the
+[revised-source check](docs/installation-check-2026-11-04.md#revised-workflow-verification--2026-11-08)
+and [earlier installation follow-up](docs/installation-check-2026-11-04.md#successful-follow-up--2026-11-08).
 
 ## Optional manual use
 
@@ -119,7 +121,7 @@ Private project evidence belongs outside this repository. Do not copy SENRI reco
 
 Limited fresh-context development trials are recorded in the [validation notes](docs/validation-2026-11-04.md). They do not establish independent validation, human usefulness, fundraising effectiveness or reliable behaviour in another host. The example prompts above are authored starting points, not observed model results.
 
-For an Agent Skills-compatible host, the package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. A 2026-11-08 follow-up verified native OpenCode v2.2.5 discovery and activation of source `22d4c8d` after waiting for host plugin readiness. Earlier empty API registries did not establish an installation failure: that version's skill-list endpoint does not await plugin loading. The [installation-check record](docs/installation-check-2026-11-04.md) preserves the earlier unsuccessful probes and the successful follow-up. Other hosts remain untested; no new release was made.
+For an Agent Skills-compatible host, the package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. Native OpenCode v2.2.5 discovery and activation of purpose-aligned source `666f8f8` were verified on 2026-11-08; the earlier readiness-aware check used `22d4c8d`. Earlier empty API registries did not establish an installation failure: that version's skill-list endpoint does not await plugin loading. The [installation-check record](docs/installation-check-2026-11-04.md) preserves the unsuccessful probes and both successful checks. Other hosts remain untested; no new release was made.
 
 ItF does not rank people, award verified-impact badges, promise donations, publish records, contact funders or distribute money. A request to draft does not authorise sending or publishing. The skill is informed by the School for Moral Ambition's public principles, not affiliated with or endorsed by the School or Rutger Bregman. See [sources and rights](SOURCES.md).
 

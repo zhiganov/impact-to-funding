@@ -1,5 +1,21 @@
 # OpenCode installation check — 2026-11-04
 
+## Revised workflow verification — 2026-11-08
+
+**Latest checked skill source: `666f8f8060276cebc3bc14f632676035cc831579`.**
+After purpose alignment, the revised source was published and the existing global
+OpenCode installation was updated to that exact revision. The native OpenCode
+v2.2.5 registry selected the intended global skill and returned the exact revised
+body; the native `skill` tool then loaded it successfully in the current session.
+No host-code or global-settings change was needed.
+
+The four package checks and independent static review passed. Hard boundaries
+and assessment funding fields were unchanged. This verifies registration and
+instruction loading, not user usefulness, reliable model behaviour, available
+collaborators or funding. No new release, separate model trial, paid evaluation
+or outreach occurred. The earlier `22d4c8d` check below remains its own dated
+evidence; it is not presented as a test of the revised instructions.
+
 ## Successful follow-up — 2026-11-08
 
 **Native discovery and activation passed in OpenCode v2.2.5 on macOS for source
