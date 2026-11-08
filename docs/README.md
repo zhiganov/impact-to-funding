@@ -17,7 +17,9 @@ collection and systems/complexity instruction changes remain separate scopes.
 The separate [seed collection](../references/library/README.md) applies the design
 through original source-linked notes and explicitly provisional pattern links.
 It supplies neither comprehensive domain coverage nor validation of transfer to
-a new setting, and does not implement a database or automated skill routing.
+a new setting. The [core skill](../SKILL.md#use-reference-knowledge-selectively)
+conditionally reads relevant notes; this adds no database, live retrieval service
+or systems/complexity method change.
 
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is

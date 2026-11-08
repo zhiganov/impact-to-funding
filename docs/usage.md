@@ -73,6 +73,35 @@ replace `@impact-to-funding` with a request to read and follow `SKILL.md`.
 
 Add an output location and permission to write only if you want saved files. A request to draft does not authorise sending, publishing, collecting new data or changing an account.
 
+## Use reference examples and patterns when helpful
+
+The skill can selectively read the [seed library](../references/library/README.md)
+while helping with a contribution or theory of change. You do not need to open
+its Markdown files, choose a framework or read the full collection. A few useful
+references are enough; your own material may be more relevant.
+
+For example:
+
+> @impact-to-funding I'm exploring a community feedback tool. Use relevant cases or candidate patterns to help me think about what would turn feedback into useful action. Explain differences from my situation and keep evidence limits clear. Do not browse or contact anyone.
+
+> @impact-to-funding Can a Housing First example help me understand the relationship between access, ongoing support and outcomes? Separate the published model, this library's reconstruction and the findings. Do not treat one outcome as proof of every expected benefit.
+
+The following are authored routing expectations, not observed model trials:
+
+| Situation | Intended routing and limit |
+|---|---|
+| Bare invocation or open exploration without a useful reference need | Reuse context or ask an open question; do not load a library or impose an example, decision or framework. |
+| Feedback tool or response-capacity question | Read the index, P001 and relevant cases such as C002; retain its publisher-summary/full-report distinction and local power/authority questions. |
+| Housing-model or outcome comparison | Read C004, with P002 if useful; distinguish housing stability from clinical and financial outcomes. |
+| Request spanning several domains or patterns | Read the relevant pattern and enough linked cases for the requested comparison; label proposed analogies and do not claim a universal mechanism. |
+| Request for a food-system example in this seed | Report the current coverage gap; do not invent a P4P case or restart source-access work merely to fill it. A transparent cross-domain analogy can be offered if useful, not disguised as food-system evidence. |
+
+Reading a case note is not the same as inspecting its underlying paper. The agent
+should attribute what the note reports and retain dates, provenance and uncertainty.
+New research and consequential external actions still need the applicable scope;
+the library supplies no automatic data collection or source-access permission.
+Local theories/applications remain private unless separately cleared for sharing.
+
 ## Optional framework lens
 
 If it would help you understand or develop the work, use the [framework starter](../references/frameworks.md)

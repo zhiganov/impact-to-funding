@@ -1,6 +1,6 @@
 # Case-grounded reference library
 
-**Seed collection, record revision 1, prepared 2026-11-08.** Original source-linked
+**Seed collection, index revision 2, updated 2026-11-08.** Original source-linked
 case notes and candidate patterns for exploring contributions and theories of
 change. This is a small, deliberately selected collection, not comprehensive
 coverage, a set of universal best practices or an independent impact assessment.
@@ -96,6 +96,9 @@ public case without a separate disclosure/reuse basis. Referencing a case does n
 authorise outreach, publication, fundraising or assigning roles.
 
 These are ordinary linked reference files, not a database, crawler, live search
-service, available reviewer pool or automated recommendation system. No new
-skill-routing or systems/complexity instruction changes are implemented by the
+service, available reviewer pool or automated recommendation system. The
+[core skill](../../SKILL.md#use-reference-knowledge-selectively) conditionally routes
+to this index and relevant notes when examples or patterns help. This is ordinary
+host file-reading, not a new retrieval service or a change to the systems/complexity
+method. The person does not need to open Markdown source files or complete the
 collection. Its use is optional, and it is not a gate for learning about ItF.

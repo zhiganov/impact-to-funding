@@ -11,6 +11,11 @@ is a separate, bounded curation stage. It does not turn this document's fictiona
 worked example into real evidence or establish pattern validity, exhaustive
 coverage, database implementation or automated skill routing.
 
+A later [core-skill integration](../SKILL.md#use-reference-knowledge-selectively)
+adds optional, selective reading of those notes through the host's existing tools.
+That is not a database, collector, automatic recommendation engine or a change
+to the systems/complexity method proposed as a separate scope.
+
 ## Purpose
 
 Help people recognise possibilities for contributing, examine their local fit
@@ -219,7 +224,8 @@ not inherit old reviews or rewrite historical evidence.
 A future skill link could load only relevant notes, with sources, interpretation
 and limitations visible. The library would be optional, not an always-loaded
 prompt, live collector or automatic recommendation engine. No routing/retrieval
-feature is implemented here.
+feature is implemented by this design record itself; the later core-skill link
+implements conditional reference reading, not a new retrieval service.
 
 Consider a database or separate distribution project when actual concurrent
 editing, retrieval, updating or multiple consumers justify it, with ownership,
@@ -250,7 +256,7 @@ Follow [sources and rights](../SOURCES.md) and ordinary privacy/disclosure rules
 
 **Established by this design:** a proposed knowledge structure, contextual links,
 transfer limits, open domains, fictional walkthrough and storage recommendation.
-**Not established:** real case coverage, recurring mechanisms, pattern validity,
+**Not established by this design alone:** real case coverage, recurring mechanisms, pattern validity,
 user usefulness, implemented catalogue/routing, operational capacity or changes to
 the skill's systems/complexity method. Seed curation, implementation, publication
 and any installed-version update retain their scope and approval boundaries.

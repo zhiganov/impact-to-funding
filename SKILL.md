@@ -1,6 +1,6 @@
 ---
 name: impact-to-funding
-description: "Help people put their skills, energy and experience towards real problems, develop meaningful contributions with others, learn what difference their work makes, and explore sustainable support. Use for exploring direction, contributing to existing efforts, collaboration, theories of change, evidence review, funding briefs and progress reports. No predefined decision, project or fundraising goal is required. Does not supply matching, introductions, funding or impact certification, or authorise outreach or money movement."
+description: "Help people put their skills, energy and experience towards real problems, develop meaningful contributions with others, learn what difference their work makes, and explore sustainable support. Use for exploring direction, collaboration, theories of change, source-linked examples and candidate patterns, evidence review, funding briefs and progress reports. No predefined decision, project or fundraising goal is required. Does not supply matching, introductions, funding or impact certification, or authorise outreach or money movement."
 license: MIT
 ---
 
@@ -44,6 +44,7 @@ Infer a suitable approach from the context; do not require a menu selection or w
 - For any assessment or funding claim, read [claim review](references/claims.md).
 - For exploring an individual's contribution, working with others or connecting shared projects in a portfolio, read [contribution relationships](references/contributions.md). Project-only work does not require contributors' personal theories.
 - Only when useful to the person's exploration/work or requested, read [optional framework lenses](references/frameworks.md) for selection, source-linked Planetary Boundaries/Doughnut notes and scale limits. No named framework, personal-purpose disclosure or framework score is required.
+- When concrete examples or reusable patterns would help, or the person asks for them, read the [reference-library index](references/library/README.md), then only the case, pattern or lens notes relevant to the current work. Do not load the collection on every invocation or require an external example before helping.
 - For a funding brief, public candidate or report, also read [funding and review](references/funding-and-review.md).
 - Use relevant sections of the [assessment packet](assets/assessment.md); do not mechanically fill every section or leave placeholder instructions in final prose.
 - For a reporting update, use [periodic report](assets/report.md).
@@ -53,6 +54,16 @@ Infer a suitable approach from the context; do not require a menu selection or w
 - For attribution/rights questions, see [sources and rights](SOURCES.md).
 - The [synthetic input](examples/builder-case.md) and [illustrative output](examples/builder-assessment.md) are examples only, never evidence about the person's work.
 - The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) illustrate linked theories, shared work and capacity limits, not observed behaviour.
+
+## Use reference knowledge selectively
+
+The library is an optional source of examples and hypotheses, not a menu the person must complete or a catalogue of proven solutions. Select by the relevant need, mechanism, relationships and constraints, not domain labels alone. Start with a small useful selection; read more only when the request or comparison needs it. The agent reads the notes through the host's tools; do not ask the person to open source Markdown as a substitute for using the skill.
+
+Read a case before relying on its findings and the relevant pattern note before proposing that pattern. Preserve the difference between a source-published theory, a case-note reconstruction, observed findings and an ItF pattern hypothesis. Retain mixed/null results, evaluator relationships and source-inspection limits. Cite the record identifier/revision and relevant source link where useful; if only the library note was read in this conversation, attribute its account rather than claiming to have inspected its underlying paper or full report.
+
+For a local adaptation, explain the proposed connection and material differences in authority, incentives, capacity, relationships, scale and affected people's perspectives. A cross-domain analogy remains a proposal, not evidence that the same outcome will recur. A tested bundle does not isolate every component. Use a framework question only if it adds something useful; shared lens labels neither corroborate cases nor establish conformance.
+
+Check the index's coverage and each note's inspection limits. If a suitable case or inspected source is absent, state the gap; do not invent an example, complete a missing report from its summary or treat an unavailable source as nonexistent. Continue with appropriate supplied material or a clearly labelled hypothesis where useful. New collection, source-access recovery, live retrieval and disclosure retain the host's actual scope/permissions; a library link does not authorise them. Keep private applications out of the public collection.
 
 ## Explore worthwhile directions and real needs
 
