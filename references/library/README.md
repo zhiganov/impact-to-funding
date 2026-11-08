@@ -102,3 +102,8 @@ to this index and relevant notes when examples or patterns help. This is ordinar
 host file-reading, not a new retrieval service or a change to the systems/complexity
 method. The person does not need to open Markdown source files or complete the
 collection. Its use is optional, and it is not a gate for learning about ItF.
+
+The [independent MCP interface decision](../../docs/reference-library-mcp-decision.md)
+records a future programmatic access direction, not a working service. These
+versioned notes remain canonical and bundled skill use stays independent of MCP
+or a funding-service account. Library expansion does not wait for that interface.

@@ -21,6 +21,12 @@ a new setting. The [core skill](../SKILL.md#use-reference-knowledge-selectively)
 conditionally reads relevant notes; this adds no database, live retrieval service
 or systems/complexity method change.
 
+The [reference-library MCP decision](reference-library-mcp-decision.md) selects an
+independently usable interface with future source in this public repository,
+separate from funding/opportunity discovery. Canonical Markdown and bundled skill
+use remain independent. This records an architecture boundary, not a tool contract,
+implemented server, hosting commitment or requirement to use MCP.
+
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is
 design only, not an exporter or publication trial; funding.json stays unchanged

@@ -118,6 +118,12 @@ reference use, not a live search or automated recommendation service. Source
 evidence and ItF interpretations remain distinct; local fit, missing coverage
 and uncertainty stay visible. See the [usage examples](docs/usage.md#use-reference-examples-and-patterns-when-helpful).
 
+An [independent library MCP interface](docs/reference-library-mcp-decision.md)
+is the selected architecture direction for future programmatic access. Its source
+would live here, separately from funding/opportunity discovery services. Canonical
+records and bundled skill use stay independent; no server, deployment or client
+compatibility is implemented by this documentation decision.
+
 The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
 
 The [optional expert-review guide](docs/expert-review.md) and [fictional review walkthrough](examples/expert-review.md) cover a bounded request, conflicts, permitted evidence, reviewer-authored findings and reuse of existing evaluations. No reviewer pool, matching, actual review or impact certification is supplied.
