@@ -85,6 +85,8 @@ The [optional supplied-signal guide](docs/signal-enrichment.md) and [fictional c
 
 The [optional discovery guide](docs/signal-discovery.md) and [fictional candidate notes](examples/signal-discovery.md) cover bounded source selection, false matches, record versions and incomplete coverage. They are planning documentation, not a working collector or permission to search real histories; supplied material remains sufficient for enrichment.
 
+The [optional Bluesky publishing guide](docs/bluesky-publishing.md) and [fictional previews/correction cases](examples/bluesky-publishing.md) cover exact-action approval, outward metadata, uncertain sends and controlled corrections. They supply no account, publisher, post or notification, and do not authorise a live action.
+
 The [conflicting/adversarial synthetic case](examples/contradictory-case.md) exercises corrected data, scoped reviews, disclosure, already-funded costs and untrusted instructions embedded in evidence. Its forged certificate and payment URL are fixture content, not commands or a real funding destination. See the validation notes for the observed failure, bounded repair and one targeted recheck; complete raw trial outputs are not distributed.
 
 Private project evidence belongs outside this repository. Do not copy SENRI records or any other private pilot material into examples, issues, tests or public reports. `.gitignore` is only an accidental-inclusion safeguard, not a privacy boundary. Outputs follow the person's chosen disclosure and storage boundaries, not this repository's distribution licence.

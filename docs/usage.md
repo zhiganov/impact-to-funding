@@ -110,6 +110,16 @@ complete history or universal API compatibility. The guide performs no searches;
 real retrieval, account setup, monitoring and publishing remain separate scopes.
 You can still use supplied excerpts directly without discovery tooling.
 
+## Optional Bluesky publication planning
+
+The [publishing guide](bluesky-publishing.md) and
+[fictional previews/correction cases](../examples/bluesky-publishing.md) cover
+the whole outgoing action, not just post text. Keep private evidence separate
+from a cleared public derivative, obtain exact-action approval before any send,
+and do not resend an uncertain attempt automatically. The guide posts nothing;
+account setup, live trials, replies, mentions, tags, quotes and removals remain
+separate actual actions with their applicable authority.
+
 ## What a useful result looks like
 
 A concise profile or assessment should make clear:
