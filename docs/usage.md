@@ -1,10 +1,10 @@
 # Using the skill
 
-This guide covers manual use of the instructions. It is not a claim that installation or automatic discovery has been tested in your agent. See the [validation limits](validation-2026-11-04.md).
+Install ItF using the [native OpenCode instructions](../README.md#install-and-use-in-opencode), then invoke `@impact-to-funding` in that project. Native discovery and activation were checked in OpenCode v2.2.5 at source `22d4c8d`; other hosts and user usefulness remain unverified. See the [installation follow-up](installation-check-2026-11-04.md#successful-follow-up--2026-11-08) and [behavioural validation limits](validation-2026-11-04.md). Manual file-reading remains an optional alternative, not the normal skill invocation below.
 
 ## Before you start
 
-1. Open a trusted copy of this repository in an agent that can read local Markdown files. Keep the directory intact: [SKILL.md](../SKILL.md) needs its relative references and assets.
+1. Install the complete trusted package in your project and use OpenCode for that project. Keep the directory intact: [SKILL.md](../SKILL.md) needs its relative references and assets. For optional manual use, open the complete repository in a file-reading agent instead.
 2. Read the [privacy guidance](../PRIVACY.md). A local file can still be sent to a remote model when your agent reads it. Use only material you are authorised to process with that host/provider.
 3. Choose a private output location outside this distributable repository. No files need to be written to try a conversation; a response in the chat may be enough. Check the host's history, retention and sharing behaviour too.
 
@@ -26,25 +26,28 @@ Unknowns are legitimate inputs. Do not invent evidence or obtain unnecessary sen
 
 ## Five starting prompts
 
+These prompts use OpenCode's skill mention. For deliberately chosen manual use,
+replace `@impact-to-funding` with a request to read and follow `SKILL.md`.
+
 ### Develop a theory of change
 
-> Read SKILL.md and the relevant references, then follow the skill. Help me develop a provisional theory of change for the description below. Identify the actual decision, assumptions, alternatives and whose perspective is missing. Use only the material I supply. Keep the result private and concise; mark unknowns rather than asking me to complete every field.
+> @impact-to-funding Help me develop a provisional theory of change for the description below. Identify the actual decision, assumptions, alternatives and whose perspective is missing. Use only the material I supply. Keep the result private and concise; mark unknowns rather than asking me to complete every field.
 
 ### Examine an existing claim
 
-> Follow SKILL.md. Assess the following claim against the supplied evidence. Distinguish what the sources actually measure, what changed, my contribution and what remains unsupported. Do not browse, contact anyone or treat linked-but-unread evidence as inspected. Suggest honest wording and the smallest useful next decision.
+> @impact-to-funding Assess the following claim against the supplied evidence. Distinguish what the sources actually measure, what changed, my contribution and what remains unsupported. Do not browse, contact anyone or treat linked-but-unread evidence as inspected. Suggest honest wording and the smallest useful next decision.
 
 ### Prepare a funding brief
 
-> Follow SKILL.md. Help me prepare a private funding brief: the purpose, supported contribution, what additional support would enable, actual cost basis if known, risks and reporting plan. Separate observed results from proposed outcomes. Account for existing support and shared credit. Do not invent a reviewer, budget, funding URL or guaranteed return, and do not submit or publish anything.
+> @impact-to-funding Help me prepare a private funding brief: the purpose, supported contribution, what additional support would enable, actual cost basis if known, risks and reporting plan. Separate observed results from proposed outcomes. Account for existing support and shared credit. Do not invent a reviewer, budget, funding URL or guaranteed return, and do not submit or publish anything.
 
 ### Review progress
 
-> Follow SKILL.md and use the report template where helpful. Compare my earlier intentions with these new records. Include failures, conflicting evidence, costs where appropriate, harms and changed assumptions. Explain which old claims or reviews no longer apply. End with the useful continue/change/support-existing/defer/stop decision, not an impact score.
+> @impact-to-funding Compare my earlier intentions with these new records, using the report template where helpful. Include failures, conflicting evidence, costs where appropriate, harms and changed assumptions. Explain which old claims or reviews no longer apply. End with the useful continue/change/support-existing/defer/stop decision, not an impact score.
 
 ### Connect personal direction and several projects
 
-> Follow SKILL.md and the contribution reference. Help me review my contributions to these projects against my tentative personal direction. Keep shared project theories separate and reference their available versions. Show my actual versus proposed roles, dependencies, capacity conflicts, shared work and evidence limits. Do not require one unified mission, other contributors' personal theories or access to restricted project records. Keep the portfolio private, do not add joint outcomes or costs repeatedly, and end with the next useful commitment or learning decision.
+> @impact-to-funding Help me review my contributions to these projects against my tentative personal direction, using the contribution reference. Keep shared project theories separate and reference their available versions. Show my actual versus proposed roles, dependencies, capacity conflicts, shared work and evidence limits. Do not require one unified mission, other contributors' personal theories or access to restricted project records. Keep the portfolio private, do not add joint outcomes or costs repeatedly, and end with the next useful commitment or learning decision.
 
 Add an output location and permission to write only if you want saved files. A request to draft does not authorise sending, publishing, collecting new data or changing an account.
 
@@ -54,7 +57,7 @@ If it would change your decision, use the [framework starter](../references/fram
 to choose a relevant lens or keep your existing local model. Ordinary use needs no
 framework, personal-purpose disclosure or complete assessment against every dimension.
 
-> Follow SKILL.md. Would Planetary Boundaries, Doughnut Economics or no named framework help this specific decision? Use the optional framework reference only where useful. Keep local questions separate from global facts, explain scale and evidence limits, and suggest only the few changes that matter to the theory. Do not invent personal quotas, stakeholder views, outcomes or framework endorsement. Keep the result private.
+> @impact-to-funding Would Planetary Boundaries, Doughnut Economics or no named framework help this specific decision? Use the optional framework reference only where useful. Keep local questions separate from global facts, explain scale and evidence limits, and suggest only the few changes that matter to the theory. Do not invent personal quotas, stakeholder views, outcomes or framework endorsement. Keep the result private.
 
 The cards contain dated source-linked notes, not copied tools or diagrams. Source
 rights/editions remain separate from this skill and your own project evidence; no

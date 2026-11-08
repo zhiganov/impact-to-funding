@@ -6,7 +6,7 @@ Impact to Funding (ItF) is an open-source agent skill for developers, maintainer
 
 It helps you explore what is worth working on, explain how your contribution could help, examine the evidence, and prepare an honest case for the resources needed to continue.
 
-**Experimental v0:** manual file-reading is available in an existing AI assistant. Native installation, human usefulness and fundraising effectiveness remain unverified. See [status and limits](#status-and-limits).
+**Experimental v0:** native installation, discovery and activation were checked in OpenCode v2.2.5 at source revision `22d4c8d`. Human usefulness, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
 
 ## Is this for me?
 
@@ -41,7 +41,29 @@ The goal is impact that can be substantiated and, where appropriate, independent
 
 **Today, ItF provides a conversational workflow and templates—not a matching network, introductions, a job-placement service, funding or impact certification.** Existing communities and human-facilitated connections may support the vision; a new platform is not assumed. Neither financial support nor successful outcomes are guaranteed.
 
-## Try it locally
+## Install and use in OpenCode
+
+From the project where you want to use ItF, install the complete package at the
+native project skill path. These commands require Git and an unused destination:
+
+```sh
+git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
+git -C .opencode/skills/impact-to-funding checkout --detach 22d4c8d31aa32e98609341eb7fd4eadc85a8608a
+```
+
+This installs only for that project; it does not change global configuration.
+In OpenCode for the same project, invoke the skill normally:
+
+> @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I supply, mark assumptions and keep the result private. Do not contact anyone.
+
+You do not need to open or read the skill's Markdown source. Read the
+[privacy guidance](PRIVACY.md) before providing real material; your host's normal
+costs and privacy terms apply. The native API check loaded the exact skill body
+and read supporting files without generating a model response. It was not a
+human usability or model-behaviour trial, an interactive TUI test, or a test of
+the Vercel Skills CLI. See the [installation-check follow-up](docs/installation-check-2026-11-04.md#successful-follow-up--2026-11-08).
+
+## Optional manual use
 
 Open a trusted copy of the whole repository in an agent that can read [SKILL.md](SKILL.md) and its relative references and assets. No automatic installation is needed for this manual route.
 
@@ -63,7 +85,7 @@ The [usage guide](docs/usage.md) covers minimal inputs, more starting prompts an
 
 No application runtime, network, account or dependency installation is required by the skill itself. The host's normal costs and privacy terms apply. Document/image/audio access depends on its actual tools; a link to unavailable evidence is not evidence that has been inspected.
 
-For voluntary early feedback, the [one-task guide](docs/user-feedback.md) identifies a pinned post-release source revision, optional questions and privacy limits. No recruitment, telemetry or feedback collection is launched by these documents; the [learning plan](docs/user-learning-plan.md) records readiness and the remaining consent/outreach boundaries.
+The [one-task feedback guide](docs/user-feedback.md) and [learning plan](docs/user-learning-plan.md) describe an earlier manual-use preparation. That invitation route is paused and superseded for actual-skill recruitment; those documents are not the native onboarding instructions above. No recruitment, telemetry or feedback collection is launched here.
 
 ## Outputs and examples
 
@@ -95,7 +117,7 @@ Private project evidence belongs outside this repository. Do not copy SENRI reco
 
 Limited fresh-context development trials are recorded in the [validation notes](docs/validation-2026-11-04.md). They do not establish independent validation, human usefulness, fundraising effectiveness or reliable behaviour in another host. The example prompts above are authored starting points, not observed model results.
 
-For an Agent Skills-compatible host, the intended package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. Native discovery and activation are not verified: isolated OpenCode v2.2.5 checks returned an empty registry with both project-local discovery and an explicit source setting. See the [installation-check record](docs/installation-check-2026-11-04.md). Use manual file-reading without claiming automatic discovery or install-tested support; other hosts remain untested.
+For an Agent Skills-compatible host, the package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. A 2026-11-08 follow-up verified native OpenCode v2.2.5 discovery and activation of source `22d4c8d` after waiting for host plugin readiness. Earlier empty API registries did not establish an installation failure: that version's skill-list endpoint does not await plugin loading. The [installation-check record](docs/installation-check-2026-11-04.md) preserves the earlier unsuccessful probes and the successful follow-up. Other hosts remain untested; no new release was made.
 
 ItF does not rank people, award verified-impact badges, promise donations, publish records, contact funders or distribute money. A request to draft does not authorise sending or publishing. The skill is informed by the School for Moral Ambition's public principles, not affiliated with or endorsed by the School or Rutger Bregman. See [sources and rights](SOURCES.md).
 
