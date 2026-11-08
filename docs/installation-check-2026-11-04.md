@@ -1,8 +1,28 @@
 # OpenCode installation check — 2026-11-04
 
+## Reference-library integration verification — 2026-11-08
+
+**Latest checked skill source: `3ebefebf0ccdab12c6a2752aa4fce122c41129a0`.**
+The published integration adds conditional instructions for reading the library
+index and relevant case/pattern/lens notes, not a database or live retrieval
+service. The existing global OpenCode installation was updated to that exact
+revision without changing global settings or restarting the session.
+
+The OpenCode v2.2.5 registry returned the exact revised body and the native skill
+tool loaded it in the current session. All nine bundled library files matched the
+source bytes. Host read tools accessed the installed index, P001 and C002; these
+were deliberate reference-access checks, not a blind test of model selection or
+reasoning. No underlying case source was fetched again.
+
+Four package checks and independent static routing review passed. Original hard
+boundaries, financial fields and case/pattern/lens record contents were unchanged;
+the library index moved to revision 2 for the integration wording. No fresh model
+trial, paid evaluation, new release, outreach or systems/complexity method change
+occurred. Earlier checks below retain their own exact revisions and limits.
+
 ## Revised workflow verification — 2026-11-08
 
-**Latest checked skill source: `666f8f8060276cebc3bc14f632676035cc831579`.**
+**Purpose-alignment check source: `666f8f8060276cebc3bc14f632676035cc831579`.**
 After purpose alignment, the revised source was published and the existing global
 OpenCode installation was updated to that exact revision. The native OpenCode
 v2.2.5 registry selected the intended global skill and returned the exact revised
