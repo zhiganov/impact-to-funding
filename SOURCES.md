@@ -48,6 +48,15 @@ validate this library, its future patterns or any local theory of change.
 
 ## Original material and licence
 
+The [seed reference collection](references/library/README.md) contains original
+case summaries, candidate-pattern interpretations and optional framework questions.
+Each case lists the exact sources inspected, dates, evidence and reuse limits;
+programme/evaluator statements are distinguished from ItF's reconstruction or
+interpretation. Source PDFs, diagrams, datasets, stories and long extracts are
+not redistributed. AI-assisted source review is not project-author endorsement,
+practitioner validation or independent impact verification. Source rights and
+any actual adaptation requirements remain separate from the licence on these notes.
+
 The original skill, templates, synthetic examples, documentation and package checks are licensed under [MIT](LICENSE), selected by Artem for public source publication. This grant does not relicense linked third-party works, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
 
 Users' project records and generated outputs are not automatically covered by this repository's software/documentation licence. Consent, confidentiality and other rights remain separate.

@@ -6,6 +6,11 @@ service or executable schema. The worked example is entirely fictional. No broad
 collection, automatic extraction, outreach, paid evaluation or installed-skill
 change follows from this design.
 
+The subsequently prepared [seed reference collection](../references/library/README.md)
+is a separate, bounded curation stage. It does not turn this document's fictional
+worked example into real evidence or establish pattern validity, exhaustive
+coverage, database implementation or automated skill routing.
+
 ## Purpose
 
 Help people recognise possibilities for contributing, examine their local fit

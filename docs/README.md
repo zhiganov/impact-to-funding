@@ -14,6 +14,11 @@ applications across open-ended domains. It is a design, not a curated collection
 validated pattern language, database or implemented skill feature. Broad case
 collection and systems/complexity instruction changes remain separate scopes.
 
+The separate [seed collection](../references/library/README.md) applies the design
+through original source-linked notes and explicitly provisional pattern links.
+It supplies neither comprehensive domain coverage nor validation of transfer to
+a new setting, and does not implement a database or automated skill routing.
+
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is
 design only, not an exporter or publication trial; funding.json stays unchanged

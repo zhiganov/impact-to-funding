@@ -107,6 +107,13 @@ local applications across open-ended domains. Its worked example is fictional;
 the design supplies no curated case collection, validated patterns, database,
 new retrieval feature or change to the installed skill.
 
+The separate [seed reference collection](references/library/README.md) contains
+source-linked case notes, candidate patterns and optional framework questions.
+It is a deliberately limited curation, not a set of universal success recipes,
+practitioner validation, database or implemented skill-routing feature. Source
+evidence and ItF interpretations are distinguished in the notes; local fit and
+uncertainty remain essential.
+
 The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
 
 The [optional expert-review guide](docs/expert-review.md) and [fictional review walkthrough](examples/expert-review.md) cover a bounded request, conflicts, permitted evidence, reviewer-authored findings and reuse of existing evaluations. No reviewer pool, matching, actual review or impact certification is supplied.
