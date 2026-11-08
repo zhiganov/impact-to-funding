@@ -124,6 +124,13 @@ would live here, separately from funding/opportunity discovery services. Canonic
 records and bundled skill use stay independent; no server, deployment or client
 compatibility is implemented by this documentation decision.
 
+The [accepted library MCP design contract](docs/reference-library-mcp-contract.md)
+and [fictional walkthrough](examples/reference-library-mcp-walkthrough.md) define
+three read-only discovery/detail/coverage tools over the existing records. This is
+the initial `itf.library/0.1-draft` application baseline, not a released standard,
+server, executable schema, installed integration or verified client capability.
+Ordinary skill use remains independent.
+
 The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
 
 The [optional expert-review guide](docs/expert-review.md) and [fictional review walkthrough](examples/expert-review.md) cover a bounded request, conflicts, permitted evidence, reviewer-authored findings and reuse of existing evaluations. No reviewer pool, matching, actual review or impact certification is supplied.

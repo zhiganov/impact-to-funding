@@ -1,8 +1,9 @@
 # Decision: an independent reference-library MCP interface
 
 **Date:** 2026-11-09. **Status:** selected architecture direction; documentation
-delivery only. No server, query contract, deployment or tested integration is
-supplied by this decision.
+delivery only. No server, deployment or tested integration is supplied by this
+decision. The later [initial application contract](reference-library-mcp-contract.md)
+was accepted as a design baseline under #44, not as an implemented interface.
 
 ## Decision
 
@@ -46,12 +47,16 @@ and appropriate access boundaries rather than silently join credentials or terms
 
 ## Contract boundary for later work
 
-The next separately selected design should define the minimum useful discovery
-and record-reading contract, its actual supported clients and treatment of record
-identifiers/revisions, relationships, coverage, unavailable history and errors.
+The selected #44 design scope supplies an [accepted discovery/read contract](reference-library-mcp-contract.md)
+and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md).
+Its tool names, snapshot/record mapping and error semantics form the initial
+`itf.library/0.1-draft` application baseline; no client is verified as supported by
+a running service, and no executable schema is supplied.
 MCP resources can expose contextual records and tools can support parameterised
 queries; the [protocol overview](https://modelcontextprotocol.io/specification/2026-07-28/server)
-permits both. That does not select tool names, schemas, SDKs or prove compatibility.
+permits both. The application contract above selects three tool names; protocol
+capability alone does not mandate those choices, select an SDK or prove client
+compatibility. No executable input/output schemas are supplied yet.
 
 Preserve source-published theories, reconstructions, findings and ItF pattern
 interpretations as distinct. Return source links, record revisions, inspection

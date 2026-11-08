@@ -27,6 +27,13 @@ separate from funding/opportunity discovery. Canonical Markdown and bundled skil
 use remain independent. This records an architecture boundary, not a tool contract,
 implemented server, hosting commitment or requirement to use MCP.
 
+The [accepted library MCP design contract](reference-library-mcp-contract.md) and
+[entirely fictional walkthrough](../examples/reference-library-mcp-walkthrough.md)
+define the initial `itf.library/0.1-draft` read-only discovery, detail and coverage
+baseline for #44. The design preserves shared-file lens context and exact
+snapshot/version limits; executable schemas, server implementation and verified
+client compatibility are not established by these documents.
+
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is
 design only, not an exporter or publication trial; funding.json stays unchanged

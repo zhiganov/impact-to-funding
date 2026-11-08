@@ -65,6 +65,19 @@ These source-informed notes are not a hybrid named method, empirical validation
 of ItF or proof that a model applies the perspectives reliably. No source assets,
 live monitoring, paid model evaluation or detailed Cynefin workflow are supplied.
 
+## Reference-library MCP design sources
+
+The [accepted design contract](docs/reference-library-mcp-contract.md) uses the following
+technical documentation, consulted 2026-11-09, to distinguish application payloads
+from protocol framing and documented client capabilities. Tool names, application
+version, bounds and the fictional walkthrough are original ItF design
+choices, not MCP standard methods or source-author endorsements.
+
+| Source | Use and limits |
+|---|---|
+| [MCP tools specification, 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/server/tools), consulted through Context7 | Object tool inputs, output schemas, structured/text results and tool/protocol errors. No SDK/schema code was imported or executed. Read-only hints are not access enforcement. A selected implementation still needs negotiated-wire-version and client checks. |
+| [OpenCode V2 MCP guide](https://opencode.ai/v2/docs/mcp-servers) | Documented tool/resource exposure, protocol modes and optional session metadata. The page was read; current installed host was previously observed as v2.2.5. This does not prove the proposed server exists, a client uses it correctly or every detail of the evolving guide matches that installed binary. No configuration or authentication was changed. |
+
 ## Original material and licence
 
 The [seed reference collection](references/library/README.md) contains original
