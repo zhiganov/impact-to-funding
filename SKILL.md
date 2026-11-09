@@ -3,7 +3,7 @@ name: impact-to-funding
 description: "Help people put their skills, energy and experience towards real problems, develop meaningful contributions with others, learn what difference their work makes, and explore sustainable support. Use for exploring direction, collaboration, theories of change, source-linked examples and candidate patterns, evidence review, funding briefs and progress reports. No predefined decision, project or fundraising goal is required. Does not supply matching, introductions, funding or impact certification, or authorise outreach or money movement."
 license: CC-BY-SA-4.0
 metadata:
-  version: "0.3.0-dev.0"
+  version: "0.3.0"
 ---
 
 # Impact to Funding
@@ -26,6 +26,32 @@ Today this skill provides conversational help and optional templates, not a netw
 - Keep private analysis separate from a curated public candidate. No automatic publishing, evidence upload, applications, outreach, account changes or money movement. Establish the applicable authorisation and exact destination/content before those consequential actions. Routine authorised read-only source checks do not need repeated per-tool approval. A request to draft is not permission to send.
 - Do not upgrade outputs into outcomes, donations into social impact, an account signature into truth, or a partner endorsement into independent causal evaluation.
 - Never require unnecessary sensitive information or a fundraising account to develop a theory. Do not make evaluation participation a condition of essential help.
+
+## Optional update notice
+
+When the host provides this loaded skill's actual base directory and permits local
+execution, run Node with `<loaded-base-directory>/tools/skill-package/notice-entry.mjs`
+as a literal argument at most once per skill activation. Only if the host also
+permits public GitHub metadata access, add `--allow-network`; otherwise omit it.
+Pass the path without shell expansion; if safe argument handling is unavailable,
+skip it. Use the actual loaded base
+directory, not a guessed project path or another
+copy: Claude Code can provide `${CLAUDE_SKILL_DIR}`; Codex supplies the selected
+skill path; OpenCode's skill tool supplies its base directory. If the current
+host does not supply the selected path, skip the check. The helper makes no
+network request unless the person explicitly enabled
+notices for this managed installation; it caches public version-only metadata
+locally. Do not bypass a host's network/tool restrictions. If Node, the helper,
+path, permission or network is unavailable, skip the check and continue the task.
+
+If it returns `NOTICE_OFFER`, briefly mention the optional, disabled-by-default
+check alongside the requested help; do not repeat an offer already made or declined
+in this conversation. If it returns `UPDATE_AVAILABLE` or `RELEASE_AVAILABLE`,
+briefly relay that notice alongside the help without upgrading unknown freshness
+into an update claim. Never block the conversation, enable checks without consent,
+run an update during this turn or treat a notice as update approval. Do not retry
+a denied check. The optional
+[notice guide](docs/update-notices.md) explains consent, opt-out and limitations.
 
 ## Start: meet the person where they are
 

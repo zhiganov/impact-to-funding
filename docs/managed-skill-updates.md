@@ -68,6 +68,11 @@ not an enforced cross-harness turn detector. Claude's skill watching, Codex's
 discovery/restart fallback and OpenCode's refresh behaviour are described in the
 [installation guide](install.md#3-check-discovery-then-try-a-bounded-conversation).
 
+For an optional per-copy notice during skill use, see
+[in-skill update notices](update-notices.md). The installed source must contain
+its helper, and the person must explicitly enable it; actual host delivery has
+not been verified.
+
 ## Protect existing work
 
 Default-folder discovery checks project ancestors within the repository boundary
@@ -96,18 +101,22 @@ any clone made by following the [installation guide](install.md) before
 exact bytes, so `adopt` refuses it as modified even when `git status` is clean.
 This is deliberate: integrity checks do not ignore line endings.
 
-If `git status` shows no changes, re-check the same commit out with LF endings
-first, then preview adoption again:
+First back up the entire owned installation, including Git metadata, ignored
+files and private material, to an unused safe location. Inspect local work
+carefully; ordinary `git status` omits ignored files. Only if the status below
+prints nothing and you have preserved any other edits, re-check out the same
+commit with LF endings and preview adoption again:
 
 ```sh
-git -C "$target" status --porcelain   # must print nothing
+git -C "$target" status --porcelain --untracked-files=all --ignored=matching   # must print nothing
 git -C "$target" config core.autocrlf false
 git -C "$target" rm -q -r --cached .
 git -C "$target" reset -q --hard
 ```
 
-This changes only line endings in that copy; `git rev-parse HEAD` stays the same.
-Do not run it on a copy with local changes: `reset --hard` discards them.
+This rewrites the index and tracked files; `git rev-parse HEAD` stays the same.
+`reset --hard` discards tracked modifications and may remove untracked files or
+directories obstructing checkout. A clean status alone is not a backup.
 
 ## Private state and recovery
 
@@ -140,10 +149,10 @@ requests or imply no updates. Git source preparation also requires public access
 ## Compatibility and source choice
 
 File placement and local lifecycle tests do not establish native activation,
-model reliability or usefulness. Existing exact-source host checks retain their
-older SHAs and limits, including the limited Claude Code check at `4566892`. No new release, host
-sign-in, model trial, automatic notice, hook, telemetry or global configuration
-change is supplied by this implementation.
+model reliability or usefulness. Existing limited Claude, Codex and OpenCode
+checks retain their older exact-source SHAs and limits, including the limited
+Claude Code check at `4566892`. These tools do not supply a host sign-in, model
+trial, guaranteed host notice, hook, telemetry or global configuration change.
 
 The bounded comparison with Vercel Skills CLI at
 [`d3701c1`](https://github.com/vercel-labs/skills/tree/d3701c11b1101251af14c9d148f026e1a47ebe17)

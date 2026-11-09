@@ -70,6 +70,12 @@ function checkCurrent(paths, receipt) {
   }
 }
 
+// Exposed to the optional notice path so it can prove the selected managed copy
+// is still intact before offering consent or making a release-metadata request.
+export function verifyManagedCopy(paths, receipt) {
+  checkCurrent(paths, receipt);
+}
+
 function preventSelfReplacement(paths) {
   if (fileURLToPath(import.meta.url).startsWith(`${paths.target}${path.sep}`)) {
     throw new Error('Run an external CLI copy; do not replace the manager currently executing inside this skill');
@@ -250,7 +256,8 @@ export function createManager({ catalogue = githubCatalogue, prepare = prepareFr
       assertSnapshot();
       const after = {
         contractVersion: RECEIPT_CONTRACT, repository, helperVersion: HELPER_VERSION,
-        generation: id, harness: paths.harness, scope: paths.scope, target: paths.target,
+        generation: id, installationId: receipt?.installationId ?? receipt?.generation ?? id,
+        harness: paths.harness, scope: paths.scope, target: paths.target,
         sourceCommit: result.targetSource.sourceCommit,
         version: result.targetSource.version ?? candidate.declaredVersion,
         versionSource: command === 'rollback' ? result.targetSource.versionSource

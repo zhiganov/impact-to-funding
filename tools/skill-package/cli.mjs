@@ -1,9 +1,12 @@
 import { fileURLToPath } from 'node:url';
-import { createManager, HELPER_VERSION, inspectInstallation } from './index.mjs';
+import { configureNotice, createManager, HELPER_VERSION, inspectInstallation } from './index.mjs';
 
 const usage = `ItF skill manager ${HELPER_VERSION}
 Usage:
   itf inspect --root <selected-installation>
+  itf notice <enable|disable|status> --harness <claude|codex|opencode>
+      --scope <project|personal> [--project <directory>] [--apply]
+  itf notice <enable|disable|status> --root <loaded-skill-directory> [--apply]
   itf <install|check|update|adopt|rollback|recover> --harness <claude|codex|opencode>
       --scope <project|personal> [--project <directory>] [--channel <stable|prerelease>]
       [--release <vX.Y.Z> | --commit <full-sha> | --follow-channel]
@@ -20,6 +23,24 @@ export async function run(args, { onPlan } = {}) {
   if (args[0] === 'inspect') {
     if (args.length !== 3 || args[1] !== '--root') throw new TypeError('Use inspect --root <selected-installation>');
     return inspectInstallation(args[2]);
+  }
+  if (args[0] === 'notice') {
+    const action = args[1];
+    if (!['enable', 'disable', 'status'].includes(action)) throw new TypeError('Use notice enable, disable or status');
+    const options = { enabled: action === 'status' ? null : action === 'enable' };
+    const values = { '--harness': 'harness', '--scope': 'scope', '--project': 'project', '--root': 'selected' };
+    for (let i = 2; i < args.length; i += 1) {
+      const key = args[i];
+      if (key === '--apply' && !Object.hasOwn(options, 'apply')) options.apply = true;
+      else if (Object.hasOwn(values, key) && args[i + 1] && !args[i + 1].startsWith('--')
+        && !Object.hasOwn(options, values[key])) options[values[key]] = args[++i];
+      else throw new TypeError('Unknown, repeated or missing notice option');
+    }
+    const preview = configureNotice({ ...options, apply: false });
+    if (!options.apply) return preview;
+    if (action === 'status') throw new TypeError('Status is read-only');
+    onPlan?.(preview);
+    return configureNotice(options);
   }
   const values = { '--harness': 'harness', '--scope': 'scope', '--project': 'project',
     '--channel': 'channel', '--release': 'release', '--commit': 'commit' };

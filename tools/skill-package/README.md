@@ -4,6 +4,8 @@ Optional Node.js 22+ and Git tooling for the [version/provenance contract](../..
 and [managed installation/update/rollback](../../docs/managed-skill-updates.md).
 There are no package dependencies; ordinary conversation needs neither this
 helper nor Node. No hooks, global configuration, telemetry or model call is run.
+An optional [in-skill notice](../../docs/update-notices.md) requires per-copy
+consent and host tool/network permissions; user-visible delivery is unverified.
 
 ## Managed CLI
 
@@ -16,7 +18,7 @@ reviewed full CLI commit instead of `main` for reproducibility. It is not the ol
 `v0.2.0` skill release, and no npm registry publication is required. From a trusted
 complete checkout, use `node tools/skill-package/itf.mjs ...` instead.
 
-`install`, `check`, `update`, `adopt`, `rollback` and `recover` require an explicit
+`install`, `check`, `update`, `adopt`, `rollback`, `recover` and `notice` require an explicit
 harness and project/personal scope. Changes require `--apply`; `check` never
 writes. Read the [managed guide](../../docs/managed-skill-updates.md) for source
 pins, duplicates, private receipts/backups, failure recovery and limitations.
@@ -54,7 +56,9 @@ for the JSON shapes and an example. These are local functions, not a GitHub
 fetcher or an updater. Complete pagination, tag peeling and trust in the source
 of supplied release records remain the caller's responsibility. The separate
 `githubCatalogue` adapter retrieves public release records; `createManager().run`
-provides the explicit managed lifecycle. Neither is invoked by ordinary skill use.
+provides the explicit managed lifecycle. The optional notice path invokes their
+read-only comparison during skill use only after per-copy opt-in and subject to
+host permissions.
 
 ## Checks
 
@@ -67,7 +71,8 @@ git diff --check
 Tests use local synthetic Git repositories, mock HTTP records and disposable
 project/home directories, with owned fixtures removed afterward. They cover
 version/channel/pin behaviour, native-folder placement, adoption, changed files,
-interrupted/error recovery and rollback—not native host activation or notices.
+interrupted/error recovery, rollback and simulated notice logic—not native host
+activation or observed user-visible notices.
 The helper's own version is independent of the skill version.
 
 Original software/tests are [MIT](../../LICENSE-CODE); documentation follows the

@@ -1,7 +1,9 @@
 # Releases and updates
 
-An installed skill is a snapshot, not a subscription. ItF does not check for new
-versions, replace its instructions, or contact GitHub during ordinary skill use.
+An installed skill is a snapshot, not a subscription. By default ItF does not
+check for new versions or contact GitHub during ordinary skill use. An optional
+in-skill notice can check release metadata after explicit per-copy consent; it
+does not replace the installed instructions.
 
 ## Hear about releases
 
@@ -42,8 +44,9 @@ or evidence of human usefulness.
 The [version/provenance contract](skill-version-provenance.md) defines the optional
 machine-readable foundation. Its inspector/comparison functions are read-only;
 the separate [managed CLI](managed-skill-updates.md) can retrieve releases and
-explicitly install/update or restore a copy. It sends no in-harness notices.
-Development metadata is not a new published release, and older tags do not gain
+explicitly install/update or restore a copy. Current source also offers
+[opt-in in-skill notices](update-notices.md), with host delivery unverified.
+A metadata change alone is not a published release, and older tags do not gain
 that metadata retroactively.
 
 ## Maintainer release convention

@@ -9,9 +9,9 @@ Invocation differs by host:
 | Codex CLI | `$impact-to-funding` or select it with `/skills` |
 | OpenCode V2 | `@impact-to-funding` |
 
-The [exact-version evidence](installation-check-2026-11-04.md) distinguishes a
-Codex 0.166.0 project-local CLI check of `4566892`, earlier OpenCode v2.2.5 checks
-of `fbb8993`, and a limited Claude Code 2.1.321 project-local CLI check of `4566892`. It establishes neither
+The [exact-version evidence](installation-check-2026-11-04.md) distinguishes
+limited project-local CLI checks of `4566892` in Codex 0.166.0 and Claude Code
+2.1.321 from earlier OpenCode v2.2.5 checks of `fbb8993`. It establishes neither
 interactive/IDE support nor reliable model routing or human usefulness. Manual
 file-reading remains a separate alternative, not native installation proof.
 
@@ -21,7 +21,10 @@ file-reading remains a separate alternative, not native installation proof.
 2. Read the [privacy guidance](../PRIVACY.md). A local file can still be sent to a remote model when your agent reads it. Use only material you are authorised to process with that host/provider.
 3. Choose a private output location outside this distributable repository. No files need to be written to try a conversation; a response in the chat may be enough. Check the host's history, retention and sharing behaviour too.
 
-The skill has no application runtime, accounts, telemetry service or payment integration. Node.js is needed only for development package checks, not for the conversational workflow. Network, audio, image and document capabilities depend on your host; the skill does not supply them.
+The conversational skill has no required runtime, account, telemetry service or
+payment integration. Optional software, including the manager and
+[update notices](update-notices.md), uses Node.js; conversation does not require
+it. Network, audio, image and document capabilities depend on your host.
 
 ## Start wherever you are, not with a form
 
