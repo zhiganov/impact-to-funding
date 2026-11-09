@@ -240,7 +240,8 @@ subscriptions, contact, applications or payment actions. Preparing/retiring a
 snapshot is separately authorised; absence, failed access, explicit withdrawal and
 loss of permission are not interchangeable. Do not promise recall of copied data.
 Original source assets are not served merely because a note links to them, and
-the package's MIT licence does not relicense sources. Keep full note rights limits.
+the package's content/software licences do not relicense sources. Keep full note
+rights limits and the [licence transition](../LICENSE-CONTENT.md).
 
 Local execution does not make host/model processing or history local-only. Remote
 queries may reveal interests; clients must minimise both arguments and optional

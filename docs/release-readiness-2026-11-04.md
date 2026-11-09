@@ -1,5 +1,10 @@
 # Release-preparation review — 2026-11-04
 
+**Historical review:** the MIT statements below describe the reviewed version.
+The current [licence scope](../LICENSE) uses CC BY-SA 4.0 for written content and
+MIT for software; earlier MIT permissions remain valid. This later transition
+does not change what the original review or installation checks established.
+
 ## Scope
 
 Documentation, example, source-rights and disclosure review for the experimental skill. This is not installation testing, a formal release, an independent impact evaluation or permission for outreach/integrations. The [development validation notes](validation-2026-11-04.md) retain the observed failure and limited recheck rather than implying broad reliability.

@@ -1,6 +1,6 @@
 {
   "$schema": "https://fundingjson.org/schema/v1.1.0.json",
-  "version": "itf-inactive-1",
+  "version": "itf-inactive-2",
   "entity": {
     "type": "individual",
     "role": "maintainer",
@@ -15,14 +15,14 @@
     {
       "guid": "impact-to-funding",
       "name": "Impact to Funding",
-      "description": "Experimental MIT-licensed instructions, references, templates and examples for individual and project theories of change, evidence-backed contribution assessment and honest funding briefs or reports. Manual use only; native activation, human usefulness and fundraising effectiveness remain unestablished. Not an impact certification service.",
+      "description": "Experimental skill for individual and project theories of change, evidence-backed contribution assessment and honest funding briefs or reports. Original written content uses CC BY-SA 4.0; original software uses MIT. Earlier MIT grants remain valid. This licence-metadata update does not establish native activation, human usefulness or fundraising effectiveness. Not an impact certification service.",
       "webpageUrl": {
         "url": "https://github.com/zhiganov/impact-to-funding"
       },
       "repositoryUrl": {
         "url": "https://github.com/zhiganov/impact-to-funding"
       },
-      "licenses": ["spdx:MIT"],
+      "licenses": ["spdx:CC-BY-SA-4.0", "spdx:MIT"],
       "tags": ["theory-of-change", "impact-assessment", "fundraising", "agent-skills"]
     }
   ],

@@ -81,7 +81,11 @@ Read on 2026-11-06: the project overview and the [README](https://github.com/atl
 
 Vercel sources read 2026-11-06: [README](https://github.com/vercel-labs/skills/blob/main/README.md), [CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md), and [creating/discovering skills](https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md). Those reads used `main`; no exact upstream commit or CLI release was recorded. Treat them as dated documentation observations, not a pinned implementation contract or evidence of ItF compatibility. No fresh package, installation, listing or activation check was performed.
 
-No third-party schemas, code or assets were imported or relicensed. ItF remains MIT-licensed; AI Registry is separately Apache-2.0-licensed and Vercel's Skills CLI is separately MIT-licensed. Linking to them does not merge the projects, confer endorsement or grant rights over private inputs.
+No third-party schemas, code or assets were imported or relicensed by this assessment.
+ItF's current [licence scope](../LICENSE) separates CC BY-SA written content from
+MIT software and preserves earlier MIT grants. AI Registry is separately
+Apache-2.0-licensed and Vercel's Skills CLI is separately MIT-licensed. Linking to
+them does not merge the projects, confer endorsement or grant rights over private inputs.
 
 This comparison is based on documentation, not CLI execution. It provides no
 registry, adapter, synchronisation service, package round trip or new release.

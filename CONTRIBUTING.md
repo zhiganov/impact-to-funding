@@ -48,7 +48,16 @@ For behavioural observations, record the exact revision or source changes, actua
 
 ## Sources, licensing and external actions
 
-Contribute only material you have the right to share under the repository's [MIT licence](LICENSE). Identify third-party material and its actual reuse basis; accessible text, worksheets or a book are not automatically open-licensed. New dependencies, adapted method text and examples need compatibility and provenance review. Never imply School for Moral Ambition/Bregman endorsement or use their branding to suggest affiliation.
+Contribute only material you have the right to share under the applicable
+[licence scope](LICENSE): **CC BY-SA 4.0 for original written content**, including
+skill instructions, templates, documentation and library notes; **MIT for original
+software, tests and executable schemas**. New contributions follow those terms
+unless a separately reviewed exception is explicitly identified. Earlier MIT grants
+are not revoked by the content transition. Identify third-party material and its
+actual reuse basis; accessible text, worksheets or a book are not automatically
+open-licensed. New dependencies, adapted method text and examples need compatibility
+and provenance review. Never imply School for Moral Ambition/Bregman endorsement
+or use their branding to suggest affiliation.
 
 Your own confidential inputs and generated outputs are not automatically relicensed by contributing to this software. Do not submit other people's restricted material. See [SOURCES.md](SOURCES.md) for the current boundary.
 

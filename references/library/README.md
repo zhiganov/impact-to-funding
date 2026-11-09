@@ -87,8 +87,9 @@ into a confidence number or "successful project" badge.
 
 Only original notes, links and attributed factual summaries belong here. Source
 PDFs, diagrams, datasets, stories and long extracts are not bundled. Individual
-notes record their source/rights inspection limits; the repository's MIT licence
-does not relicense the sources. Follow [sources and rights](../../SOURCES.md).
+notes record their source/rights inspection limits. The original notes use
+[CC BY-SA 4.0](../../LICENSE-CONTENT.md), subject to the earlier-MIT transition;
+this does not relicense their sources. Follow [sources and rights](../../SOURCES.md).
 
 Keep user conversations, contacts, affiliations, private project theories and
 evidence outside this distributable collection. A local application is not a new

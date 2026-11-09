@@ -250,7 +250,7 @@ maintainer acceptance is not independent impact verification.
 Prefer original source-linked summaries; public access is not permission to bundle
 books, paid material, diagrams, worksheets, stories or datasets. Check applicable
 rights before importing/adapting them. Names, branding and source licences remain
-separate from ItF's MIT licence. Preserve applicable share-alike obligations for
+separate from ItF's [own licences](../LICENSE). Preserve applicable share-alike obligations for
 actual adaptations; DEAL asks users not to generate Doughnut diagrams with AI.
 Follow [sources and rights](../SOURCES.md) and ordinary privacy/disclosure rules.
 

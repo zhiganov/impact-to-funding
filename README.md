@@ -185,7 +185,15 @@ For an Agent Skills-compatible host, the package is this directory under the nam
 
 ItF does not rank people, award verified-impact badges, promise donations, publish records, contact funders or distribute money. A request to draft does not authorise sending or publishing. The skill is informed by the School for Moral Ambition's public principles, not affiliated with or endorsed by the School or Rutger Bregman. See [sources and rights](SOURCES.md).
 
-The original skill, templates, examples, documentation and package checks are open source under the [MIT licence](LICENSE). Your own inputs and outputs follow their own rights and disclosure boundaries.
+Original skill instructions, templates, fictional prose examples, documentation
+and library notes use [CC BY-SA 4.0](LICENSE-CONTENT.md): shared adaptations must
+preserve attribution and ShareAlike. Commercial reuse remains allowed. Original
+software, tests and executable schemas remain [MIT-licensed](LICENSE-CODE).
+See the [licence scope](LICENSE) for third-party exceptions and the transition:
+earlier MIT grants remain valid, so unchanged previously published text remains
+usable under those grants. New copyrightable content contributions use CC BY-SA.
+Using ItF does not automatically license your inputs or outputs; sharing protected
+ItF text copied or adapted into an output can carry its licence obligations.
 
 ## Local package checks
 

@@ -37,4 +37,9 @@ Agree appropriate retention and access with the people responsible for real proj
 
 If you find an accidental disclosure, do not quote or re-upload the sensitive material in a public issue. Stop further sharing and identify the affected surface and owner. Use only a verified, appropriate confidential reporting route; none is promised by this repository. If no such route is established, a public report should contain only a non-sensitive description asking how to report privately—not the evidence itself.
 
-The [MIT licence](LICENSE) covers original repository material. It does not grant rights over users' private records or decide ownership/confidentiality of generated outputs. See [sources and rights](SOURCES.md) and [contribution guidance](CONTRIBUTING.md).
+The [licence scope](LICENSE) separates CC BY-SA 4.0 written content from MIT
+software and third-party exceptions. Using the skill does not automatically
+license users' private records or generated outputs; sharing protected ItF text
+copied or adapted into an output can carry its licence obligations. Neither licence
+decides confidentiality or grants disclosure permission. See [sources and rights](SOURCES.md)
+and [contribution guidance](CONTRIBUTING.md).
