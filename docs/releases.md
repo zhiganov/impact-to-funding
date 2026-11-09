@@ -40,9 +40,11 @@ tag, passing package checks or an experimental prerelease as broad compatibility
 or evidence of human usefulness.
 
 The [version/provenance contract](skill-version-provenance.md) defines the optional
-machine-readable foundation. Its local helper does not retrieve releases,
-install/update a copy or send in-harness notices. Development metadata is not a
-new published release, and older tags do not gain that metadata retroactively.
+machine-readable foundation. Its inspector/comparison functions are read-only;
+the separate [managed CLI](managed-skill-updates.md) can retrieve releases and
+explicitly install/update or restore a copy. It sends no in-harness notices.
+Development metadata is not a new published release, and older tags do not gain
+that metadata retroactively.
 
 ## Maintainer release convention
 
