@@ -63,6 +63,24 @@ replace `@impact-to-funding` with a request to read and follow `SKILL.md`.
 
 > @impact-to-funding Help me prepare a private funding brief: the purpose, supported contribution, what additional support would enable, actual cost basis if known, risks and reporting plan. Separate observed results from proposed outcomes. Account for existing support and shared credit. Do not invent a reviewer, budget, funding URL or guaranteed return, and do not submit or publish anything.
 
+### Plan evidence or reuse it for different audiences
+
+Use the [evidence/reporting guidance](evidence-reporting-design.md) and
+[optional private worksheet](../assets/evidence-crosswalk.md) only when useful.
+Keep one evidence/claim basis and separate the permitted destination views; no
+funder, account, formal requirements file or evidence register is needed to learn.
+This is source guidance, not a collector, provider connection or installation check.
+
+> @impact-to-funding Using only the permitted material supplied here, help me plan the smallest useful evidence collection, or explain why no new collection is needed. Keep actual versus proposed actors, missing baselines, cost/capacity, host processing, consent, retention and stopping conditions explicit. Do not recruit, collect, browse, schedule or publish anything.
+
+> @impact-to-funding Help me prepare separate private drafts for these two supplied sets of funder terms. Keep official wording, phases, source versions and local interpretations distinct. Map the same claim/evidence versions without changing definitions, failures, shared credit or actual review scope. Separate evidence fit, destination permission and actual presentation checks. Do not export the private worksheet, restricted source references or protected associations, and do not send either draft.
+
+These are authored prompts, not observed model results. A request from a funder is
+not disclosure permission, and a completed field is not eligibility, compliance,
+an award or impact validation. Changed terms or permissions require reassessing
+the affected view, not rewriting facts. Source changes do not update an installed
+skill; the installation evidence above remains tied to its named revision.
+
 ### Review progress
 
 > @impact-to-funding Compare my earlier intentions with these new records, using the report template where helpful. Include failures, conflicting evidence, costs where appropriate, harms and changed assumptions. Explain which old claims or reviews no longer apply, what I can learn and what could help the contribution continue or change. Include any actual decision needed, not an impact score or a forced commitment.

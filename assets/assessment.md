@@ -56,11 +56,26 @@ For each evidence ID: source/owner, what was supplied or inspected, relevant obs
 
 ## Proportionate evaluation plan
 
+When useful, use the [optional private evidence/crosswalk worksheet](evidence-crosswalk.md#2-proportionate-collection-plan-if-useful)
+for the collection plan. Reference existing claim/evidence versions rather than
+create another editable register. Collection planning can serve learning without
+a funder or past outcomes; it does not execute collection.
+
 | Decision/question | Outcome or concern | Baseline and useful evidence | Method and limitations | Actual owner/capacity; consent, access and burden | Checkpoint and stopping condition |
 |---|---|---|---|---|---|
 | Why learn this now? | Not only activity volume | Existing records first | Distinguish change from causal proof | Unknown if not agreed | No invented dates or execution approval |
 
+Retain actual versus proposed actors, feasible method, absent baselines, timing,
+effort/cost/capacity, host/provider processing and disclosure basis, retention and
+correction, and stop/alternative conditions as relevant. Keep unknowns explicit;
+do not obtain extra data or make participation a condition of essential help.
+
 ## Funding brief, if requested
+
+For a selected funder/round, use the [private requirement crosswalk](evidence-crosswalk.md#3-requirement-interpretation-only-for-a-selected-audienceuse)
+to preserve official wording, source/local versions and unresolved conditions.
+Evidence fit, exact audience permission and actual form checks are separate;
+the private worksheet and restricted source references are not outgoing attachments.
 
 - What additional funding would enable and why this contribution rather than alternatives:
 - Supported past results and review limits; prospective claims clearly labelled:

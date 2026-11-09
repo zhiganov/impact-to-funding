@@ -58,6 +58,12 @@ requirements interpretation and audience-specific crosswalks. Its
 an implemented collector, provider adapter or new installed-skill capability.
 Manual use does not depend on funding discovery or a hosted evidence store.
 
+The source skill now conditionally routes to that manual guidance and the
+[optional private evidence/crosswalk worksheet](../assets/evidence-crosswalk.md),
+with links from the existing assessment and report templates. Its
+[check record](evidence-reporting-checks.md) distinguishes source/template review
+from model behaviour, native installation and actual funder interoperability.
+
 [Broader support discovery and funding.json compatibility](funding-interchange-design.md)
 reassesses the earlier webpage-only bridge. The
 [accepted architecture](funding-interchange-direction-decision.md) selects a

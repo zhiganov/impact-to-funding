@@ -146,8 +146,12 @@ The [optional discovery guide](docs/signal-discovery.md) and [fictional candidat
 The [evidence/reporting design](docs/evidence-reporting-design.md) and
 [fictional two-funder walkthrough](examples/evidence-reporting.md) connect reusable
 private evidence, collection plans and versioned funder-specific presentations.
-They are design documentation, not an implemented collector, provider integration
-or change to the installed skill; ordinary learning needs no funding service.
+The source skill conditionally routes to this manual guidance and its
+[optional private worksheet](assets/evidence-crosswalk.md), with assessment/report
+links. Evidence fit, destination permission and actual presentation checks remain
+separate. This is not a collector, provider integration or change to the installed
+skill; ordinary learning needs no funding service. Actual source-review/check limits
+are recorded separately in the [manual-path check record](docs/evidence-reporting-checks.md).
 
 The [funding-interchange design](docs/funding-interchange-design.md) has an
 [accepted architectural direction](docs/funding-interchange-direction-decision.md):

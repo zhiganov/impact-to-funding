@@ -7,6 +7,12 @@ invented, not modified private cases. This is an expected manual interpretation,
 **not a behavioural test result**, provider response, actual review or real funding
 lead. No collection, URL retrieval, application or publication occurred.
 
+The source skill's [optional private worksheet](../assets/evidence-crosswalk.md)
+uses this walkthrough for source/template review. The
+[check record](../docs/evidence-reporting-checks.md) separates those actual checks
+from the authored scenario and untested model behaviour. The facts and original
+destination views below are unchanged by adding the worksheet.
+
 ## 1. Private working material in the invented scenario
 
 Notebook Ferry is a fictional file-conversion tool maintained by two collaborators.
@@ -156,12 +162,37 @@ separately authorised safe correction route; no automatic recall, contact or cla
 that E3 became false follows. If E1 is later corrected, version its observation
 and C1 and reassess dependent views rather than carrying forward an old review.
 
-## What this exposes for ItF
+## Applying the optional worksheet without changing the evidence
 
-The core references already prohibit inflated claims, duplicate costs and unwanted
-disclosure. The missing implementation is a small optional way to carry their
-evidence/requirement links and collection gaps through drafting, with conditional
-skill routing and existing-template links. A future read-only funding consumer
+This is an authored mapping of the same fictional records, not a new observation:
+
+- The existing-record section points to C1/v1 and E1/v1 rather than making a second
+  editable finding. E2/v1 remains internal-only, including its existence; E3/v1
+  remains a partner checklist review of the error-summary change, not C1.
+- The collection section points to P1/v1: proposed owner/timing, 60-unit estimate,
+  absent historical baseline and stop/alternative conditions remain unconfirmed.
+  No collection is needed to repeat the bounded T4 observation in Access Seed's view.
+- Requirement interpretation preserves the supplied official words, phase and
+  source versions. A-R1 through B-R1 remain local analyst references; no publisher
+  requirement ID or service metadata is invented.
+- Crosswalk rows retain the separate evidence-fit, permission and presentation
+  judgments above. A-R2 is not yet due; A-R3 is conditionally inapplicable, not a
+  blanket eligibility finding. B-R1's prospective learning plan requires no past outcome.
+- Notes v2 creates an affected interpretation/view revision, not a revised E1.
+  Distinct-people evidence is missing and the supplied definitions conflict; the
+  unavailable form remains uninspected even if candidate text fits 50 words.
+- The public-story request remains unmet. A later E3 permission change removes
+  only the affected checklist passage and triggers permitted correction work,
+  not an invented falsehood, automatic recipient contact or erased history.
+- K1's old 180 units, genuine possible adaptation costs and P1's proposed 60 units
+  stay separate. Reusing records changes neither costs nor outcome counts.
+
+## ItF source support and remaining limits
+
+The core references prohibit inflated claims, duplicate costs and unwanted
+disclosure. Conditional skill routing, the optional worksheet and existing-template
+links now supply the manual source path for carrying evidence/requirement versions
+and collection gaps through drafting. A future read-only funding consumer
 must preserve source/version/support limits without receiving the private packet.
 These are ItF product scopes, not tasks for Notebook Ferry's repository. No new
 database, provider contract, model test or collection service is demonstrated here.

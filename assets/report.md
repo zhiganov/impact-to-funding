@@ -26,6 +26,24 @@ Material claims, their support and limitations, actual reviewer/version/date if 
 
 After a challenge to a cited finding is acknowledged, show "challenged, unresolved" only to a permitted audience where that disclosure is safe. Qualify or omit dependent claims as appropriate; do not disclose the raiser or allegation, or even the challenge's existence where that could reveal protected information. An unresolved challenge does not by itself make a claim false; update the challenge status only when its actual outcome is recorded.
 
+## Audience-specific view, only if requested
+
+Use the [optional private evidence/crosswalk worksheet](evidence-crosswalk.md)
+to connect a selected destination's actual requirement/source versions to existing
+claim/evidence versions. Preserve official wording and source-declared IDs separately
+from local interpretation, with phase, strength, applicability and coverage limits.
+No formal file or funding provider is required.
+
+Keep evidence fit, destination/use permission and actual form/field/length checks
+separate. Do not paste the private crosswalk, restricted locators, IDs or protected
+associations into the report; even a source's existence may be undisclosable. Keep
+failures, missing baselines and review limits near the permitted claims. If a field
+cannot carry a material qualification, narrow/omit the claim and retain the gap privately.
+
+Changed terms trigger crosswalk/view reassessment, not changed observations or an
+inherited review. A permission change stops affected uses while its scope is checked;
+follow the existing correction/retention limits. Preparing a view authorises no send.
+
 ## Resources, costs and funding
 
 Record expenditure information, funding received and remaining needs only where known and appropriate. Explain cost basis, existing support and actual funding-destination limits. Do not equate fundraising with social benefit or invent a return on donations.

@@ -4,6 +4,10 @@
 2026-11-09, with an [authored fictional walkthrough](../examples/evidence-reporting.md).
 This defines an optional conversational/manual path, not an implemented collector,
 database, provider adapter, form filler or change to the installed skill.
+The later source support for [#48](https://github.com/zhiganov/impact-to-funding/issues/48)
+adds conditional skill routing, the [private worksheet](../assets/evidence-crosswalk.md)
+and links from existing templates; see the [source/template check record](evidence-reporting-checks.md).
+Those changes do not turn the original design walkthrough into observed model behaviour.
 
 ## Purpose and boundaries
 
@@ -202,28 +206,30 @@ permission withdrawal, review withdrawal and disputed truth. Preserve only permi
 history; do not keep prohibited source content just to maintain an audit trail or
 promise recall of third-party copies. Follow the existing claim correction rules.
 
-## 7. Consequences for ItF's own implementation
+## 7. Manual source support and separate implementation boundaries
 
 The fictional walkthrough exercises this design, not model adherence or human
-usefulness. It identifies the following bounded implementation path for this
-repository; no builders' repository tasks are generated:
+usefulness. The source path below concerns this repository; no builders'
+repository tasks are generated:
 
-1. **Manual skill support:** add conditional resource routing and a concise optional
-   evidence/crosswalk worksheet; extend the existing assessment collection-plan
-   and report-view prompts by reference, not by copying another claim register.
-   Add audience-specific processing/export checks using the existing privacy
-   guidance. These are proposed source changes, not changes delivered here.
+1. **Manual skill support (#48):** the source skill conditionally routes to this
+   guidance and the [optional private evidence/crosswalk worksheet](../assets/evidence-crosswalk.md).
+   The assessment's collection-plan and report-view prompts link to it without
+   copying another claim register. Usage/privacy guidance separates host processing,
+   exact destination permission and actual presentation checks. These are manual
+   source instructions, not a collector, exporter or permission enforcement system.
 2. **Optional funding consumer (#35):** when implemented against an authorised,
    documented versioned provider, preserve requirement authority, phases, support,
    revisions, completeness and unresolved references. Do not send private evidence
    to search/detail tools. Unknown/unsupported results remain visibly limited;
    manual supplied-source use remains available. No provider-specific contract
    is adopted by this public design.
-3. **Review the implemented manual path:** use the wholly fictional cases to check
+3. **Review the manual source path:** use the wholly fictional cases to check
    that facts/reviews do not change across views, contrary evidence remains,
    permissions are destination-specific, and changed definitions stay unresolved
    where necessary. Use existing package checks; source/package success alone
-   does not establish model behaviour or funder interoperability.
+   does not establish model behaviour or funder interoperability. The
+   [check record](evidence-reporting-checks.md) reports the actual review and limits.
 
 The manual path does not depend on #35, a hosted store, another collector, native
 app orchestration, recruitment or a new test platform. Live collection, provider
@@ -233,5 +239,6 @@ The later [funding-interchange design](funding-interchange-design.md) has an
 [accepted architecture](funding-interchange-direction-decision.md) for an optional
 curated public support-document output across domains, including OSS compatibility
 where appropriate. The [field contract](support-profile-contract.md) is now an
-accepted design baseline, not an implementation. It does not make a public manifest
-part of this private collection/crosswalk path or authorise exporting a person's packet.
+accepted design baseline with separate [optional local support-profile tools](support-profile-tools.md).
+Neither the contract nor those tools makes a public manifest part of this private
+collection/crosswalk path or authorises exporting a person's packet.
