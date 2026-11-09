@@ -33,7 +33,7 @@ than being guessed. Older released packages need not be rewritten to add it.
 
 Host checks remain external, source-specific evidence: Codex's recorded source
 is `4566892ad990131fb36f760e14c73e5f275600cc`, OpenCode's historical source is
-`fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`, and Claude activation remains unverified.
+`fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`, and Claude Code's limited check is also at `4566892`.
 This metadata change and any later helper/package release inherit none of those
 exact-package checks. See the [installation record](installation-check-2026-11-04.md).
 
