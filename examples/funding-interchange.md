@@ -1,11 +1,15 @@
 # Fictional support discovery across domains and an OSS compatibility view
 
 **Entirely fictional**, authored 2026-11-09 for the
-[funding interchange proposal](../docs/funding-interchange-design.md).
+[funding interchange design](../docs/funding-interchange-design.md).
 All names, sources, dates, permissions, costs and observations below are invented,
 not adapted private cases. This is **not a behavioural test result**, real funding
 request, accepted schema, consumer response or evidence that a directory supports
 the proposed profile. No URL was fetched or submitted.
+
+The [architectural direction](../docs/funding-interchange-direction-decision.md)
+is accepted. The concrete fields and carrier spelling used below remain candidate
+illustrations, not an adopted field contract or normative validation fixtures.
 
 ## 1. Non-software work is a first-class case
 

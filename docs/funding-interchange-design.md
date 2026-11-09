@@ -1,8 +1,10 @@
-# Proposal: broader support discovery with optional funding.json compatibility
+# Design: broader support discovery with optional funding.json compatibility
 
-**Date:** 2026-11-09. **Status:** design reassessment following #6 and #47;
-candidate conventions, not an adopted public standard, executable schema, exporter
-or tested directory integration. See the [fictional examples](../examples/funding-interchange.md).
+**Date:** 2026-11-09. **Status:** architectural direction accepted; see the
+[decision and next contract-design scope](funding-interchange-direction-decision.md).
+Concrete fields/carrier names remain candidates, not an adopted field contract,
+public standard, executable schema, exporter or tested directory integration.
+See the [fictional examples](../examples/funding-interchange.md).
 
 ## 1. Purpose, audience and origin
 
@@ -26,7 +28,7 @@ FLOSS/fund describes itself as **a Zerodha initiative**. That source wording is
 used here; no separate subsidiary/legal-entity status is established by this
 assessment. ItF is not affiliated with or endorsed by FLOSS/fund or Zerodha.
 
-**User requirement:** keep ItF broader than OSS, use funding.json as a valuable
+**Scope requirement:** keep ItF broader than OSS, use funding.json as a valuable
 reference, and preserve compatibility where useful. Compatibility must not become
 a requirement that excludes other work or forces invented software/financial data.
 
@@ -46,13 +48,13 @@ must not export the private evidence register or each funder's application draft
 |---|---|---|
 | Existing financial manifest plus linked pages | Existing funding.json consumers read known financial fields; people follow richer accounts manually. | Keep as a fallback. It does not supply structured report/case discovery and is insufficient as the only path for the new goal. |
 | funding.json as the universal ItF format | Could reuse its familiar financial vocabulary everywhere. | Not recommended: its public contact/funding assumptions and FOSS consumer purpose do not fit everyone. A schema accepting non-OSS data does not make the directory a non-OSS funding service. |
-| Optional ItF support profile, with a funding.json carrier/projection for suitable OSS cases | ItF-aware consumers connect versioned support cases to permitted reports across domains; existing financial consumers can still receive an ordinary applicable OSS manifest. | Recommended candidate. Requires a small explicit ItF contract and later consumer checks. Existing readers are not promised to understand the added profile. |
+| Optional ItF support profile, with a funding.json carrier/projection for suitable OSS cases | ItF-aware consumers connect versioned support cases to permitted reports across domains; existing financial consumers can still receive an ordinary applicable OSS manifest. | Accepted architectural direction. Concrete contract and later consumer checks remain open. Existing readers are not promised to understand the added profile. |
 | Fork or replace funding.json, or ask upstream to broaden its mission | Could make one format cover local preferences. | Not justified here. Creates adoption/maintenance work and assumes a change to another project's intended audience. No upstream change or outreach is selected. |
 
-**Recommendation:** design the general ItF support document first, with an optional
+**Accepted direction:** design the general ItF support document first, with an optional
 funding.json-compatible OSS view. For an OSS publisher wanting a single file,
 allow the same support profile in a clearly qualified optional extension on its
-funding.json. Do not silently replace the user's broader goal with the old
+funding.json. Do not replace the broader cross-domain goal with the old
 webpage-only bridge, and do not market an ItF convention as an upstream standard.
 
 ## 3. Small candidate support profile
@@ -202,14 +204,14 @@ install, disclose or send. There is no new query, upload endpoint or service her
 
 ## 6. What changes now, and what does not
 
-This proposal revisits #6's **default no-structured-extension** choice for a new
+This direction revisits #6's **default no-structured-extension** choice for a new
 cross-domain goal. It preserves the earlier work as a historical compatibility
 scope and does not rewrite the upstream standard, recruit its consumers or assume
 FLOSS/fund should support non-OSS work.
 
 ItF's own currently published inactive `funding.json` stays operationally unchanged
 by this assessment: its status, destination and existing disclosure limits are not
-upgraded by writing a design. If this candidate is adopted, a later source change
+upgraded by writing a design. Once a field contract is adopted, a later source change
 can add a cleared support/report link payload after real content and exact
 publication approval exist. No social-impact result is invented for ItF itself.
 
@@ -228,13 +230,13 @@ The relationship to other work is:
 
 ## 7. Finite decision and implementation path
 
-1. Review the candidate scope/carriers and fictional cross-domain/OSS examples.
-   Adopt, revise or keep it as a proposal; publication and adoption are distinct.
-2. If adopted, specify the exact minimal support-profile/output contract and add
-   source templates/manual guidance, safe projection rules and representative
-   fixtures. Use an existing validator if full schema validation is needed; no
-   new test platform or live funding account is a prerequisite to design review.
-3. For actual compatibility claims, select a real consumer/adapter version and
+1. The [architecture decision](funding-interchange-direction-decision.md) adopts
+   the cross-domain path and optional OSS compatibility, not the candidate fields.
+2. Next, draft the exact minimal field/carrier/projection contract within that
+   decision's bounded design scope. Reconcile examples and obtain a field-contract
+   adoption/revision decision before selecting source/runtime implementation.
+3. After contract adoption, select the smallest authoring/projection implementation.
+   For actual compatibility claims, select a real consumer/adapter version and
    verify plain financial import, added-field handling and declared information
    loss. Prioritise the intended consumer's real constraints; do not infer behaviour
    from permissive JSON Schema alone. Directory submission and upstream outreach
@@ -243,7 +245,7 @@ The relationship to other work is:
 Required design checks are source/field mapping, internally coherent fictional
 JSON/references, privacy/meaning review and existing package/text checks. Full
 Draft-07 validation, exporter round trips, directory ingestion, funding eligibility,
-human usefulness and model behaviour are **not established** by this proposal.
+human usefulness and model behaviour are **not established** by this design.
 
 ## Sources and attribution limits
 

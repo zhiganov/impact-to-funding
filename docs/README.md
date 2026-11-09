@@ -53,11 +53,13 @@ an implemented collector, provider adapter or new installed-skill capability.
 Manual use does not depend on funding discovery or a hosted evidence store.
 
 [Broader support discovery and funding.json compatibility](funding-interchange-design.md)
-reassesses the earlier webpage-only bridge: a proposed domain-neutral ItF support
-profile, with optional upstream financial projection and a same-file extension
-for appropriate OSS cases. Its [fictional examples](../examples/funding-interchange.md)
-are not schema/consumer compatibility results. The candidate is not adopted or
-implemented; ItF is not restricted to OSS or FLOSS/fund's audience.
+reassesses the earlier webpage-only bridge. The
+[accepted architecture](funding-interchange-direction-decision.md) selects a
+domain-neutral ItF support profile, with optional upstream financial projection
+and a same-file extension for appropriate OSS cases. Concrete fields remain
+candidates; its [fictional examples](../examples/funding-interchange.md) are not
+schema/consumer compatibility results. Nothing is implemented; ItF is not
+restricted to OSS or FLOSS/fund's audience.
 
 [AI Registry and Vercel Skills CLI distribution references](ai-registry-distribution.md)
 compare registry/catalog value with direct Git skill distribution, separately

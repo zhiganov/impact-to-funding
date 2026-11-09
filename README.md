@@ -149,11 +149,12 @@ private evidence, collection plans and versioned funder-specific presentations.
 They are design documentation, not an implemented collector, provider integration
 or change to the installed skill; ordinary learning needs no funding service.
 
-The [funding-interchange proposal](docs/funding-interchange-design.md) explores a
-broader machine-readable support case with optional funding.json compatibility
-for suitable OSS work. ItF is not OSS-only. The proposal is inspired by FLOSS/fund's
-format, not an agreed upstream extension, exporter, directory integration or
-change to this repository's currently inactive financial plan.
+The [funding-interchange design](docs/funding-interchange-design.md) has an
+[accepted architectural direction](docs/funding-interchange-direction-decision.md):
+a broader machine-readable support case with optional funding.json compatibility
+for suitable OSS work. ItF is not OSS-only. Concrete fields remain candidates;
+there is no agreed upstream extension, exporter, directory integration or change
+to this repository's currently inactive financial plan.
 
 The [optional Bluesky publishing guide](docs/bluesky-publishing.md) and [fictional previews/correction cases](examples/bluesky-publishing.md) cover exact-action approval, outward metadata, uncertain sends and controlled corrections. They supply no account, publisher, post or notification, and do not authorise a live action.
 
