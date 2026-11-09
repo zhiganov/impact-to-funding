@@ -36,6 +36,12 @@ optional personal scope, discovery checks, deliberate updates, reversible remova
 and troubleshooting. ItF itself needs no signup, Node.js, MCP server or plugin for
 conversation. Your host's model costs and privacy terms still apply.
 
+**Updates:** subscribe on GitHub with **Watch → Custom → Releases**, or check the
+[releases page](https://github.com/zhiganov/impact-to-funding/releases).
+Notifications announce available versions; they do not update your installed
+copy. Read the changes and host-check limits before choosing an update. See
+[release and update guidance](docs/releases.md).
+
 ### Codex CLI quick start
 
 From the project where you want to use ItF, with Git:

@@ -157,9 +157,34 @@ real material: local installation does not mean local-only model processing.
 
 ## Update deliberately
 
+### Know when an update is available
+
+On the [GitHub repository](https://github.com/zhiganov/impact-to-funding), choose
+**Watch → Custom → Releases**. In your GitHub notification settings, enable the
+watching notifications you want on GitHub or by email. This is optional: ItF
+itself needs no account, and you can instead check the
+[releases page](https://github.com/zhiganov/impact-to-funding/releases).
+Delivery depends on your GitHub settings; ItF has no notification service or
+background update check. Starring the repository or installing the skill is not
+a release subscription. Notifications are not sent for every source commit.
+
+Read a release's changes, migration/licensing notes and exact host-check limits
+before deciding to update. A newer source release is not automatically checked
+in your host. See the [release policy](releases.md) for versioning and boundaries.
+
+### Choose and apply a version
+
 Updates are opt-in. A published source change does not update an installed copy.
 Choose and review a full commit SHA; do not automatically follow latest main or
 assume an earlier host check covers a newer revision.
+
+For a Git clone, `git -C "$target" rev-parse HEAD` shows the installed SHA. You can
+fetch tags with `git -C "$target" fetch origin --tags` and resolve a chosen release
+with `git -C "$target" rev-parse 'refs/tags/<chosen-release>^{commit}'`. Replace the
+placeholder with the exact tag shown on its release page, confirm the origin
+first, and review the resolved commit before using it as `revision` below.
+Fetching downloads repository metadata/objects; it does not switch the installed
+files. These are shell commands, not an instruction to let the skill update itself.
 
 For a Git installation only, set `target` to the installation you own and
 `revision` to the reviewed full SHA. Before running the block, inspect

@@ -103,6 +103,12 @@ verification of `4566892`, earlier OpenCode checks of `fbb8993`, and Claude's
 documented but unverified route. Personal installs, interactive/IDE/desktop
 surfaces and human usefulness are not established by the CLI check.
 
+[Release and update guidance](releases.md) explains optional GitHub release
+notifications, deliberate version selection, source-versus-host-check boundaries
+and the maintainer's release convention. The
+[v0.2.0 release notes](releases/v0.2.0.md) describe the experimental source
+prerelease; exact-package host verification remains separately bounded.
+
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,
 tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22)
