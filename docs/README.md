@@ -119,6 +119,10 @@ explicit installation, check/update, adoption, rollback and recovery. Optional
 [in-skill update notices](update-notices.md) require per-copy consent and host
 permissions; actual user-visible delivery and new host verification are not claimed.
 
+The [task-playbook design](task-playbooks-design.md) proposes one optional
+support-brief playbook under the existing person-first skill. It maps other jobs
+to current guidance and compares host entry points. No new playbook is implemented.
+
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,
 tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22)
