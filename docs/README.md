@@ -111,8 +111,10 @@ prerelease; exact-package host verification remains separately bounded.
 
 The [version/provenance contract](skill-version-provenance.md) and optional
 [local inspector](../tools/skill-package/README.md) define released source,
-explicit channels/pins and private installation observations. They do not fetch
-updates, install packages, notify users or add host-verification claims.
+explicit channels/pins and private installation observations. Those interfaces
+remain read-only. The separate [managed CLI](managed-skill-updates.md) adds
+explicit installation, check/update, adoption, rollback and recovery; neither
+automatic notices nor new host-verification claims are included.
 
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,

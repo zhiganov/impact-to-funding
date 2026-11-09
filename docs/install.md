@@ -7,6 +7,12 @@ credentials, Node.js, MCP server, plugin or additional installer for conversatio
 If your host needs sign-in, complete its normal flow in your own terminal; do not
 paste tokens or passwords into an agent conversation.
 
+For an optional install/check/update/rollback command with managed receipts and
+recovery, see the [managed CLI guide](managed-skill-updates.md). That route needs
+Node.js 22+, npm and Git; it changes nothing without explicit `--apply` and makes
+no new host-activation claim. The complete pinned Git/manual instructions below
+remain available independently, with their own exact-source check boundaries.
+
 **Verification boundary:** the commands below pin source
 `4566892ad990131fb36f760e14c73e5f275600cc`. A limited Codex CLI 0.166.0 check
 passed for a GitHub clone at the native project-local path: explicit

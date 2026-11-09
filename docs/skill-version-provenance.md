@@ -1,15 +1,16 @@
 # Skill versions and installation provenance
 
 **Contract:** `itf.release/0.1` and `itf.installation/0.1`.
-**Status:** local metadata/inspection foundation for
-[#54](https://github.com/zhiganov/impact-to-funding/issues/54), not an installer,
-GitHub fetcher, managed update, notification integration or newly verified host.
+**Status:** metadata/inspection foundation delivered in
+[#54](https://github.com/zhiganov/impact-to-funding/issues/54). The separate
+[managed CLI](managed-skill-updates.md) now builds on it for explicit installation
+and updates; automatic notices and new host verification remain separate.
 
 The existing GitHub repository and release API are the publication source; no
 registry, new service or version endpoint is introduced. The optional
 [local helper](../tools/skill-package/README.md) implements validation, comparison,
-selection and explicit-path installation inspection. It never contacts a service
-or changes an installed copy.
+selection and explicit-path installation inspection. Those #54 interfaces never
+contact a service or change an installed copy; the managed commands are separate.
 
 ## Three versions must not be confused
 
@@ -21,7 +22,8 @@ or changes an installed copy.
    resolved full commit SHA. Exact source is determined after checkout or tag
    resolution, not inferred from a version string.
 3. **Helper version:** the optional metadata tool is independently versioned
-   `0.1.0`. Its version is not the installed skill's version.
+   `0.2.0` after the managed CLI addition (`0.1.0` for the original #54 inspector).
+   Its version is not the installed skill's version.
 
 The [Agent Skills specification](https://agentskills.io/specification#metadata-field)
 defines `metadata` as a string-to-string map. This package uses a deliberately
@@ -61,7 +63,8 @@ A GitHub adapter must enumerate **all** release pages, not just the stable-only
 latest-release endpoint. It must retrieve the actual tag ref and peel annotated
 tags to the commit. `releaseFromGitHub(release, { tag, commit })` normalises the
 release after that resolution; it deliberately ignores `target_commitish`, which
-can be a moving branch. No live retrieval adapter is implemented here.
+  can be a moving branch. The separate managed CLI's public GitHub adapter performs
+  that retrieval; the normalisation function itself remains local.
 
 If an existing tag resolves to a different commit than a stored installation pin,
 stop rather than silently accepting a moved tag. Matching archive checksums from
@@ -156,8 +159,9 @@ incomplete packages, unsafe archive paths and unexpected links; source/digest
 trust is a separate check from matching bytes. Never include local dependencies,
 private reports, evidence or untracked files in a release bundle.
 
-[#55](https://github.com/zhiganov/impact-to-funding/issues/55) can use this contract
-for managed installation, receipts, explicit updates and rollback.
+The [managed CLI](managed-skill-updates.md), tracked in
+[#55](https://github.com/zhiganov/impact-to-funding/issues/55), uses this contract
+for installation, receipts, explicit updates and rollback.
 [#56](https://github.com/zhiganov/impact-to-funding/issues/56) can later use its
 version-only release records for consent-aware notices. Neither capability is
-implemented by #54, and no conversation is made dependent on this helper.
+implemented by #54 itself, and no conversation is made dependent on this helper.

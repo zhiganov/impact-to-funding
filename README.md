@@ -42,6 +42,21 @@ Notifications announce available versions; they do not update your installed
 copy. Read the changes and host-check limits before choosing an update. See
 [release and update guidance](docs/releases.md).
 
+### Managed CLI (optional)
+
+For install/check/update/rollback with local-work protection, use the experimental
+[managed CLI](docs/managed-skill-updates.md). From your project:
+
+```sh
+npx --yes --package=github:zhiganov/impact-to-funding#main itf install --harness codex --scope project --channel prerelease
+```
+
+This only prints a plan; changes require a separately chosen `--apply`. The CLI
+comes from the mutable GitHub default branch; pin a reviewed full CLI commit for
+reproducibility. It needs Node.js 22+, npm and Git, but conversation does not.
+Native folder placement is not a new host-activation check. The complete pinned
+Git/manual routes below remain available without this manager.
+
 ### Codex CLI quick start
 
 From the project where you want to use ItF, with Git:
@@ -153,7 +168,7 @@ Ordinary skill use does not require the optional software or a manifest.
 | [Evidence planning and audience-specific drafting](docs/evidence-reporting-design.md) | Current source routes to manual guidance and an [optional private crosswalk](assets/evidence-crosswalk.md). | Reuse permitted evidence; evidence fit, disclosure permission and presentation checks are separate. No collector or funding-provider integration. |
 | [Local reference-library MCP](mcp/README.md) | Implemented optional stdio server with three read-only discovery/detail/coverage tools over a prepared public snapshot. Separate Node.js 22+ setup. | Not a hosted service, live source search, semantic ranking or automatic refresh; see the [implementation checks](docs/reference-library-mcp-checks.md). |
 | [Support-profile authoring and tools](docs/support-profile-tools.md) | Optional worksheet plus implemented local inspection and explicit OSS financial binding/projection. Tools need separate Node.js 22+ setup. | General support cases are not OSS-only. No report fetching, publication, application, payment or consumer-acceptance guarantee; see the [check record](docs/support-profile-checks.md). |
-| [Skill version/provenance](docs/skill-version-provenance.md) | Standard declared-version metadata and an optional local, read-only helper for release records, explicit channels/pins and a selected installation. Node.js 22+ for the helper; no dependencies. | Development source, not a new release or host check. No release fetching, installer, update, automatic notice or publisher authentication. |
+| [Skill versions and managed updates](docs/managed-skill-updates.md) | Optional CLI for explicit install/check/update/adopt/rollback/recovery, using the version/provenance contract and complete source snapshots. Node.js 22+ and Git; no package dependencies. | Development CLI, not a new skill release or host check. No automatic notice/update, hooks, telemetry or global configuration change; local Git alone is not publisher authentication. |
 | [Additional practice guides](docs/README.md) | Manual guidance and fictional cases for affected-person accounts, scoped review, coordination, supplied signals and publishing plans. | No reviewer pool, recruitment, monitoring, publishing service or automatic integration. |
 
 For a machine-readable public support candidate, **`itf-manifest.json`** is the
