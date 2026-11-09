@@ -1,5 +1,10 @@
 # Local support-profile implementation checks
 
+**Licence transition:** the source version checked below used MIT for original
+ItF material. Current written content uses [CC BY-SA 4.0](../LICENSE-CONTENT.md);
+software remains MIT and earlier grants remain valid. The check results below
+are historical runtime evidence, not a new installation or snapshot refresh.
+
 **Date:** 2026-11-09. **Scope:** optional source implementation for
 [#49](https://github.com/zhiganov/impact-to-funding/issues/49), based on
 `beb0fb8fa77664ff78de3475e58d897547d4c234`. This records local checks, not a

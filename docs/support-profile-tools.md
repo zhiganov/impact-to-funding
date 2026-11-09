@@ -234,7 +234,9 @@ and expected command behaviour must not be reported as observed passes.
 The optional package vendors the **unmodified** funding.json v1.1.0 upstream
 schema under **CC-BY-SA 4.0**; see its
 [NOTICE](../tools/support-profile/vendor/NOTICE.md). ItF code and its own support
-schema are **MIT**. Do not describe the vendored schema as MIT or imply upstream,
+schema remain **MIT**; the written guide and worksheet use
+[CC BY-SA 4.0](../LICENSE-CONTENT.md), with earlier MIT grants preserved.
+Do not describe the vendored schema as MIT or imply upstream,
 FLOSS/fund or Zerodha endorsement. The qualified carrier is an ItF convention,
 not upstream agreement. Your candidate's content keeps its own rights and
 disclosure limits; neither licence permits publication of private records.

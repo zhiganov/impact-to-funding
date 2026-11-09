@@ -15,5 +15,7 @@ The upstream licence includes its warranty/liability disclaimer. No endorsement
 or agreed ItF extension is implied by using the schema.
 
 This is a separately identified third-party file in a collection. ItF's original
-code, own support-profile schema, instructions and fictional examples retain their
-own licence. Do not remove this attribution or silently replace the pinned schema.
+code and own support-profile schema remain [MIT](../../../LICENSE-CODE). Original
+written instructions, notes and fictional prose examples use [CC BY-SA 4.0](../../../LICENSE-CONTENT.md),
+with earlier MIT permissions preserved. Do not remove this attribution or silently
+replace the pinned schema.

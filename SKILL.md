@@ -1,7 +1,7 @@
 ---
 name: impact-to-funding
 description: "Help people put their skills, energy and experience towards real problems, develop meaningful contributions with others, learn what difference their work makes, and explore sustainable support. Use for exploring direction, collaboration, theories of change, source-linked examples and candidate patterns, evidence review, funding briefs and progress reports. No predefined decision, project or fundraising goal is required. Does not supply matching, introductions, funding or impact certification, or authorise outreach or money movement."
-license: MIT
+license: CC-BY-SA-4.0
 ---
 
 # Impact to Funding

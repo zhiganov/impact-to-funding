@@ -1,21 +1,35 @@
-MIT License
+Impact to Funding — licence scope
 
-Copyright (c) 2026 Artem Zhiganov
+Copyright (c) 2026 Artem Zhiganov, except where otherwise credited.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Original written content: CC-BY-SA-4.0
+The original skill instructions, references and library notes, templates,
+fictional prose examples, documentation and attribution notices are licensed
+under Creative Commons Attribution-ShareAlike 4.0 International.
+See LICENSE-CONTENT.md and https://creativecommons.org/licenses/by-sa/4.0/.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Original software: MIT
+Original program code, tests, executable JSON schemas and machine-readable
+configuration/metadata remain under the MIT licence in LICENSE-CODE.
+Markdown is written content even when located beside software. Original JSON
+examples embedded in that content follow its content licence; independently
+licensed third-party material retains its own terms.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Third-party exceptions
+Dependencies, linked works and separately identified third-party files keep
+their own licences. In particular, the unmodified financial schema at
+tools/support-profile/vendor/funding-v1.1.0.schema.json retains upstream
+CC-BY-SA-4.0; see the accompanying NOTICE.md. Licence texts retain their own
+terms. Neither ItF licence grants rights to third-party source material.
+
+Earlier MIT versions
+This change does not revoke MIT permissions already granted for earlier
+published copies. Unchanged material obtained under an earlier MIT grant can
+still be used under that grant. New copyrightable written contributions in
+this version and later versions use CC-BY-SA-4.0 unless otherwise marked.
+
+User materials
+Using the skill or tools does not automatically apply either licence to users'
+inputs, evidence, personal information or generated outputs. Sharing protected
+ItF text copied or adapted into an output can carry its attribution/ShareAlike
+obligations. Consent, confidentiality and other rights remain separate.

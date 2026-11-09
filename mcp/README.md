@@ -88,8 +88,11 @@ and malformed protocol requests remain protocol errors.
   on stderr, not paths or raw parser exceptions. There is no query logging,
   telemetry or persistent cursor store in this implementation.
 - Prepare only deliberately included public notes. Do not use private applications,
-  contacts, assessments, commercial records or source assets. This package's MIT
-  licence does not relicense the linked sources; full note rights limits remain.
+  contacts, assessments, commercial records or source assets. The server software
+  remains MIT; current written content uses [CC BY-SA 4.0](../LICENSE-CONTENT.md),
+  with earlier MIT grants preserved. Neither licence relicenses linked sources;
+  full note rights limits remain. Existing snapshots keep their source revision
+  and licensing basis; this source change does not refresh a running server.
 - A local subprocess does not make host/model processing or client history local.
   Supply short authorised topics rather than assessment packets; the client may
   retain requests/results. Session metadata is not an identity, credential,

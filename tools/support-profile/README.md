@@ -117,7 +117,9 @@ source; an executable schema or schema pass does not replace those meanings or
 prove consumer acceptance. The [unmodified vendored funding.json v1.1.0 schema](vendor/funding-v1.1.0.schema.json)
 is **CC-BY-SA 4.0**, not MIT; retain its [upstream notice](vendor/NOTICE.md).
 Original ItF code and its own support schema are **MIT**; see the repository
-[licence](../../LICENSE) and [sources](../../SOURCES.md). No upstream, FLOSS/fund
+[software licence](../../LICENSE-CODE) and [sources](../../SOURCES.md). This README,
+the worksheet and other written content use [CC BY-SA 4.0](../../LICENSE-CONTENT.md),
+subject to the earlier-MIT transition. No upstream, FLOSS/fund
 or Zerodha endorsement or extension agreement is implied. These licences do not
 grant rights over private inputs or make a local candidate publishable.
 

@@ -26,7 +26,7 @@ assessments, a maintained authoritative library or source-author endorsements.
 
 No source licence is transferred to unrelated material. A future actual adaptation
 must preserve its applicable attribution/share-alike or other terms and remain
-distinguishable from ItF's original MIT material; a paraphrase is not automatically
+distinguishable from ItF's own material; a paraphrase is not automatically
 an independent work. Linking these sources establishes neither conformance with
 their methods nor permission to imply affiliation. These notes are not legal advice.
 
@@ -91,7 +91,8 @@ project evidence or establish an upstream extension agreement.
 | [Ajv](https://ajv.js.org/guide/getting-started.html), version 8.17.1 | MIT-licensed local Draft-07 validator; compiles only the trusted bundled schemas, never a schema/URL supplied by input records. Version/integrity are pinned in the optional tool's lockfile. |
 | [Microsoft jsonc-parser](https://github.com/microsoft/node-jsonc-parser), version 3.3.1 | MIT-licensed parser used with comments/trailing commas disabled, checking parser errors and duplicate keys before interpreting JSON. Current documentation and installed type definitions are distinct from a consumer-compatibility result. |
 
-The original ItF support schema, code, worksheet and fictional checks are MIT.
+The original ItF support schema, code and executable checks remain MIT. The
+worksheet and written guidance use CC BY-SA 4.0 under the [content scope](LICENSE-CONTENT.md).
 The separately included financial schema retains its upstream licence and
 attribution. No upstream logos, real application, participant dataset or payment
 credential is bundled. Linking a report or validating JSON does not license that
@@ -108,7 +109,13 @@ not redistributed. AI-assisted source review is not project-author endorsement,
 practitioner validation or independent impact verification. Source rights and
 any actual adaptation requirements remain separate from the licence on these notes.
 
-The original skill, templates, synthetic examples, documentation, package checks and optional local code are licensed under [MIT](LICENSE). This grant does not relicense the separately attributed financial schema, linked third-party works or dependencies, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
+Original skill instructions, templates, synthetic prose examples, documentation
+and library notes use [CC BY-SA 4.0](LICENSE-CONTENT.md); original software, package
+checks and executable schemas remain [MIT](LICENSE-CODE). The [root scope](LICENSE)
+preserves earlier MIT permissions and third-party exceptions. Neither grant
+relicenses linked third-party works or dependencies, implies their endorsement,
+or makes a future source-derived adaptation automatically compatible. Review reuse
+rights and compatibility before adding such material or dependencies.
 
 Users' project records and generated outputs are not automatically covered by this repository's software/documentation licence. Consent, confidentiality and other rights remain separate.
 
