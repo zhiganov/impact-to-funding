@@ -228,3 +228,8 @@ repository; no builders' repository tasks are generated:
 The manual path does not depend on #35, a hosted store, another collector, native
 app orchestration, recruitment or a new test platform. Live collection, provider
 integration, installation changes and public reporting are separate scopes.
+
+The later [funding-interchange proposal](funding-interchange-design.md) considers
+an optional curated public support-document output across domains, including OSS
+compatibility where appropriate. It does not make a public manifest part of this
+private collection/crosswalk path or authorise exporting a person's packet.

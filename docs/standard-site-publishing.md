@@ -3,6 +3,12 @@
 **Date:** 2026-11-06
 **Status:** design note; no exporter, publisher integration or round-trip test is implemented.
 
+**Later assessment, 2026-11-09:** the [funding-interchange proposal](funding-interchange-design.md)
+revisits #6's no-structured-extension default for a broader cross-domain support
+document. The unchanged-financial-fields statements below describe this publishing
+note's scope, not a permanent ban on a separately designed optional ItF extension.
+The candidate is not adopted and no financial manifest or publisher changed here.
+
 ## Purpose and decision
 
 [Standard.site](https://standard.site/docs/) could make an explicitly approved public ItF report easier to discover and read through existing ATProto publishing tools. It is an optional publishing/discovery layer, not an impact-assessment standard, certification service, funding format or requirement for using the skill.
