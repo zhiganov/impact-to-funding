@@ -93,6 +93,31 @@ actual bytes, inventory, references and licences, then replaces the live directo
 Git hooks, global Git filters/configuration and credential prompts are disabled
 for source preparation. Package source files are not executed by installation.
 
+### Adopting a Windows clone
+
+A copy cloned on Windows with Git's default `core.autocrlf=true`, which includes
+any clone made by following the [installation guide](install.md) before
+`.gitattributes` fixed line endings, has CRLF text files. The manager compares
+exact bytes, so `adopt` refuses it as modified even when `git status` is clean.
+This is deliberate: integrity checks do not ignore line endings.
+
+First back up the entire owned installation, including Git metadata, ignored
+files and private material, to an unused safe location. Inspect local work
+carefully; ordinary `git status` omits ignored files. Only if the status below
+prints nothing and you have preserved any other edits, re-check out the same
+commit with LF endings and preview adoption again:
+
+```sh
+git -C "$target" status --porcelain --untracked-files=all --ignored=matching   # must print nothing
+git -C "$target" config core.autocrlf false
+git -C "$target" rm -q -r --cached .
+git -C "$target" reset -q --hard
+```
+
+This rewrites the index and tracked files; `git rev-parse HEAD` stays the same.
+`reset --hard` discards tracked modifications and may remove untracked files or
+directories obstructing checkout. A clean status alone is not a backup.
+
 ## Private state and recovery
 
 Receipts, locks, journals, staging and retained backups live under the home
@@ -125,9 +150,9 @@ requests or imply no updates. Git source preparation also requires public access
 
 File placement and local lifecycle tests do not establish native activation,
 model reliability or usefulness. Existing limited Claude, Codex and OpenCode
-checks retain their older exact-source SHAs and limits. These tools do not supply a
-host sign-in, model trial, guaranteed host notice, hook, telemetry or global
-configuration change.
+checks retain their older exact-source SHAs and limits, including the limited
+Claude Code check at `4566892`. These tools do not supply a host sign-in, model
+trial, guaranteed host notice, hook, telemetry or global configuration change.
 
 The bounded comparison with Vercel Skills CLI at
 [`d3701c1`](https://github.com/vercel-labs/skills/tree/d3701c11b1101251af14c9d148f026e1a47ebe17)

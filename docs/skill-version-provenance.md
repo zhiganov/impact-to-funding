@@ -165,6 +165,6 @@ The [managed CLI](managed-skill-updates.md), tracked in
 [#55](https://github.com/zhiganov/impact-to-funding/issues/55), uses this contract
 for installation, receipts, explicit updates and rollback.
 [#56](https://github.com/zhiganov/impact-to-funding/issues/56) uses its
-version-only release records for consent-aware notices in development source;
+version-only release records for consent-aware notices in current source;
 see the [host-delivery limits](update-notices.md). Neither capability is implemented
 by #54 itself, and no conversation is made dependent on this helper.

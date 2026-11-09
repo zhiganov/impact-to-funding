@@ -1,5 +1,46 @@
 # Native CLI installation checks
 
+## Claude Code project-local verification — 2026-11-09
+
+**Checked package:** `4566892ad990131fb36f760e14c73e5f275600cc`.
+**Host:** Claude Code 2.1.321, existing sign-in, CLI-default model
+(`claude-opus-5-5`) with no model override. One approved synthetic run; no
+automatic rerun.
+
+The complete public repository was cloned from GitHub into a disposable Git
+project at `.claude/skills/impact-to-funding`, then checked out at that exact SHA.
+No personal or other ItF installation existed or was changed.
+
+The run used `claude -p` with `--setting-sources project,local`, an empty
+`--strict-mcp-config`, read-only tools (Read, Glob, Grep, Skill) and the explicit
+`/impact-to-funding` invocation, without supplying a skill-file path. User
+settings were omitted to avoid configured hooks and plugins; user-level
+`CLAUDE.md` instructions still applied. This is not a pristine new-account
+comparison.
+
+Observed evidence:
+
+- Session initialisation listed the project skill `impact-to-funding`; no MCP
+  servers were loaded.
+- The persisted session log shows the skill body injected into context: all 78
+  checked `SKILL.md` lines were present verbatim.
+- The model read bundled `references/contributions.md`; the captured tool output
+  matched the frozen file exactly.
+- The same fictional request as the Codex check (four weekly hours on an
+  accessibility guide, uncertain benefit, no funding goal) produced a response
+  that separated supplied facts from assumptions, proposed low-cost checks, kept
+  stopping as a legitimate option and asked questions. No contribution, consent
+  or outcome was created.
+- All 106 tracked package files retained their source hashes; the clone and
+  disposable project stayed clean. No permission denials, file-change, web or
+  MCP action occurred.
+
+This establishes a limited **project-local explicit CLI activation and bundled-
+reference access check** for Claude Code at the named source. It does not
+establish implicit trigger reliability, the interactive `/` menu, IDE/desktop
+support, personal scope, update/removal behaviour, human usefulness or
+fundraising benefit. Raw traces remain private.
+
 ## Codex project-local verification — 2026-11-09
 
 **Checked package:** `4566892ad990131fb36f760e14c73e5f275600cc`.
@@ -38,8 +79,8 @@ The response also reflected inherited host instructions; it is not a blind
 behavioural evaluation. Complete raw traces remain private, not a distributed
 transcript or a new public benchmark.
 
-**Claude Code:** its native-folder route is documented, but no completed activation
-check is recorded here. **OpenCode:** the historical checks below retain their
+**Claude Code:** see the separate limited check above at the same source.
+**OpenCode:** the historical checks below retain their
 own source/version boundaries; `4566892` was not rechecked there. The
 [installation guide](install.md) separates these statuses and scopes. No installer,
 plugin marketplace, hosted service, new release or user recruitment was introduced.
