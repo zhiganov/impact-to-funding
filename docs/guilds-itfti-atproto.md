@@ -102,8 +102,10 @@ This is a presentation/design direction, not a JSON example or contract amendmen
 The [current support profile](support-profile-contract.md) already permits `person`
 and `collective` subjects, but defines no contributor/guild relationship arrays or
 DID fields. Its existing descriptions, scoped report references and limitations
-can explain permitted context; typed relationships need an explicit reuse/gap and
-contract decision under [#52][I52]. The filename alone defines no semantics.
+can explain permitted context. The [curation assessment](guild-curation-assessment.md)
+finds documentation-only reuse sufficient for this presentation need; any later
+typed relationships still need an actual exchange need and explicit contract
+decision. The filename alone defines no semantics.
 
 ## 3. The ATProto-specific opportunity and boundary
 
@@ -209,8 +211,10 @@ ATProto experience rather than treating a manual guide as proof of native suppor
 the latter must assess existing record/policy facilities before proposing any type.
 The [guild-workflow assessment](guild-workflow-assessment.md) now covers #53's
 offline journey and native mapping; its extended fictional example is not a live
-workflow test. #52's curation assessment remains unfinished. Allocation-specific
-questions extend #8 instead of a duplicate issue.
+workflow test. The [curation assessment](guild-curation-assessment.md) and
+[fictional policy-change case](../examples/guild-curation.md) cover #52's offline
+semantics/reuse gap, not a new exchange contract or native implementation.
+Allocation-specific questions extend #8 instead of a duplicate issue.
 
 [Readiness #10][I10] still lacks a confirmed supported deployed member-PDS/group-host/
 client tuple and an authorised disposable-resource arrangement with actual operating

@@ -24,8 +24,9 @@ Guilds are people sustaining useful practice together, not merely applicant list
 **Recommendation:** retain the core skill, report template and existing contracts
 unchanged. Add this small cooperation guide and extend the existing fictional
 walkthrough. The gap is the guild-level journey and native mapping, not a missing
-impact score, matching service or another mandatory record type. #52's independent
-curation assessment remains open; this assessment does not settle typed relationships.
+impact score, matching service or another mandatory record type. The separate
+[#52 curation assessment](guild-curation-assessment.md) supplies policy/selection
+reuse guidance; neither assessment adopts typed relationships.
 
 ## 2. Smallest useful cooperation journey
 

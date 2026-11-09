@@ -116,6 +116,12 @@ The [native guild-workflow assessment](guild-workflow-assessment.md) completes
 decision and report designs. Its recommendation is documentation-only; implemented
 collaboration, user usefulness and deployed Groups compatibility remain unverified.
 
+The [guild-curation assessment](guild-curation-assessment.md) and
+[fictional policy-change case](../examples/guild-curation.md) cover #52's offline
+reuse/gap assessment: attributed policy-bound selections and optional personal/
+collective views, without a new schema, registry, automatic ranking or certification.
+Human-readable portability does not establish typed or native interoperability.
+
 [The preserved scope snapshot](design-scope-2026-11-04.md) records the proposed product/method boundary at the time it was drafted. Its statements that implementation was unselected and licensing/publication undecided are historical. Current package status is in the [project README](../README.md); the [licence scope](../LICENSE) separates CC BY-SA 4.0 written content, MIT software and third-party exceptions while preserving earlier MIT grants.
 
 The snapshot is retained verbatim. It is not a live task queue, a licence grant, a private evidence export, or approval for publication, integrations or money movement.
