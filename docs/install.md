@@ -16,8 +16,11 @@ All 106 tracked files remained unchanged; no web or MCP calls occurred.
 
 That was one ephemeral, read-only `codex exec` check with user configuration
 omitted but user-level agent instructions still inherited—not a clean-account,
-interactive UI, IDE or usability test. Claude Code and OpenCode activation at
-this source remain unverified. Historical OpenCode v2.2.5 checks cover source
+interactive UI, IDE or usability test. A matching limited Claude Code 2.1.321
+check also passed at this source: explicit `/impact-to-funding` in one
+non-interactive `claude -p` run loaded the project skill and read the same bundled
+reference, with all tracked files unchanged and no web or MCP calls. OpenCode
+activation at this source remains unverified. Historical OpenCode v2.2.5 checks cover source
 `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b` separately. Checks are tied to those exact
 source revisions, not later documentation commits or latest main. Personal scope, manual
 copying, updates and removal below are documented, not runtime-checked routes.
@@ -31,7 +34,7 @@ Choose **one** target, not all three:
 
 | Host | Project-local target | Native invocation | Verification |
 |---|---|---|---|
-| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `4566892`: documented candidate; activation unverified. |
+| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `4566892`: limited CLI 2.1.321 check passed using explicit `/impact-to-funding` in `claude -p`, not the interactive menu. |
 | Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or select it through `/skills` | `4566892`: limited CLI 0.166.0 check passed using explicit `$impact-to-funding`, not the interactive menu. |
 | OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | `4566892`: documented candidate only; historical v2.2.5 checks cover `fbb8993` separately. |
 
@@ -64,8 +67,8 @@ support. No plugin marketplace setup is required here.
 
 ## 2. Clone the complete package at an exact revision
 
-The Codex native project-local clone route has the limited check described above;
-the Claude Code and OpenCode routes at this revision remain documented candidates.
+The Codex and Claude Code native project-local clone routes have the limited checks
+described above; the OpenCode route at this revision remains a documented candidate.
 With `target` set above, run from the intended project. The guard refuses an
 existing directory, file or symlink; inspect it rather than overwriting it.
 

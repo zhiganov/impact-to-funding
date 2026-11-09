@@ -28,7 +28,7 @@ do not install three copies or use one host's invocation syntax in another.
 | Host | Project skill folder | Invoke in the agent | Exact-version evidence |
 |---|---|---|---|
 | Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or `/skills` | Project-local CLI check passed for `4566892` on Codex 0.166.0. |
-| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | Documented native route for `4566892`; activation not yet checked. |
+| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | Project-local CLI check passed for `4566892` on Claude Code 2.1.321. |
 | OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | Earlier checks cover `fbb8993` on OpenCode v2.2.5, not `4566892`. |
 
 The [installation guide](docs/install.md) gives guarded complete-package commands,
@@ -67,8 +67,11 @@ the interactive selector, IDE/desktop UI, personal installs or human usefulness.
 ### Claude Code
 
 Use the guide's `.claude/skills/impact-to-funding` target and `/impact-to-funding`
-invocation. The source/docs support this route, but no successful activation check
-is recorded for this host yet. Do not treat documentation as a tested result.
+invocation. A limited check passed for `4566892` on Claude Code 2.1.321: explicit
+`/impact-to-funding` in one non-interactive `claude -p` run loaded the project skill
+and read a bundled reference, with no files changed. It did **not** test the
+interactive `/` menu, implicit triggering, IDE/desktop UI, personal installs or
+human usefulness.
 
 ### Install and use in OpenCode
 
