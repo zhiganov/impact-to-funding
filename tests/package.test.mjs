@@ -18,13 +18,15 @@ function files(directory = root) {
 
 test('entry point has valid metadata in the supported simple format', () => {
   const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
-  const match = skill.match(/^---\nname: ([a-z0-9-]+)\ndescription: ("[^\n]+")\nlicense: CC-BY-SA-4\.0\n---\n/);
-  assert.ok(match, 'Expected name, JSON-quoted YAML description and CC BY-SA content licence');
+  const match = skill.match(/^---\nname: ([a-z0-9-]+)\ndescription: ("[^\n]+")\nlicense: CC-BY-SA-4\.0\nmetadata:\n  version: ("[^\n]+")\n---\n/);
+  assert.ok(match, 'Expected name, description, licence and standard metadata.version');
   const name = match[1];
   assert.ok(name.length <= 64 && !/(^\-|\-$|--)/.test(name));
   assert.equal(name, path.basename(root));
   const description = JSON.parse(match[2]);
   assert.ok(description.length > 0 && description.length <= 1024);
+  const version = JSON.parse(match[3]);
+  assert.match(version, /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/);
   assert.ok(skill.split('\n').length < 500);
 });
 
@@ -35,7 +37,7 @@ test('reciprocal content and MIT software have separate explicit licence scopes'
   assert.match(scope, /does not revoke MIT permissions/);
   assert.match(readFileSync(path.join(root, 'LICENSE-CODE'), 'utf8'), /^MIT License\n/);
   assert.match(readFileSync(path.join(root, 'LICENSE-CONTENT.md'), 'utf8'), /creativecommons\.org\/licenses\/by-sa\/4\.0\/legalcode\.en/);
-  for (const packagePath of ['mcp/package.json', 'tools/support-profile/package.json']) {
+  for (const packagePath of ['mcp/package.json', 'tools/support-profile/package.json', 'tools/skill-package/package.json']) {
     assert.equal(JSON.parse(readFileSync(path.join(root, packagePath), 'utf8')).license, 'MIT');
   }
   const manifest = JSON.parse(readFileSync(path.join(root, 'funding.json'), 'utf8'));

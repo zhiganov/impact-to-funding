@@ -39,6 +39,11 @@ Read the [check record](installation-check-2026-11-04.md); do not treat a newer
 tag, passing package checks or an experimental prerelease as broad compatibility
 or evidence of human usefulness.
 
+The [version/provenance contract](skill-version-provenance.md) defines the optional
+machine-readable foundation. Its local helper does not retrieve releases,
+install/update a copy or send in-harness notices. Development metadata is not a
+new published release, and older tags do not gain that metadata retroactively.
+
 ## Maintainer release convention
 
 - Publish a GitHub release for a meaningful user-facing batch: changed skill
