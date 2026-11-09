@@ -3,9 +3,10 @@
 **Date:** 2026-11-09. **Application contract:** `itf.library/0.1-draft`.
 **Status:** initial application-contract design baseline, completed 2026-11-09 in
 [#44](https://github.com/zhiganov/impact-to-funding/issues/44),
-not a released standard, executable schema or working server.
+not a released standard. The optional [local implementation](../mcp/README.md)
+provides executable schemas and a stdio server separately from this prose contract.
 It follows the [independent-interface decision](reference-library-mcp-decision.md).
-Implementation has not started. The [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md)
+The [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md)
 specifies expected behaviour, not observed calls.
 
 ## 1. Three read-only tools, not a new record standard
@@ -31,8 +32,9 @@ publication format or a change to funding.json or a funding-discovery contract.
 **Client basis:** OpenCode v2.2.5 was observed in the current development workflow.
 The [V2 guide](https://opencode.ai/v2/docs/mcp-servers) documents tool exposure and
 resource-reading helpers; generic tool-capable MCP clients are also intended.
-Neither has been tested with this nonexistent server. No client/transport
-compatibility is claimed, and no SDK or transport is mandated here. The MCP wire
+This design did not establish client/transport compatibility and mandates no SDK
+or transport. Later [implementation checks](reference-library-mcp-checks.md) state
+the actually tested clients and wire revisions separately. The MCP wire
 revision is negotiated separately from this application contract; the current
 OpenCode guide documents both legacy and 2026-07-28 modes. Implementation must use
 the negotiated wire envelope, not mistake this application's payload for JSON-RPC.
@@ -264,4 +266,5 @@ and no-source-fetch behaviour. Static consistency and package checks are not sch
 validation, model trials, an MCP round trip or supported-client certification.
 The contract-design work in #44 is complete. Implementation is tracked separately
 in [#45](https://github.com/zhiganov/impact-to-funding/issues/45); no server or deployed
-service is supplied by these design documents.
+service is supplied by these design documents. See the optional
+[local server](../mcp/README.md) for the separate implementation and its boundaries.

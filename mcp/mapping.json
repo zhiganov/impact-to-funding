@@ -1,0 +1,111 @@
+{
+  "mappingRevision": "itf.library.mapping/1",
+  "indexPath": "references/library/README.md",
+  "indexRevision": 2,
+  "limitations": [
+    "This is a small, deliberately selected seed collection, not comprehensive coverage, universal best practices or an independent impact assessment. Historical evaluations do not establish current programme operation; candidate patterns are ItF interpretations, not practitioner-validated findings.",
+    "Food systems are not represented in this seed. The proposed WFP Purchase for Progress case was omitted because its programme/theory and evaluation texts could not be inspected within the bounded retrieval attempt; this is not a finding of ineffectiveness or absence of worthwhile food-system work.",
+    "L001 and L002 share a backing document. Search within that document may match text outside the requested lens section; the anchor identifies the requested section, but detail returns the full shared document with its common caveats."
+  ],
+  "records": [
+    {
+      "id": "C001",
+      "kind": "case",
+      "title": "Ahmedabad Heat Action Plan",
+      "recordRevision": 1,
+      "documentPath": "references/library/cases/ahmedabad-heat-action-plan.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "Climate adaptation, public health, municipal coordination. Source-published logic model; programme-linked observational mortality evaluation, with non-significant and sensitivity results retained.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "C002",
+      "kind": "case",
+      "title": "Making All Voices Count",
+      "recordRevision": 1,
+      "documentPath": "references/library/cases/making-all-voices-count.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "Civic technology, accountability, public services. Published theory and publisher-reported learning; full evaluation/synthesis reports not inspected. Not a verified effectiveness case.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "C003",
+      "kind": "case",
+      "title": "Teaching at the Right Level",
+      "recordRevision": 1,
+      "documentPath": "references/library/cases/teaching-at-the-right-level.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "Education, foundational learning, implementation. Reconstructed short pathway from published programme mechanisms; randomised delivery-package evaluations with positive and null variants.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "C004",
+      "kind": "case",
+      "title": "At Home/Chez Soi",
+      "recordRevision": 1,
+      "documentPath": "references/library/cases/at-home-chez-soi.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "Housing, mental health, supported participation. Reconstructed pathway from published model; randomised housing/support comparison with different findings across outcomes.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "C005",
+      "kind": "case",
+      "title": "Rural Mali CLTS",
+      "recordRevision": 1,
+      "documentPath": "references/library/cases/mali-community-led-sanitation.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "Public health, sanitation, collective action. Reconstructed pathway; cluster-randomised trial with increased uptake, primary health null findings, qualified secondary gains and ethical concerns.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "P001",
+      "kind": "pattern",
+      "title": "Put usable response capacity behind information",
+      "recordRevision": 1,
+      "documentPath": "references/library/patterns/response-behind-the-channel.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "An intervention/coordination hypothesis informed by C001–C003, not proof that information is never useful alone or a common component was causally isolated.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "P002",
+      "kind": "pattern",
+      "title": "Keep distinct outcomes distinct",
+      "recordRevision": 1,
+      "documentPath": "references/library/patterns/keep-outcomes-distinct.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "A learning/design pattern motivated by the different findings across C001–C005, not a reason to dismiss a meaningful outcome or require maximal measurement.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "L001",
+      "kind": "lens",
+      "title": "Doughnut Economics",
+      "recordRevision": 1,
+      "documentPath": "references/library/lenses.md",
+      "contentScope": "shared_document",
+      "anchor": "l001--doughnut-economics",
+      "discoveryText": "Consider social needs and ecological limits together, including distribution, participation, power, care and whether growth serves the work. Retain both social foundation and ecological ceiling, rather than using only the convenient half for a particular case. These questions do not establish a complete Doughnut assessment, local agreement, ecological safety or an outcome.",
+      "discoverySource": "references/library/lenses.md#l001--doughnut-economics"
+    },
+    {
+      "id": "L002",
+      "kind": "lens",
+      "title": "Planetary Boundaries",
+      "recordRevision": 1,
+      "documentPath": "references/library/lenses.md",
+      "contentScope": "shared_document",
+      "anchor": "l002--planetary-boundaries",
+      "discoveryText": "Examine relevant environmental dependencies, interacting pressures and possible burden shifting rather than treating a single local output as evidence of overall ecological sustainability. This collection provides no method for assigning local or personal shares of global boundaries.",
+      "discoverySource": "references/library/lenses.md#l002--planetary-boundaries"
+    }
+  ]
+}

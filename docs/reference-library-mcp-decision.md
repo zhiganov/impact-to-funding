@@ -1,8 +1,9 @@
 # Decision: an independent reference-library MCP interface
 
-**Date:** 2026-11-09. **Status:** architecture decision; implementation not started.
+**Date:** 2026-11-09. **Status:** architecture decision; local implementation available.
 The [initial application contract](reference-library-mcp-contract.md) is the design
-baseline developed in #44. No server, deployment or tested integration is available.
+baseline developed in #44. The optional [stdio server](../mcp/README.md) implements
+that baseline. Hosting and operating arrangements remain separate.
 
 ## Decision
 
@@ -44,18 +45,21 @@ hosted access. Hosting, authentication, rate limits, costs and operating ownersh
 remain open operating questions. Any shared infrastructure must preserve independent interfaces
 and appropriate access boundaries rather than silently join credentials or terms.
 
-## Contract boundary for later work
+## Design baseline and implementation
 
 The completed #44 design supplies a [discovery/read contract](reference-library-mcp-contract.md)
 and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md).
 Its tool names, snapshot/record mapping and error semantics form the initial
-`itf.library/0.1-draft` application baseline; no client is verified as supported by
-a running service, and no executable schema is supplied.
+`itf.library/0.1-draft` application baseline. That design alone supplied no executable
+schemas or client verification. The later [local implementation](../mcp/README.md)
+provides schemas and a stdio server; its
+[compatibility checks](reference-library-mcp-checks.md) identify the actually tested
+client and wire revisions separately from the design.
 MCP resources can expose contextual records and tools can support parameterised
 queries; the [protocol overview](https://modelcontextprotocol.io/specification/2026-07-28/server)
 permits both. The application contract above selects three tool names; protocol
 capability alone does not mandate those choices, select an SDK or prove client
-compatibility. No executable input/output schemas are supplied yet.
+compatibility.
 
 Preserve source-published theories, reconstructions, findings and ItF pattern
 interpretations as distinct. Return source links, record revisions, inspection

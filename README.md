@@ -119,17 +119,19 @@ evidence and ItF interpretations remain distinct; local fit, missing coverage
 and uncertainty stay visible. See the [usage examples](docs/usage.md#use-reference-examples-and-patterns-when-helpful).
 
 An [independent library MCP interface](docs/reference-library-mcp-decision.md)
-is the selected architecture direction for future programmatic access. Its source
-would live here, separately from funding/opportunity discovery services. Canonical
-records and bundled skill use stay independent; no server, deployment or client
-compatibility is implemented by this documentation decision.
+provides optional programmatic access separately from funding/opportunity discovery.
+The [local stdio server](mcp/README.md) exposes three read-only tools over a separately
+prepared immutable public-library snapshot. Canonical records and bundled skill use
+stay independent; ordinary skill installation needs no server or Node dependencies.
 
 The [accepted library MCP design contract](docs/reference-library-mcp-contract.md)
 and [fictional walkthrough](examples/reference-library-mcp-walkthrough.md) define
 three read-only discovery/detail/coverage tools over the existing records. This is
 the initial `itf.library/0.1-draft` application baseline, not a released standard,
-server, executable schema, installed integration or verified client capability.
-Ordinary skill use remains independent.
+hosted service or automatic source collector. The optional implementation includes
+executable schemas; see [start instructions](mcp/README.md) and the
+[observed compatibility checks](docs/reference-library-mcp-checks.md). No MCP host
+configuration or installed skill is changed automatically.
 
 The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
 
@@ -184,4 +186,4 @@ These checks cover package structure, the deliberately simple frontmatter format
 - [Installation-check record](docs/installation-check-2026-11-04.md): unsuccessful bounded OpenCode discovery probes, isolation, limits and unresolved release decision.
 - `docs/design-scope-2026-11-04.md`: preserved historical scope snapshot; its original unselected-work status is not a statement that this implementation does not exist.
 
-Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, automated funding/report manifest integrations, automatic allocation and an MCP interface are separate potential extensions, not implemented features or first-release dependencies.
+Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. The optional local library MCP is separate from the skill. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, automated funding/report manifest integrations and automatic allocation remain potential extensions, not implemented features or first-release dependencies.
