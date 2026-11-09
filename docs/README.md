@@ -109,6 +109,11 @@ and the maintainer's release convention. The
 [v0.2.0 release notes](releases/v0.2.0.md) describe the experimental source
 prerelease; exact-package host verification remains separately bounded.
 
+The [version/provenance contract](skill-version-provenance.md) and optional
+[local inspector](../tools/skill-package/README.md) define released source,
+explicit channels/pins and private installation observations. They do not fetch
+updates, install packages, notify users or add host-verification claims.
+
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,
 tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22)

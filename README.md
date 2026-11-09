@@ -153,6 +153,7 @@ Ordinary skill use does not require the optional software or a manifest.
 | [Evidence planning and audience-specific drafting](docs/evidence-reporting-design.md) | Current source routes to manual guidance and an [optional private crosswalk](assets/evidence-crosswalk.md). | Reuse permitted evidence; evidence fit, disclosure permission and presentation checks are separate. No collector or funding-provider integration. |
 | [Local reference-library MCP](mcp/README.md) | Implemented optional stdio server with three read-only discovery/detail/coverage tools over a prepared public snapshot. Separate Node.js 22+ setup. | Not a hosted service, live source search, semantic ranking or automatic refresh; see the [implementation checks](docs/reference-library-mcp-checks.md). |
 | [Support-profile authoring and tools](docs/support-profile-tools.md) | Optional worksheet plus implemented local inspection and explicit OSS financial binding/projection. Tools need separate Node.js 22+ setup. | General support cases are not OSS-only. No report fetching, publication, application, payment or consumer-acceptance guarantee; see the [check record](docs/support-profile-checks.md). |
+| [Skill version/provenance](docs/skill-version-provenance.md) | Standard declared-version metadata and an optional local, read-only helper for release records, explicit channels/pins and a selected installation. Node.js 22+ for the helper; no dependencies. | Development source, not a new release or host check. No release fetching, installer, update, automatic notice or publisher authentication. |
 | [Additional practice guides](docs/README.md) | Manual guidance and fictional cases for affected-person accounts, scoped review, coordination, supplied signals and publishing plans. | No reviewer pool, recruitment, monitoring, publishing service or automatic integration. |
 
 For a machine-readable public support candidate, **`itf-manifest.json`** is the
@@ -219,9 +220,10 @@ node --test tests/package.test.mjs
 
 These check package structure, metadata, local links and accidental local-machine
 paths—not reasoning, privacy completeness, host compatibility or social impact.
-The [MCP](mcp/README.md#checks-and-compatibility) and
-[support-profile](tools/support-profile/README.md#local-checks) packages document their
-own optional setup and checks; ordinary conversation needs neither.
+The [MCP](mcp/README.md#checks-and-compatibility),
+[support-profile](tools/support-profile/README.md#local-checks) and
+[skill metadata](tools/skill-package/README.md#checks) packages document their
+own optional setup and checks; ordinary conversation needs none of them.
 
 ## Contents and release boundary
 
