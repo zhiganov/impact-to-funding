@@ -18,7 +18,7 @@ export function owned(value) {
   return stat;
 }
 
-export function inventory(root) {
+export function inventory(root, allowedPaths = null) {
   const result = [];
   let total = 0;
   function walk(directory, prefix = '') {
@@ -32,6 +32,11 @@ export function inventory(root) {
       if (item.isSymbolicLink()) throw new Error('Linked package files are not managed');
       if (item.isDirectory()) { walk(file, relative); continue; }
       if (!item.isFile()) throw new Error('Unsupported package entry');
+      if (allowedPaths && !allowedPaths.has(relative)) {
+        const error = new Error('Unexpected package file');
+        error.code = 'ITF_UNEXPECTED_FILE';
+        throw error;
+      }
       const stat = lstatSync(file);
       total += stat.size;
       if (stat.size > 8 * 1024 * 1024 || total > 32 * 1024 * 1024 || result.length >= 10000) {
@@ -60,7 +65,14 @@ export function validateFiles(files) {
 
 export function matchesInventory(root, expected) {
   validateFiles(expected);
-  return JSON.stringify(inventory(root)) === JSON.stringify(expected);
+  try {
+    // Never open unrecognised extra files merely to decide whether a managed
+    // installation has changed: they may contain private user material.
+    return JSON.stringify(inventory(root, new Set(expected.map((file) => file.path)))) === JSON.stringify(expected);
+  } catch (error) {
+    if (error.code === 'ITF_UNEXPECTED_FILE') return false;
+    throw error;
+  }
 }
 
 export function readJson(file) {
@@ -89,6 +101,7 @@ export function validateReceipt(receipt, paths) {
     || !uuidPattern.test(receipt.generation) || !/^[a-f0-9]{40}$/.test(receipt.sourceCommit)
     || !['git', 'manual'].includes(receipt.kind) || !['release', 'declared', 'unknown'].includes(receipt.versionSource)
     || !['stable', 'prerelease'].includes(receipt.policy?.channel)
+    || (receipt.installationId !== undefined && !uuidPattern.test(receipt.installationId))
     || (receipt.previous !== null && !uuidPattern.test(receipt.previous))) throw new Error('Unrecognised managed receipt');
   validateFiles(receipt.files);
   if (receipt.version !== null) parseVersion(receipt.version);

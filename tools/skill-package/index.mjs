@@ -3,3 +3,4 @@ export { RELEASE_CONTRACT, REPOSITORY, releaseFromGitHub, selectRelease, validat
 export { HELPER_VERSION, INSTALLATION_CONTRACT, inspectInstallation } from './lib/installation.mjs';
 export { createManager } from './lib/manager.mjs';
 export { githubCatalogue } from './lib/github.mjs';
+export { checkNotice, configureNotice, formatNotice } from './lib/notice.mjs';

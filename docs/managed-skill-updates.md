@@ -68,6 +68,11 @@ not an enforced cross-harness turn detector. Claude's skill watching, Codex's
 discovery/restart fallback and OpenCode's refresh behaviour are described in the
 [installation guide](install.md#3-check-discovery-then-try-a-bounded-conversation).
 
+For an optional per-copy notice during skill use, see
+[in-skill update notices](update-notices.md). The installed source must contain
+its helper, and the person must explicitly enable it; actual host delivery has
+not been verified.
+
 ## Protect existing work
 
 Default-folder discovery checks project ancestors within the repository boundary
@@ -119,10 +124,10 @@ requests or imply no updates. Git source preparation also requires public access
 ## Compatibility and source choice
 
 File placement and local lifecycle tests do not establish native activation,
-model reliability or usefulness. Existing exact-source host checks retain their
-older SHAs and limits; Claude activation remains unverified. No new release, host
-sign-in, model trial, automatic notice, hook, telemetry or global configuration
-change is supplied by this implementation.
+model reliability or usefulness. Existing limited Claude, Codex and OpenCode
+checks retain their older exact-source SHAs and limits. These tools do not supply a
+host sign-in, model trial, guaranteed host notice, hook, telemetry or global
+configuration change.
 
 The bounded comparison with Vercel Skills CLI at
 [`d3701c1`](https://github.com/vercel-labs/skills/tree/d3701c11b1101251af14c9d148f026e1a47ebe17)

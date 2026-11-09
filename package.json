@@ -1,13 +1,13 @@
 {
   "name": "itf-skill-manager",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Bootstrap CLI for installing complete Impact to Funding Git snapshots; not the skill bundle",
   "type": "module",
   "license": "SEE LICENSE IN LICENSE",
   "engines": { "node": ">=22" },
   "bin": { "itf": "tools/skill-package/itf.mjs" },
-  "files": ["tools/skill-package", "docs/managed-skill-updates.md", "docs/skill-version-provenance.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "PRIVACY.md"],
+  "files": ["tools/skill-package", "docs/managed-skill-updates.md", "docs/skill-version-provenance.md", "docs/update-notices.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "PRIVACY.md"],
   "scripts": {
     "test": "node --test tests/package.test.mjs tools/skill-package/tests/*.test.mjs"
   }

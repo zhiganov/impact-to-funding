@@ -4,7 +4,8 @@
 **Status:** metadata/inspection foundation delivered in
 [#54](https://github.com/zhiganov/impact-to-funding/issues/54). The separate
 [managed CLI](managed-skill-updates.md) now builds on it for explicit installation
-and updates; automatic notices and new host verification remain separate.
+and updates. The later [opt-in notice path](update-notices.md) does not establish
+automatic host delivery or new host verification.
 
 The existing GitHub repository and release API are the publication source; no
 registry, new service or version endpoint is introduced. The optional
@@ -15,14 +16,15 @@ contact a service or change an installed copy; the managed commands are separate
 ## Three versions must not be confused
 
 1. **Declared skill version:** standard Agent Skills `metadata.version`, a
-   JSON-quoted SemVer string inside `SKILL.md`. Current development source declares
-   `0.3.0-dev.0`; this is not a published release or a claim about the existing
-   `v0.2.0` tag. No source SHA is embedded in its own Git tree.
+   JSON-quoted SemVer string inside `SKILL.md`. This source declares `0.3.0`;
+   that string alone is not proof of a release, a particular commit or a host
+   check. No source SHA is embedded in its own Git tree.
 2. **Released source:** a published GitHub release with a fixed version tag and its
    resolved full commit SHA. Exact source is determined after checkout or tag
    resolution, not inferred from a version string.
 3. **Helper version:** the optional metadata tool is independently versioned
-   `0.2.0` after the managed CLI addition (`0.1.0` for the original #54 inspector).
+   `0.3.0` after the notice addition (`0.1.0` for the original #54
+   inspector and `0.2.0` for the managed CLI).
    Its version is not the installed skill's version.
 
 The [Agent Skills specification](https://agentskills.io/specification#metadata-field)
@@ -31,15 +33,15 @@ small, two-space-indented, double-quoted version entry. The helper is not a gene
 YAML parser: absent, invalid or differently encoded metadata stays unknown rather
 than being guessed. Older released packages need not be rewritten to add it.
 
-Host checks remain external, source-specific evidence: Codex's recorded source
-is `4566892ad990131fb36f760e14c73e5f275600cc`, OpenCode's historical source is
-`fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`, and Claude activation remains unverified.
+Host checks remain external, source-specific evidence: the limited Codex and
+Claude CLI checks used `4566892ad990131fb36f760e14c73e5f275600cc`, while OpenCode's
+historical check used `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
 This metadata change and any later helper/package release inherit none of those
 exact-package checks. See the [installation record](installation-check-2026-11-04.md).
 
 ## Release record
 
-The machine-readable representation of the already-published source prerelease is:
+An example machine-readable representation of the earlier v0.2.0 source prerelease is:
 
 ```json
 {
@@ -162,6 +164,7 @@ private reports, evidence or untracked files in a release bundle.
 The [managed CLI](managed-skill-updates.md), tracked in
 [#55](https://github.com/zhiganov/impact-to-funding/issues/55), uses this contract
 for installation, receipts, explicit updates and rollback.
-[#56](https://github.com/zhiganov/impact-to-funding/issues/56) can later use its
-version-only release records for consent-aware notices. Neither capability is
-implemented by #54 itself, and no conversation is made dependent on this helper.
+[#56](https://github.com/zhiganov/impact-to-funding/issues/56) uses its
+version-only release records for consent-aware notices in development source;
+see the [host-delivery limits](update-notices.md). Neither capability is implemented
+by #54 itself, and no conversation is made dependent on this helper.

@@ -98,23 +98,25 @@ native onboarding guide, and there is no active feedback collection through them
 
 The [native installation guide](install.md) covers project/personal folders,
 host-specific invocation, safe updates/removal and troubleshooting. The
-[check record](installation-check-2026-11-04.md) separates Codex's limited CLI
-verification of `4566892`, earlier OpenCode checks of `fbb8993`, and Claude's
-documented but unverified route. Personal installs, interactive/IDE/desktop
+[check record](installation-check-2026-11-04.md) separates the limited Codex and
+Claude CLI checks of `4566892` from earlier OpenCode checks of `fbb8993`.
+Personal installs, interactive/IDE/desktop
 surfaces and human usefulness are not established by the CLI check.
 
 [Release and update guidance](releases.md) explains optional GitHub release
 notifications, deliberate version selection, source-versus-host-check boundaries
 and the maintainer's release convention. The
-[v0.2.0 release notes](releases/v0.2.0.md) describe the experimental source
-prerelease; exact-package host verification remains separately bounded.
+[v0.3.0 release notes](releases/v0.3.0.md) describe the current experimental source
+prerelease; the earlier [v0.2.0 notes](releases/v0.2.0.md) remain historical.
+Exact-package host verification remains separately bounded.
 
 The [version/provenance contract](skill-version-provenance.md) and optional
 [local inspector](../tools/skill-package/README.md) define released source,
 explicit channels/pins and private installation observations. Those interfaces
 remain read-only. The separate [managed CLI](managed-skill-updates.md) adds
-explicit installation, check/update, adoption, rollback and recovery; neither
-automatic notices nor new host-verification claims are included.
+explicit installation, check/update, adoption, rollback and recovery. Optional
+[in-skill update notices](update-notices.md) require per-copy consent and host
+permissions; actual user-visible delivery and new host verification are not claimed.
 
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,

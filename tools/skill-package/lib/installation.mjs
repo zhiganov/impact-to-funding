@@ -6,7 +6,7 @@ import { REPOSITORY } from './releases.mjs';
 import { parseVersion } from './version.mjs';
 
 export const INSTALLATION_CONTRACT = 'itf.installation/0.1';
-export const HELPER_VERSION = '0.2.0';
+export const HELPER_VERSION = '0.3.0';
 
 function git(root, args) {
   // Inspection must not borrow another repo/index/object store from the caller.
