@@ -104,7 +104,9 @@ host file-reading, not a new retrieval service or a change to the systems/comple
 method. The person does not need to open Markdown source files or complete the
 collection. Its use is optional, and it is not a gate for learning about ItF.
 
-The [independent MCP interface decision](../../docs/reference-library-mcp-decision.md)
-records a future programmatic access direction, not a working service. These
-versioned notes remain canonical and bundled skill use stays independent of MCP
-or a funding-service account. Library expansion does not wait for that interface.
+The [optional local MCP implementation](../../mcp/README.md) now provides three
+read-only tools over a separately prepared public snapshot, following the
+[interface decision](../../docs/reference-library-mcp-decision.md) and contract.
+It is not a hosted service, live collector or automatic library refresh. These
+versioned notes remain canonical; bundled skill use and library expansion remain
+independent of MCP setup or a funding-service account.

@@ -2,215 +2,165 @@
 
 **Put your skills and experience towards real problems—and build a credible case for support.**
 
-Impact to Funding (ItF) is an open-source agent skill for developers, maintainers and independent builders who already work with AI agents and want to turn their capabilities into meaningful contributions.
+Impact to Funding (ItF) helps your agent support meaningful contribution: explore
+where your skills could be useful, develop shared work, learn what difference it
+makes, and explain what would help it continue. Start with your situation—not a
+required theory of change, project, evidence packet or fundraising goal.
 
-It helps you explore where your skills and experience could be useful, develop contributions with others, learn what difference the work makes, and explain what support would help it continue. You can arrive without a predefined decision, project or fundraising goal.
+It is an open-source skill for developers, maintainers and independent builders
+who already use AI agents. Community organisers, small teams and facilitators may
+also find it useful. Employment uncertainty can make these questions urgent, but
+you do not need to become a founder or assume unpaid work is the answer.
 
-**Experimental v0:** native installation, discovery, activation and bundled-reference access were checked in OpenCode v2.2.5 at source revision `fbb8993`, including the optional systems/complexity guidance. Human usefulness, reliable model routing, fundraising effectiveness and other hosts remain unverified. See [installation](#install-and-use-in-opencode) and [status and limits](#status-and-limits).
+**Experimental v0:** conversational guidance, optional templates and reference
+material—not a matching network, available collaborators, funding or impact
+certification. Human usefulness and fundraising effectiveness remain unverified.
 
-## Is this for me?
-
-You might recognise one or more of these situations:
-
-- "I can build things, but want to work on something people actually need."
-- "I want to contribute to an existing effort rather than launch another project."
-- "I'm doing useful work, but struggle to explain its value or sustain it financially."
-- "I want to know whether my work is helping—not just producing outputs."
-- "I'm facing employment uncertainty and exploring other ways to contribute."
-
-Job loss and difficulty getting hired can make these questions urgent, including when AI agents put pressure on paid work. That is one reason to use ItF, not everyone's situation. You do not need to become a founder, create a nonprofit or already have proven impact. A funding narrative is not a substitute for income security.
-
-Community organisers, small project teams and facilitators may also find the workflow useful. A theory of change is simply an explanation of how work could lead to a useful change—and why that explanation might be wrong. You can begin without one. The [audience and positioning note](docs/audience-and-positioning.md) explains the intended users and distinct jobs in more detail.
-
-## What can it help me do today?
-
-- **Explore where you could contribute.** Connect your interests, capabilities and circumstances with real needs; no predefined project, decision or life mission is required. Consider supporting existing work as well as a new effort.
-- **Develop a contribution with others.** Clarify possible roles, existing relationships, shared interests and capacity without inventing invitations, agreements or access to collaborators.
-- **Explain how your contribution could help.** Connect activities to intended outcomes while distinguishing your role from the results of a shared project.
-- **Examine what the evidence supports.** Separate outputs, observed changes, plausible contributions and expected impact; retain dated sources, uncertainty and contrary evidence.
-- **Plan proportionate learning.** Identify the smallest useful way to learn whether the work helps, without inventing stakeholder views or collecting unnecessary data.
-- **Explore sustainable participation.** Understand time, income, collaborators and other resources needed to continue, without assuming unpaid capacity or promising support.
-- **Prepare an honest case for support.** Explain what additional resources would enable, the cost basis where known, dependencies and how progress could be reported.
-- **Review what changed.** Compare intentions with results, including failures and changed assumptions, and decide what to do differently.
-
-Decisions and documents support this work; they are not required entry points or the endpoint of every conversation. Optional resources support personal/project theories of change, multi-project contribution portfolios, and source-linked framework lenses. They are supporting methods, not required forms or scores. Project-only work does not require a personal theory; a prospective proposal does not require pretending that future outcomes have already happened.
-
-## The larger vision
-
-The longer-term aim is to help people channel their energy and wisdom towards real problems, establish credible evidence of contribution, and connect with like-minded peers, communities and funders. Financial support matters, but so do collaboration, belonging and shared learning. Those relationships are valuable in their own right, not merely steps in a fundraising funnel.
-
-The goal is impact that can be substantiated and, where appropriate, independently checked—not just persuasive reports. A theory of change, a donation or a completed assessment does not itself verify impact. Early-stage work can still be worth supporting before outcomes exist.
-
-**Today, ItF provides a conversational workflow and templates—not a matching network, introductions, a job-placement service, funding or impact certification.** Existing communities and human-facilitated connections may support the vision; a new platform is not assumed. Neither financial support nor successful outcomes are guaranteed.
+[Get started](#install-and-use-in-opencode) · [Choose a task](#three-ways-to-start) ·
+[See an example](#outputs-and-examples) · [Capability status](#what-is-available) ·
+[Privacy and limits](#status-and-limits)
 
 ## Install and use in OpenCode
 
-From the project where you want to use ItF, install the complete package at the
-native project skill path. These commands require Git and an unused destination:
+These commands install the **last installation-tested snapshot**, not the latest
+repository source. From your project, with Git and an unused destination:
 
 ```sh
 git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
 git -C .opencode/skills/impact-to-funding checkout --detach fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b
 ```
 
-This installs only for that project; it does not change global configuration.
-In OpenCode for the same project, invoke the skill normally:
+This installs the complete package for that project only, without changing global
+configuration. In OpenCode for the same project, invoke:
 
 > @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I supply, mark assumptions and keep the result private. Do not contact anyone.
 
-You do not need to open or read the skill's Markdown source. Read the
-[privacy guidance](PRIVACY.md) before providing real material; your host's normal
-costs and privacy terms apply. The native registry and skill tool loaded the exact
-revised body, and a host file read accessed the installed systems/complexity
-reference. All 14 bundled reference files matched the selected source. These
-were loading/access checks, not human usability or model-routing trials,
-interactive TUI tests, or tests of the Vercel Skills CLI. See the
-[systems-source check](docs/installation-check-2026-11-04.md#systemscomplexity-guidance-verification--2026-11-09)
-and [earlier installation follow-up](docs/installation-check-2026-11-04.md#successful-follow-up--2026-11-08).
+**Version boundary:** native discovery, activation and bundled-reference access
+for `fbb8993` were checked in OpenCode v2.2.5 on 2026-11-09. Newer source adds
+responsible-assistance guidance, evidence/reporting worksheets and optional local
+tools that are **not included in this pin**. Links below describe the current
+repository source; they do not establish installation checks of that newer version.
+See the [successful checks and their limits](docs/installation-check-2026-11-04.md).
+
+No Node.js, MCP server or funding account is required for the conversational skill.
+Your host supplies the model and tools, with its normal costs and privacy terms.
+Read the [privacy guide](PRIVACY.md) before supplying real material. You do not need
+to open the skill's Markdown files yourself.
 
 ## Optional manual use
 
-Open a trusted copy of the whole repository in an agent that can read [SKILL.md](SKILL.md) and its relative references and assets. No automatic installation is needed for this manual route.
+Open a trusted copy of the whole repository in an agent able to read
+[SKILL.md](SKILL.md) and its references/assets. Ask it to read and follow SKILL.md,
+then describe your situation. This needs no automatic installation, but is not
+proof of native discovery, activation or compatibility in another host.
 
-Read the [privacy guidance](PRIVACY.md) before providing real material: a file on your machine may still enter a remote model's context through your agent. Use only material you are authorised to process with that host/provider. Keep saved outputs outside this distributable repository; a response in the chat may be enough.
+## Three ways to start
 
-### Find a direction
+After native activation, use a prompt such as these. They are alternative starting
+points, not commands or a required sequence. For manual use, ask the agent to read
+SKILL.md first.
 
-> Read SKILL.md and follow it. I want to put my skills and experience towards a useful contribution. Here is what I can offer, the time I have and the problems I care about. Help me compare possible directions, including supporting existing work rather than starting another project. Use only the material I supply; mark needs, opportunities and assumptions that still need checking. Keep this private and do not contact anyone.
+### Find a useful contribution
 
-### Prepare a funding brief
+> Help me explore where my skills and available time could be useful, including contributing to existing work. Use what I supply, mark assumptions, and keep this private. Do not contact anyone.
 
-> Read SKILL.md and follow it. Help me assess the following project and prepare a private funding brief. Use only the material I supply; distinguish observed results from proposed outcomes and mark missing evidence explicitly. Explain what support would enable without inventing a budget or promising impact. Do not submit or publish anything.
+### Develop shared work and learn
 
-### Review progress
+> Help me describe my role in this shared project, check it against my capacity, and examine what we know about its effects. Preserve other contributors and disagreement. Do not collect or publish anything.
 
-> Read SKILL.md and follow it. Review this report against my earlier theory of change. What changed, what is supported, and what should I do differently?
+### Explain what support would help
 
-The [usage guide](docs/usage.md) covers minimal inputs, more starting prompts and missing evidence. You can begin with a few sentences; no selected project, complete evidence packet, funding account or prior results are required for exploring a direction.
+> Help me prepare a private case for sustaining this work. Separate observations from proposals, use only known costs and commitments, and keep uncertainty visible. Do not invent impact, submit an application or contact a funder.
 
-No application runtime, network, account or dependency installation is required by the skill itself. The host's normal costs and privacy terms apply. Document/image/audio access depends on its actual tools; a link to unavailable evidence is not evidence that has been inspected.
-
-The [one-task feedback guide](docs/user-feedback.md) and [learning plan](docs/user-learning-plan.md) describe an earlier manual-use preparation, not the current native onboarding instructions above. There is no active recruitment, telemetry or feedback collection through those materials.
+A few sentences can be enough. A useful result may be a contribution possibility,
+a clearer question, a revised commitment or a decision to stop—not a formal report.
+The [usage guide](docs/usage.md) has more prompts and incomplete-evidence examples.
 
 ## Outputs and examples
 
-Use the relevant parts of the [assessment packet](assets/assessment.md) or [periodic report](assets/report.md); small projects need not produce six separate documents.
+**Fictional illustration, not an observed model result:** 60 copies of an access
+guide were distributed—but that does not establish that 60 households repaired
+appliances. The [worked example](examples/builder-assessment.md) separates copies
+distributed, a small self-reported information benefit, unmeasured repairs and
+unconfirmed future costs. It retains a smaller alternative to another print run.
 
-The [synthetic builder case](examples/builder-case.md) and [illustrative assessment](examples/builder-assessment.md) show the intended distinctions. They are authored examples, not observed project results or proof that a model follows the skill. Do not use their numbers or claims in a real fundraising ask.
+That is the kind of distinction ItF aims to help with: describe your actual role,
+keep claims within their evidence, and learn whether the next contribution is
+worthwhile. A careful account is not itself verified impact or funding approval.
 
-The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) show how a person's direction can connect to independent shared theories, with capacity conflicts, shared costs and private/unavailable material kept explicit. No personal theory is required for project-only use; no account or new tracking service is needed.
+Other starting points: a [five-project portfolio](examples/portfolio-assessment.md)
+with shared work and capacity conflicts, or optional
+[assessment](assets/assessment.md)/[report](assets/report.md) sections. Project-only
+work needs no personal theory; supporting existing work or reducing a commitment
+can be responsible outcomes.
 
-The [optional framework starter](references/frameworks.md) covers choosing or declining a lens, Planetary Boundaries and Doughnut Economics reference cards, source versions and scale limits. Its [fictional examples](examples/framework-lenses.md) show useful questions without invented outcomes or personal quotas. This is dated manual-use guidance, not a comprehensive library, asset collection, fresh behavioural validation or MCP service.
+## What is available?
 
-The [pattern-language design](docs/pattern-language-design.md) proposes a future
-library linking real cases, contextual patterns, framework lenses and private
-local applications across open-ended domains. Its worked example is fictional;
-the design supplies no curated case collection, validated patterns, database,
-new retrieval feature or change to the installed skill.
+**Current repository source—not everything in the installation pin above.**
+Ordinary skill use does not require the optional software or a manifest.
 
-The separate [seed reference collection](references/library/README.md) contains
-source-linked case notes, candidate patterns and optional framework questions.
-It is a deliberately limited curation, not a set of universal success recipes,
-practitioner validation or database. The skill conditionally reads its index and
-relevant notes when examples or patterns would help; it does not load the whole
-collection by default or require you to read source Markdown. This is selective
-reference use, not a live search or automated recommendation service. Source
-evidence and ItF interpretations remain distinct; local fit, missing coverage
-and uncertainty stay visible. See the [usage examples](docs/usage.md#use-reference-examples-and-patterns-when-helpful).
+| Capability | Current status | Important boundary |
+|---|---|---|
+| [Conversational skill](SKILL.md), contribution/claim guidance and optional templates | Source instructions and authored examples for exploration, collaboration, learning and support. | Host capabilities and model behaviour vary; no matching, funding or independent evaluation is supplied. |
+| [Reference library](references/library/README.md) and optional [framework](references/frameworks.md)/[systems](references/systems-and-complexity.md) lenses | A small source-linked collection of cases, candidate patterns and questions; selectively read when useful. | Not universal recipes, comprehensive coverage, automatic recommendations or a required framework. |
+| [Evidence planning and audience-specific drafting](docs/evidence-reporting-design.md) | Current source routes to manual guidance and an [optional private crosswalk](assets/evidence-crosswalk.md). | Reuse permitted evidence; evidence fit, disclosure permission and presentation checks are separate. No collector or funding-provider integration. |
+| [Local reference-library MCP](mcp/README.md) | Implemented optional stdio server with three read-only discovery/detail/coverage tools over a prepared public snapshot. Separate Node.js 22+ setup. | Not a hosted service, live source search, semantic ranking or automatic refresh; see the [implementation checks](docs/reference-library-mcp-checks.md). |
+| [Support-profile authoring and tools](docs/support-profile-tools.md) | Optional worksheet plus implemented local inspection and explicit OSS financial binding/projection. Tools need separate Node.js 22+ setup. | General support cases are not OSS-only. No report fetching, publication, application, payment or consumer-acceptance guarantee; see the [check record](docs/support-profile-checks.md). |
+| [Additional practice guides](docs/README.md) | Manual guidance and fictional cases for affected-person accounts, scoped review, coordination, supplied signals and publishing plans. | No reviewer pool, recruitment, monitoring, publishing service or automatic integration. |
 
-An [independent library MCP interface](docs/reference-library-mcp-decision.md)
-provides optional programmatic access separately from funding/opportunity discovery.
-The [local stdio server](mcp/README.md) exposes three read-only tools over a separately
-prepared immutable public-library snapshot. Canonical records and bundled skill use
-stay independent; ordinary skill installation needs no server or Node dependencies.
+For a machine-readable public support candidate, **`itf-manifest.json`** is the
+preferred filename under the [accepted support profile](docs/support-profile-contract.md),
+not a mandatory endpoint or automatic discovery feature. The repository's own
+`funding.json` is separate upstream-format metadata for maintaining ItF; its
+financial plan remains inactive. Neither file is needed to develop a contribution.
 
-The [accepted library MCP design contract](docs/reference-library-mcp-contract.md)
-and [fictional walkthrough](examples/reference-library-mcp-walkthrough.md) define
-three read-only discovery/detail/coverage tools over the existing records. This is
-the initial `itf.library/0.1-draft` application baseline, not a released standard,
-hosted service or automatic source collector. The optional implementation includes
-executable schemas; see [start instructions](mcp/README.md) and the
-[observed compatibility checks](docs/reference-library-mcp-checks.md). No MCP host
-configuration or installed skill is changed automatically.
+## Direction and design-only work
 
-The [optional affected-person account guide](docs/beneficiary-accounts.md) and [fictional library walkthrough](examples/beneficiary-accounts.md) show how permitted accounts can challenge claims and change a practical decision. Use Markdown, an appropriate human conversation or optional Harmonica facilitation; no live collection, privacy configuration or integration has been validated.
+The longer-term aim includes connections with peers, communities and funders.
+Belonging, reciprocal help and shared learning matter in their own right—not only
+as steps towards funding. Existing communities may support that vision; a new
+platform is not assumed and no introductions or opportunities are promised.
 
-The [optional expert-review guide](docs/expert-review.md) and [fictional review walkthrough](examples/expert-review.md) cover a bounded request, conflicts, permitted evidence, reviewer-authored findings and reuse of existing evaluations. No reviewer pool, matching, actual review or impact certification is supplied.
-
-The [optional coordination guide](docs/session-coordination.md) and [fictional index](examples/coordination-index.md) connect conversations and reporting periods through selective, versioned handoffs. This is a portable manual bridge, not an implemented Harmonica-native ItF type, automatic session graph or shared-evidence permission.
-
-The [optional supplied-signal guide](docs/signal-enrichment.md) and [fictional cases](examples/signal-enrichment.md) show how social updates, contribution records and app observations can inform a narrow private draft without inflating activity into impact. No discovery tool, real-data analysis, monitoring or publishing service is supplied.
-
-The [optional discovery guide](docs/signal-discovery.md) and [fictional candidate notes](examples/signal-discovery.md) cover bounded source selection, false matches, record versions and incomplete coverage. They are planning documentation, not a working collector or permission to search real histories; supplied material remains sufficient for enrichment.
-
-The [evidence/reporting design](docs/evidence-reporting-design.md) and
-[fictional two-funder walkthrough](examples/evidence-reporting.md) connect reusable
-private evidence, collection plans and versioned funder-specific presentations.
-The source skill conditionally routes to this manual guidance and its
-[optional private worksheet](assets/evidence-crosswalk.md), with assessment/report
-links. Evidence fit, destination permission and actual presentation checks remain
-separate. This is not a collector, provider integration or change to the installed
-skill; ordinary learning needs no funding service. Actual source-review/check limits
-are recorded separately in the [manual-path check record](docs/evidence-reporting-checks.md).
-
-The [funding-interchange design](docs/funding-interchange-design.md) has an
-[accepted architectural direction](docs/funding-interchange-direction-decision.md):
-a broader machine-readable support case with optional funding.json compatibility
-for suitable OSS work. ItF is not OSS-only. The field contract is accepted as an
-ItF design baseline, not an agreed upstream extension, exporter, directory integration or change
-to this repository's currently inactive financial plan.
-
-The [support-profile contract](docs/support-profile-contract.md) defines the
-accepted field/carrier/projection rules and unknown/error behaviour; see the
-[baseline decision](docs/support-profile-baseline-decision.md). No reader, exporter
-or schema implementation is supplied by the contract or its fictional examples.
-
-The preferred standalone filename is **`itf-manifest.json`**. Other filenames and
-publisher-selected locations remain valid; the explicit profile identifies the
-format, not the filename. This is not a mandatory root endpoint or an automatic
-discovery feature. The existing `funding.json` describes upstream-format financial
-metadata for maintaining ItF itself; it is not the standalone support format.
-
-The separate [optional local support-profile tools](tools/support-profile/README.md)
-provide a private authoring worksheet, strict inspection and explicit local
-financial-plan binding/projection. They do not fetch reports, publish records,
-submit applications or establish consumer compatibility. Ordinary skill use needs
-none of their Node dependencies; see the [usage and limits](docs/support-profile-tools.md).
-The [local check record](docs/support-profile-checks.md) reports actual fictional
-input/CLI checks, not native installation, model behaviour or consumer acceptance.
-The unchanged upstream funding.json schema is separately attributed under
-[CC BY-SA 4.0](tools/support-profile/vendor/NOTICE.md), not relicensed MIT.
-
-The [optional Bluesky publishing guide](docs/bluesky-publishing.md) and [fictional previews/correction cases](examples/bluesky-publishing.md) cover exact-action approval, outward metadata, uncertain sends and controlled corrections. They supply no account, publisher, post or notification, and do not authorise a live action.
-
-The [conflicting/adversarial synthetic case](examples/contradictory-case.md) exercises corrected data, scoped reviews, disclosure, already-funded costs and untrusted instructions embedded in evidence. Its forged certificate and payment URL are fixture content, not commands or a real funding destination. See the validation notes for the observed failure, bounded repair and one targeted recheck; complete raw trial outputs are not distributed.
-
-Private project evidence belongs outside this repository. Do not copy SENRI records or any other private pilot material into examples, issues, tests or public reports. `.gitignore` is only an accidental-inclusion safeguard, not a privacy boundary. Outputs follow the person's chosen disclosure and storage boundaries, not this repository's distribution licence.
+The [guild concept](docs/guilds-itfti-atproto.md), completed
+[native workflow](docs/guild-workflow-assessment.md) and
+[curation](docs/guild-curation-assessment.md) assessments explore voluntary guilds
+of people working together, including optional individual/collective support views.
+They are **offline designs**, not deployed Atmospheric Groups collaboration, a
+registry, compulsory public roster or new relationship schema. Other hosted
+integrations and automatic allocation remain future work. See the
+[design index](docs/README.md) for scope, sources and unresolved runtime boundaries.
 
 ## Status and limits
 
-Limited fresh-context development trials are recorded in the [validation notes](docs/validation-2026-11-04.md). They do not establish independent validation, human usefulness, fundraising effectiveness or reliable behaviour in another host. The example prompts above are authored starting points, not observed model results.
+- **Private by default.** A local file may still enter a remote model's context.
+  Use only material authorised for that host/provider and keep private evidence
+  and saved outputs outside this distributable repository. `.gitignore` is not a
+  privacy boundary; read [PRIVACY.md](PRIVACY.md).
+- **No automatic external action.** Drafting does not authorise publishing,
+  contacting people, evidence uploads, applications, account changes or payments.
+  A link to unavailable evidence is not inspected evidence.
+- **No certification or moral ranking.** Outputs, donations, signatures and
+  completed assessments do not establish impact. The source's
+  [responsible-assistance rules](docs/responsible-assistance.md) address concrete
+  harmful conduct and deception, not sector labels or people's worth.
+- **Evidence limits stay visible.** [Development trials](docs/validation-2026-11-04.md)
+  are limited; the examples are authored fiction. Reliable model routing, other
+  hosts, human usefulness and funding effectiveness remain unverified. A passing
+  package check or published source is not an install-tested release.
+- **No implied affiliation.** ItF draws on public Moral Ambition principles but is
+  not affiliated with or endorsed by the School for Moral Ambition or Rutger
+  Bregman. [Sources and rights](SOURCES.md) distinguish original material from
+  third-party sources.
 
-For an Agent Skills-compatible host, the package is this directory under the name `impact-to-funding`, including references and assets rather than just SKILL.md. Native OpenCode v2.2.5 discovery, activation and reference access for source `fbb8993` were verified on 2026-11-09; earlier successful checks used `3ebefeb`, `666f8f8` and `22d4c8d`. Earlier empty API registries did not establish an installation failure: that version's skill-list endpoint does not await plugin loading. The [installation-check record](docs/installation-check-2026-11-04.md) preserves the unsuccessful probes and the successive successful checks. Other hosts and reliable model selection of references remain untested; no new release was made.
+### Licence
 
-ItF does not rank people, award verified-impact badges, promise donations, publish records, contact funders or distribute money. A request to draft does not authorise sending or publishing. The skill is informed by the School for Moral Ambition's public principles, not affiliated with or endorsed by the School or Rutger Bregman. See [sources and rights](SOURCES.md).
-
-The source skill's [responsible-assistance boundaries](docs/responsible-assistance.md)
-address concrete harmful conduct and deceptive claims, not sector labels or people's
-moral worth. Ordinary commercial risk and fair criticism are not abuse. The
-[fictional cases](examples/responsible-assistance.md) are authored illustrations,
-not model tests, legal clearance or proof of enforcement; source adoption does
-not update an installed copy, manifest format or licence.
-
-Original skill instructions, templates, fictional prose examples, documentation
-and library notes use [CC BY-SA 4.0](LICENSE-CONTENT.md): shared adaptations must
-preserve attribution and ShareAlike. Commercial reuse remains allowed. Original
-software, tests and executable schemas remain [MIT-licensed](LICENSE-CODE).
-See the [licence scope](LICENSE) for third-party exceptions and the transition:
-earlier MIT grants remain valid, so unchanged previously published text remains
-usable under those grants. New copyrightable content contributions use CC BY-SA.
-Using ItF does not automatically license your inputs or outputs; sharing protected
-ItF text copied or adapted into an output can carry its licence obligations.
+Current original written content uses [CC BY-SA 4.0](LICENSE-CONTENT.md); commercial
+reuse is allowed with applicable attribution/ShareAlike obligations. Original
+software, tests and executable schemas remain [MIT](LICENSE-CODE). The older pinned
+snapshot retains its earlier MIT licence; those grants remain valid. See the
+[licence scope](LICENSE) for the transition and third-party exceptions, including
+the vendored funding.json schema. Your inputs and generated outputs are not
+automatically relicensed; copied/adapted protected ItF text can carry obligations.
 
 ## Local package checks
 
@@ -220,27 +170,27 @@ Development-only requirement: a Node.js version supporting `node:test` (Node 18 
 node --test tests/package.test.mjs
 ```
 
-These checks cover package structure, the deliberately simple frontmatter format, local links and accidental local-machine paths. They do **not** establish semantic correctness, privacy completeness, independent verification, host compatibility, user usefulness or social impact.
-
-The optional support-profile package has separate local checks: after its documented
-dependency setup, run `npm test` from `tools/support-profile`. These check the local
-reader/projections and CLI against fictional inputs, not upstream consumer acceptance.
+These check package structure, metadata, local links and accidental local-machine
+paths—not reasoning, privacy completeness, host compatibility or social impact.
+The [MCP](mcp/README.md#checks-and-compatibility) and
+[support-profile](tools/support-profile/README.md#local-checks) packages document their
+own optional setup and checks; ordinary conversation needs neither.
 
 ## Contents and release boundary
 
-- [SKILL.md](SKILL.md): progressive-disclosure workflow and non-negotiable safeguards.
-- [Claim review reference](references/claims.md): evidence, attribution, review provenance and corrections.
-- [Contribution relationships](references/contributions.md): personal/project theories, bounded roles, portfolio views, shared credit/costs and disclosure limits.
-- [Optional framework lenses](references/frameworks.md): selection, source-linked starter cards and limits on translating global frameworks into project/personal claims.
-- [Optional systems/complexity guidance](references/systems-and-complexity.md): revisable causal hypotheses, feedback, emergence and adaptive learning; no mandatory framework or complete Cynefin method.
-- [Funding/review reference](references/funding-and-review.md): prospective asks, budgets, reporting and disclosure.
-- [Assessment packet](assets/assessment.md) and [report template](assets/report.md): optional output structures.
-- [Sources and rights](SOURCES.md): attribution and redistribution boundaries.
-- [Development validation](docs/validation-2026-11-04.md): trial procedure, observed finding, repair/recheck and limits.
-- [Usage](docs/usage.md), [privacy](PRIVACY.md) and [contributing](CONTRIBUTING.md): practical use, disclosure boundaries and safe improvements.
-- [Audience and positioning](docs/audience-and-positioning.md): initial users, jobs to be done, intended connections/support and the distinction between vision and current capabilities.
-- [Release-preparation review](docs/release-readiness-2026-11-04.md): current documentation/example/source-rights boundary and remaining installation/distribution checks.
-- [Installation-check record](docs/installation-check-2026-11-04.md): unsuccessful bounded OpenCode discovery probes, isolation, limits and unresolved release decision.
-- `docs/design-scope-2026-11-04.md`: preserved historical scope snapshot; its original unselected-work status is not a statement that this implementation does not exist.
+- [Usage](docs/usage.md) and [audience](docs/audience-and-positioning.md): starting
+  situations, prompts and intended users.
+- [Skill instructions](SKILL.md), [claims](references/claims.md) and
+  [contributions](references/contributions.md): the core workflow and distinctions.
+- [Design/documentation index](docs/README.md): practice guides, contracts, examples
+  and integration designs with their individual status and source limits.
+- [Installation evidence](docs/installation-check-2026-11-04.md): successful
+  exact-version discovery/activation/reference checks, earlier probes and limits.
+- [Development validation](docs/validation-2026-11-04.md) and
+  [historical release-preparation review](docs/release-readiness-2026-11-04.md):
+  bounded observations and earlier source-rights review, not current-release proof.
+- [Contributing](CONTRIBUTING.md): safe reports, source rights and checks.
 
-Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. The optional local library MCP and support-profile tools are separate from ordinary skill use. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, hosted funding/report consumer integrations and automatic allocation remain potential extensions, not implemented features or first-release dependencies.
+A newer install-tested release needs verification of that exact package in a
+supported host. Publishing source does not update an installed copy or establish
+a new distribution channel.
