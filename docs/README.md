@@ -45,6 +45,13 @@ maps approved public reports to existing publication metadata and tools. It is
 design only, not an exporter or publication trial; funding.json stays unchanged
 and the skill remains usable through ordinary Markdown/manual reading.
 
+[Reusable evidence and funder-specific reporting](evidence-reporting-design.md)
+designs private evidence/claim links, proportionate collection planning, versioned
+requirements interpretation and audience-specific crosswalks. Its
+[fictional walkthrough](../examples/evidence-reporting.md) is not a model trial or
+an implemented collector, provider adapter or new installed-skill capability.
+Manual use does not depend on funding discovery or a hosted evidence store.
+
 [AI Registry and Vercel Skills CLI distribution references](ai-registry-distribution.md)
 compare registry/catalog value with direct Git skill distribution, separately
 from skills.sh discovery and impact evidence. Neither distribution tool has been
