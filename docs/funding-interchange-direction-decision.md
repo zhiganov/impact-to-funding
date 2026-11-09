@@ -1,8 +1,13 @@
 # Decision: cross-domain support discovery, optional OSS compatibility
 
 **Date:** 2026-11-09. **Status:** accepted architectural direction for #49.
-Concrete fields, identifiers, carrier names and schemas remain candidates, not an
-adopted field contract, implemented exporter or tested consumer integration.
+This architecture decision did not adopt exact fields, identifiers or carrier
+names. Their later [field-contract adoption](support-profile-baseline-decision.md)
+is separate; neither decision implements an exporter or establishes compatibility.
+
+The bounded design slice below has produced a
+[field/carrier/projection contract](support-profile-contract.md) and reconciled
+fictional examples, now accepted in the separate field-contract decision.
 
 ## Accepted direction
 
@@ -33,13 +38,13 @@ reader. An existing funding.json consumer is only a target for its actual financ
 contract; added-field handling, report discovery, eligibility and directory support
 are not inferred from permissive schema validation.
 
-## What remains open
+## What this architecture decision left open
 
-The proposed `itf.support/0.1-proposal` identifier, JSON field shapes, illustrative
-filename and `extensions`/`org.impact-to-funding.support` carrier spelling remain
-**candidates**. This decision adopts their intended architectural jobs, not those
-exact names, all proposed monetary rules or a published namespace. The existing
-JSON examples remain authored design illustrations, not normative fixtures.
+At architecture adoption, the `itf.support/0.1-proposal` identifier, JSON field
+shapes and carrier spelling were candidates. This decision accepted their jobs,
+not those exact names or monetary rules. The later field-contract decision accepts
+those concrete conventions without claiming a registered namespace or executable
+schema. The JSON examples remain authored illustrations, not consumer trials.
 
 The real inactive ItF `funding.json`, its financial status/destination and existing
 disclosure limits are unchanged. No schema, codec, exporter, reader, installation,
@@ -47,16 +52,16 @@ live evidence processing, directory submission, outreach or funding operation wa
 delivered. #48's independent manual evidence workflow is not selected by this
 decision, and ordinary skill use requires no manifest or service.
 
-## Next bounded scope: define the contract, not the runtime
+## Completed bounded scope: define the contract, not the runtime
 
-The next design slice in [#49](https://github.com/zhiganov/impact-to-funding/issues/49)
-should produce **one minimal contract draft and a reconciled fictional walkthrough**
-for review. Use the existing assessment, source mapping, #14 content concepts and
-#47 disclosure rules; do not restart broad format research. Its finish condition is
+The subsequent design slice in [#49](https://github.com/zhiganov/impact-to-funding/issues/49)
+produced **one minimal contract draft and a reconciled fictional walkthrough**
+for review. It reused the existing assessment, source mapping, #14 content concepts
+and #47 disclosure rules. Its finish condition was
 that an implementer can determine what each supported representation means and
 which inputs cannot be safely represented, without inventing facts.
 
-Resolve within that slice:
+The slice addressed:
 
 1. **Exact document meaning:** minimum/optional fields, types, allowed values,
    identifier scope, content versus report/review versions, unknowns and partial
@@ -80,13 +85,13 @@ Resolve within that slice:
    the draft. Check local references and package/text integrity, stating exactly
    what was inspected. These are design checks, not consumer or model trials.
 
-Deliver the draft for an explicit **field-contract adoption or revision** decision.
-Do not implement exporters/readers, install dependencies, publish a schema endpoint,
-change the live manifest or run a directory test during this design slice. An
+The draft received an explicit **field-contract adoption** decision, recorded
+separately. This design slice implemented no exporter/reader, dependency, schema
+endpoint, live manifest change or directory test. An
 actual consumer's unavailable capability may limit a later compatibility claim,
 but does not block drafting the general contract or require participant recruitment.
 
-After a field contract is accepted, define/select the smallest authoring/projection
+With the field contract accepted, define/select the smallest authoring/projection
 implementation against it and verify its actual behaviour. Consumer-specific tests,
 upstream contact and public fundraising retain their own real scope boundaries.
 This dependency path records the next work; it does not start that work.

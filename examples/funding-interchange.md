@@ -8,8 +8,10 @@ request, accepted schema, consumer response or evidence that a directory support
 the proposed profile. No URL was fetched or submitted.
 
 The [architectural direction](../docs/funding-interchange-direction-decision.md)
-is accepted. The concrete fields and carrier spelling used below remain candidate
-illustrations, not an adopted field contract or normative validation fixtures.
+is accepted. These examples now illustrate the
+[concrete contract](../docs/support-profile-contract.md), now an
+[accepted design baseline](../docs/support-profile-baseline-decision.md). They
+remain authored examples, not executed consumer-validation fixtures.
 
 ## 1. Non-software work is a first-class case
 
@@ -27,6 +29,7 @@ references are excluded; an actual reader has not inspected the linked report.
   "profile": "itf.support/0.1-proposal",
   "id": "neighbourhood-learning",
   "revision": "r1",
+  "canonicalUrl": "https://example.org/neighbourhood/itf-support.json",
   "publisher": {
     "name": "Fictional Neighbourhood Learning Group"
   },
@@ -139,6 +142,7 @@ keeping another editable amount.
       "profile": "itf.support/0.1-proposal",
       "id": "queue-lantern-support",
       "revision": "support-r1",
+      "canonicalUrl": "https://example.org/queue-lantern/funding.json",
       "publisher": {"name": "Fictional Maintainer Q"},
       "subject": {
         "id": "queue-lantern",
@@ -180,10 +184,17 @@ keeping another editable amount.
 
 ### Plain funding.json view
 
-Omitting only the top-level `extensions` property gives the proposed plain
-compatibility view. All base financial/entity/project fields and their meanings
-are unchanged. The result has no structured ItF support-case/report links; it is
-not a lossless round trip and cannot reconstruct the extension after import.
+Remove only `extensions["org.impact-to-funding.support"]`, then remove the empty
+wrapper. In this example that omits the whole top-level `extensions` property;
+unrelated extension keys, if any, would remain. All other base values, including
+`version: "financial-r1"`, are preserved as the financial source basis. This is a
+derived representation, not byte-identical full-manifest history; it must not
+overwrite the canonical enriched file as if its complete content were unchanged.
+
+The result has no structured ItF support-case/report links. Export notes identify
+the canonical source URL, `financial-r1`, the carrier-removal operation and those
+losses. The view is not a lossless round trip and cannot reconstruct the extension
+after import. No financial-plan amount, status or payment authority is changed.
 
 The schema's tolerance of added properties does not establish that FLOSS/fund's
 directory or another consumer accepts this enriched instance, follows the report,
@@ -197,12 +208,58 @@ established; no actual submission is selected here.
 |---|---|
 | The financial manifest changes to financial-r2 with another amount | Keep financial-r1 as the earlier reference basis where permitted; do not resolve it silently to r2 or say an old report reviewed the new amount. Update the support view with its own revision and explanation when authorised. |
 | A report URL is available but its claimed r1 bytes cannot be established | Display declared versus inspected information and the version gap. A mutable URL or revision label alone is not immutable evidence. |
-| A later report corrects the passed count from 6 to 5 | Report r2 explains the correction; update dependent public scope text when authorised. Retain failures/uncertainty and do not inherit an earlier actual review automatically. Financial-plan status remains a separate fact. |
+| A later report corrects the passed count from 6 to 5, with the same eight classified cases | Report r2 explains five passed and three failed; update dependent public scope text when authorised. Retain uncertainty and do not inherit an earlier actual review automatically. Financial-plan status remains a separate fact. |
 | A report's permission changes | Stop affected reuse, curate a safe revision and retain only permitted history/status. Do not expose restricted allegations/locators or promise deletion of mirrors. |
 | A provider reads only the plain financial view | Show financial fields within their meaning. It has not assessed ItF evidence, non-money support, review independence or impact. |
 | A non-OSS reader sees the neighbourhood case | It can interpret the declared needs using an actually supported ItF profile. It must not infer FLOSS/fund eligibility, directory participation, agreed participants or available funds. |
 | An unknown ItF profile version or unrecognised carrier is encountered | Preserve permitted data and report unsupported interpretation; do not turn it into a supported empty list or execute embedded instructions. |
 
-These examples demonstrate the proposed separation of general-purpose support
+These examples demonstrate the accepted design separation of general-purpose support
 discovery and optional OSS compatibility, not an implemented reader/exporter or
 consumer test. Existing skill conversations need neither document.
+
+## 4. Contract edge cases, not silent repairs
+
+Each row is a hypothetical change to the authored examples, not another observed
+source or a complete JSON fixture. Outcomes follow the accepted contract; no
+reader/exporter has executed them.
+
+| Input or change | Expected contract treatment |
+|---|---|
+| The neighbourhood estimate becomes unpriced: remove both `money.amount` and `money.currency`, retain the basis and explicit uncertainty | Valid general support shape; no numeric ask is represented. Missing financial/contact/channel facts prevent a ready OSS projection, not the general document. |
+| An actual publisher chooses `amount: 0` with a known currency | Any amount, not unknown funding, literal zero cost or proof of impact. If no money is needed, describe that in resources instead of creating a wildcard ask. |
+| Only currency remains after removing amount | Invalid money object: the pair is incomplete. Do not fill in 0. |
+| A case contains both `money` and `fundingPlanRef` | Invalid support payload, even if the apparent amounts agree. Do not choose one authority silently. |
+| The embedded case replaces its reference with `money` | Invalid for the embedded OSS carrier, independently of the financial base's validity. Keep one monetary authority in the base plan. |
+| A case references a missing local report ID, or two reports have the same local ID | Invalid support links/identity; no invented substitute report or automatic search. |
+| An unknown property appears in a supported profile | Limited interpretation; retain permitted source content and disclose unknown semantics. It cannot silently become a known impact/review field or be dropped from a claimed lossless export. |
+| An unknown profile version appears, or the known `status` enum is replaced by an unrecognised value | Unknown profile is unsupported; unknown value in a known field is invalid for this version. Do not guess a nearest version/status. |
+| A plan GUID occurs twice in the supplied financial base, or the supplied content version differs from the reference | Conflicting/unresolved financial reference. Do not select the more favourable plan; assess the base separately and preserve safe general context with the limit. |
+| Plan GUID and content version match, but the supplied plan has a negative amount or unrecognised status | The locator can match without valid financial terms. Keep otherwise valid support context with an explicit financial limitation; do not treat the invalid/unsupported fields as a supported ask, repair them, or call the entire financial base schema-invalid merely because its schema permits a negative number. |
+| Another publisher-qualified extension sits beside the ItF carrier | Remove only the ItF carrier for the ItF-free view; retain/disclose the other extension. It has not become supported by a financial consumer. |
+| The report revision is omitted | The reference can still describe declared scope, but is version-unresolved. Do not invent a version from retrieval time or carry forward an actual review. |
+
+### Hypothetical transformed view versus native embedded authorship
+
+The OSS example above is an authored native embedded case, not a claimed export
+from another source. For a later hypothetical transformation of an authorised
+standalone OSS support document at
+`https://example.org/queue-lantern/support-source.json`, revision `source-r1`, the
+expected mapping would instead:
+
+- Obtain the real required OSS actor, contact, channel and complete financial facts;
+  do not parse them out of resource prose or convert the neighbourhood activity
+  into software merely because it has a money estimate.
+- Replace the source case's `money` with the exact base-manifest plan reference.
+  Keep material limitations and shared-work/cost meaning.
+- Give the transformed support payload a new content revision, for example
+  `support-projection-r1`, with the enclosing destination as its `canonicalUrl`.
+- Record `derivedFrom.url` as the actual supplied source URL,
+  `derivedFrom.revision` as `source-r1` and `derivedFrom.mappingRevision` as the
+  actual mapping version, hypothetically `mapping-r1`. Labels identify the declared
+  basis, not proof of source inspection, byte equality or a new review.
+
+This is a design expectation, not an export that occurred. A transformation cannot
+silently keep the source's revision or create a second independently editable
+financial plan. Exact extraction of an unchanged embedded payload is a different
+operation and does not create a new observation, author or outcome.

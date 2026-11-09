@@ -1,10 +1,11 @@
 # Design: broader support discovery with optional funding.json compatibility
 
 **Date:** 2026-11-09. **Status:** architectural direction accepted; see the
-[decision and next contract-design scope](funding-interchange-direction-decision.md).
-Concrete fields/carrier names remain candidates, not an adopted field contract,
-public standard, executable schema, exporter or tested directory integration.
-See the [fictional examples](../examples/funding-interchange.md).
+[architecture decision](funding-interchange-direction-decision.md).
+The [concrete field/carrier contract](support-profile-contract.md) is now an
+[accepted ItF design baseline](support-profile-baseline-decision.md), not a released
+standard, executable schema, exporter or tested directory integration. See the
+[fictional examples](../examples/funding-interchange.md).
 
 ## 1. Purpose, audience and origin
 
@@ -48,7 +49,7 @@ must not export the private evidence register or each funder's application draft
 |---|---|---|
 | Existing financial manifest plus linked pages | Existing funding.json consumers read known financial fields; people follow richer accounts manually. | Keep as a fallback. It does not supply structured report/case discovery and is insufficient as the only path for the new goal. |
 | funding.json as the universal ItF format | Could reuse its familiar financial vocabulary everywhere. | Not recommended: its public contact/funding assumptions and FOSS consumer purpose do not fit everyone. A schema accepting non-OSS data does not make the directory a non-OSS funding service. |
-| Optional ItF support profile, with a funding.json carrier/projection for suitable OSS cases | ItF-aware consumers connect versioned support cases to permitted reports across domains; existing financial consumers can still receive an ordinary applicable OSS manifest. | Accepted architectural direction. Concrete contract and later consumer checks remain open. Existing readers are not promised to understand the added profile. |
+| Optional ItF support profile, with a funding.json carrier/projection for suitable OSS cases | ItF-aware consumers connect versioned support cases to permitted reports across domains; existing financial consumers can still receive an ordinary applicable OSS manifest. | Accepted architecture and field-contract target. Implementation and consumer checks remain open. Existing readers are not promised to understand the added profile. |
 | Fork or replace funding.json, or ask upstream to broaden its mission | Could make one format cover local preferences. | Not justified here. Creates adoption/maintenance work and assumes a change to another project's intended audience. No upstream change or outreach is selected. |
 
 **Accepted direction:** design the general ItF support document first, with an optional
@@ -57,10 +58,15 @@ allow the same support profile in a clearly qualified optional extension on its
 funding.json. Do not replace the broader cross-domain goal with the old
 webpage-only bridge, and do not market an ItF convention as an upstream standard.
 
-## 3. Small candidate support profile
+## 3. Support-profile overview
 
-Proposed identifier: **`itf.support/0.1-proposal`**. It is an ItF design identifier,
-not a registered standard or an adopted namespace. A standalone UTF-8 JSON file is
+This section is an architectural overview, not a second editable field contract.
+The [accepted contract](support-profile-contract.md) defines required/optional fields,
+types, unknown handling, money rules and exact projection behaviour.
+
+Identifier: **`itf.support/0.1-proposal`**. Its retained suffix is part of the literal
+version, not an unadopted status. It is an ItF design identifier, not a registered
+standard or namespace. A standalone UTF-8 JSON file is
 suggested; `itf-support.json` is an illustrative filename, not a required root path,
 well-known discovery convention or directory registration. A normal page can link
 to it. Private conversational work need not produce any such file.
@@ -72,10 +78,11 @@ and the existing [claim](../references/claims.md),
 [disclosure](../references/funding-and-review.md) guidance. No Groups/ATProto host,
 personal theory, new database or financial account is required.
 
-| Candidate field | Meaning |
+| Field family | Meaning |
 |---|---|
 | `profile` | Exact supported profile identifier; unknown versions are not interpreted as the nearest known one. |
 | `id`, `revision` | Publisher-scoped document identity and actual content revision. Neither establishes retrievable history or real-world identity. |
+| `canonicalUrl`, `derivedFrom` | Optional declared primary representation and versioned derivation context; neither proves control, inspection or byte identity. Exact fields are in the contract. |
 | `publisher` | Cleared public publishing name and optional public webpage; authorship/authority limits stated in readable context. No mandatory email, legal identity or payment details. A name alone is not identity verification. |
 | `subject` | Local `id`, `name`, `kind` (person, project, collective or other) and description of the actual subject/role. No repository or software licence is required. It does not appoint the publisher to speak for everyone involved. |
 | `supportCases` | Optional selected cases with local `id`, `purpose`, `status` (proposed, seeking, paused, completed or withdrawn), `resources`, optional monetary terms/reference, report references and material `limitations`. Case status is not upstream financial-plan status, review status or evidence quality. Empty/omitted cases mean no cases represented, not no needs. |
@@ -133,9 +140,9 @@ allocation.
 
 ### Same-file extension option
 
-The candidate ItF carrier is an added top-level `extensions` object containing
+The ItF carrier is an added top-level `extensions` object containing
 `org.impact-to-funding.support` with the profile payload. **Both names are ItF
-proposals, not upstream-defined properties or a registered namespace.** The base
+conventions, not upstream-defined properties or a registered namespace.** The base
 v1.1.0 schema permits additional properties; that proves neither consumer support
 nor agreement to an extension. Unknown consumers may ignore or reject additions
 in their own processing. No live consumer was exercised here.
@@ -211,8 +218,8 @@ FLOSS/fund should support non-OSS work.
 
 ItF's own currently published inactive `funding.json` stays operationally unchanged
 by this assessment: its status, destination and existing disclosure limits are not
-upgraded by writing a design. Once a field contract is adopted, a later source change
-can add a cleared support/report link payload after real content and exact
+upgraded by writing a design. Now that the field contract is adopted, a later source
+change can add a cleared support/report link payload after real content and exact
 publication approval exist. No social-impact result is invented for ItF itself.
 
 The relationship to other work is:
@@ -232,9 +239,9 @@ The relationship to other work is:
 
 1. The [architecture decision](funding-interchange-direction-decision.md) adopts
    the cross-domain path and optional OSS compatibility, not the candidate fields.
-2. Next, draft the exact minimal field/carrier/projection contract within that
-   decision's bounded design scope. Reconcile examples and obtain a field-contract
-   adoption/revision decision before selecting source/runtime implementation.
+2. The [minimal field/carrier/projection contract](support-profile-contract.md)
+   and reconciled fictional walkthrough are accepted as a design baseline by the
+   [field-contract decision](support-profile-baseline-decision.md).
 3. After contract adoption, select the smallest authoring/projection implementation.
    For actual compatibility claims, select a real consumer/adapter version and
    verify plain financial import, added-field handling and declared information
@@ -258,5 +265,5 @@ The announcement establishes origin and intent; its historical schema example
 does not override the current v1.1.0 contract. The FAQ's current FOSS-selection
 focus is a funder policy, not a universal field/eligibility rule for all readers.
 No source schema, logos, datasets or method text are redistributed as MIT material.
-The proposed ItF field names and fictional examples are original design choices,
+The ItF field names and fictional examples are original design choices,
 not FLOSS/fund/Zerodha endorsement or an agreed upstream extension.

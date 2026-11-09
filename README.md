@@ -152,9 +152,14 @@ or change to the installed skill; ordinary learning needs no funding service.
 The [funding-interchange design](docs/funding-interchange-design.md) has an
 [accepted architectural direction](docs/funding-interchange-direction-decision.md):
 a broader machine-readable support case with optional funding.json compatibility
-for suitable OSS work. ItF is not OSS-only. Concrete fields remain candidates;
-there is no agreed upstream extension, exporter, directory integration or change
+for suitable OSS work. ItF is not OSS-only. The field contract is accepted as an
+ItF design baseline, not an agreed upstream extension, exporter, directory integration or change
 to this repository's currently inactive financial plan.
+
+The [support-profile contract](docs/support-profile-contract.md) defines the
+accepted field/carrier/projection rules and unknown/error behaviour; see the
+[baseline decision](docs/support-profile-baseline-decision.md). No reader, exporter
+or schema implementation is supplied by the contract or its fictional examples.
 
 The [optional Bluesky publishing guide](docs/bluesky-publishing.md) and [fictional previews/correction cases](examples/bluesky-publishing.md) cover exact-action approval, outward metadata, uncertain sends and controlled corrections. They supply no account, publisher, post or notification, and do not authorise a live action.
 

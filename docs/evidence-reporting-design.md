@@ -232,5 +232,6 @@ integration, installation changes and public reporting are separate scopes.
 The later [funding-interchange design](funding-interchange-design.md) has an
 [accepted architecture](funding-interchange-direction-decision.md) for an optional
 curated public support-document output across domains, including OSS compatibility
-where appropriate. Its fields remain candidates. It does not make a public manifest
+where appropriate. The [field contract](support-profile-contract.md) is now an
+accepted design baseline, not an implementation. It does not make a public manifest
 part of this private collection/crosswalk path or authorise exporting a person's packet.
