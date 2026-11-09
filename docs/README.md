@@ -8,6 +8,12 @@ value also includes meaningful contribution, verifiable impact, peer/community
 connections and potential financial support; these are not claims of existing
 matching or funding services. Demand and usefulness remain unvalidated.
 
+The [responsible-assistance guidance](responsible-assistance.md) explains the
+source skill's conduct-based boundaries without a sector blacklist, mandatory
+screening or moral ranking. Its [nine fictional cases](../examples/responsible-assistance.md)
+are authored expectations, not observed model behaviour, legal clearance or
+evidence of reliable enforcement. It changes no manifest format or licence.
+
 [A case-grounded pattern language with framework lenses](pattern-language-design.md)
 proposes linked cases, contextual patterns, optional lenses and private local
 applications across open-ended domains. It is a design, not a curated collection,

@@ -191,6 +191,13 @@ For an Agent Skills-compatible host, the package is this directory under the nam
 
 ItF does not rank people, award verified-impact badges, promise donations, publish records, contact funders or distribute money. A request to draft does not authorise sending or publishing. The skill is informed by the School for Moral Ambition's public principles, not affiliated with or endorsed by the School or Rutger Bregman. See [sources and rights](SOURCES.md).
 
+The source skill's [responsible-assistance boundaries](docs/responsible-assistance.md)
+address concrete harmful conduct and deceptive claims, not sector labels or people's
+moral worth. Ordinary commercial risk and fair criticism are not abuse. The
+[fictional cases](examples/responsible-assistance.md) are authored illustrations,
+not model tests, legal clearance or proof of enforcement; source adoption does
+not update an installed copy, manifest format or licence.
+
 Original skill instructions, templates, fictional prose examples, documentation
 and library notes use [CC BY-SA 4.0](LICENSE-CONTENT.md): shared adaptations must
 preserve attribution and ShareAlike. Commercial reuse remains allowed. Original
