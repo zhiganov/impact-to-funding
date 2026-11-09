@@ -13,7 +13,7 @@ Documentation, example, source-rights and disclosure review for the experimental
 | [Privacy guide](../PRIVACY.md) | Distinguishes local files from remote model processing, host history/tool permissions from skill instructions, and working packets from approved public derivatives. No confidential reporting service or technical access controls are invented. |
 | [Examples](../examples/builder-case.md) | The builder input and authored answer are labelled fictional and illustrative. The contrasting case is also fictional; its malicious certificate is explicitly data, not operational instruction or a real funding route. No raw private trial response is bundled. |
 | Status and non-affiliation | README describes experimental, limited development evidence and unestablished host/user/funding effectiveness. No official School/Bregman methodology, endorsement or certification is claimed. |
-| [Original-material licence](../LICENSE) | MIT was selected by the owner for original skill, templates, examples, docs and checks. It does not cover linked third-party works or grant rights over private user evidence. |
+| [Original-material licence](../LICENSE) | Original skill, templates, examples, docs and checks use MIT. It does not cover linked third-party works or grant rights over private user evidence. |
 
 ## Source-rights inventory
 

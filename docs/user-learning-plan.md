@@ -1,5 +1,9 @@
 # Initial-user learning plan
 
+**Historical manual-use preparation, not an active study.** For current native
+onboarding, use the [installation guide](../README.md#install-and-use-in-opencode).
+The dated proposal below records the earlier feedback approach.
+
 **Prepared 2026-11-05. Scope: feedback preparation and readiness assessment only.**
 Source choice and readiness notes updated 2026-11-08; this is not a new release.
 No participants are claimed, no invitation has been sent and no responses have
@@ -20,8 +24,8 @@ repair, new runner, application, MCP service or fresh release is required.
 
 ## Artifact and access readiness
 
-Primary learning source: `22d4c8d31aa32e98609341eb7fd4eadc85a8608a`, explicitly
-selected on 2026-11-08. It contains contribution portfolios, the withdrawal
+This historical preparation used source `22d4c8d31aa32e98609341eb7fd4eadc85a8608a`,
+recorded on 2026-11-08. It contains contribution portfolios, the withdrawal
 clarification, the report template's review-status and confidential-challenge
 safeguards, and conditional routing to the optional signal guides.
 It is post-release source, not a renamed `v0.1.0`. Choosing it avoids knowingly
@@ -36,9 +40,9 @@ improvements. Record existing release users separately, not as a comparison grou
 | End-to-end invocation | Download/open the pinned folder in an existing file-reading assistant, supply the guide's one-task prompt and permitted input, inspect the output, optionally answer a few questions. The guide gives a fictional-input alternative. No automatic skill discovery is involved. |
 | Evidence for that method | Earlier limited fresh-context manual trials are recorded in [validation notes](validation-2026-11-04.md), with their exact older source and limits. They do not prove behaviour at this newer revision or in a participant's host. No new model trial was run for this plan. |
 | Participant guide | Published in the repository and updated for this source choice. Send the current guide alongside the pinned folder: the archived guide still names the previous pin. Public availability does not establish participant receipt or approve an invitation. |
-| Actual participant host | Not established. A participant may check that their existing assistant can read the files before giving it real material. Inability to do so is useful access feedback, not a requirement to build a new host or reopen stopped installation routes. |
-| Feedback collection | A proposed owner/channel and handling terms were selected separately on 2026-11-08. Operational account/recipient details and the exact notice/invitation are not approved here; no returned-response intake has started. Keep those details outside this public document and make service-processing limits explicit before requesting feedback. |
-| Outreach | No sender account, recipient/conversation or exact invitation is approved here. The public template below is not a send-ready request. |
+| Actual participant host | Not established. Access difficulties are useful feedback; the current [installation guide](../README.md#install-and-use-in-opencode) describes the verified native route. |
+| Feedback collection | Not active. A future study needs a named organiser, response channel, clear data handling and consent. Keep private contact details out of public study notes and explain any service processing before requesting feedback. |
+| Outreach | No invitation has been sent through this plan. The public template below requires actual study and contact details before use. |
 
 The packet is usable for review without recruiting anyone. The finite path to a
 first returned response is: supply the current guide and pinned source folder;
@@ -86,7 +90,7 @@ and limitations. Use a compact private note; missing answers stay missing.
 Review failures as well as successes before choosing one concrete improvement,
 keeping useful feedback that cannot be quantified. Link any resulting change to
 the specific finding and affected source version. Existing issues may already
-cover it; filing, source edits and public reporting need their applicable scope.
+cover it; keep public reproductions separate from private feedback and its consent.
 
 If summarising learning later, state how feedback was obtained, source versions,
 actual attempts/responses known, dropouts/nonresponse and unknown denominators,
@@ -115,8 +119,8 @@ this as a request to return feedback. No recipients or distribution list are sto
 > your separate permission. The source folder is available at:
 > https://github.com/zhiganov/impact-to-funding/archive/22d4c8d31aa32e98609341eb7fd4eadc85a8608a.zip
 
-This invitation is separate from any Moral Ambition community introduction or
-partnership outreach. Approval of this plan does not approve either activity.
+Study invitations, community introductions and partnership outreach serve
+different purposes and should not be conflated.
 
 ## Preparation checks and limits
 

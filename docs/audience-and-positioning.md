@@ -98,7 +98,7 @@ ItF's possible contribution is narrower: for someone who chooses this route, hel
 
 The needs to choose worthwhile work, connect with peers and communities, learn what helps and explain what support enables also matter independently of unemployment. Their importance follows from the person's situation; they are not substitutes for addressing income insecurity when it is present. Whether ItF can provide material help across these jobs remains an open usefulness question.
 
-No audience interviews, recruitment or feedback collection have been conducted or authorised by this note.
+This positioning note is not based on audience interviews, recruitment or collected user feedback.
 
 ## Basis and limits
 

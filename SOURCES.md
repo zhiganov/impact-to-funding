@@ -75,7 +75,7 @@ choices, not MCP standard methods or source-author endorsements.
 
 | Source | Use and limits |
 |---|---|
-| [MCP tools specification, 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/server/tools), consulted through Context7 | Object tool inputs, output schemas, structured/text results and tool/protocol errors. No SDK/schema code was imported or executed. Read-only hints are not access enforcement. A selected implementation still needs negotiated-wire-version and client checks. |
+| [MCP tools specification, 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/server/tools), consulted through Context7 | Object tool inputs, output schemas, structured/text results and tool/protocol errors. No SDK/schema code was imported or executed. Read-only hints are not access enforcement. A future implementation needs negotiated-wire-version and client checks. |
 | [OpenCode V2 MCP guide](https://opencode.ai/v2/docs/mcp-servers) | Documented tool/resource exposure, protocol modes and optional session metadata. The page was read; current installed host was previously observed as v2.2.5. This does not prove the proposed server exists, a client uses it correctly or every detail of the evolving guide matches that installed binary. No configuration or authentication was changed. |
 
 ## Original material and licence
@@ -89,7 +89,7 @@ not redistributed. AI-assisted source review is not project-author endorsement,
 practitioner validation or independent impact verification. Source rights and
 any actual adaptation requirements remain separate from the licence on these notes.
 
-The original skill, templates, synthetic examples, documentation and package checks are licensed under [MIT](LICENSE), selected by Artem for public source publication. This grant does not relicense linked third-party works, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
+The original skill, templates, synthetic examples, documentation and package checks are licensed under [MIT](LICENSE). This grant does not relicense linked third-party works, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
 
 Users' project records and generated outputs are not automatically covered by this repository's software/documentation licence. Consent, confidentiality and other rights remain separate.
 

@@ -90,7 +90,7 @@ The [usage guide](docs/usage.md) covers minimal inputs, more starting prompts an
 
 No application runtime, network, account or dependency installation is required by the skill itself. The host's normal costs and privacy terms apply. Document/image/audio access depends on its actual tools; a link to unavailable evidence is not evidence that has been inspected.
 
-The [one-task feedback guide](docs/user-feedback.md) and [learning plan](docs/user-learning-plan.md) describe an earlier manual-use preparation. That invitation route is paused and superseded for actual-skill recruitment; those documents are not the native onboarding instructions above. No recruitment, telemetry or feedback collection is launched here.
+The [one-task feedback guide](docs/user-feedback.md) and [learning plan](docs/user-learning-plan.md) describe an earlier manual-use preparation, not the current native onboarding instructions above. There is no active recruitment, telemetry or feedback collection through those materials.
 
 ## Outputs and examples
 

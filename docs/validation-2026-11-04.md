@@ -62,4 +62,7 @@ node --test tests/package.test.mjs
 
 Package checks do not verify reasoning, source authenticity or privacy completeness. Raw behavioural responses and private evidence are deliberately not bundled with the skill. The authored [illustrative assessment](../examples/builder-assessment.md) remains an example, not an observed trial output.
 
-Automatic discovery, installation in a supported host, human usefulness, varied real-world projects, cross-model/harness behaviour, fundraising conversion and social outcomes remain unestablished. Public content, installation/distribution and any external use retain their ordinary review/authorisation boundaries.
+These trials did not establish automatic discovery, host installation, human
+usefulness, varied real-world performance, cross-model/harness behaviour,
+fundraising conversion or social outcomes. Later native-host checks are documented
+separately in the [installation record](installation-check-2026-11-04.md).

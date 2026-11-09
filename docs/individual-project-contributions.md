@@ -1,8 +1,7 @@
 # Individual theories, shared projects and contribution portfolios
 
 **Date: 2026-11-05. Status: agreed conceptual direction with core manual-use instructions implemented in source.**
-This records the relationship discussed with the project owner. The
-[contribution reference](../references/contributions.md) is the operational
+The [contribution reference](../references/contributions.md) is the operational
 guidance for the skill; this document preserves the design rationale and scope.
 The implementation is instructions, templates and synthetic examples, not a
 tracking application, published schema, adopted pilot mission or authority to
@@ -156,8 +155,7 @@ an account, group, database or application.
 - [x] Preserve version-scoped reviews, privacy of personal motivations and project
   associations, shared outcomes and duplicate-cost safeguards in reports/asks.
 - [x] Review the changed content and run the existing package/text checks. Keep
-  authored expectations distinct from behavioural evidence; no paid trial,
-  installation retry or new validation infrastructure is included by default.
+  authored expectations distinct from behavioural evidence.
 
 The four package checks pass, including local links, text integrity and the new
 example inventory/labels. A separate read-only AI content review found no material
@@ -166,16 +164,14 @@ an independent impact evaluation or a fresh-context behavioural trial. These
 source-level acceptance marks do not assert remote delivery, native activation
 or successful model behaviour. The experimental v0.1.0 release remains unchanged.
 
-Coordinate with #16 for collaborative workflows and #14 for any later selected
+Coordinate with #16 for collaborative workflows and #14 for any future
 structured representation. Groups runtime readiness is not a dependency for this
-Markdown/manual-use slice. Filing this issue does not select implementation,
-source publication, a release, monitoring, fundraising or payment operations.
+Markdown/manual-use functionality.
 
 ### Collaborative workflow extension — issue #16
 
-The [existing issue](https://github.com/zhiganov/impact-to-funding/issues/16) was
-updated and read back on 2026-11-05, preserving its earlier requirements and open
-status. Its added scope is:
+The [collaborative-workflow design](https://github.com/zhiganov/impact-to-funding/issues/16)
+includes:
 
 Extend the collaborative journey to show how an independently authored personal
 theory connects through a bounded contribution to an explicitly approved shared
@@ -187,14 +183,13 @@ Acceptance should demonstrate project and personal report views referencing the
 same underlying shared work without duplicating outcomes, silently transferring
 reviews or requiring personal-purpose disclosure. Carry forward #11/#14 rather
 than reopening completed design or introducing a mandatory new graph service.
-The protocol-neutral core-skill issue owns manual-use implementation; #16 owns
-the collaborative workflow design. Neither selects live Groups integration.
+The protocol-neutral core-skill issue covers manual-use implementation; #16 covers
+the collaborative workflow design. Live Groups integration is separate work.
 
-Tracker filing, design preservation and core-skill implementation are distinct
-stages; none by itself establishes published source delivery, a release or runtime
-verification. The core instructions do not complete #16's collaborative workflow
-design. No private pilot facts were included. Hosting, Groups integration,
-framework imports and native-installation recovery remain outside this slice.
+Source instructions, collaborative design and runtime integration are distinct
+deliverables. These changes do not provide hosting or Groups integration, and
+contain no private pilot facts. The [installation record](installation-check-2026-11-04.md)
+documents native host checks separately from this source-level design.
 
 ## Basis and limits
 

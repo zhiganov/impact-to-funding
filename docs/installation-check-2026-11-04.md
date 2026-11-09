@@ -81,7 +81,7 @@ earlier 2026-11-08 empty response. Correct location and HTTP success alone did n
 establish discovery readiness.
 
 The existing [agent-list handler](https://github.com/anomalyco/opencode/blob/v2.2.5/packages/server/src/handlers/agent.ts)
-awaits plugin activation. The bounded correction used that supported readiness
+awaits plugin activation. The follow-up used that supported readiness
 boundary before reading the skill list; no polling, delay loop, new runner,
 installer or package repair was added. The native
 [session skill lookup](https://github.com/anomalyco/opencode/blob/v2.2.5/packages/core/src/session/skill.ts)
@@ -105,8 +105,8 @@ that normal skill activation failed.
   personal evidence are distributed with this note. Other hosts remain untested.
 
 For normal installation and invocation, use the [README instructions](../README.md#install-and-use-in-opencode),
-not the diagnostic API sequence. The source pin remains `22d4c8d`; this follow-up
-does not change the earlier prerelease or resume recruitment.
+not the diagnostic API sequence. This check used source `22d4c8d`; later checks
+and their exact revisions are recorded above. The earlier prerelease is unchanged.
 
 ## Original result — 2026-11-04
 
@@ -128,9 +128,11 @@ The release-facing documentation was published at `cc953001df8ebb74afb6da2a7d1ed
 |---|---|---|
 | Direct HTTP to an owned loopback server | `/api/info` returned HTTP 401, before skill discovery. The owned server was stopped and its port closed. | The probe did not supply the runtime's required authentication. This was an invocation problem, not evidence about the skill. Loopback/private hosting did not imply authentication-free access. |
 | Native authenticated CLI, project-local discovery | `opencode api --standalone` identified v2.2.5. Its skill-list response identified the intended disposable project but returned an empty registry. | The supported client reached the intended location, but the target skill was not discovered in this probe. Registration/activation was not verified. |
-| Separately approved explicit-source check | The disposable project declared the documented V2 `skills` source for the parent skill directory. The native skill-list response again identified the intended project and returned an empty registry. | The alternate documented source setting did not establish discovery in this fixture. The check stopped at its first failure; no activation or further API attempts followed. |
+| Explicit-source check | The disposable project declared the documented V2 `skills` source for the parent skill directory. The native skill-list response again identified the intended project and returned an empty registry. | The alternate documented source setting did not establish discovery in this fixture. No activation or further API attempts followed that result. |
 
-The original route permitted one evidence-backed correction. After it stopped, the owner explicitly selected one bounded explicit-source check, with no automatic retries. Both stopped outcomes remain recorded; unused downstream API-call allowance is not permission to resume them.
+Both unsuccessful probes are retained as historical observations. The later
+readiness-aware checks above provide the successful discovery and activation
+evidence; they do not retroactively turn these earlier results into passes.
 
 ## Interpretation and limits
 
@@ -140,10 +142,14 @@ At the end of this original check, the cause was **unresolved**. These probes di
 
 Manual development trials documented in the [validation notes](validation-2026-11-04.md) exercised instruction-following, not installation. They remain useful bounded evidence but do not close this gate. There is no new semantic trial or paid-run evidence here.
 
-## Operational lesson and next decision
+## Diagnostic lesson
 
-Use the host's supported authenticated client and verify the target context before interpreting a capability result; see [contribution guidance](../CONTRIBUTING.md). Do not add a custom credential mechanism or build more installation infrastructure merely to keep an exhausted route running.
+Use the host's supported authenticated client and verify the target context and
+registry readiness before interpreting a capability result; see
+[contribution guidance](../CONTRIBUTING.md).
 
-At the original stopping point, the options were an explicitly manual-use-only experimental distribution, without an install-tested claim, or a separately scoped host-discovery diagnosis. The later successful follow-up was explicitly authorised; it did not silently reopen these checks or change the release acceptance boundary. No tag/release, global skill installation, outreach or integration was performed by the original task.
+The original checks established no native compatibility. The later successful
+follow-up documents that compatibility for its exact host and source revision.
+Neither result changes the earlier release tag or establishes user usefulness.
 
 Technical references: the official V2 [skills guide](https://opencode.ai/v2/docs/skills), [API reference](https://opencode.ai/v2/docs/api), and [client/authentication guide](https://opencode.ai/v2/docs/build/client). Documentation describes intended behaviour; the observations above describe this fixture only.

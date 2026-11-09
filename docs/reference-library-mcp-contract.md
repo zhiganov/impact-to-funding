@@ -1,12 +1,11 @@
 # ItF reference-library MCP contract
 
 **Date:** 2026-11-09. **Application contract:** `itf.library/0.1-draft`.
-**Status:** initial application-contract design baseline accepted by Artem on
-2026-11-09 under [#44](https://github.com/zhiganov/impact-to-funding/issues/44),
+**Status:** initial application-contract design baseline, completed 2026-11-09 in
+[#44](https://github.com/zhiganov/impact-to-funding/issues/44),
 not a released standard, executable schema or working server.
 It follows the [independent-interface decision](reference-library-mcp-decision.md).
-Implementation, installation, ingestion, trials, hosting and access changes remain
-unselected. The [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md)
+Implementation has not started. The [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md)
 specifies expected behaviour, not observed calls.
 
 ## 1. Three read-only tools, not a new record standard
@@ -247,7 +246,7 @@ metadata. The OpenCode guide documents possible session-ID metadata, which is no
 identity or authorisation. A future service must not require or repurpose such IDs
 as a credential, cross-service link or financial-enrolment signal. Hosted logging,
 retention/deletion, authentication, rate limits, costs and operator ownership must
-be made explicit before hosting; none is selected here. Public records/source do
+be made explicit before hosting; those operating arrangements are not defined here. Public records/source do
 not promise unlimited free hosted access. Funding-service terms and credentials
 are separate and must not be silently transferred.
 
@@ -256,13 +255,13 @@ are separate and must not be silently transferred.
 This design maps the existing case/pattern files and two co-located lenses without
 changing their content. It adds no database, live collector, recommendation engine,
 new record-publication standard or mandatory framework. Expansion under #43 remains
-independent; food-system #41 and detailed Cynefin #42 work remain deferred.
+independent; food-system coverage (#41) and detailed Cynefin guidance (#42) are
+separate backlog items.
 
 The fictional walkthrough covers discovery/detail, shared lenses, revision and
 pagination mismatches, incomplete coverage, absent/unsupported snapshots/contracts
 and no-source-fetch behaviour. Static consistency and package checks are not schema
 validation, model trials, an MCP round trip or supported-client certification.
-Artem selected **Accept and publish** for this reviewed design and walkthrough,
-authorising documentation delivery and closure of #44's design scope only. Any
-later implementation remains a separate selection. No deployment or new evaluation
-infrastructure was needed to review or accept this application contract.
+The contract-design work in #44 is complete. Implementation is tracked separately
+in [#45](https://github.com/zhiganov/impact-to-funding/issues/45); no server or deployed
+service is supplied by these design documents.

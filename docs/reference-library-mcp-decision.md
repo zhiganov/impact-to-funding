@@ -1,9 +1,8 @@
 # Decision: an independent reference-library MCP interface
 
-**Date:** 2026-11-09. **Status:** selected architecture direction; documentation
-delivery only. No server, deployment or tested integration is supplied by this
-decision. The later [initial application contract](reference-library-mcp-contract.md)
-was accepted as a design baseline under #44, not as an implemented interface.
+**Date:** 2026-11-09. **Status:** architecture decision; implementation not started.
+The [initial application contract](reference-library-mcp-contract.md) is the design
+baseline developed in #44. No server, deployment or tested integration is available.
 
 ## Decision
 
@@ -15,7 +14,7 @@ funding service the library's only programmatic access route.
 This is a responsibility and access boundary, not a rule that every repository
 needs a server. Separate interfaces may share implementation components or
 infrastructure where justified. No shared runtime, operator, credentials, hosting
-arrangement or access policy is selected here.
+arrangement or access policy is specified here.
 
 ## What remains where
 
@@ -42,12 +41,12 @@ service's availability, terms or release schedule.
 
 Public records and public implementation source do not promise unlimited free
 hosted access. Hosting, authentication, rate limits, costs and operating ownership
-remain unselected. Any shared infrastructure must preserve independent interfaces
+remain open operating questions. Any shared infrastructure must preserve independent interfaces
 and appropriate access boundaries rather than silently join credentials or terms.
 
 ## Contract boundary for later work
 
-The selected #44 design scope supplies an [accepted discovery/read contract](reference-library-mcp-contract.md)
+The completed #44 design supplies a [discovery/read contract](reference-library-mcp-contract.md)
 and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md).
 Its tool names, snapshot/record mapping and error semantics form the initial
 `itf.library/0.1-draft` application baseline; no client is verified as supported by
@@ -75,15 +74,13 @@ logging/retention and host/model-processing limits before a hosted service.
 - [#43](https://github.com/zhiganov/impact-to-funding/issues/43) tracks expansion
   across cases, contextual patterns and optional lenses. Expansion is independent
   of MCP delivery; neither is a prerequisite for ordinary skill use.
-- Food-system coverage under #41 and detailed Cynefin work under #42 remain
-  deferred. This decision does not reopen their source routes or method work.
+- Food-system coverage (#41) and detailed Cynefin guidance (#42) are separate
+  backlog items, not dependencies of this interface.
 - Keep versioned Markdown records as the current source format. No new database,
-  collector, recommendation engine or replacement record standard is selected.
+  collector, recommendation engine or replacement record standard is needed.
 - Source assets, private evidence, contacts and commercial records stay outside
   public records and MCP responses. The package licence does not relicense linked
   source material; follow [sources and rights](../SOURCES.md).
 
-The selected action records and publishes this direction only. Implementation,
-package/SDK installation, source ingestion, model trials, paid execution, hosting,
-authentication changes, enrolment and outreach remain unselected. Current native
-skill-loading evidence is not evidence of an MCP server or client round trip.
+Implementation is tracked in [#45](https://github.com/zhiganov/impact-to-funding/issues/45).
+The native skill-loading checks do not establish an MCP server or client round trip.

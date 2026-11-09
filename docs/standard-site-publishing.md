@@ -1,7 +1,7 @@
 # Optional Standard.site publishing and discovery
 
 **Date:** 2026-11-06
-**Status:** design capture only; no exporter, publisher, report publication or round-trip test is implemented or selected.
+**Status:** design note; no exporter, publisher integration or round-trip test is implemented.
 
 ## Purpose and decision
 
@@ -19,9 +19,9 @@ The preferred baseline is an existing publisher plus ordinary human-readable fil
 
 ## Relationship to completed design
 
-This note is a candidate application of the [#17 public-discovery/export baseline](https://github.com/zhiganov/impact-to-funding/issues/17#issuecomment-6665579580), not a replacement or reopening of that completed design. Reuse its public-derivative, access, exact-version, correction and stale-copy boundaries. It supplies no runtime proof and does not implement #17, #18 sync/indexing, #4 widgets or the unselected #21 pilot.
+This note applies the [#17 public-discovery/export baseline](https://github.com/zhiganov/impact-to-funding/issues/17#issuecomment-6665579580), preserving its public-derivative, access, exact-version, correction and stale-copy boundaries. It supplies no runtime proof or implementation of discovery, sync/indexing, widgets or the #21 pilot.
 
-[#29](https://github.com/zhiganov/impact-to-funding/issues/29) tracks the optional skill/platform relationship. This note narrows one possible public-output seam without requiring any particular community platform, group account, Spaces deployment or Groups beta. The skill's native-installation checks remain stopped.
+[#29](https://github.com/zhiganov/impact-to-funding/issues/29) tracks the optional skill/platform relationship. This note describes one possible public-output connection without requiring any particular community platform, group account, Spaces deployment or Groups beta. Native skill compatibility is documented separately in the [installation record](installation-check-2026-11-04.md).
 
 ## Minimal document mapping
 
@@ -47,7 +47,11 @@ The readable report remains where claims, limitations, actual evidence access an
 
 The [official implementations list](https://standard.site/docs/implementations/) documents existing options such as Leaflet for reading/publishing, Sequoia for publishing existing content, and indexes/readers including Read on Pckt and Docs.surf. This is a list of documented options, not a verification of their current availability, terms, grants, field support, privacy or interoperability.
 
-For a separately selected publication, first check whether an already authorised publishing route can emit the required metadata and retain a readable canonical page. If it can, use that rather than building an exporter. If it cannot preserve essential qualifications, keep the ordinary page/file route or surface the actual gap; do not compensate with misleading metadata or unsupported “open in any app” promises.
+For a permission-cleared public report, check whether an existing publishing route
+can emit the required metadata and retain a readable canonical page. If it can,
+use that rather than building an exporter. If it cannot preserve essential
+qualifications, keep the ordinary page/file route or explain the gap; do not
+compensate with misleading metadata or unsupported “open in any app” promises.
 
 Discoverability depends on a consumer's actual indexing, discovery and rendering support. Listing a record does not guarantee distribution, audience, reader comprehension, complete content export or a lossless move between hosts. Owning a copy of metadata is not a guarantee of permanent hosting or availability of every linked resource.
 
@@ -73,9 +77,15 @@ Standard.site's edit timestamps and canonical links are helpful metadata, not an
 
 ## Future acceptance boundary
 
-If a publishing slice is later selected, establish the approved public artifact/version, publisher and correction owner, actual existing access route, supported schema/content fields and consumer limits. Any synthetic publication/round-trip experiment needs its own explicit scope and finite attempts; this document neither launches one nor makes one mandatory for private/manual use.
+Before implementing a publisher connection, identify the public artifact/version,
+publisher and correction contact, actual access route, supported schema/content
+fields and consumer limits. A round-trip check should use a safe test artifact;
+none has been run for this note, and publishing is optional for ordinary skill use.
 
-The scoped work completed here is the design note and #29 capture only. Package/text checks do not establish a working exporter, supported publisher-reader pair, discovery result, privacy enforcement, funding effectiveness or user usefulness. No report, public ATProto record, publication account, domain backlink, subscriber list or external funding link is created or changed. No code, service, credential, payment, outreach, recruitment, feedback-version pin, implementation/pilot approval or stopped installation route changes.
+This is a design note, not a working exporter or verified publisher-reader pair.
+Package/text checks do not establish discovery results, privacy enforcement,
+funding effectiveness or user usefulness. No public report or ATProto record was
+created through this work.
 
 ## Sources
 

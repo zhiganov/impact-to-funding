@@ -13,6 +13,10 @@ A larger template, extra metric, new server or more persuasive fundraising copy 
 
 ## Report a problem safely
 
+Write issues for project contributors: describe the problem, intended outcome,
+current status and acceptance criteria. Keep personal task selections, assistant
+execution permissions and private coordination instructions out of public records.
+
 For a public issue, include a non-sensitive description, the skill revision, host/model information if actually known, a fictional or permission-cleared minimal input, the observed behaviour, and why it is unsupported or unhelpful. Say what was actually run and inspected. Do not claim an authored example is a model response, or automatic discovery was tested when instructions were read manually.
 
 Do not attach private transcripts, real beneficiary stories, identities, contact details, signed/private URLs, credentials or minimally disguised private cases. Permission to use material internally is not permission to include it in an issue or PR. Follow the [privacy guidance](PRIVACY.md); do not assume public GitHub issues or an unverified private-reporting feature are confidential channels.
@@ -48,4 +52,7 @@ Contribute only material you have the right to share under the repository's [MIT
 
 Your own confidential inputs and generated outputs are not automatically relicensed by contributing to this software. Do not submit other people's restricted material. See [SOURCES.md](SOURCES.md) for the current boundary.
 
-Submitting code or opening an issue does not authorise deployment, outreach, account changes, data collection, fund applications or disbursements. Widgets, payment-provider connections, AT Protocol publishing, partner integrations and an MCP server remain separate proposed scopes. Do not introduce them as hidden prerequisites for the conversational skill.
+Distinguish proposals, design documents, source implementation and deployed
+functionality. Describe what was actually built or tested, and keep privacy,
+consent and provider requirements explicit for external integrations. Optional
+services and integrations are not prerequisites for the conversational skill.
