@@ -90,6 +90,41 @@ does not replace the private group workflow or prove eligibility. A funder's
 `fti-manifest.json` would describe its funding intentions/opportunities, not grant
 access to member records. No manifest is published in this scenario.
 
+## Complementary public views, not complete directories
+
+Suppose the guild prepares a collective `itf-manifest.json` presentation of its
+selected shared work and support needs, while Sol prepares a separate individual
+presentation of selected contributions across Harbour and another project. Either
+view can stand alone; Mira need not publish an individual manifest, and the other
+project need not publish a collective one. These are fictional prose descriptions
+of possible views, not JSON fields or actual published files.
+
+The guild's view recognises Sol's maintenance account v1 and Ren's guide v1 where
+attribution is cleared. Sol's view references that same maintenance account v1,
+describing Sol's bounded role rather than claiming the whole tool or every guild
+outcome. If both publishers acknowledge that particular account, the reciprocal
+references mean scoped acknowledgement, not independent review or agreement with
+everything in the other view. The maintenance cost remains one cost, not two asks.
+
+An invented non-member, Ivo, helped test the guide and permits that contribution
+to be recognised without joining. A current member, Tavi, has no contribution to
+report for this period; that does not imply poor standing. Sol can later retain
+the historical maintenance account after leaving, clearly marked as historical
+work rather than current membership or endorsement.
+
+Neither view lists everyone's associations. Sol omits a sensitive affiliation;
+the guild omits any attribution not cleared for that audience. Absence does not
+mean no work or relationship exists. Where the native design references an
+ATProto identity, it would use the DID with a readable handle that may change;
+this example creates no identity or handle. Non-ATProto participation remains valid.
+
+The technical group roster/access records, contribution claims or recognition,
+and these separately curated public views remain distinct. No roster is exported
+automatically. A group administrator's access cannot supply publishing consent,
+representation authority or applicant eligibility. The current support contract
+defines no contributor/guild relationship arrays or DID fields; any typed addition
+requires a separate decision, not an inferred extension from this example.
+
 ## Departure, correction and continuity
 
 Sol leaves the guild while remaining involved in one project. Current membership

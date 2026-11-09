@@ -66,6 +66,45 @@ in several views without becoming several outcomes or costs. Preserve the existi
 [contribution relationships](../references/contributions.md),
 [claim rules](../references/claims.md) and [private crosswalk](../assets/evidence-crosswalk.md).
 
+### Complementary individual and guild manifests
+
+Allow both views under the preferred `itf-manifest.json` filename, without making
+either compulsory or requiring every contributor or association to be listed:
+
+| Publisher-controlled view | What it can present | What it does not establish |
+|---|---|---|
+| Guild / collective | Shared purpose, selected work, support needs and permission-cleared recognition of contributors. | A complete roster, every member's approval, exclusive credit or authority to represent or receive funds for everyone. |
+| Individual / person | Selected contributions across projects and guilds, with actual roles, periods and limits. | A complete public portfolio, current membership, the guild's recognition or a mandate to speak for it. |
+
+A guild view can stand without individual manifests; an individual view can stand
+without guild manifests. Each publisher controls its own statements, not the
+other party's account. Optional reciprocal references can acknowledge a specific
+relationship or statement at a particular version; they are not independent
+corroboration, consensus or blanket endorsement. A missing reciprocal reference
+does not by itself refute a contribution claim.
+
+Membership and contribution are different: a non-member may contribute, a current
+member may have no contribution in a period, and historical work is not continuing
+membership or endorsement. People may decline public attribution or omit sensitive
+affiliations. Omission is not evidence of inactivity or poor standing, and no
+complete public social graph is required.
+
+For ATProto identity references, use DIDs as identifiers and handles as readable,
+changeable labels, not identity keys. Handles are not specific to Bluesky as an
+application. Neither a DID nor a handle proves the contribution or authority;
+ordinary non-ATProto ItF use requires no such account.
+
+Both views should reference the same versioned shared work rather than copy it
+into separate claimed outcomes, reviews, ownership or funding needs. Separate
+real support costs remain possible when their scope and overlap are clear.
+
+This is a presentation/design direction, not a JSON example or contract amendment.
+The [current support profile](support-profile-contract.md) already permits `person`
+and `collective` subjects, but defines no contributor/guild relationship arrays or
+DID fields. Its existing descriptions, scoped report references and limitations
+can explain permitted context; typed relationships need an explicit reuse/gap and
+contract decision under [#52][I52]. The filename alone defines no semantics.
+
 ## 3. The ATProto-specific opportunity and boundary
 
 The [Groups introduction][A1] demonstrates the intended cross-application pattern:
@@ -97,6 +136,12 @@ group access does not authorise transfer to an AI provider or funding service.
 Space commits use MAC-based authenticity in the pinned proposal, not transferable
 public signatures of every private record. Public signatures, MACs, CIDs and DIDs
 have bounded provenance meanings; none proves truth, independent judgement or impact.
+
+Keep three layers distinct in the native design: **Groups membership/access
+records**, **application-level contribution claims and recognition**, and
+**separately curated public manifests**. None is an automatic export or substitute
+for the others. Public presentation needs its own permission and approval basis;
+a technical roster or access grant does not authorise disclosing an association.
 
 ## 4. Collaborative practice before ranking or treasury automation
 
