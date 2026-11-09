@@ -1,10 +1,23 @@
 # Using the skill
 
-Install ItF using the [native OpenCode instructions](../README.md#install-and-use-in-opencode), then invoke `@impact-to-funding` in that project. Native discovery, activation and bundled-reference access were checked in OpenCode v2.2.5 at source `fbb8993`, including the optional systems/complexity guidance; other hosts, reliable model routing and user usefulness remain unverified. See the [systems-source check](installation-check-2026-11-04.md#systemscomplexity-guidance-verification--2026-11-09) and [behavioural validation limits](validation-2026-11-04.md). Manual file-reading remains an optional alternative, not the normal skill invocation below.
+Install the complete package using the [native installation guide](install.md).
+Invocation differs by host:
+
+| Host | Native invocation |
+|---|---|
+| Claude Code | `/impact-to-funding` |
+| Codex CLI | `$impact-to-funding` or select it with `/skills` |
+| OpenCode V2 | `@impact-to-funding` |
+
+The [exact-version evidence](installation-check-2026-11-04.md) distinguishes a
+Codex 0.166.0 project-local CLI check of `4566892`, earlier OpenCode v2.2.5 checks
+of `fbb8993`, and Claude's documented but unverified route. It establishes neither
+interactive/IDE support nor reliable model routing or human usefulness. Manual
+file-reading remains a separate alternative, not native installation proof.
 
 ## Before you start
 
-1. Install the complete trusted package in your project and use OpenCode for that project. Keep the directory intact: [SKILL.md](../SKILL.md) needs its relative references and assets. For optional manual use, open the complete repository in a file-reading agent instead.
+1. Install the complete trusted package in your chosen host's project or deliberately selected personal scope. Keep the directory intact: [SKILL.md](../SKILL.md) needs its relative references and assets. Use the host in the project where discovery applies. For optional manual use, open the complete repository in a file-reading agent instead.
 2. Read the [privacy guidance](../PRIVACY.md). A local file can still be sent to a remote model when your agent reads it. Use only material you are authorised to process with that host/provider.
 3. Choose a private output location outside this distributable repository. No files need to be written to try a conversation; a response in the chat may be enough. Check the host's history, retention and sharing behaviour too.
 
@@ -14,7 +27,10 @@ The skill has no application runtime, accounts, telemetry service or payment int
 
 You can start with a few sentences about your interests, capabilities, current work or what is difficult. Existing notes, a theory of change or a report can also be useful. You do not need a predefined decision, project, life mission, complete budget, legal identity, public profile, donation account or demonstrated past impact. Exploration and continuing work are valid uses, not just preparation for a report or funding ask.
 
-If you invoke only `@impact-to-funding`, the agent should reuse relevant context or ask one open question about your situation and the help you want. It should not demand a decision or start filling an assessment template. For example:
+If you invoke only the skill, using your host's syntax above, the agent should
+reuse relevant context or ask one open question about your situation and the help
+you want. It should not demand a decision or start filling an assessment template.
+For example:
 
 > What have you been working on or caring about lately, and where would you like some help?
 
@@ -40,7 +56,7 @@ These authored examples describe intended help, not measured results or new live
 | "I maintain something people rely on, but it is getting hard to keep going." | Understand the work, other contributors, what it enables, capacity limits and what support could make participation sustainable. | A new project, an income guarantee, assumed unpaid capacity or proof of impact before discussing support. |
 | "I'd like to contribute with other people rather than alone." | Explore known communities and relationships, possible roles and shared interests; distinguish possibilities from invitations or agreed commitments. | A promised match, automatic contact, a scraped roster or invented community agreement. |
 
-You can use any of these as a prompt after `@impact-to-funding`. Relationships,
+You can use any of these after your host's native skill invocation. Relationships,
 belonging and shared learning can matter independently of funding. Discussing a
 possibility does not authorise searching for people, contacting them or creating
 accounts. A clearer understanding or a useful conversation may be enough; no
@@ -48,8 +64,9 @@ document or immediate commitment is required.
 
 ## More focused prompts
 
-These prompts use OpenCode's skill mention. For deliberately chosen manual use,
-replace `@impact-to-funding` with a request to read and follow `SKILL.md`.
+These prompts show OpenCode's `@impact-to-funding` mention. In Claude Code replace
+it with `/impact-to-funding`; in Codex CLI use `$impact-to-funding`. For deliberately
+chosen manual use, replace the mention with a request to read and follow `SKILL.md`.
 
 ### Develop a theory of change
 

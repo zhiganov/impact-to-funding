@@ -1,8 +1,52 @@
-# OpenCode installation check — 2026-11-04
+# Native CLI installation checks
+
+## Codex project-local verification — 2026-11-09
+
+**Checked package:** `4566892ad990131fb36f760e14c73e5f275600cc`.
+**Host:** Codex CLI 0.166.0, existing ChatGPT sign-in, CLI-default model with no
+model override. One approved synthetic run; no automatic rerun.
+
+The complete public repository was cloned from GitHub into a disposable Git
+project at `.agents/skills/impact-to-funding`, then checked out at that exact SHA.
+No existing or personal/global ItF installation was changed.
+
+The run used `codex exec --ignore-user-config --ephemeral --sandbox read-only`
+and the explicit `$impact-to-funding` mention, without supplying a skill-file path
+in the prompt. User configuration was omitted to avoid configured MCP/hook setup;
+the native auth backend was retained and user-level agent instructions still
+applied. This is not a pristine new-account or fully default-config comparison.
+
+Observed evidence:
+
+- The CLI selected the project skill and read its `SKILL.md` and bundled
+  `references/contributions.md` in one successful local file-reading command.
+  Captured tool output matched both frozen files exactly; it was not just a
+  plausible path or a model's assertion of having read them.
+- The fictional request described four weekly hours maintaining an accessibility
+  guide, uncertain user benefit and no funding goal. The response separated supplied
+  facts from a proposal, kept collaborator availability unknown and asked one
+  question. No actual contribution, participant consent or outcome was created.
+- All 106 tracked package files retained their source hashes; the clone stayed
+  clean. The trace contained no file-change, web-search or MCP action. The owned
+  process group exited with no remaining child processes.
+
+This establishes a limited **project-local explicit CLI activation and bundled-
+reference access check** at the named source. It does not establish implicit
+trigger reliability, interactive `/skills` UI, IDE/desktop/plugin support,
+personal scope, update/removal behaviour, human usefulness or fundraising benefit.
+The response also reflected inherited host instructions; it is not a blind
+behavioural evaluation. Complete raw traces remain private, not a distributed
+transcript or a new public benchmark.
+
+**Claude Code:** its native-folder route is documented, but no completed activation
+check is recorded here. **OpenCode:** the historical checks below retain their
+own source/version boundaries; `4566892` was not rechecked there. The
+[installation guide](install.md) separates these statuses and scopes. No installer,
+plugin marketplace, hosted service, new release or user recruitment was introduced.
 
 ## Systems/complexity guidance verification — 2026-11-09
 
-**Latest checked skill source: `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.**
+**OpenCode checked skill source: `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.**
 The published change adds an optional systems/complexity reference, selective
 core-skill routing, a fictional illustration and source/rights notes. It covers
 causal hypotheses, feedback, emergence and adaptive learning without a required

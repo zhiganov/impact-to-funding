@@ -16,14 +16,58 @@ you do not need to become a founder or assume unpaid work is the answer.
 material—not a matching network, available collaborators, funding or impact
 certification. Human usefulness and fundraising effectiveness remain unverified.
 
-[Get started](#install-and-use-in-opencode) · [Choose a task](#three-ways-to-start) ·
+[Get started](#install-and-use) · [Choose a task](#three-ways-to-start) ·
 [See an example](#outputs-and-examples) · [Capability status](#what-is-available) ·
 [Privacy and limits](#status-and-limits)
 
-## Install and use in OpenCode
+## Install and use
 
-These commands install the **last installation-tested snapshot**, not the latest
-repository source. From your project, with Git and an unused destination:
+Use your existing signed-in CLI agent. Choose its native folder and invocation;
+do not install three copies or use one host's invocation syntax in another.
+
+| Host | Project skill folder | Invoke in the agent | Exact-version evidence |
+|---|---|---|---|
+| Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or `/skills` | Project-local CLI check passed for `4566892` on Codex 0.166.0. |
+| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | Documented native route for `4566892`; activation not yet checked. |
+| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | Earlier checks cover `fbb8993` on OpenCode v2.2.5, not `4566892`. |
+
+The [installation guide](docs/install.md) gives guarded complete-package commands,
+optional personal scope, discovery checks, deliberate updates, reversible removal
+and troubleshooting. ItF itself needs no signup, Node.js, MCP server or plugin for
+conversation. Your host's model costs and privacy terms still apply.
+
+### Codex CLI quick start
+
+From the project where you want to use ItF, with Git:
+
+```sh
+target='.agents/skills/impact-to-funding'
+if [ -e "$target" ] || [ -L "$target" ]; then
+  echo "Destination already exists; stop and inspect: $target"
+else
+  git clone https://github.com/zhiganov/impact-to-funding.git "$target" &&
+    git -C "$target" checkout --detach 4566892ad990131fb36f760e14c73e5f275600cc
+fi
+```
+
+Open Codex in that project, find ItF with `/skills`, and try:
+
+> $impact-to-funding Help me explore a useful contribution with my skills and available time. Use only what I supply, mark assumptions and keep this private. Do not contact anyone or create files.
+
+The check established explicit skill selection, actual bundled-reference reading
+and a bounded synthetic response in non-interactive CLI mode. It did **not** test
+the interactive selector, IDE/desktop UI, personal installs or human usefulness.
+
+### Claude Code
+
+Use the guide's `.claude/skills/impact-to-funding` target and `/impact-to-funding`
+invocation. The source/docs support this route, but no successful activation check
+is recorded for this host yet. Do not treat documentation as a tested result.
+
+### Install and use in OpenCode
+
+The earlier verified route remains available. These commands install its older
+**installation-tested snapshot**, not current source; use an unused destination:
 
 ```sh
 git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
@@ -35,15 +79,12 @@ configuration. In OpenCode for the same project, invoke:
 
 > @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I supply, mark assumptions and keep the result private. Do not contact anyone.
 
-**Version boundary:** native discovery, activation and bundled-reference access
-for `fbb8993` were checked in OpenCode v2.2.5 on 2026-11-09. Newer source adds
-responsible-assistance guidance, evidence/reporting worksheets and optional local
-tools that are **not included in this pin**. Links below describe the current
-repository source; they do not establish installation checks of that newer version.
-See the [successful checks and their limits](docs/installation-check-2026-11-04.md).
+**Version boundary:** OpenCode's `fbb8993` pin predates responsible-assistance
+guidance, evidence/reporting worksheets and optional local tools. Codex's checked
+`4566892` package includes those later source changes. Documentation continues on
+`main`; a later docs commit is not a new host check or automatic update. See the
+[exact-version checks and limits](docs/installation-check-2026-11-04.md).
 
-No Node.js, MCP server or funding account is required for the conversational skill.
-Your host supplies the model and tools, with its normal costs and privacy terms.
 Read the [privacy guide](PRIVACY.md) before supplying real material. You do not need
 to open the skill's Markdown files yourself.
 
@@ -96,7 +137,7 @@ can be responsible outcomes.
 
 ## What is available?
 
-**Current repository source—not everything in the installation pin above.**
+**Current repository source—not everything in every host's installation pin.**
 Ordinary skill use does not require the optional software or a manifest.
 
 | Capability | Current status | Important boundary |
@@ -144,8 +185,8 @@ integrations and automatic allocation remain future work. See the
   [responsible-assistance rules](docs/responsible-assistance.md) address concrete
   harmful conduct and deception, not sector labels or people's worth.
 - **Evidence limits stay visible.** [Development trials](docs/validation-2026-11-04.md)
-  are limited; the examples are authored fiction. Reliable model routing, other
-  hosts, human usefulness and funding effectiveness remain unverified. A passing
+  are limited; the examples are authored fiction. Reliable model routing,
+  unchecked hosts/surfaces, human usefulness and funding effectiveness remain unverified. A passing
   package check or published source is not an install-tested release.
 - **No implied affiliation.** ItF draws on public Moral Ambition principles but is
   not affiliated with or endorsed by the School for Moral Ambition or Rutger
@@ -156,7 +197,7 @@ integrations and automatic allocation remain future work. See the
 
 Current original written content uses [CC BY-SA 4.0](LICENSE-CONTENT.md); commercial
 reuse is allowed with applicable attribution/ShareAlike obligations. Original
-software, tests and executable schemas remain [MIT](LICENSE-CODE). The older pinned
+software, tests and executable schemas remain [MIT](LICENSE-CODE). The older OpenCode
 snapshot retains its earlier MIT licence; those grants remain valid. See the
 [licence scope](LICENSE) for the transition and third-party exceptions, including
 the vendored funding.json schema. Your inputs and generated outputs are not
@@ -178,8 +219,9 @@ own optional setup and checks; ordinary conversation needs neither.
 
 ## Contents and release boundary
 
-- [Usage](docs/usage.md) and [audience](docs/audience-and-positioning.md): starting
-  situations, prompts and intended users.
+- [Install/update/remove](docs/install.md), [usage](docs/usage.md) and
+  [audience](docs/audience-and-positioning.md): native routes, starting prompts
+  and intended users.
 - [Skill instructions](SKILL.md), [claims](references/claims.md) and
   [contributions](references/contributions.md): the core workflow and distinctions.
 - [Design/documentation index](docs/README.md): practice guides, contracts, examples

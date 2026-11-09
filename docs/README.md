@@ -96,6 +96,13 @@ integrated or tested for ItF; native-host checks are documented separately.
 feedback preparation and an artifact/access assessment. They are not the current
 native onboarding guide, and there is no active feedback collection through them.
 
+The [native installation guide](install.md) covers project/personal folders,
+host-specific invocation, safe updates/removal and troubleshooting. The
+[check record](installation-check-2026-11-04.md) separates Codex's limited CLI
+verification of `4566892`, earlier OpenCode checks of `fbb8993`, and Claude's
+documented but unverified route. Personal installs, interactive/IDE/desktop
+surfaces and human usefulness are not established by the CLI check.
+
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,
 tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22)
