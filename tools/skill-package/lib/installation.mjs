@@ -12,7 +12,9 @@ function git(root, args) {
   // Inspection must not borrow another repo/index/object store from the caller.
   // No network/credential operation needs inherited Git-specific overrides.
   const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.startsWith('GIT_')));
-  return execFileSync('git', ['--no-replace-objects', '--no-optional-locks', '-c', 'core.fsmonitor=false', '-C', root, ...args], {
+  // core.longpaths: managed staging paths can pass Windows' 260-character limit (see git.mjs).
+  return execFileSync('git', ['--no-replace-objects', '--no-optional-locks', '-c', 'core.fsmonitor=false',
+    '-c', 'core.longpaths=true', '-C', root, ...args], {
     env, encoding: 'utf8', timeout: 10000, maxBuffer: 4 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'],
   });
 }

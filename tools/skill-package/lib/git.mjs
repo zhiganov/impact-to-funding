@@ -1,17 +1,26 @@
 import { execFileSync } from 'node:child_process';
-import { devNull } from 'node:os';
+
+// Git's own spelling of the null device, not Node's os.devNull. On Windows os.devNull is
+// `\\.\nul`, which Git for Windows rejects as GIT_CONFIG_GLOBAL/GIT_CONFIG_SYSTEM ("unable to
+// access '\\.\nul': Invalid argument"), so every clone failed there. Git for Windows maps
+// `/dev/null` to its null device, and POSIX Git reads it natively.
+const GIT_NULL = '/dev/null';
 
 export const SOURCE_URL = 'https://github.com/zhiganov/impact-to-funding.git';
 
 export function sourceGit(args, { cwd, timeout = 60000 } = {}) {
   const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.startsWith('GIT_')));
   Object.assign(env, {
-    GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: devNull,
-    GIT_CONFIG_SYSTEM: devNull, GIT_TERMINAL_PROMPT: '0',
+    GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: GIT_NULL,
+    GIT_CONFIG_SYSTEM: GIT_NULL, GIT_TERMINAL_PROMPT: '0',
   });
   return execFileSync('git', ['--no-replace-objects', '--no-optional-locks',
-    '-c', `core.hooksPath=${devNull}`, '-c', `core.attributesFile=${devNull}`,
-    '-c', 'core.fsmonitor=false', '-c', 'credential.helper=', ...args], {
+    '-c', `core.hooksPath=${GIT_NULL}`, '-c', `core.attributesFile=${GIT_NULL}`,
+    '-c', 'core.fsmonitor=false', '-c', 'credential.helper=',
+    // Staging paths (state hash + run id + .git/objects/pack/…) pass Windows' 260-character
+    // MAX_PATH under a long home or temp directory, and the isolated config above also hides a
+    // user's own core.longpaths. Git for Windows needs it set here; other platforms ignore it.
+    '-c', 'core.longpaths=true', ...args], {
     cwd, env, encoding: 'utf8', timeout, maxBuffer: 8 * 1024 * 1024,
     stdio: ['ignore', 'pipe', 'pipe'],
   });
