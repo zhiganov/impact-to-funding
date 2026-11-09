@@ -105,6 +105,12 @@ guidance. Source instructions and package checks do not establish native activat
 model adherence or a hosted tracker;
 #16's collaborative workflow design remains separate work.
 
+The [draft ItFtI/guilds concept note](guilds-itfti-atproto.md) and
+[fictional Atmospheric Group walkthrough](../examples/guilds-itfti-atproto.md)
+explore ItF users working together as guilds: shared practice, recognition and
+learning before optional funding. They distinguish protocol permissions from
+community governance and describe anti-capture questions, not a working integration.
+
 [The preserved scope snapshot](design-scope-2026-11-04.md) records the proposed product/method boundary at the time it was drafted. Its statements that implementation was unselected and licensing/publication undecided are historical. Current package status is in the [project README](../README.md); the [licence scope](../LICENSE) separates CC BY-SA 4.0 written content, MIT software and third-party exceptions while preserving earlier MIT grants.
 
 The snapshot is retained verbatim. It is not a live task queue, a licence grant, a private evidence export, or approval for publication, integrations or money movement.
