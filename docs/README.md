@@ -22,7 +22,7 @@ conditionally reads relevant notes; this adds no database, live retrieval servic
 or systems/complexity method change.
 
 The [reference-library MCP decision](reference-library-mcp-decision.md) selects an
-independently usable interface with future source in this public repository,
+independently usable interface with source in this public repository,
 separate from funding/opportunity discovery. Canonical Markdown and bundled skill
 use remain independent. This records an architecture boundary, not a tool contract,
 implemented server, hosting commitment or requirement to use MCP.
@@ -33,6 +33,12 @@ define the initial `itf.library/0.1-draft` read-only discovery, detail and cover
 baseline for #44. The design preserves shared-file lens context and exact
 snapshot/version limits; executable schemas, server implementation and verified
 client compatibility are not established by these documents.
+
+The [optional local library MCP](../mcp/README.md) implements that baseline with
+stdio tools and separately prepared immutable public snapshots. Its
+[implementation checks](reference-library-mcp-checks.md) record observed behaviour
+and client-specific limits. It supplies no hosting, authentication, live ingestion
+or change to ordinary bundled skill use.
 
 [Optional Standard.site publishing and discovery](standard-site-publishing.md)
 maps approved public reports to existing publication metadata and tools. It is
