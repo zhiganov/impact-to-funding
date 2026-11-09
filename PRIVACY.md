@@ -8,9 +8,10 @@ The skill is a set of instructions, references, templates and fictional examples
 |---|---|
 | Your chosen agent and model | Material pasted into chat or read through tools can enter model context and reach the provider. Check that host/provider's permissions, retention, training and sharing settings; do not infer them from this repository. |
 | Agent history and local outputs | Sessions, tool logs, backups and generated files may retain material. Choose appropriate storage, access and retention, not just an output filename. |
+| Optional local support-profile tools | They read only explicitly supplied local files and create new local candidate bundles on request. They make no network/publication calls. Diagnostic redaction and restrictive output permissions are not permission to process inputs or publish outputs; inspect the candidate and its loss/provenance notes for the exact destination. |
 | Evidence retrieval and other tools | Opening a source can reveal request information or send data to an external service. Permission to inspect a file is not permission to upload it to another provider. Keep signed/private links and access credentials out of public outputs. |
 | GitHub and distribution | Public source, issues, PRs, branches and release archives are not a private workspace. Do not attach raw project packets or real beneficiary material to a bug report. |
-| Fundraising destinations and future integrations | Their ownership, privacy and eligibility requirements are separate. No Open Collective, Ko-fi, AT Protocol, widget, manifest, grant-distribution or MCP integration is bundled. |
+| Fundraising destinations and future integrations | Their ownership, privacy and eligibility requirements are separate. Local support-profile preparation and the optional public-library MCP do not supply a hosted funding provider, application submission, account setup, public-report publisher or payment integration. |
 
 There is no in-product consent mechanism, access-control system or audit service here. Safety instructions are not a sandbox or enforcement guarantee. The host's actual tools and permissions govern execution.
 

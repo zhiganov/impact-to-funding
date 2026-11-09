@@ -79,6 +79,24 @@ choices, not MCP standard methods or source-author endorsements.
 | [OpenCode V2 MCP guide](https://opencode.ai/v2/docs/mcp-servers) | Documented tool/resource exposure, protocol modes and optional session metadata. The page was read; current installed host was previously observed as v2.2.5. This does not prove the proposed server exists, a client uses it correctly or every detail of the evolving guide matches that installed binary. No configuration or authentication was changed. |
 | [MCP TypeScript SDK 2.4.0](https://github.com/modelcontextprotocol/typescript-sdk/tree/v2.4.0), low-level server, stdio and 2026-07-28 migration documentation consulted through Context7 | The optional implementation uses the official server package and tests with the official client. Actual local protocol checks are in the [implementation record](docs/reference-library-mcp-checks.md), not inferred from documentation. SDK packages use Apache-2.0; Ajv uses MIT. Dependency versions, integrity hashes and declared licences are pinned in the separate [lockfile](mcp/package-lock.json). Dependencies are not copied into the skill or relicensed by ItF. |
 
+## Optional support-profile tool sources
+
+The [local support-profile tools](tools/support-profile/README.md) use the adopted
+ItF contract and existing public financial format. They do not collect real
+project evidence or establish an upstream extension agreement.
+
+| Source | Use and licence boundary |
+|---|---|
+| [funding.json v1.1.0 schema](https://fundingjson.org/schema/v1.1.0.json), retrieved 2026-11-09 | An unchanged, hash-pinned copy is included under the source project's **CC BY-SA 4.0**, separately identified in [vendor/NOTICE.md](tools/support-profile/vendor/NOTICE.md). It is not relicensed as MIT. Schema checks do not establish directory acceptance, financial authority, eligibility or impact. |
+| [Ajv](https://ajv.js.org/guide/getting-started.html), version 8.17.1 | MIT-licensed local Draft-07 validator; compiles only the trusted bundled schemas, never a schema/URL supplied by input records. Version/integrity are pinned in the optional tool's lockfile. |
+| [Microsoft jsonc-parser](https://github.com/microsoft/node-jsonc-parser), version 3.3.1 | MIT-licensed parser used with comments/trailing commas disabled, checking parser errors and duplicate keys before interpreting JSON. Current documentation and installed type definitions are distinct from a consumer-compatibility result. |
+
+The original ItF support schema, code, worksheet and fictional checks are MIT.
+The separately included financial schema retains its upstream licence and
+attribution. No upstream logos, real application, participant dataset or payment
+credential is bundled. Linking a report or validating JSON does not license that
+report/evidence or make the publisher an independent evaluator.
+
 ## Original material and licence
 
 The [seed reference collection](references/library/README.md) contains original
@@ -90,7 +108,7 @@ not redistributed. AI-assisted source review is not project-author endorsement,
 practitioner validation or independent impact verification. Source rights and
 any actual adaptation requirements remain separate from the licence on these notes.
 
-The original skill, templates, synthetic examples, documentation, package checks and optional MCP implementation are licensed under [MIT](LICENSE). This grant does not relicense linked third-party works or dependencies, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
+The original skill, templates, synthetic examples, documentation, package checks and optional local code are licensed under [MIT](LICENSE). This grant does not relicense the separately attributed financial schema, linked third-party works or dependencies, imply their endorsement, or make a future source-derived adaptation automatically compatible. Review reuse rights and compatibility before adding such material or dependencies.
 
 Users' project records and generated outputs are not automatically covered by this repository's software/documentation licence. Consent, confidentiality and other rights remain separate.
 

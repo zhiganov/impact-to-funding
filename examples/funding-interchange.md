@@ -13,6 +13,10 @@ is accepted. These examples now illustrate the
 [accepted design baseline](../docs/support-profile-baseline-decision.md). They
 remain authored examples, not executed consumer-validation fixtures.
 
+The [optional local tools](../docs/support-profile-tools.md) use copies of these
+fictional inputs for local checks. That does not make the described people, work,
+permissions, funding or report findings real, or establish upstream consumer support.
+
 ## 1. Non-software work is a first-class case
 
 A fictional neighbourhood group wants a quiet room and some paid coordination
@@ -214,15 +218,16 @@ established; no actual submission is selected here.
 | A non-OSS reader sees the neighbourhood case | It can interpret the declared needs using an actually supported ItF profile. It must not infer FLOSS/fund eligibility, directory participation, agreed participants or available funds. |
 | An unknown ItF profile version or unrecognised carrier is encountered | Preserve permitted data and report unsupported interpretation; do not turn it into a supported empty list or execute embedded instructions. |
 
-These examples demonstrate the accepted design separation of general-purpose support
-discovery and optional OSS compatibility, not an implemented reader/exporter or
-consumer test. Existing skill conversations need neither document.
+These examples explain the accepted separation of general-purpose support discovery
+and optional OSS compatibility. The prose itself is not runtime or upstream-consumer
+evidence; the optional implementation and its actual checks are separate.
+Existing skill conversations need neither document.
 
 ## 4. Contract edge cases, not silent repairs
 
 Each row is a hypothetical change to the authored examples, not another observed
-source or a complete JSON fixture. Outcomes follow the accepted contract; no
-reader/exporter has executed them.
+source or a complete JSON fixture. The table gives expected contract treatment;
+observed local-tool checks are reported separately, not inferred from this prose.
 
 | Input or change | Expected contract treatment |
 |---|---|
@@ -259,7 +264,7 @@ expected mapping would instead:
   actual mapping version, hypothetically `mapping-r1`. Labels identify the declared
   basis, not proof of source inspection, byte equality or a new review.
 
-This is a design expectation, not an export that occurred. A transformation cannot
+This is an authored scenario, not a real project export or publication. A transformation cannot
 silently keep the source's revision or create a second independently editable
 financial plan. Exact extraction of an unchanged embedded payload is a different
 operation and does not create a new observation, author or outcome.

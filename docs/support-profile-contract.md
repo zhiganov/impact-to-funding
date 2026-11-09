@@ -2,9 +2,10 @@
 
 **Date:** 2026-11-09. **Status:** accepted ItF design baseline for #49; see the
 [field-contract decision](support-profile-baseline-decision.md) and
-[architecture](funding-interchange-direction-decision.md). Not an executable schema,
-registered namespace, exporter or consumer compatibility result. “Must” defines
-the implementation target, not authority to act or proof that it is implemented.
+[architecture](funding-interchange-direction-decision.md). This document defines
+meaning, not a registered namespace or consumer-compatibility result. A separate
+[optional local implementation](support-profile-tools.md) supplies inspection and
+projection tools. “Must” does not grant authority to act or establish real-world truth.
 
 ## 1. Scope and representations
 
@@ -263,9 +264,11 @@ the existing [privacy guidance](../PRIVACY.md) remain decisive.
 
 The [fictional walkthrough](../examples/funding-interchange.md) illustrates the
 accepted standalone and embedded shapes, their financial view and failure cases.
-JSON/manual shape/reference checks and package integrity are design evidence only.
-No complete JSON Schema, formal validator, codec, consumer import, round trip,
-directory submission, model trial, live manifest change or installation is supplied.
+The original JSON/manual shape/reference and package checks were design evidence
+only. The separate [local implementation](support-profile-tools.md) adds executable
+structural schemas and local declaration/projection checks; these do not establish
+upstream consumer import, a lossless round trip, directory acceptance, model
+behaviour, real impact, live manifest changes or updated native installation.
 
 The financial source basis remains the v1.1.0 schema and official pages inspected
 for the [architecture assessment](funding-interchange-design.md#sources-and-attribution-limits).

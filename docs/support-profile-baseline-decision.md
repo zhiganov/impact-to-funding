@@ -3,6 +3,10 @@
 **Date:** 2026-11-09. **Status:** accepted ItF design baseline for #49; not a
 released standard, registered namespace, executable schema or tested integration.
 
+This records the design-adoption stage. The later
+[optional local implementation](support-profile-tools.md) is separate work;
+its presence does not turn the adoption checks below into runtime evidence.
+
 ## Accepted contract
 
 Accept the reviewed [support-profile contract](support-profile-contract.md) and
