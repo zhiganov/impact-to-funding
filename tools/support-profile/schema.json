@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:itf:support:0.1-proposal",
+  "$comment": "Original ItF support schema, MIT licensed. Unknown properties are retained and reported separately as limited interpretation.",
+  "type": "object",
+  "required": ["profile", "id", "revision", "publisher", "subject", "limitations"],
+  "properties": {
+    "profile": {"const": "itf.support/0.1-proposal", "type": "string"},
+    "id": {"$ref": "#/definitions/id"},
+    "revision": {"$ref": "#/definitions/text"},
+    "publisher": {
+      "type": "object", "required": ["name"],
+      "properties": {"name": {"$ref": "#/definitions/text"}, "webpageUrl": {"$ref": "#/definitions/url"}}
+    },
+    "subject": {
+      "type": "object", "required": ["id", "name", "kind", "description"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"}, "name": {"$ref": "#/definitions/text"},
+        "kind": {"type": "string", "enum": ["person", "project", "collective", "other"]},
+        "description": {"$ref": "#/definitions/text"}
+      }
+    },
+    "canonicalUrl": {"$ref": "#/definitions/url"},
+    "supportCases": {"type": "array", "items": {"$ref": "#/definitions/case"}},
+    "reports": {"type": "array", "items": {"$ref": "#/definitions/report"}},
+    "statusUrl": {"$ref": "#/definitions/url"},
+    "limitations": {"$ref": "#/definitions/text"},
+    "derivedFrom": {
+      "type": "object", "required": ["url", "revision", "mappingRevision"],
+      "properties": {
+        "url": {"$ref": "#/definitions/url"}, "revision": {"$ref": "#/definitions/text"},
+        "mappingRevision": {"$ref": "#/definitions/text"}
+      }
+    }
+  },
+  "definitions": {
+    "text": {"type": "string", "pattern": "\\S"},
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,63}(?![\\s\\S])"},
+    "url": {"type": "string", "pattern": "^[Hh][Tt][Tt][Pp][Ss]://"},
+    "money": {
+      "type": "object", "required": ["costBasis", "existingSupport"],
+      "properties": {
+        "amount": {"type": "number", "minimum": 0},
+        "currency": {"type": "string", "pattern": "^[A-Z]{3}(?![\\s\\S])"},
+        "frequency": {"type": "string", "enum": ["one-time", "weekly", "fortnightly", "monthly", "yearly", "other"]},
+        "status": {"type": "string", "enum": ["active", "inactive"]},
+        "costBasis": {"$ref": "#/definitions/text"}, "existingSupport": {"$ref": "#/definitions/text"}
+      },
+      "dependencies": {"amount": ["currency"], "currency": ["amount"]}
+    },
+    "fundingPlanRef": {
+      "type": "object", "required": ["url", "guid"],
+      "properties": {
+        "url": {"$ref": "#/definitions/url"},
+        "guid": {"type": "string", "pattern": "^[a-z0-9-]{1,32}(?![\\s\\S])"},
+        "version": {"$ref": "#/definitions/text"}
+      }
+    },
+    "case": {
+      "type": "object", "required": ["id", "purpose", "status", "resources", "limitations"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"}, "purpose": {"$ref": "#/definitions/text"},
+        "status": {"type": "string", "enum": ["proposed", "seeking", "paused", "completed", "withdrawn"]},
+        "resources": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/text"}},
+        "money": {"$ref": "#/definitions/money"}, "fundingPlanRef": {"$ref": "#/definitions/fundingPlanRef"},
+        "reportRefs": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/id"}},
+        "limitations": {"$ref": "#/definitions/text"}
+      },
+      "not": {"required": ["money", "fundingPlanRef"]}
+    },
+    "report": {
+      "type": "object", "required": ["id", "url", "scope", "limitations"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"}, "url": {"$ref": "#/definitions/url"},
+        "scope": {"$ref": "#/definitions/text"}, "limitations": {"$ref": "#/definitions/text"},
+        "revision": {"$ref": "#/definitions/text"}, "period": {"$ref": "#/definitions/text"},
+        "published": {"$ref": "#/definitions/text"}
+      }
+    }
+  }
+}

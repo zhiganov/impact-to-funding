@@ -7,6 +7,10 @@ The [concrete field/carrier contract](support-profile-contract.md) is now an
 standard, executable schema, exporter or tested directory integration. See the
 [fictional examples](../examples/funding-interchange.md).
 
+The later [optional local tools](support-profile-tools.md) implement a bounded
+authoring/inspection/projection path. They do not establish upstream directory
+compatibility or change this assessment's original design-only evidence.
+
 ## 1. Purpose, audience and origin
 
 ItF helps people develop meaningful contributions, learn what difference they make
@@ -264,6 +268,8 @@ Read 2026-11-09: [funding.json description](https://fundingjson.org/),
 The announcement establishes origin and intent; its historical schema example
 does not override the current v1.1.0 contract. The FAQ's current FOSS-selection
 focus is a funder policy, not a universal field/eligibility rule for all readers.
-No source schema, logos, datasets or method text are redistributed as MIT material.
+This assessment redistributed no source schema, logos, datasets or method text as
+MIT material. The later local tools retain an unmodified financial schema under
+its own [CC BY-SA 4.0 attribution](../tools/support-profile/vendor/NOTICE.md), not MIT.
 The ItF field names and fictional examples are original design choices,
 not FLOSS/fund/Zerodha endorsement or an agreed upstream extension.

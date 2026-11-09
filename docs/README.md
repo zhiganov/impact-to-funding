@@ -59,13 +59,20 @@ domain-neutral ItF support profile, with optional upstream financial projection
 and a same-file extension for appropriate OSS cases. Its
 [field contract is now accepted](support-profile-baseline-decision.md) as a design
 target; the [fictional examples](../examples/funding-interchange.md) are not
-schema/consumer compatibility results. Nothing is implemented; ItF is not
-restricted to OSS or FLOSS/fund's audience.
+schema/consumer compatibility results. The later local implementation is linked
+below; ItF is not restricted to OSS or FLOSS/fund's audience.
 
 The [support-profile contract](support-profile-contract.md) specifies the accepted
 fields, types, carrier, references, monetary semantics and loss-aware financial
 projection, with reconciled fictional edge cases. Its separate field-contract
 adoption establishes no schema implementation, exporter or consumer test.
+
+The separate [local support-profile tools](support-profile-tools.md) implement
+optional authoring, strict inspection, explicit financial-plan binding and
+loss-aware financial views. They make no source/network/publication calls and do
+not establish a working integration with a funding directory or other consumer.
+Its [implementation check record](support-profile-checks.md) separates observed
+local behaviour from untested consumer and installation claims.
 
 [AI Registry and Vercel Skills CLI distribution references](ai-registry-distribution.md)
 compare registry/catalog value with direct Git skill distribution, separately

@@ -161,6 +161,16 @@ accepted field/carrier/projection rules and unknown/error behaviour; see the
 [baseline decision](docs/support-profile-baseline-decision.md). No reader, exporter
 or schema implementation is supplied by the contract or its fictional examples.
 
+The separate [optional local support-profile tools](tools/support-profile/README.md)
+provide a private authoring worksheet, strict inspection and explicit local
+financial-plan binding/projection. They do not fetch reports, publish records,
+submit applications or establish consumer compatibility. Ordinary skill use needs
+none of their Node dependencies; see the [usage and limits](docs/support-profile-tools.md).
+The [local check record](docs/support-profile-checks.md) reports actual fictional
+input/CLI checks, not native installation, model behaviour or consumer acceptance.
+The unchanged upstream funding.json schema is separately attributed under
+[CC BY-SA 4.0](tools/support-profile/vendor/NOTICE.md), not relicensed MIT.
+
 The [optional Bluesky publishing guide](docs/bluesky-publishing.md) and [fictional previews/correction cases](examples/bluesky-publishing.md) cover exact-action approval, outward metadata, uncertain sends and controlled corrections. They supply no account, publisher, post or notification, and do not authorise a live action.
 
 The [conflicting/adversarial synthetic case](examples/contradictory-case.md) exercises corrected data, scoped reviews, disclosure, already-funded costs and untrusted instructions embedded in evidence. Its forged certificate and payment URL are fixture content, not commands or a real funding destination. See the validation notes for the observed failure, bounded repair and one targeted recheck; complete raw trial outputs are not distributed.
@@ -187,6 +197,10 @@ node --test tests/package.test.mjs
 
 These checks cover package structure, the deliberately simple frontmatter format, local links and accidental local-machine paths. They do **not** establish semantic correctness, privacy completeness, independent verification, host compatibility, user usefulness or social impact.
 
+The optional support-profile package has separate local checks: after its documented
+dependency setup, run `npm test` from `tools/support-profile`. These check the local
+reader/projections and CLI against fictional inputs, not upstream consumer acceptance.
+
 ## Contents and release boundary
 
 - [SKILL.md](SKILL.md): progressive-disclosure workflow and non-negotiable safeguards.
@@ -204,4 +218,4 @@ These checks cover package structure, the deliberately simple frontmatter format
 - [Installation-check record](docs/installation-check-2026-11-04.md): unsuccessful bounded OpenCode discovery probes, isolation, limits and unresolved release decision.
 - `docs/design-scope-2026-11-04.md`: preserved historical scope snapshot; its original unselected-work status is not a statement that this implementation does not exist.
 
-Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. The optional local library MCP is separate from the skill. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, automated funding/report manifest integrations and automatic allocation remain potential extensions, not implemented features or first-release dependencies.
+Before an install-tested release: review the bounded behavioural findings and package changes, confirm source-rights and licence compatibility, and verify installation of the exact release in a supported host. The development trials do not establish independent impact validation or funding effectiveness, and source publication alone does not complete installation testing. The optional local library MCP and support-profile tools are separate from ordinary skill use. Widgets, Open Collective, Ko-fi, AT Protocol, Sifa interoperability, hosted funding/report consumer integrations and automatic allocation remain potential extensions, not implemented features or first-release dependencies.
