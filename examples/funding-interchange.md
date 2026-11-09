@@ -24,6 +24,10 @@ time for a small shared-learning activity. It has no software repository, softwa
 licence or public payment channel. The document below can still describe the need.
 It does not pretend that the group qualifies for an OSS directory.
 
+`itf-manifest.json` is the preferred standalone filename used below. The filename
+and path are optional; the `profile` declaration identifies the format. No real
+manifest was published, relocated or fetched for this fictional example.
+
 The fictional publisher has permission for the displayed group name, proposed
 resource needs and report scope only. Participant material and internal evidence
 references are excluded; an actual reader has not inspected the linked report.
@@ -33,7 +37,7 @@ references are excluded; an actual reader has not inspected the linked report.
   "profile": "itf.support/0.1-proposal",
   "id": "neighbourhood-learning",
   "revision": "r1",
-  "canonicalUrl": "https://example.org/neighbourhood/itf-support.json",
+  "canonicalUrl": "https://example.org/neighbourhood/itf-manifest.json",
   "publisher": {
     "name": "Fictional Neighbourhood Learning Group"
   },

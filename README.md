@@ -161,6 +161,12 @@ accepted field/carrier/projection rules and unknown/error behaviour; see the
 [baseline decision](docs/support-profile-baseline-decision.md). No reader, exporter
 or schema implementation is supplied by the contract or its fictional examples.
 
+The preferred standalone filename is **`itf-manifest.json`**. Other filenames and
+publisher-selected locations remain valid; the explicit profile identifies the
+format, not the filename. This is not a mandatory root endpoint or an automatic
+discovery feature. The existing `funding.json` describes upstream-format financial
+metadata for maintaining ItF itself; it is not the standalone support format.
+
 The separate [optional local support-profile tools](tools/support-profile/README.md)
 provide a private authoring worksheet, strict inspection and explicit local
 financial-plan binding/projection. They do not fetch reports, publish records,

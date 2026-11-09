@@ -35,6 +35,9 @@ with fictional identities, contact details, amounts, roles or permissions.
 `itf.support/0.1-proposal`. It needs no standard filename, repository, software
 licence, public contact or payment channel. This is normally the appropriate path
 for non-OSS work; do not recast that work as software to fit a financial consumer.
+Prefer `itf-manifest.json` when naming a standalone candidate; other filenames and
+publisher-selected locations remain valid. A filename is not disclosure permission,
+profile detection, authority or proof that a reader will discover the document.
 
 **Optional OSS carrier:** only when appropriate real OSS financial facts exist,
 the same support shape can appear at

@@ -71,7 +71,7 @@ types, unknown handling, money rules and exact projection behaviour.
 Identifier: **`itf.support/0.1-proposal`**. Its retained suffix is part of the literal
 version, not an unadopted status. It is an ItF design identifier, not a registered
 standard or namespace. A standalone UTF-8 JSON file is
-suggested; `itf-support.json` is an illustrative filename, not a required root path,
+suggested; **`itf-manifest.json` is the preferred filename**, not a required root path,
 well-known discovery convention or directory registration. A normal page can link
 to it. Private conversational work need not produce any such file.
 

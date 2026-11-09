@@ -65,6 +65,9 @@ syntactically acceptable URLs are not permission to disclose their destinations.
 
 - Use exactly `itf.support/0.1-proposal`. Local IDs identify records within this
   document; names and matching URLs do not merge identities or establish authority.
+- Prefer **`itf-manifest.json`** for a standalone support document. This is a
+  naming convention, not a required root path or automatic discovery mechanism;
+  other filenames remain valid and the exact `profile` selects interpretation.
 - A standalone object has no mandatory filename, repository, licence, public
   contact or payment account. Do not convert non-OSS needs into software to fit a
   financial projection.
@@ -104,7 +107,7 @@ instructions, not a record that they were executed.
 ## Inspect a candidate
 
 ```sh
-node ./impact-to-funding/tools/support-profile/cli.mjs inspect ./work/input.json
+node ./impact-to-funding/tools/support-profile/cli.mjs inspect ./work/itf-manifest.json
 ```
 
 Optionally supply `--source-url URL` for the actual cleared public source locator;
@@ -162,7 +165,7 @@ This narrower operation does not create financial facts. Supply:
   mappings are blocked, not ignored.
 
 ```sh
-node ./impact-to-funding/tools/support-profile/cli.mjs bind ./work/input.json --funding ./work/base.json --map ./work/map.json --destination-url https://example.org/funding.json --revision support-view-r2 --mapping-revision map-r1 --output ./work/bound-candidate
+node ./impact-to-funding/tools/support-profile/cli.mjs bind ./work/itf-manifest.json --funding ./work/base.json --map ./work/map.json --destination-url https://example.org/funding.json --revision support-view-r2 --mapping-revision map-r1 --output ./work/bound-candidate
 ```
 
 The example URL and revision labels illustrate syntax only. Supply the actual

@@ -8,6 +8,10 @@ and optional [worksheet](../../assets/support-profile.md). General standalone
 profiles include non-software, non-financial and prospective work; OSS projection
 requirements must not become a gate for that work.
 
+Prefer **`itf-manifest.json`** for standalone candidates. Other filenames remain
+valid: the declared profile selects interpretation. This convention neither adds
+automatic discovery nor renames upstream `funding.json` financial views/carriers.
+
 ## Setup
 
 Requires **Node.js 22 or later**. From **this directory only**
@@ -39,7 +43,7 @@ its sibling `./work`, outside the distributable copy. For example, from that
 private workspace:
 
 ```sh
-node ./impact-to-funding/tools/support-profile/cli.mjs inspect ./work/input.json
+node ./impact-to-funding/tools/support-profile/cli.mjs inspect ./work/itf-manifest.json
 ```
 
 | Operation | Input and result |

@@ -18,12 +18,21 @@ agreement is implied.
 
 Two representations carry the same support-document shape:
 
-1. **Standalone:** a UTF-8 JSON object containing the support document. No mandatory
-   filename, root path, directory, software repository or payment account.
+1. **Standalone:** a UTF-8 JSON object containing the support document.
+   **`itf-manifest.json` is the preferred filename**, not a mandatory root path,
+   directory or discovery endpoint. Other filenames remain valid; the exact
+   `profile` declaration, not the filename, selects interpretation. No software
+   repository or payment account is required.
 2. **Embedded OSS view:** the object at
    `extensions["org.impact-to-funding.support"]` in an appropriate funding.json
    v1.1.0 manifest. The wrapper and key are ItF conventions, not upstream
    fields or a registered namespace. The financial base keeps its upstream meanings.
+
+The filename convention does not change the profile version or carrier. A
+publisher may link its chosen canonical location from an ordinary page; the name
+does not establish authority, disclosure permission, automatic discovery or
+consumer support. The repository's own `funding.json` remains upstream financial
+metadata about maintaining ItF, not a renamed standalone ItF support document.
 
 This is a small public-discovery bridge, not the private evidence packet or a full
 claim/review exchange model. Existing conversations and private work need neither
