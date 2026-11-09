@@ -88,6 +88,27 @@ actual bytes, inventory, references and licences, then replaces the live directo
 Git hooks, global Git filters/configuration and credential prompts are disabled
 for source preparation. Package source files are not executed by installation.
 
+### Adopting a Windows clone
+
+A copy cloned on Windows with Git's default `core.autocrlf=true`, which includes
+any clone made by following the [installation guide](install.md) before
+`.gitattributes` fixed line endings, has CRLF text files. The manager compares
+exact bytes, so `adopt` refuses it as modified even when `git status` is clean.
+This is deliberate: integrity checks do not ignore line endings.
+
+If `git status` shows no changes, re-check the same commit out with LF endings
+first, then preview adoption again:
+
+```sh
+git -C "$target" status --porcelain   # must print nothing
+git -C "$target" config core.autocrlf false
+git -C "$target" rm -q -r --cached .
+git -C "$target" reset -q --hard
+```
+
+This changes only line endings in that copy; `git rev-parse HEAD` stays the same.
+Do not run it on a copy with local changes: `reset --hard` discards them.
+
 ## Private state and recovery
 
 Receipts, locks, journals, staging and retained backups live under the home

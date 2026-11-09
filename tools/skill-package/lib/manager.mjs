@@ -19,6 +19,17 @@ const receiptFile = (paths) => path.join(paths.state, 'receipt.json');
 const staging = (paths, id) => path.join(paths.state, 'staging', id);
 const backup = (paths, id) => path.join(paths.state, 'backups', id);
 
+// A Git for Windows clone made with the default core.autocrlf=true has CRLF text files, so its
+// byte inventory never matches the LF source and adoption refuses. Integrity hashes stay byte-exact
+// on purpose; this only points the user at the documented LF re-checkout instead of a bare refusal.
+function crlfHint(target) {
+  try {
+    if (!readFileSync(path.join(target, 'SKILL.md')).includes('\r\n')) return '';
+  } catch { return ''; }
+  return '. Its files use Windows (CRLF) line endings; re-check it out with LF endings first:'
+    + ' see "Adopting a Windows clone" in docs/managed-skill-updates.md';
+}
+
 function validateCandidate(root, source) {
   const observation = inspectInstallation(root);
   if (observation.source.commit !== source.sourceCommit || observation.source.repository !== repository
@@ -224,7 +235,9 @@ export function createManager({ catalogue = githubCatalogue, prepare = prepareFr
       if (command === 'rollback') checkCurrent({ ...paths, target: candidateRoot }, result.targetSource);
       if (command === 'adopt') {
         owned(paths.target);
-        if (!matchesInventory(paths.target, candidate.files)) throw new Error('Unknown or modified adoption files; preserve this copy');
+        if (!matchesInventory(paths.target, candidate.files)) {
+          throw new Error(`Unknown or modified adoption files; preserve this copy${crlfHint(paths.target)}`);
+        }
         if (existsSync(path.join(paths.target, '.git'))) {
           const observation = inspectInstallation(paths.target);
           if (observation.source.repository !== repository || observation.source.commit !== result.targetSource.sourceCommit
