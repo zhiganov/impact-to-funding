@@ -20,6 +20,56 @@ administrator and a separately agreed editorial process. Joining does not make
 someone a project contributor, independent evaluator, spokesperson or payment signer.
 The tool predates the guild; its earlier work is not credited to the guild retroactively.
 
+## Bounded help, declined help and learning that changes a plan
+
+This extends the [#53 workflow assessment](../docs/guild-workflow-assessment.md);
+every action and decision below is invented, not a recorded interaction.
+
+Mira asks for help simplifying one guide for the fictional Open Door project.
+Ren offers one editing pass, not responsibility for every guide or future meeting.
+Mira's request is not Ren's commitment until Ren accepts that exact scope. The
+guild's shared interest does not require Ren to disclose a personal theory.
+
+Sol declines a request to add a new export feature: Sol's available maintenance
+capacity is already committed to a different project, Lantern Tools. Nothing is
+assigned to Sol because a summary says the feature is useful. Mira narrows the
+request instead of assuming unpaid work, replacing Sol or treating refusal as
+poor standing. The project can defer the feature; no available alternative helper
+is invented. Sol's private reasons need not be published.
+
+In this scenario Mira and Ren are Open Door's agreed approvers, with both needed
+for a changed working plan. They agree guide candidate v1; Ren separately accepts
+only the editing pass. Sol's other project and its decisions remain independent.
+Another fictional guild, Quiet Tools, also supports Lantern Tools: neither guild
+owns that project or the whole result of Sol's contribution.
+
+After the pass, Ren finds that some instructions assume a desktop interface. The
+story supplies no participant experience or measured accessibility improvement.
+Ren proposes testing the assumption before distributing the guide more widely;
+Mira instead proposes a smaller revision that removes the desktop-only instruction.
+No test or recruitment is launched by either proposal. Mira and Ren approve exact
+candidate v2 as a limited interim plan, retaining Ren's unresolved concern that
+other barriers remain unknown. An AI summary cannot call that unanimous confidence
+or erase the objection. Their next learning question is whether the remaining
+instructions work in the intended setting; owner, resources and consent for any
+future check remain unestablished.
+
+At their agreed reflection point, a short private account can say: one editing
+pass completed, an assumption identified, a feature deferred and a plan revised.
+It does not establish participant benefit or independent review. Mira's access
+coordination and Ren's care for newcomers remain meaningful work even without
+code commits, public testimonials or contribution scores. No additional guild
+reporting cadence is required.
+
+In a future native application, the request, Ren's accepted scope, Sol's declined
+request and the versioned project decision are distinct attributed meanings,
+not new record types selected by this example. Personal responses stay personally
+authored; a guild-authored summary retains its acting editor and actual decision
+basis. Neither a personal login nor a shared group session proves the permissions
+or consent needed for these actions. Sensitive reasons and affiliations stay out
+of any shared account. Where a safe supported carrier is unavailable, the step
+is not claimed as a working native interaction.
+
 ## One group identity, different application responsibilities
 
 In the proposed native design, the guild has one group DID and uses suitable

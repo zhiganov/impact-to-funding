@@ -207,8 +207,10 @@ The focused new backlog separates [native guild collaboration #53][I53] from
 [policy-bound curation portability #52][I52]. The former must map the intended
 ATProto experience rather than treating a manual guide as proof of native support;
 the latter must assess existing record/policy facilities before proposing any type.
-The concept/example here are inputs to those assessments, not completed acceptance
-of either. Allocation-specific questions extend #8 instead of a duplicate issue.
+The [guild-workflow assessment](guild-workflow-assessment.md) now covers #53's
+offline journey and native mapping; its extended fictional example is not a live
+workflow test. #52's curation assessment remains unfinished. Allocation-specific
+questions extend #8 instead of a duplicate issue.
 
 [Readiness #10][I10] still lacks a confirmed supported deployed member-PDS/group-host/
 client tuple and an authorised disposable-resource arrangement with actual operating

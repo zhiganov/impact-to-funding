@@ -111,6 +111,11 @@ explore ItF users working together as guilds: shared practice, recognition and
 learning before optional funding. They distinguish protocol permissions from
 community governance and describe anti-capture questions, not a working integration.
 
+The [native guild-workflow assessment](guild-workflow-assessment.md) completes
+#53's offline cooperation journey and native mapping, reusing existing contribution,
+decision and report designs. Its recommendation is documentation-only; implemented
+collaboration, user usefulness and deployed Groups compatibility remain unverified.
+
 [The preserved scope snapshot](design-scope-2026-11-04.md) records the proposed product/method boundary at the time it was drafted. Its statements that implementation was unselected and licensing/publication undecided are historical. Current package status is in the [project README](../README.md); the [licence scope](../LICENSE) separates CC BY-SA 4.0 written content, MIT software and third-party exceptions while preserving earlier MIT grants.
 
 The snapshot is retained verbatim. It is not a live task queue, a licence grant, a private evidence export, or approval for publication, integrations or money movement.
