@@ -141,7 +141,7 @@ requests or imply no updates. Git source preparation also requires public access
 
 File placement and local lifecycle tests do not establish native activation,
 model reliability or usefulness. Existing exact-source host checks retain their
-older SHAs and limits; Claude activation remains unverified. No new release, host
+older SHAs and limits, including the limited Claude Code check at `4566892`. No new release, host
 sign-in, model trial, automatic notice, hook, telemetry or global configuration
 change is supplied by this implementation.
 

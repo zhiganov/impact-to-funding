@@ -11,7 +11,7 @@ Invocation differs by host:
 
 The [exact-version evidence](installation-check-2026-11-04.md) distinguishes a
 Codex 0.166.0 project-local CLI check of `4566892`, earlier OpenCode v2.2.5 checks
-of `fbb8993`, and Claude's documented but unverified route. It establishes neither
+of `fbb8993`, and a limited Claude Code 2.1.321 project-local CLI check of `4566892`. It establishes neither
 interactive/IDE support nor reliable model routing or human usefulness. Manual
 file-reading remains a separate alternative, not native installation proof.
 
