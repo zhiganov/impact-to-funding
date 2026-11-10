@@ -49,6 +49,12 @@ needs no legal identity.
   is current rather than assuming it is open. When requested, produce a short list
   of relevant leads with known terms, round status and uncertainty. The list records
   possibilities; it provides no introductions. Check offers and eligibility separately.
+- **Application rules:** Before drafting for a named funder, read its form and
+  guidance for rules that shape the draft. These include the exact questions, word
+  and format limits, required attachments, eligibility conditions, deadlines and
+  time zones, and any stated policy on AI-assisted writing. Note where you found
+  each rule and when. Tell the person about the rules that change how they should
+  prepare, and fit the draft to them. If you can't find the rules, say so.
 
 ## Present the result
 
