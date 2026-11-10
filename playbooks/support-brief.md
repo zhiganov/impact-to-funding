@@ -70,6 +70,11 @@ Before the person shares a draft, offer to run the local
 It flags long sentences, passive voice and adverbs. Suggest plainer wording for
 what it flags; the person decides what to change.
 
+If the person has the Pangram MCP server connected and wants to know whether a
+public draft reads as AI-written, offer to check it with Pangram. That sends the
+text to Pangram, so use only text they may share and never private evidence. A
+score isn't a judgement of quality. See [optional writing tools](../docs/optional-writing-tools.md).
+
 If useful information is missing, offer a clear provisional draft or a short
 outline. The person can correct it without first completing a questionnaire,
 register or evidence packet. Keep a working draft private by default; write a
