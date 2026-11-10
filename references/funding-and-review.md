@@ -35,6 +35,8 @@ A brief or fact sheet for the person's own use is different from text submitted 
 
 Don't use humanizer or detector-evasion tools to get around a funder's rule. Text passed through them is still AI-written, and hiding that misrepresents who wrote the application. Editing tools can also count: a tool that rewrites text with AI may break a rule that allows only proofreading. When unsure, reread the funder's wording; the person can ask the funder directly.
 
+AI detectors sometimes flag text that people wrote themselves. If the person writes their own application, suggest they keep their drafts or edit history. That record can help show they wrote it if a funder questions it.
+
 ## Proportionate reports
 
 Use the reporting period and earlier intentions as the baseline. Include what happened, what did not, what evidence was inspected, missingness, other contributors, expenditure information if appropriate, adverse effects and what changed in the theory or next ask. Do not quietly drop unsuccessful actions or inflate impact to justify past donations.
