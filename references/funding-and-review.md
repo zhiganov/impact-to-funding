@@ -39,6 +39,7 @@ Default to a private assessment. Public text is a separately curated candidate, 
 4. Are scope, dates, uncertainty, shared contributions, material contrary evidence and review limits near the claims they qualify?
 5. Can the person correct or withdraw material, and what are the limits once third parties copy it? Do not promise recall of public copies.
 6. Has the exact public content and destination been approved? Approval of one version/channel is not permission for every use.
+7. Is it easy to read? If the host can run Node 22, offer the local [readability check](../tools/readability/README.md) on the draft or a manifest's descriptions. It runs locally and sends nothing anywhere.
 
 Recording permission is not blanket permission for fundraising or publication. “Anonymised” and “synthetic” are not automatic clearances: a minimally altered private case can remain identifying. Keep private project evidence outside the distributable skill, tests and public examples.
 
