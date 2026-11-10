@@ -141,6 +141,9 @@ SKILL.md first.
 
 > Help me prepare a private case for sustaining this work. Separate observations from proposals, use only known costs and commitments, and keep uncertainty visible. Do not invent impact, submit an application or contact a funder.
 
+The current source includes an optional [support-brief playbook](playbooks/support-brief.md)
+for this task. The earlier host-tested pins above do not include it.
+
 A few sentences can be enough. A useful result may be a contribution possibility,
 a clearer question, a revised commitment or a decision to stop—not a formal report.
 The [usage guide](docs/usage.md) has more prompts and incomplete-evidence examples.
