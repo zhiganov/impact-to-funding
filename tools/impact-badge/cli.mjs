@@ -8,7 +8,8 @@ const HELP = `Build an ItF impact report badge and cards (Node 22+).
   node tools/impact-badge/cli.mjs MANIFEST INPUT --output DIR [--force]
 
 MANIFEST is your public itf-manifest.json. INPUT is itf-badge-input.json.
-Writes itf-badge.json, itf-card-light.svg and itf-card-dark.svg into DIR.
+Writes itf-badge.json, itf-card-light.svg, itf-card-dark.svg, itf-card.html
+and itf-card.css into DIR.
 Refuses to overwrite existing files unless you add --force.
 Runs locally and sends nothing anywhere.
 Exits: 0 built, 1 usage or read error, 2 inputs don't fit the contract.

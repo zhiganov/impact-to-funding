@@ -23,6 +23,8 @@ This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4)
 - **`itf-badge.json`**, in the shields.io [endpoint badge](https://shields.io/badges/endpoint-badge) format. The label is "impact report". The message is the period plus the provenance, for example "2026 Q3 · self-reported". It becomes "withdrawn" or "out of date" in those states.
 - **`itf-card-light.svg`** and **`itf-card-dark.svg`**: the subject name, period, each claim with its support and provenance labels, the published date and the report URL as text. Each has a `<title>` and an `aria-label` with the same content. The dark card uses colours that read well on GitHub's dark theme.
 
+- **`itf-card.html`** and **`itf-card.css`**: the same content as semantic HTML text (a section with a heading, a list of claims and a link to the report), plus optional styles with light and dark colours. Use these on websites.
+
 ## Display labels
 
 Input values stay short. Both outputs show them the same way:
@@ -52,6 +54,8 @@ Input values stay short. Both outputs show them the same way:
   ```
 
 - The compact badge needs no dark version: its colours sit on their own background.
+- On websites, use the HTML card by default. Visitors' browsers fetch a shields.io badge directly, without GitHub's image proxy.
+- The report URL must start with `http://` or `https://`.
 - Offer a badge only after the person has an approved public report.
 
 ## Open questions

@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
-import { badgeJson, build, cardSvg, validate } from '../index.mjs';
+import { badgeJson, build, cardCss, cardHtml, cardSvg, validate } from '../index.mjs';
 import { main } from '../cli.mjs';
 
 const examples = fileURLToPath(new URL('../examples/', import.meta.url));
@@ -19,7 +19,7 @@ const data = (changes = {}) => validate(manifest, { ...input, ...changes }, { no
 
 test('the fictional example builds all three files without warnings', () => {
   const result = build(manifest, input, { now });
-  assert.deepEqual(Object.keys(result.files), ['itf-badge.json', 'itf-card-light.svg', 'itf-card-dark.svg']);
+  assert.deepEqual(Object.keys(result.files), ['itf-badge.json', 'itf-card-light.svg', 'itf-card-dark.svg', 'itf-card.html', 'itf-card.css']);
   assert.deepEqual(result.warnings, []);
 });
 
@@ -99,4 +99,28 @@ test('CLI writes the files, refuses to overwrite and reports contract errors', a
   const help = sink();
   assert.equal(await main([], help, sink()), 1);
   assert.match(help.text(), /sends nothing anywhere/);
+});
+
+test('HTML card is semantic text with a heading, claim list and report link', () => {
+  const html = cardHtml(data());
+  assert.match(html, /^<section class="itf-card" data-state="current" aria-labelledby="itf-card-report-2026-q3">/);
+  assert.match(html, /<h2 class="itf-card__title" id="itf-card-report-2026-q3">Lantern repair guide \(fictional\)<\/h2>/);
+  assert.equal((html.match(/<li>/g) ?? []).length, 3);
+  assert.match(html, /<span class="itf-card__label">not assessed<\/span>/);
+  assert.match(html, /<a href="https:\/\/example\.org\/lantern\/report-2026-q3">Read the full report<\/a>/);
+  assert.match(cardHtml(data({ state: 'withdrawn', stateNote: 'on 2026-11-02' })), /<p class="itf-card__banner">Withdrawn: on 2026-11-02<\/p>/);
+});
+
+test('HTML card escapes text and only links to http or https', () => {
+  const html = cardHtml(data({ claims: [{ text: '<img src=x onerror=alert(1)>', support: 'supported', provenance: 'self-report' }] }));
+  assert.doesNotMatch(html, /<img/);
+  assert.match(html, /&lt;img src=x onerror=alert\(1\)&gt;/);
+  const unsafe = { ...manifest, reports: [{ ...manifest.reports[0], url: 'javascript:alert(1)' }] };
+  assert.match(validate(unsafe, input, { now }).errors[0], /must start with http:\/\/ or https:\/\//);
+});
+
+test('CSS styles the card in light and dark themes', () => {
+  const css = cardCss();
+  assert.match(css, /@media \(prefers-color-scheme: dark\)/);
+  assert.match(css, /\.itf-card\[data-state="withdrawn"\]/);
 });
