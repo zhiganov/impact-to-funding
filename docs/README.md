@@ -43,6 +43,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Guilds concept note](guilds-itfti-atproto.md) and [fictional Atmospheric Group walkthrough](../examples/guilds-itfti-atproto.md): ItF users working together as guilds, sharing practice, recognition and learning before any funding.
 - [Guild workflow assessment](guild-workflow-assessment.md): how a guild could cooperate, mapped onto Atmospheric Groups ([#53](https://github.com/zhiganov/impact-to-funding/issues/53)). It recommends documentation only.
 - [Guild curation assessment](guild-curation-assessment.md) and [fictional policy-change case](../examples/guild-curation.md): how a guild's attributed selection of work can travel between tools ([#52](https://github.com/zhiganov/impact-to-funding/issues/52)). It adds no schema, registry or ranking.
+- [Local portable records](../tools/portable-records/README.md): a JSON/Markdown round trip from #14's record design. It preserves version-bound reviews, dissent and source restrictions. Live ATProto transport remains separate.
 
 ## History
 
@@ -50,7 +51,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 
 ## Limits
 
-- A design note describes a proposal. Only five pieces are working code: the support-profile tools, the local library MCP, the version inspector, the managed-update tool and the readability check.
+- A design note describes a proposal. Working code includes the support-profile tools, local library MCP, version inspector, managed-update tool, readability check, impact badge and local portable-record converter. Each tool's guide states its checks and limits.
 - Skill guidance tells the agent what to do. Whether a given host and model follow it hasn't been checked.
 - Fictional cases and walkthroughs show what we expect. They aren't observed model behaviour.
 - Check records list what was run. They don't show that any host, consumer, directory, funder or Atmospheric Groups deployment works with ItF beyond those checks.

@@ -1,0 +1,68 @@
+{
+  "contentModel": "itf.packet/0.1-local",
+  "packetId": "fictional-lantern",
+  "revision": "2",
+  "disclosure": {
+    "audience": "private",
+    "purpose": "Entirely fictional local interchange example; no real participants or results."
+  },
+  "people": [
+    { "id": "member-a", "role": "arranged a room" },
+    { "id": "member-b", "role": "provided tools" },
+    { "id": "reviewer-c", "role": "fictional peer reviewer" }
+  ],
+  "project": { "id": "project-lantern", "groupContext": "fictional-guild-g" },
+  "dissent": ["Member B wants to pause expansion until the outcome question is clearer."],
+  "publicVersionApproval": "not supplied",
+  "objects": [
+    {
+      "id": "theory-1", "revision": "1", "kind": "theory", "author": "member-a",
+      "hypothesis": "Repair sessions may help participants maintain household items.",
+      "limitation": "Session counts describe outputs; participant benefit remains unknown."
+    },
+    {
+      "id": "evidence-1", "revision": "1", "kind": "evidence", "author": "member-b",
+      "source": "Entirely fictional session register.",
+      "inspection": "Fictional reviewer-c read the invented register.",
+      "scheduled": "5", "recordedAsHeld": "3", "remainingStatus": "unknown"
+    },
+    {
+      "id": "claim-1", "revision": "1", "kind": "output-claim", "author": "member-a",
+      "statement": "Five sessions were held.", "subject": "project-lantern",
+      "evidence": [{ "type": "local", "id": "evidence-1", "revision": "1" }],
+      "state": "superseded"
+    },
+    {
+      "id": "review-1", "revision": "1", "kind": "peer-review", "author": "reviewer-c",
+      "status": "performed",
+      "subject": {
+        "type": "local", "id": "claim-1", "revision": "1",
+        "digest": "sha256:eda32241429d9602c6e48b1538ecffae8747e9837106729665fb48a0bc34df9d"
+      },
+      "evidenceExamined": [{
+        "type": "local", "id": "evidence-1", "revision": "1",
+        "digest": "sha256:068c8396d9d270f405f19a5d0b8068814a64158f04b3b748d6723fae33e8a352"
+      }],
+      "finding": "The register supports three recorded sessions, rather than five held sessions.",
+      "independence": "not established"
+    },
+    {
+      "id": "claim-1", "revision": "2", "kind": "output-claim", "author": "member-a",
+      "statement": "Three of five scheduled sessions were recorded as held; the other two statuses are unknown.",
+      "subject": "project-lantern",
+      "evidence": [{ "type": "local", "id": "evidence-1", "revision": "1" }],
+      "supersedes": { "type": "local", "id": "claim-1", "revision": "1" },
+      "contributionLimits": "A arranged the room and B provided tools; no exclusive causal credit.",
+      "state": "current"
+    },
+    {
+      "id": "report-1", "revision": "2", "kind": "periodic-report", "author": "member-a",
+      "period": "fictional reporting period A",
+      "earlierTheory": { "type": "local", "id": "theory-1", "revision": "1" },
+      "claims": [{ "type": "local", "id": "claim-1", "revision": "2" }],
+      "priorVersionReviews": [{ "type": "local", "id": "review-1", "revision": "1" }],
+      "caveat": "The prior review concerns claim revision 1; revision 2 has no performed review in this packet.",
+      "fundingAsk": "Not supplied."
+    }
+  ]
+}
