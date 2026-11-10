@@ -49,6 +49,10 @@ needs no legal identity.
   is current rather than assuming it is open. When requested, produce a short list
   of relevant leads with known terms, round status and uncertainty. The list records
   possibilities; it provides no introductions. Check offers and eligibility separately.
+  Prefer each funder's own page to aggregator listings, and label which one each
+  lead comes from. Record open, rolling or closed status with the date you checked,
+  and list the checks still needed, such as eligibility or minimum amounts. Offer to
+  save the list privately with the date in its name; write it only if they agree.
 - **Application rules:** Before drafting for a named funder, read its form and
   guidance for rules that shape the draft. These include the exact questions, word
   and format limits, required attachments, eligibility conditions, deadlines and
