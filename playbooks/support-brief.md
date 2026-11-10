@@ -59,6 +59,11 @@ review plan. A final brief should keep unresolved facts visible too. Use the
 [funding and disclosure guidance](../references/funding-and-review.md) for the
 appropriate audience and approval boundaries.
 
+Before the person shares a draft, offer to run the local
+[readability check](../tools/readability/README.md) if the host can run Node 22.
+It flags long sentences, passive voice and adverbs. Suggest plainer wording for
+what it flags; the person decides what to change.
+
 If useful information is missing, offer a clear provisional draft or a short
 outline. The person can correct it without first completing a questionnaire,
 register or evidence packet. Keep a working draft private by default; write a
