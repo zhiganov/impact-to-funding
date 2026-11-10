@@ -42,7 +42,12 @@ test('finds -ly adverbs and skips common non-adverbs', () => {
 
 test('ignores code, headings, tables and front matter in Markdown', () => {
   const blocks = markdownBlocks('---\ntitle: x\n---\n# Heading here\n\n```\nconst slowly = 1;\n```\n| a | b |\n\nPlain text [link](https://example.org) here.');
-  assert.deepEqual(blocks, [{ line: 11, text: 'Plain text link here.' }]);
+  assert.deepEqual(blocks.map(({ line, text }) => ({ line, text })), [{ line: 11, text: 'Plain text link here.' }]);
+});
+
+test('reports the line where each sentence starts, not where its paragraph starts', () => {
+  const report = analyseMarkdown('First line is fine.\nThe second one was written\nacross two lines. Then the third\nwas written too.');
+  assert.deepEqual(report.flagged.map((sentence) => sentence.location), ['line 2', 'line 3']);
 });
 
 test('treats each list item as its own block', () => {

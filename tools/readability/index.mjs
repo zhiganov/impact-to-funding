@@ -118,8 +118,11 @@ export function markdownBlocks(markdown) {
       .replace(/`[^`]*`/g, 'code')
       .replace(/<[^>]+>/g, '')
       .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, '$1');
-    if (!current) current = { line, text };
-    else current.text += ` ${text}`;
+    if (!current) current = { line, text, starts: [{ offset: 0, line }] };
+    else {
+      current.starts.push({ offset: current.text.length + 1, line });
+      current.text += ` ${text}`;
+    }
     if (listItem) flush();
   });
   flush();
@@ -140,14 +143,27 @@ export function jsonBlocks(value, pathLabel = '$') {
   return [];
 }
 
+/** The source line where a character offset in a Markdown block falls. */
+function lineAt(block, offset) {
+  let { line } = block;
+  for (const start of block.starts ?? []) {
+    if (start.offset > offset) break;
+    ({ line } = start);
+  }
+  return line;
+}
+
 /** Analyse prose blocks. Each block has `text` and either `line` or `path`. */
 export function analyse(blocks) {
   const sentences = [];
   for (const block of blocks) {
+    let cursor = 0;
     for (const text of splitSentences(block.text)) {
+      const offset = Math.max(block.text.indexOf(text, cursor), cursor);
+      cursor = offset + text.length;
       const count = words(text).length;
       sentences.push({
-        location: block.path ?? `line ${block.line}`,
+        location: block.path ?? `line ${lineAt(block, offset)}`,
         text,
         words: count,
         length: count >= VERY_LONG_SENTENCE_WORDS ? 'very long' : count >= LONG_SENTENCE_WORDS ? 'long' : 'ok',

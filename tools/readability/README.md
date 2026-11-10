@@ -21,7 +21,7 @@ A `.json` file is read as a manifest, such as `funding.json` or `itf-manifest.js
 - **Passive voice:** a form of "be" followed by a past participle, such as "was written".
 - **Adverbs:** words ending in "-ly", minus common exceptions.
 
-Each flagged sentence shows the line where its paragraph starts.
+Each flagged sentence shows the line where it starts.
 
 ## Limits
 
