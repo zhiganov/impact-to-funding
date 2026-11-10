@@ -50,7 +50,7 @@ export function gradeLevel(characterCount, wordCount, sentenceCount) {
 export function splitSentences(block) {
   return block
     .replace(/\b(e\.g|i\.e|etc|vs|Dr|Mr|Mrs|Ms|St|No)\./g, '$1\u0000')
-    .split(/(?<=[.!?])\s+(?=["'“‘(]?[A-Z0-9])/)
+    .split(/(?<=[.!?])\s+(?=["'“‘(]?(?:[A-Z0-9]|v\d))/)
     .map((sentence) => sentence.replace(/\u0000/g, '.').trim())
     .filter((sentence) => words(sentence).length > 0);
 }
@@ -115,7 +115,7 @@ export function markdownBlocks(markdown) {
       .replace(/^([-*+]|\d+[.)])\s+/, '')
       .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
       .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-      .replace(/`[^`]*`/g, 'code')
+      .replace(/`[^`]*`/g, 'Code')
       .replace(/<[^>]+>/g, '')
       .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, '$1');
     if (!current) current = { line, text, starts: [{ offset: 0, line }] };

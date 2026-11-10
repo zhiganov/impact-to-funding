@@ -14,6 +14,11 @@ test('splits sentences and keeps common abbreviations together', () => {
   ]);
 });
 
+test('splits before a version number or inline code at the start of a sentence', () => {
+  assert.deepEqual(splitSentences('Pick a version. v0.4.0 is current.'), ['Pick a version.', 'v0.4.0 is current.']);
+  assert.equal(analyseMarkdown('Run the tests. `npm test` checks links.').sentences, 2);
+});
+
 test('grades short plain text lower than long dense text', () => {
   const plain = analyseMarkdown('We fix bikes. Kids ride them to school. It works.');
   const dense = analyseMarkdown('Notwithstanding considerable organisational uncertainty, the intervention demonstrated substantively meaningful improvements across multidimensional wellbeing indicators throughout the extended implementation period.');
