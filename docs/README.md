@@ -33,6 +33,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Support-profile contract](support-profile-contract.md): the accepted fields, types, money rules and how the financial view handles losses.
 - [Support-profile tools](support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](support-profile-checks.md).
 - [Readability check](../tools/readability/README.md): a local check for drafts and manifest descriptions. It flags long sentences, passive voice and adverbs.
+- [Impact badge contract](impact-badge-contract.md): a draft for a repo badge and card that link to an approved public report and state its evidence basis.
 - [Optional writing tools](optional-writing-tools.md): the readability check and Pangram, an online AI-text detector you can use from your agent through MCP.
 - [Standard.site publishing](standard-site-publishing.md): how approved public reports could use existing Standard.site metadata and tools.
 - [AI Registry and Skills CLI](ai-registry-distribution.md): compares registry listings with direct Git distribution.
