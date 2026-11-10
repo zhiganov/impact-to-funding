@@ -1,0 +1,10 @@
+{
+  "reportId": "report-2026-q3",
+  "provenance": "self-report",
+  "state": "current",
+  "claims": [
+    { "text": "Printed and handed out 60 access guides", "support": "supported", "provenance": "self-report" },
+    { "text": "12 of 15 readers asked said the guide helped", "support": "partly-supported", "provenance": "self-report" },
+    { "text": "Households repaired appliances", "support": "not-assessed" }
+  ]
+}
