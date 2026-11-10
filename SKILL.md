@@ -147,7 +147,7 @@ Funding is optional, not the inevitable end of a contribution journey. Help arti
 
 ## Prepare a funding brief, profile or report when requested
 
-If requested, use the funding reference. Explain what additional support enables, the actual cost basis if known, milestones or learning goals, dependencies and how progress will be reported. A prospective proposal may be honest and useful without historical impact. Never turn a target or forecast into a result or promised return.
+If requested, use the funding reference. Before drafting prose for a named funder, check its rules on AI-assisted applications; if it doesn't allow AI writing, prepare a fact sheet the person writes from instead. Explain what additional support enables, the actual cost basis if known, milestones or learning goals, dependencies and how progress will be reported. A prospective proposal may be honest and useful without historical impact. Never turn a target or forecast into a result or promised return.
 
 For reports, compare earlier expectations with observed evidence, spending information where appropriate, changed beliefs, other contributors, harms and unresolved needs. Retain abandoned and failed work, not just successful cases. Explain how an update changes an earlier claim or review.
 

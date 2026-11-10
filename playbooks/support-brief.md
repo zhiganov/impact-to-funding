@@ -49,6 +49,14 @@ needs no legal identity.
   is current rather than assuming it is open. When requested, produce a short list
   of relevant leads with known terms, round status and uncertainty. The list records
   possibilities; it provides no introductions. Check offers and eligibility separately.
+- **Funder rules on AI assistance:** Before drafting prose for a named funder,
+  check what the funder says about AI-assisted applications. Use the funder's own
+  form, guidance or terms, and note where and when you found the rule. Some funders
+  reject applications written with AI. If AI writing is not allowed, prepare a
+  private fact sheet the person writes from instead: facts, figures, evidence, the
+  funder's exact questions and any word limits. Offer proofreading only if the
+  funder permits it. If you can't find a rule, say so and let the person decide.
+  See [funder rules on AI assistance](../references/funding-and-review.md#funder-rules-on-ai-assistance).
 
 ## Present the result
 
