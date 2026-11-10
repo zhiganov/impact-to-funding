@@ -1,10 +1,10 @@
 # Impact badge example (fictional)
 
-Output of the impact badge tool for the fictional [manifest](itf-manifest.json) and [badge input](itf-badge-input.json). Everything here is invented.
+Output of the impact badge tool for the fictional [manifest](itf-manifest.json) and [badge input](itf-badge-input.json). Everything here is invented. The badge reads `output/itf-badge.json` from the `main` branch.
 
 ## Badge
 
-[![Impact report 2026 Q3, self-reported](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzhiganov%2Fimpact-to-funding%2Fclaude%2Fimpact-badge%2Ftools%2Fimpact-badge%2Fexamples%2Foutput%2Fitf-badge.json)](https://example.org/lantern/report-2026-q3)
+[![Impact report 2026 Q3, self-reported](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzhiganov%2Fimpact-to-funding%2Fmain%2Ftools%2Fimpact-badge%2Fexamples%2Foutput%2Fitf-badge.json)](https://example.org/lantern/report-2026-q3)
 
 ## Card
 
