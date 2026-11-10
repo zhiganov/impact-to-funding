@@ -79,4 +79,4 @@ When the report changes, run the tool again and replace the files.
 
 ## Limits
 
-The tool trusts your input. It can't check that the claims match the report or that the labels are accurate. A badge is your own declaration, like a self-certified badge. The badge itself is drawn by shields.io, which fetches `itf-badge.json` from your repository. The cards need no outside service. The Astro example follows Astro's documented `?raw` imports and `set:html`; it hasn't been tried in an Astro build.
+The tool trusts your input. It can't check that the claims match the report or that the labels are accurate. A badge is your own declaration, like a self-certified badge. The badge itself is drawn by shields.io, which fetches `itf-badge.json` from your repository. The cards need no outside service. The Astro example was checked with Astro 7.4.8 on 2026-11-10: a fictional site built, the HTML card and its styles appeared, and the `<picture>` switch picked the right SVG card in light and dark mode.
