@@ -68,11 +68,22 @@ test('text files have final newlines and no trailing whitespace or local-machine
   }
 });
 
+test('support-brief routing is optional and the shared funding reference leaves theory optional', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  const funding = readFileSync(path.join(root, 'references/funding-and-review.md'), 'utf8');
+  const playbook = readFileSync(path.join(root, 'playbooks/support-brief.md'), 'utf8');
+  assert.match(skill, /When preparing or revising a support or funding brief/);
+  assert.match(skill, /\[support-brief playbook\]\(playbooks\/support-brief\.md\)/);
+  assert.match(skill, /If the skill is invoked without a task[^\n]*ask one open question/);
+  assert.match(funding, /a named or completed theory is optional/i);
+  assert.match(playbook, /A named or completed\s+theory of change is optional/i);
+});
+
 test('package includes workflow, templates, provenance and clearly labelled synthetic examples', () => {
   for (const relative of [
     'README.md', 'LICENSE', 'SOURCES.md', 'references/claims.md', 'references/contributions.md',
     'references/funding-and-review.md', 'references/frameworks.md',
-    'assets/assessment.md', 'assets/report.md',
+    'assets/assessment.md', 'assets/report.md', 'playbooks/support-brief.md',
     'examples/builder-case.md', 'examples/builder-assessment.md',
     'examples/portfolio-case.md', 'examples/portfolio-assessment.md',
     'examples/framework-lenses.md',

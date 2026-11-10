@@ -79,9 +79,24 @@ chosen manual use, replace the mention with a request to read and follow `SKILL.
 
 > @impact-to-funding Assess the following claim against the supplied evidence. Distinguish what the sources actually measure, what changed, my contribution and what remains unsupported. Do not browse, contact anyone or treat linked-but-unread evidence as inspected. Suggest honest wording and the smallest useful next decision.
 
-### Prepare a funding brief
+### Prepare a support or funding brief
 
-> @impact-to-funding Help me prepare a private funding brief: the purpose, supported contribution, what additional support would enable, actual cost basis if known, risks and reporting plan. Separate observed results from proposed outcomes. Account for existing support and shared credit. Do not invent a reviewer, budget, funding URL or guaranteed return, and do not submit or publish anything.
+The [support-brief playbook](../playbooks/support-brief.md) helps organise this
+task. You can ask in ordinary language. `support-brief` below is optional task
+text, not a separately registered command.
+
+The experimental v0.4.0 source includes this playbook. The earlier installation-
+tested pins above do not include it; its routing at this revision is unverified.
+
+> @impact-to-funding support-brief Help me draft a private case for support.
+> Use the information I supply, check known costs and existing support, and mark
+> unknown recipients or evidence. Do not search for funders, submit or publish.
+
+For example, if a fictional repair guide needs printing support and an existing
+grant may cover part of the same cost, the brief can describe that overlap as an
+open question. The uncovered amount stays unknown until the actual terms and
+costs are established. This is an authored illustration, not an observed model
+response.
 
 ### Plan evidence or reuse it for different audiences
 

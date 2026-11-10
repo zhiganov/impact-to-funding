@@ -16,9 +16,9 @@ contact a service or change an installed copy; the managed commands are separate
 ## Three versions must not be confused
 
 1. **Declared skill version:** standard Agent Skills `metadata.version`, a
-   JSON-quoted SemVer string inside `SKILL.md`. This source declares `0.3.0`;
-   that string alone is not proof of a release, a particular commit or a host
-   check. No source SHA is embedded in its own Git tree.
+   JSON-quoted SemVer string inside `SKILL.md`. This source declares `0.4.0`.
+   That string alone is not proof of a release, a particular commit
+   or a host check. No source SHA is embedded in its own Git tree.
 2. **Released source:** a published GitHub release with a fixed version tag and its
    resolved full commit SHA. Exact source is determined after checkout or tag
    resolution, not inferred from a version string.

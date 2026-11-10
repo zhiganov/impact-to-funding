@@ -107,9 +107,9 @@ the CLI checks.
 [Release and update guidance](releases.md) explains optional GitHub release
 notifications, deliberate version selection, source-versus-host-check boundaries
 and the maintainer's release convention. The
-[v0.3.0 release notes](releases/v0.3.0.md) describe the current experimental source
-prerelease; the earlier [v0.2.0 notes](releases/v0.2.0.md) remain historical.
-Exact-package host verification remains separately bounded.
+[v0.4.0 release notes](releases/v0.4.0.md) describe the current experimental source
+prerelease. The [v0.3.0](releases/v0.3.0.md) and [v0.2.0](releases/v0.2.0.md)
+notes remain historical. Exact-package host verification remains separately bounded.
 
 The [version/provenance contract](skill-version-provenance.md) and optional
 [local inspector](../tools/skill-package/README.md) define released source,
@@ -119,9 +119,10 @@ explicit installation, check/update, adoption, rollback and recovery. Optional
 [in-skill update notices](update-notices.md) require per-copy consent and host
 permissions; actual user-visible delivery and new host verification are not claimed.
 
-The [task-playbook design](task-playbooks-design.md) proposes one optional
-support-brief playbook under the existing person-first skill. It maps other jobs
-to current guidance and compares host entry points. No new playbook is implemented.
+The [task-playbook design](task-playbooks-design.md) maps jobs to current guidance
+and compares host entry points. Current source adds the optional
+[support-brief playbook](../playbooks/support-brief.md) under the existing skill.
+Its routing is source guidance; host behaviour at this revision remains unverified.
 
 [Individual theories, shared projects and contribution portfolios](individual-project-contributions.md)
 records the agreed conceptual relationship and core manual-use source implementation,

@@ -1,13 +1,15 @@
 # Task playbooks for Impact to Funding
 
-**Status:** design proposal for [#57](https://github.com/zhiganov/impact-to-funding/issues/57).
-Reviewed source: `8df16a66196837e60c6d62ded9862702558350a3`. This document does not
-add a playbook or change skill behaviour.
+**Status:** design assessment for [#57](https://github.com/zhiganov/impact-to-funding/issues/57).
+Reviewed source: `8df16a66196837e60c6d62ded9862702558350a3`. Later source work
+for [#70](https://github.com/zhiganov/impact-to-funding/issues/70) adds the
+[support-brief playbook](../playbooks/support-brief.md). This document records the
+design; host behaviour for the new route remains unverified.
 
 ## Recommendation
 
 Keep `impact-to-funding` as one person-first skill and distribute one complete
-package. Add **one optional support-brief playbook** when implementation is selected.
+package. The first optional playbook covers **a support brief**.
 The person can still describe their situation in ordinary language. The agent chooses
 the useful guidance; a command or menu is not required.
 
@@ -42,7 +44,7 @@ without preparing a funding brief.
 These are possible starting points, not a prescribed journey. A person can change
 direction, stop, or work on only one of them.
 
-## Proposed first playbook: support brief
+## First playbook: support brief
 
 Use the following order when it fits the person's request. Reuse supplied material
 and leave unknowns visible. A provisional draft can be useful before every detail
@@ -67,12 +69,11 @@ is settled.
    `funding.json` candidate using real financial facts. A general support document
    can instead use the [support-profile guidance](support-profile-tools.md).
 
-The existing funding reference says a brief should include a concise theory of
-change. The root skill makes a theory optional. A future implementation should
-reconcile that wording: explain the work's rationale when useful without requiring
-a named theory or a completed theory document.
+At the reviewed revision, the funding reference called for a concise theory of
+change. Current source explains the rationale where useful and makes a named or
+completed theory optional.
 
-[#70](https://github.com/zhiganov/impact-to-funding/issues/70) tracks this possible
+[#70](https://github.com/zhiganov/impact-to-funding/issues/70) tracks the source
 implementation.
 
 ## Compare the shapes
@@ -91,7 +92,7 @@ framework or template alone is not enough reason to split it.
 ## How people would start
 
 These examples use each host's **existing root invocation**. The `support-brief`
-words are proposed task text, not a new registered command.
+words are task text, not a new registered command.
 
 | Host | Example |
 |---|---|
@@ -102,22 +103,22 @@ words are proposed task text, not a new registered command.
 Claude Code passes text following a skill invocation as input. Codex selects the
 skill with `$` or `/skills`; the rest is prompt text. OpenCode selects the skill
 with `@`; its separate slash commands use their own registry. These host paths do
-not establish that the proposed playbook routing has been implemented or tested.
+not establish that a model will follow the new route.
 
 Sources: [Claude skills](https://code.claude.com/docs/en/skills),
 [Codex skills](https://developers.openai.com/codex/build-skills),
 [OpenCode V2 skills](https://opencode.ai/v2/docs/skills) and
 [OpenCode V2 commands](https://opencode.ai/v2/docs/commands).
 
-## Proposed source layout and migration
+## Source layout and migration
 
-- Keep `SKILL.md` as the shared entry. Add a short conditional route to a proposed
+- Keep `SKILL.md` as the shared entry. Its conditional route points to
   `playbooks/support-brief.md`; load that file only for the relevant task.
-- Link the playbook to the existing claim, contribution, funding and evidence
-  references. Keep shared privacy and responsible-assistance rules in their
-  existing sources rather than copying separate versions into every playbook.
-- Reconcile the optional-theory wording in `references/funding-and-review.md`.
-  Add an example to `docs/usage.md` and check all relative links in the package.
+- The playbook links to existing claim, contribution, funding and evidence
+  references. Shared privacy and responsible-assistance rules remain in their
+  existing sources.
+- The funding reference makes a theory optional, and `docs/usage.md` includes a
+  short example. Package checks cover the relative links.
 - Resolve every path from the **selected** skill copy. Keep its complete files,
   source version and the existing managed-update and opt-in notice boundaries.
   Old pinned copies remain unchanged until their owner deliberately updates.

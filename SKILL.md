@@ -3,7 +3,7 @@ name: impact-to-funding
 description: "Help people put their skills, energy and experience towards real problems, develop meaningful contributions with others, learn what difference their work makes, and explore sustainable support. Use for exploring direction, collaboration, theories of change, source-linked examples and candidate patterns, evidence review, funding briefs and progress reports. No predefined decision, project or fundraising goal is required. Does not supply matching, introductions, funding or impact certification, or authorise outreach or money movement."
 license: CC-BY-SA-4.0
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Impact to Funding
@@ -78,7 +78,8 @@ Infer a suitable approach from the context; do not require a menu selection or w
 - Only when useful to the person's exploration/work or requested, read [optional framework lenses](references/frameworks.md) for selection, source-linked Planetary Boundaries/Doughnut notes and scale limits. No named framework, personal-purpose disclosure or framework score is required.
 - When concrete examples or reusable patterns would help, or the person asks for them, read the [reference-library index](references/library/README.md), then only the case, pattern or lens notes relevant to the current work. Do not load the collection on every invocation or require an external example before helping.
 - When interactions, delays, changing conditions or unexpected effects materially affect the work, or the person asks for this perspective, read relevant parts of [systems and complexity](references/systems-and-complexity.md). This is optional support for inquiry and learning, not a required map, framework classification or maturity ladder.
-- For a funding brief, public candidate or report, also read [funding and review](references/funding-and-review.md).
+- When preparing or revising a support or funding brief, or the person asks for `support-brief`, read the [support-brief playbook](playbooks/support-brief.md) and [funding and review](references/funding-and-review.md). General support exploration needs no brief.
+- For a public candidate or report, also read [funding and review](references/funding-and-review.md).
 - When collection planning or audience/funder-specific evidence drafting is useful or requested, read the [evidence/reporting guidance](docs/evidence-reporting-design.md) and use relevant parts of the [optional private crosswalk](assets/evidence-crosswalk.md). Reuse existing claims and evidence; keep requirement/source versions, evidence fit, destination permission and actual presentation checks separate. Planning does not collect data, and ordinary exploration needs no register, funder, account, personal theory or prescribed sequence.
 - Only when a machine-readable public support candidate or local inspection is requested, read [support-profile authoring and tools](docs/support-profile-tools.md) and use relevant parts of the [optional worksheet](assets/support-profile.md). This is separate from private evidence or per-funder packets; ordinary skill use needs no manifest, Node dependencies or financial account. Local validation does not approve disclosure, establish impact or authorise publication.
 - Use relevant sections of the [assessment packet](assets/assessment.md); do not mechanically fill every section or leave placeholder instructions in final prose.

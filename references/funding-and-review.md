@@ -9,8 +9,10 @@ An early-stage person can seek support for discovery or learning. Say what is no
 A funding brief should explain:
 
 - Person/project, actual role, purpose and affected groups, without implying authority to speak for others.
-- A concise theory of change and what specific additional support enables.
-- Evidence-backed past results, narrowed claims, shared contributions and material limitations.
+- What specific additional support enables and why it could help. An existing
+  theory of change can inform the brief; a named or completed theory is optional.
+- Any reported past results, supported claims, shared contributions and material
+  limitations. When no past result is established, say so.
 - Amount, currency, duration and cost basis if supplied; otherwise explicitly unknown. Include essential dependencies and existing relevant support to avoid double-funding the same cost.
 - For personal/project asks or portfolios sharing work, apply the [contribution and duplicate-cost guidance](contributions.md); separate actual marginal costs rather than charging again for reused work.
 - Delivery or learning milestones, actual responsibilities/capacity, review conditions and plausible failure/stop decisions. Do not invent owners or deadlines.
