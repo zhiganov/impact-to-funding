@@ -10,3 +10,8 @@
 - Before finishing, reread and cut any qualifier that wouldn't change what the reader does next.
 
 This applies to the skill, the docs and issues. Accuracy still matters: keep every limit that changes what a reader would do, and state it once.
+
+## Pull requests
+
+- Push docs-only changes straight to `main`. Don't open a pull request for them.
+- Open a pull request for any change that touches code, tests, the skill (`SKILL.md`, `playbooks/`, `references/`, `assets/`) or package files.
