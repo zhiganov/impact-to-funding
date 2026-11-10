@@ -56,6 +56,7 @@ needs no legal identity.
   private fact sheet the person writes from instead: facts, figures, evidence, the
   funder's exact questions and any word limits. Offer proofreading only if the
   funder permits it. If you can't find a rule, say so and let the person decide.
+  Don't use humanizer or detector-evasion tools to get around the rule.
   See [funder rules on AI assistance](../references/funding-and-review.md#funder-rules-on-ai-assistance).
 
 ## Present the result
