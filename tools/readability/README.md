@@ -23,6 +23,8 @@ A `.json` file is read as a manifest, such as `funding.json` or `itf-manifest.js
 
 Each flagged sentence shows the line where it starts.
 
+To check whether text reads as AI-written, see [optional writing tools](../../docs/optional-writing-tools.md).
+
 ## Limits
 
 These are simple rules for English. They miss some cases and flag some correct writing. A low grade doesn't make writing accurate or persuasive. Use the results as prompts, and keep any sentence that is clearer as it is.
