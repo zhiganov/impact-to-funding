@@ -1,75 +1,58 @@
 # Using the skill
 
-Install the complete package using the [native installation guide](install.md).
-Invocation differs by host:
+Install the complete package with the [installation guide](install.md). Each host invokes the skill differently:
 
-| Host | Native invocation |
+| Host | Invoke |
 |---|---|
 | Claude Code | `/impact-to-funding` |
-| Codex CLI | `$impact-to-funding` or select it with `/skills` |
+| Codex CLI | `$impact-to-funding`, or select it with `/skills` |
 | OpenCode V2 | `@impact-to-funding` |
 
-The [exact-version evidence](installation-check-2026-11-04.md) distinguishes
-limited project-local CLI checks of `4566892` in Codex 0.166.0 and Claude Code
-2.1.321 from earlier OpenCode v2.2.5 checks of `fbb8993`. It establishes neither
-interactive/IDE support nor reliable model routing or human usefulness. Manual
-file-reading remains a separate alternative, not native installation proof.
+Limited command-line checks passed for `4566892` in Codex 0.166.0 and Claude Code 2.1.321, and earlier ones for `fbb8993` in OpenCode v2.2.5. They didn't test the interactive UI, IDEs, reliable model behaviour or usefulness. See the [check record](installation-check-2026-11-04.md).
 
 ## Before you start
 
-1. Install the complete trusted package in your chosen host's project or deliberately selected personal scope. Keep the directory intact: [SKILL.md](../SKILL.md) needs its relative references and assets. Use the host in the project where discovery applies. For optional manual use, open the complete repository in a file-reading agent instead.
-2. Read the [privacy guidance](../PRIVACY.md). A local file can still be sent to a remote model when your agent reads it. Use only material you are authorised to process with that host/provider.
-3. Choose a private output location outside this distributable repository. No files need to be written to try a conversation; a response in the chat may be enough. Check the host's history, retention and sharing behaviour too.
+1. **Install the complete package** in your host's project or personal folder. Keep it intact: [SKILL.md](../SKILL.md) needs its references and assets. Use the host in the project where you installed it. For manual use, open the whole repository in an agent that can read files instead.
+2. **Read the [privacy guide](../PRIVACY.md).** A local file can still go to a remote model when the agent reads it. Use only material you may process with that provider.
+3. **Choose where outputs go**, outside this repository. You don't need to save files to try a conversation; the chat may be enough. Check the host's history, retention and sharing settings too.
 
-The conversational skill has no required runtime, account, telemetry service or
-payment integration. Optional software, including the manager and
-[update notices](update-notices.md), uses Node.js; conversation does not require
-it. Network, audio, image and document capabilities depend on your host.
+Conversation needs no extra software, account, telemetry or payment setup. The optional tools, including the update manager and [update notices](update-notices.md), need Node.js. What the agent can do with the web, audio, images and documents depends on your host.
 
 ## Start wherever you are, not with a form
 
-You can start with a few sentences about your interests, capabilities, current work or what is difficult. Existing notes, a theory of change or a report can also be useful. You do not need a predefined decision, project, life mission, complete budget, legal identity, public profile, donation account or demonstrated past impact. Exploration and continuing work are valid uses, not just preparation for a report or funding ask.
+A few sentences about your interests, skills, current work or what's hard are enough to start. Existing notes, a theory of change or a report can help too. You don't need a decision, project, life mission, budget, legal identity, public profile, donation account or proof of past impact. Exploring and continuing existing work are valid uses in their own right.
 
-If you invoke only the skill, using your host's syntax above, the agent should
-reuse relevant context or ask one open question about your situation and the help
-you want. It should not demand a decision or start filling an assessment template.
-For example:
+If you invoke the skill with nothing else, the agent should use what it already knows or ask one open question. It shouldn't demand a decision or start filling in a template. For example:
 
 > What have you been working on or caring about lately, and where would you like some help?
 
-That is an illustrative opening, not a fixed script or an observed behavioural result.
+That's an illustration, not a fixed script or a test result.
 
-Useful context, where known:
+Useful context, where you know it:
 
-- What you or the project are trying to change, and for whom.
-- Your actual role and other contributors.
-- What you would like to explore, develop, understand or sustain; a particular decision only if relevant.
-- Existing evidence, its dates and limits, and what may be shared.
-- What additional support might enable; distinguish an idea from an agreed cost.
+- what you or the project want to change, and for whom,
+- your actual role and who else contributes,
+- what you'd like to explore, develop, understand or sustain,
+- existing evidence, its dates and limits, and what may be shared,
+- what extra support might enable, kept separate from agreed costs.
 
-Unknowns are legitimate inputs. Do not invent evidence or obtain unnecessary sensitive data to fill a template.
+"I don't know" is a fine answer. Don't invent evidence or gather sensitive data just to fill a template.
 
 ## Explore contributions, relationships and support
 
-These authored examples describe intended help, not measured results or new live trials:
+These authored examples show the help we intend. They aren't measured results.
 
-| Starting point | Useful help | What not to impose |
+| Starting point | Useful help | What the skill shouldn't push |
 |---|---|---|
-| "I use coding agents, but I don't know where my skills could help." | Explore capabilities, interests, constraints and possible contributions to real needs, including existing efforts; keep unverified needs and opportunities explicit. | A ready-made decision, life mission, startup or assessment packet. |
-| "I maintain something people rely on, but it is getting hard to keep going." | Understand the work, other contributors, what it enables, capacity limits and what support could make participation sustainable. | A new project, an income guarantee, assumed unpaid capacity or proof of impact before discussing support. |
-| "I'd like to contribute with other people rather than alone." | Explore known communities and relationships, possible roles and shared interests; distinguish possibilities from invitations or agreed commitments. | A promised match, automatic contact, a scraped roster or invented community agreement. |
+| "I use coding agents, but I don't know where my skills could help." | Explore skills, interests, limits and possible contributions, including to existing efforts. Keep unverified needs and openings marked. | A ready-made decision, life mission, startup or assessment packet. |
+| "I maintain something people rely on, but it is getting hard to keep going." | Understand the work, other contributors, what it enables, capacity limits and what support would help. | A new project, an income guarantee, more unpaid time or proof of impact before talking about support. |
+| "I'd like to contribute with other people rather than alone." | Explore communities and relationships you know, possible roles and shared interests. Keep possibilities separate from invitations and agreements. | A promised match, automatic contact, a scraped list of people or an invented agreement. |
 
-You can use any of these after your host's native skill invocation. Relationships,
-belonging and shared learning can matter independently of funding. Discussing a
-possibility does not authorise searching for people, contacting them or creating
-accounts. A clearer understanding or a useful conversation may be enough; no
-document or immediate commitment is required.
+Relationships, belonging and shared learning can matter without any funding. Talking about a possibility doesn't authorise searching for people, contacting them or creating accounts. A useful conversation may be enough on its own.
 
 ## More focused prompts
 
-These prompts show OpenCode's `@impact-to-funding` mention. In Claude Code replace
-it with `/impact-to-funding`; in Codex CLI use `$impact-to-funding`. For deliberately
-chosen manual use, replace the mention with a request to read and follow `SKILL.md`.
+These prompts use OpenCode's `@impact-to-funding`. In Claude Code use `/impact-to-funding`; in Codex CLI use `$impact-to-funding`. For manual use, start with a request to read and follow `SKILL.md`.
 
 ### Develop a theory of change
 
@@ -81,40 +64,25 @@ chosen manual use, replace the mention with a request to read and follow `SKILL.
 
 ### Prepare a support or funding brief
 
-The [support-brief playbook](../playbooks/support-brief.md) helps organise this
-task. You can ask in ordinary language. `support-brief` below is optional task
-text, not a separately registered command.
+The [support-brief playbook](../playbooks/support-brief.md) helps with this task. Ask in ordinary words. `support-brief` in the prompt below is optional text, not a separate command.
 
-The experimental v0.4.0 source includes this playbook. The earlier installation-
-tested pins above do not include it; its routing at this revision is unverified.
+The playbook is in the v0.4.0 source. The older host-tested pins don't include it, and we haven't checked how hosts route to it.
 
 > @impact-to-funding support-brief Help me draft a private case for support.
 > Use the information I supply, check known costs and existing support, and mark
 > unknown recipients or evidence. Do not search for funders, submit or publish.
 
-For example, if a fictional repair guide needs printing support and an existing
-grant may cover part of the same cost, the brief can describe that overlap as an
-open question. The uncovered amount stays unknown until the actual terms and
-costs are established. This is an authored illustration, not an observed model
-response.
+For example, say a fictional repair guide needs printing money, and an existing grant may already cover part of that cost. The brief should name the overlap as an open question. The uncovered amount stays unknown until the real terms and costs are known. This is an authored example, not a model response.
 
 ### Plan evidence or reuse it for different audiences
 
-Use the [evidence/reporting guidance](evidence-reporting-design.md) and
-[optional private worksheet](../assets/evidence-crosswalk.md) only when useful.
-Keep one evidence/claim basis and separate the permitted destination views; no
-funder, account, formal requirements file or evidence register is needed to learn.
-This is source guidance, not a collector, provider connection or installation check.
+Use the [evidence and reporting guidance](evidence-reporting-design.md) and the [optional private worksheet](../assets/evidence-crosswalk.md) when they help. Keep one set of claims and evidence, and prepare a separate view for each audience. You don't need a funder, account, requirements file or evidence register to start.
 
 > @impact-to-funding Using only the permitted material supplied here, help me plan the smallest useful evidence collection, or explain why no new collection is needed. Keep actual versus proposed actors, missing baselines, cost/capacity, host processing, consent, retention and stopping conditions explicit. Do not recruit, collect, browse, schedule or publish anything.
 
 > @impact-to-funding Help me prepare separate private drafts for these two supplied sets of funder terms. Keep official wording, phases, source versions and local interpretations distinct. Map the same claim/evidence versions without changing definitions, failures, shared credit or actual review scope. Separate evidence fit, destination permission and actual presentation checks. Do not export the private worksheet, restricted source references or protected associations, and do not send either draft.
 
-These are authored prompts, not observed model results. A request from a funder is
-not disclosure permission, and a completed field is not eligibility, compliance,
-an award or impact validation. Changed terms or permissions require reassessing
-the affected view, not rewriting facts. Source changes do not update an installed
-skill; the installation evidence above remains tied to its named revision.
+A funder asking for something doesn't give you permission to disclose it. A filled-in field doesn't mean you're eligible, compliant, funded or proven. If terms or permissions change, rework the affected view. The facts stay the same.
 
 ### Review progress
 
@@ -124,161 +92,92 @@ skill; the installation evidence above remains tied to its named revision.
 
 > @impact-to-funding Help me understand how my contributions to these projects connect with my tentative personal direction, using the contribution reference. Keep shared project theories separate and reference their available versions. Show my actual versus proposed roles, relationships, dependencies, capacity conflicts, shared work and evidence limits. Do not require one unified mission, other contributors' personal theories or access to restricted project records. Keep the portfolio private and do not add joint outcomes or costs repeatedly. Help me see what fits, what I am learning and where support or a change might help; do not invent commitments.
 
-Add an output location and permission to write only if you want saved files. A request to draft does not authorise sending, publishing, collecting new data or changing an account.
+If you want files saved, say where, and give permission to write. Asking for a draft doesn't authorise sending, publishing, collecting data or changing an account.
 
 ## Use reference examples and patterns when helpful
 
-The skill can selectively read the [seed library](../references/library/README.md)
-while helping with a contribution or theory of change. You do not need to open
-its Markdown files, choose a framework or read the full collection. A few useful
-references are enough; your own material may be more relevant.
-
-For example:
+The skill can read relevant notes from the [seed library](../references/library/README.md) while it helps you. You don't need to open them, pick a framework or read the whole collection. A few references are enough, and your own material may matter more.
 
 > @impact-to-funding I'm exploring a community feedback tool. Use relevant cases or candidate patterns to help me think about what would turn feedback into useful action. Explain differences from my situation and keep evidence limits clear. Do not browse or contact anyone.
 
 > @impact-to-funding Can a Housing First example help me understand the relationship between access, ongoing support and outcomes? Separate the published model, this library's reconstruction and the findings. Do not treat one outcome as proof of every expected benefit.
 
-The following are authored routing expectations, not observed model trials:
+What we expect the agent to read (authored expectations, not trial results):
 
-| Situation | Intended routing and limit |
+| Situation | What it should read, and the limit |
 |---|---|
-| Bare invocation or open exploration without a useful reference need | Reuse context or ask an open question; do not load a library or impose an example, decision or framework. |
-| Feedback tool or response-capacity question | Read the index, P001 and relevant cases such as C002; retain its publisher-summary/full-report distinction and local power/authority questions. |
-| Housing-model or outcome comparison | Read C004, with P002 if useful; distinguish housing stability from clinical and financial outcomes. |
-| Request spanning several domains or patterns | Read the relevant pattern and enough linked cases for the requested comparison; label proposed analogies and do not claim a universal mechanism. |
-| Request for a food-system example in this seed | Report the current coverage gap; do not invent a P4P case or restart source-access work merely to fill it. A transparent cross-domain analogy can be offered if useful, not disguised as food-system evidence. |
+| Bare invocation or open exploration | Nothing from the library. Use context or ask an open question, without imposing an example or framework. |
+| Feedback tool or response capacity | The index, P001 and cases such as C002. Keep the difference between a publisher's summary and the full report, and ask about local power. |
+| Housing models or outcomes | C004, with P002 if useful. Keep housing stability separate from health and financial outcomes. |
+| Several domains or patterns | The relevant pattern and enough linked cases to compare. Label analogies, and don't claim a universal mechanism. |
+| A food-system example | Say the library doesn't cover food systems yet. Don't invent a P4P case. A clearly labelled analogy from another domain is fine. |
 
-Reading a case note is not the same as inspecting its underlying paper. The agent
-should attribute what the note reports and retain dates, provenance and uncertainty.
-New research and consequential external actions still need the applicable scope;
-the library supplies no automatic data collection or source-access permission.
-Local theories/applications remain private unless separately cleared for sharing.
+A case note summarises a source; reading it isn't reading the original paper. The agent should say what the note reports and keep its dates and uncertainty. New research or outside actions still need your permission. Your own notes stay private unless you clear them for sharing.
 
 ## Learn when conditions and relationships change
 
-The optional [systems/complexity reference](../references/systems-and-complexity.md)
-helps examine causal hypotheses, feedback dynamics, emergence and adaptive learning
-when those perspectives matter. You do not need to choose a framework, produce a
-system map or complete an evaluation. You can also continue without this reference.
+The optional [systems and complexity reference](../references/systems-and-complexity.md) helps when feedback loops, delays or unexpected effects matter. You don't need to pick a framework, draw a system map or run an evaluation.
 
 > @impact-to-funding Help me understand how this contribution could help while other people and conditions are changing. Consider relevant feedback, delays and unexpected effects without inventing them. Keep hypotheses separate from observations, and help me identify what learning could change our approach. Do not collect data, run experiments or contact anyone.
 
-The intended behaviour is selective inquiry, not automatic whole-project analysis:
-an ordinary information gap need not become a complexity label, and a proposed
-feedback loop is not an observed finding. The fictional illustration in the
-reference is an authored example, not a model-trial result. Cynefin is a distinct,
-optional source perspective; no detailed Cynefin workflow, maturity ladder or
-reliable model application of it has been established.
+The agent should use this only where it helps. A gap in information isn't automatically "complexity", and a suggested feedback loop isn't an observed finding. Cynefin is one optional perspective. ItF has no detailed Cynefin workflow, and we haven't tested how well models apply it.
 
 ## Optional framework lens
 
-If it would help you understand or develop the work, use the [framework starter](../references/frameworks.md)
-to choose a relevant lens or keep your existing local model. Ordinary use needs no
-framework, personal-purpose disclosure or complete assessment against every dimension.
+The [framework starter](../references/frameworks.md) helps you pick a lens if one would help, or keep your own model. You don't need a framework, a statement of personal purpose or a full assessment.
 
 > @impact-to-funding Would Planetary Boundaries, Doughnut Economics or no named framework help me understand this contribution? Use the optional framework reference only where useful. Keep local questions separate from global facts, explain scale and evidence limits, and suggest only the few changes that matter to the theory. Do not invent personal quotas, stakeholder views, outcomes or framework endorsement. Keep the result private.
 
-The cards contain dated source-linked notes, not copied tools or diagrams. Source
-rights/editions remain separate from this skill and your own project evidence; no
-live framework feed, new account or MCP server is required.
+The framework cards hold dated, source-linked notes, not copied tools or diagrams. No live feed, account or MCP server is needed.
 
-## Optional accounts from people affected by the work
+## Optional practice guides
 
-Use the [manual account guide/session brief](beneficiary-accounts.md) when an
-experience could change a specific decision. It covers neutral initial questions,
-recap correction, permission-bounded handoff and report revision, with a
-[fictional library walkthrough](../examples/beneficiary-accounts.md). Written
-accounts and appropriate human conversations remain alternatives to optional
-Harmonica facilitation; declining or not responding is valid. No real collection,
-service privacy configuration or native integration has been tested by this guide.
+These guides each have a fictional example. They work with ordinary documents and conversations. None of them has been tested with real people or live services.
 
-## Optional claim-specific expert review
-
-The [manual review-request/session guide](expert-review.md) and
-[fictional walkthrough](../examples/expert-review.md) show how to ask a bounded
-question, distinguish acceptance from a finding, preserve conflicts and exact
-versions, or reference an existing evaluation without inventing participation.
-Document exchange remains valid; Harmonica is optional and no available reviewer,
-real review or live privacy configuration is established. A review request does
-not authorise contact or evidence transfer, and a finding is not certification.
-
-## Optional coordination over time
-
-Use the [coordination guide](session-coordination.md) and
-[fictional index](../examples/coordination-index.md) when several conversations
-or reporting periods need organising. Keep permitted source snapshots, actual
-authorship, missing dependencies and corrections explicit; the index does not
-send evidence or advance sessions. Markdown/non-Harmonica use remains valid.
-The proposed dedicated Harmonica ItF project type is distinct from this optional
-manual bridge and is not implemented by these documents.
-
-## Optional enrichment from supplied records
-
-Use the [supplied-signal guide](signal-enrichment.md) and
-[fictional cases](../examples/signal-enrichment.md) to revisit one claim or
-contribution using deliberately selected, permitted social/forge/app material.
-Keep source assertions, analyst proposals and accepted report changes separate;
-preserve missing context, shared credit, duplication and exact versions. No
-discovery integration, personal profile, actual data collection or public post
-is required or authorised by the guide.
-
-## Optional bounded source discovery
-
-The [discovery guide](signal-discovery.md) and
-[fictional candidate notes](../examples/signal-discovery.md) help plan one finite
-source scope and distinguish possible matches from inspected evidence. They cover
-social threads, forge contributions and selected app records without assuming
-complete history or universal API compatibility. The guide performs no searches;
-real retrieval, account setup, monitoring and publishing remain separate scopes.
-You can still use supplied excerpts directly without discovery tooling.
-
-## Optional Bluesky publication planning
-
-The [publishing guide](bluesky-publishing.md) and
-[fictional previews/correction cases](../examples/bluesky-publishing.md) cover
-the whole outgoing action, not just post text. Keep private evidence separate
-from a cleared public derivative, obtain exact-action approval before any send,
-and do not resend an uncertain attempt automatically. The guide posts nothing;
-account setup, live trials, replies, mentions, tags, quotes and removals remain
-separate actual actions with their applicable authority.
+- **Accounts from people affected by the work:** the [account guide](beneficiary-accounts.md) and [fictional library walkthrough](../examples/beneficiary-accounts.md). Use it when someone's experience could change a specific decision. It covers neutral questions, letting people correct a recap, sharing only what they allow and revising the report. Harmonica facilitation is optional. Declining or not replying is fine.
+- **Claim-specific expert review:** the [review guide](expert-review.md) and [fictional walkthrough](../examples/expert-review.md). They show how to ask a bounded question, record conflicts and exact versions, and cite an existing evaluation honestly. A request doesn't authorise contact or sharing evidence, and a finding isn't certification.
+- **Coordination over time:** the [coordination guide](session-coordination.md) and [fictional index](../examples/coordination-index.md), for when several conversations or reporting periods need organising. The index doesn't send evidence or move sessions forward. A dedicated Harmonica project type is proposed but not built.
+- **Enrichment from supplied records:** the [supplied-signal guide](signal-enrichment.md) and [fictional cases](../examples/signal-enrichment.md). Revisit one claim using social, code-forge or app material you chose and may share. Keep what a source says, what the analyst suggests and what you accept separate.
+- **Bounded source discovery:** the [discovery guide](signal-discovery.md) and [fictional candidate notes](../examples/signal-discovery.md). Plan one finite search and separate possible matches from inspected evidence. The guide runs no searches, and you can always use excerpts you supply instead.
+- **Bluesky publication planning:** the [publishing guide](bluesky-publishing.md) and [fictional previews and corrections](../examples/bluesky-publishing.md). Keep private evidence apart from the public version, and get approval for the exact action before sending. Don't resend automatically if you're unsure a post went out. The guide posts nothing.
 
 ## What a useful result looks like
 
-A useful result can be conversational exploration, a possible contribution,
-understanding of relationships or support needs, learning, a particular decision
-or a requested profile/report. It need not be a document. Where relevant, keep clear:
+A useful result can be a conversation, a possible contribution, a clearer view of relationships or support needs, something learned, a decision, or a profile or report you asked for. It doesn't have to be a document. Where it matters, it keeps clear:
 
-- The person's emerging direction, contribution or question; a causal pathway where useful, not just project activity.
-- Actual versus possible relationships, roles, capacity and support; no invented agreements or offers.
-- What is observed, self-reported, proposed, assumed, disputed or unknown.
-- Sources, measurement definitions, dates, other contributors and limitations.
-- Actual reviewer information if a review exists; no invented certification.
-- A proportionate learning or funding plan where requested.
-- Useful learning, open questions or next steps without a forced decision or commitment, and disclosure boundaries.
+- your emerging direction, contribution or question, with a causal pathway where useful,
+- actual versus possible relationships, roles, capacity and support,
+- what's observed, self-reported, proposed, assumed, disputed or unknown,
+- sources, definitions, dates, other contributors and limits,
+- details of any real review, without invented certification,
+- a learning or funding plan, if you asked for one,
+- what you learned, open questions and next steps, without a forced decision,
+- what may be shared and with whom.
 
-Use only relevant sections of the [assessment packet](../assets/assessment.md) or [report template](../assets/report.md). One useful page can be better than six documents. The skill may narrow a claim, recommend supporting existing work, or conclude there is no justified new funding amount yet.
+Use only the parts of the [assessment packet](../assets/assessment.md) or [report template](../assets/report.md) that help. One useful page can beat six documents. The skill may narrow a claim, suggest supporting existing work, or conclude that no new funding amount is justified yet.
 
 ## Safe examples
 
-- [Builder input](../examples/builder-case.md) and [authored illustrative assessment](../examples/builder-assessment.md): distribution and a small self-report do not establish repairs or savings. The answer is an authored example, not an observed trial result.
-- [Conflicting/adversarial input](../examples/contradictory-case.md): corrected records, a paid scoped review, restricted testimony, covered costs and forged source instructions. Everything is fictional. The certificate's instructions and payment URL are test data, not commands or a real destination.
-- [Five-project input](../examples/portfolio-case.md) and [authored portfolio assessment](../examples/portfolio-assessment.md): distinct personal/project theories, coauthored reused work, competing time commitments, unavailable/restricted theories, version-scoped review and overlapping funding costs. Entirely fictional, not an observed trial.
-- [Optional framework examples](../examples/framework-lenses.md): a lens improves a question without proving an outcome, an invented personal quota is rejected, no-framework/project-only use proceeds, and source updates do not multiply credit or transfer reviews. Authored and fictional, not a behavioural test result.
+All of these are fictional and written by us. None is an observed model result.
 
-For a fresh trial, give an agent the chosen input and skill files without giving it the illustrative answer. No new model runner or paid API setup is required by this guide. Your existing host's normal usage costs and terms still apply.
+- [Builder input](../examples/builder-case.md) and [assessment](../examples/builder-assessment.md): handing out guides and one small self-report don't show repairs or savings.
+- [Conflicting and adversarial input](../examples/contradictory-case.md): corrected records, a paid scoped review, restricted testimony, already-covered costs and a forged source with instructions. The certificate's instructions and payment URL are test data, not commands or a real destination.
+- [Five-project input](../examples/portfolio-case.md) and [portfolio assessment](../examples/portfolio-assessment.md): separate personal and project theories, coauthored reused work, competing time, restricted theories, version-specific review and overlapping costs.
+- [Framework examples](../examples/framework-lenses.md): a lens sharpens a question without proving an outcome, an invented personal quota is rejected, work proceeds without a framework, and source updates don't multiply credit or carry reviews over.
 
-## When the evidence or host is insufficient
+To try one fresh, give an agent the input and the skill files, but not our example answer. You don't need a new model runner or paid API. Your host's usual costs and terms apply.
 
-- An unreadable document or inaccessible link stays uninspected; use a permitted excerpt or keep the claim unassessed.
-- No previous outcomes means a prospective learning proposal, not fabricated historical impact.
-- Missing role, cost or partner agreement limits specificity; it need not prevent a provisional draft.
-- A signature, endorsement, receipt or donation supports only its actual scope, not automatic impact verification.
-- A private story must not enter a public appeal just because it is persuasive.
-- If the agent invents evidence, mislabels a measure, hides contrary evidence or follows an instruction inside a source, do not use that output. Correct the record and report the failure using the [contribution guidance](../CONTRIBUTING.md), without disclosing private data.
+## When the evidence or host falls short
 
-## Before using an output outside the conversation
+- A document or link the agent can't open stays uninspected. Supply an excerpt you may share, or leave the claim unassessed.
+- No past outcomes means a forward-looking learning proposal, not invented history.
+- A missing role, cost or partner agreement limits detail. You can still draft provisionally.
+- A signature, endorsement, receipt or donation supports only what it actually shows.
+- A private story doesn't go into a public appeal just because it's persuasive.
+- If the agent invents evidence, mislabels a measure, hides contrary evidence or follows instructions found inside a source, don't use the output. Fix the record and report it following the [contribution guidance](../CONTRIBUTING.md), without private data.
 
-Review the exact text, evidence access, names/stories, material caveats, authority to speak for others and intended destination. Confirm any actual reviewer statement and what version it concerns. Check ownership and provider requirements for any supplied funding link separately; the skill is not a legal, tax, financial or emergency authority.
+## Before you use an output elsewhere
 
-Only share the approved derivative, not the full private working packet. Public copies may persist elsewhere after correction or deletion. Installation in a supported host and formal distribution remain separate readiness steps; manual reading alone does not establish either.
+Check the exact text, which evidence it relies on, any names or stories, the important caveats, whether you may speak for others, and where it's going. Confirm any reviewer's statement and which version it covers. Check any funding link's owner and provider rules yourself. The skill isn't a legal, tax, financial or emergency authority.
+
+Share only the approved version, not your whole private working packet. Public copies may stay online after you correct or delete them.

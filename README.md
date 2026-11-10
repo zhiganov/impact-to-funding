@@ -1,65 +1,49 @@
 # Impact to Funding
 
-**Put your skills and experience towards real problems—and build a credible case for support.**
+**Put your skills and experience towards real problems, and build a credible case for support.**
 
-Impact to Funding (ItF) helps your agent support meaningful contribution: explore
-where your skills could be useful, develop shared work, learn what difference it
-makes, and explain what would help it continue. Start with your situation—not a
-required theory of change, project, evidence packet or fundraising goal.
+Impact to Funding (ItF) is a skill for your AI agent. It helps you:
 
-It is an open-source skill for developers, maintainers and independent builders
-who already use AI agents. Community organisers, small teams and facilitators may
-also find it useful. Employment uncertainty can make these questions urgent, but
-you do not need to become a founder or assume unpaid work is the answer.
+- explore where your skills could be useful,
+- develop shared work with others,
+- learn what difference the work makes,
+- explain what would help it continue.
 
-**Experimental v0:** conversational guidance, optional templates and reference
-material—not a matching network, available collaborators, funding or impact
-certification. Human usefulness and fundraising effectiveness remain unverified.
+Start with your situation. You don't need a theory of change, a project, evidence or a fundraising goal.
+
+ItF is open source. It's for developers, maintainers and independent builders who already use AI agents. Community organisers, small teams and facilitators may find it useful too. If you're worried about work, you don't need to become a founder or work for free.
+
+**Experimental v0:** ItF offers conversation, optional templates and reference material. It doesn't find collaborators, provide funding or certify impact. We haven't yet tested how useful it is to people or whether it helps them raise money.
 
 [Get started](#install-and-use) · [Choose a task](#three-ways-to-start) ·
-[See an example](#outputs-and-examples) · [Capability status](#what-is-available) ·
+[See an example](#outputs-and-examples) · [What's available](#what-is-available) ·
 [Privacy and limits](#status-and-limits)
 
 ## Install and use
 
-Use your existing signed-in CLI agent. Choose its native folder and invocation;
-do not install three copies or use one host's invocation syntax in another.
+Use the CLI agent you already have and are signed in to. Install ItF once, in that host's folder, and use that host's command.
 
-| Host | Project skill folder | Invoke in the agent | Exact-version evidence |
+| Host | Project skill folder | Invoke in the agent | Version checked |
 |---|---|---|---|
-| Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or `/skills` | Project-local CLI check passed for `4566892` on Codex 0.166.0. |
-| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | Project-local CLI check passed for `4566892` on Claude Code 2.1.321. |
-| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | Earlier checks cover `fbb8993` on OpenCode v2.2.5, not `4566892`. |
+| Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or `/skills` | `4566892` on Codex 0.166.0 |
+| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `4566892` on Claude Code 2.1.321 |
+| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | `fbb8993` on OpenCode v2.2.5 (not `4566892`) |
 
-The [installation guide](docs/install.md) gives guarded complete-package commands,
-optional personal scope, discovery checks, deliberate updates, reversible removal
-and troubleshooting. ItF itself needs no signup, Node.js, MCP server or plugin for
-conversation. Your host's model costs and privacy terms still apply.
+The [installation guide](docs/install.md) has safe install commands, personal installs, discovery checks, updates, removal and troubleshooting. Conversation with ItF needs no signup, Node.js, MCP server or plugin. Your host's model costs and privacy terms still apply.
 
-**Updates:** subscribe on GitHub with **Watch → Custom → Releases**, or check the
-[releases page](https://github.com/zhiganov/impact-to-funding/releases).
-Notifications announce available versions; they do not update your installed
-copy. Read the changes and host-check limits before choosing an update. See
-[release and update guidance](docs/releases.md).
+**Updates:** on GitHub, choose **Watch → Custom → Releases**, or check the [releases page](https://github.com/zhiganov/impact-to-funding/releases). A notification tells you a version exists. It doesn't change your installed copy. See [release and update guidance](docs/releases.md).
 
-The current source also includes an **opt-in** [in-skill notice](docs/update-notices.md)
-for managed copies containing its helper. The agent follows normal host permissions;
-delivery to a user has not been verified. It never updates the copy automatically.
+You can also turn on an [in-skill update notice](docs/update-notices.md) for managed copies. It never updates the copy itself. We haven't confirmed that hosts show the notice.
 
 ### Managed CLI (optional)
 
-For install/check/update/rollback with local-work protection, use the experimental
-[managed CLI](docs/managed-skill-updates.md). From your project:
+The experimental [managed CLI](docs/managed-skill-updates.md) installs, checks, updates and rolls back copies, and protects your local work. From your project:
 
 ```sh
 npx --yes --package=github:zhiganov/impact-to-funding#main itf install --harness codex --scope project --channel prerelease
 ```
 
-This only prints a plan; changes require a separately chosen `--apply`. The CLI
-comes from the mutable GitHub default branch; pin a reviewed full CLI commit for
-reproducibility. It needs Node.js 22+, npm and Git, but conversation does not.
-Native folder placement is not a new host-activation check. The complete pinned
-Git/manual routes below remain available without this manager.
+This prints a plan. Nothing changes until you run it again with `--apply`. The command takes the CLI from the GitHub default branch, which changes over time; pin a reviewed CLI commit if you need a repeatable result. The CLI needs Node.js 22+, npm and Git. You can still install with Git or by hand without it.
 
 ### Codex CLI quick start
 
@@ -79,55 +63,36 @@ Open Codex in that project, find ItF with `/skills`, and try:
 
 > $impact-to-funding Help me explore a useful contribution with my skills and available time. Use only what I supply, mark assumptions and keep this private. Do not contact anyone or create files.
 
-The check established explicit skill selection, actual bundled-reference reading
-and a bounded synthetic response in non-interactive CLI mode. It did **not** test
-the interactive selector, IDE/desktop UI, personal installs or human usefulness.
+The check confirmed that Codex selected the skill, read a bundled reference and gave a bounded answer, in one non-interactive run. It didn't test the interactive selector, IDE or desktop apps, personal installs or usefulness.
 
 ### Claude Code
 
-Use the guide's `.claude/skills/impact-to-funding` target and `/impact-to-funding`
-invocation. A limited check passed for `4566892` on Claude Code 2.1.321: explicit
-`/impact-to-funding` in one non-interactive `claude -p` run loaded the project skill
-and read a bundled reference, with no files changed. It did **not** test the
-interactive `/` menu, implicit triggering, IDE/desktop UI, personal installs or
-human usefulness.
+Use the `.claude/skills/impact-to-funding` folder from the guide and invoke `/impact-to-funding`. A limited check passed for `4566892` on Claude Code 2.1.321: one non-interactive `claude -p` run loaded the skill and read a bundled reference, and changed no files. It didn't test the `/` menu, automatic triggering, IDE or desktop apps, personal installs or usefulness.
 
 ### Install and use in OpenCode
 
-The earlier verified route remains available. These commands install its older
-**installation-tested snapshot**, not current source; use an unused destination:
+These commands install an older snapshot that was install-tested in OpenCode. Use an empty destination:
 
 ```sh
 git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
 git -C .opencode/skills/impact-to-funding checkout --detach fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b
 ```
 
-This installs the complete package for that project only, without changing global
-configuration. In OpenCode for the same project, invoke:
+This installs the complete package for that project only. It doesn't change global settings. In OpenCode, in the same project, invoke:
 
 > @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I supply, mark assumptions and keep the result private. Do not contact anyone.
 
-**Version boundary:** OpenCode's `fbb8993` pin predates responsible-assistance
-guidance, evidence/reporting worksheets and optional local tools. Codex's checked
-`4566892` package includes those later source changes. Documentation continues on
-`main`; a later docs commit is not a new host check or automatic update. See the
-[exact-version checks and limits](docs/installation-check-2026-11-04.md).
+**Version note:** the OpenCode snapshot `fbb8993` is older than the Codex and Claude Code pin `4566892`. It lacks the responsible-assistance guidance, the evidence and reporting worksheets and the optional local tools. Later commits on `main` aren't host-checked and don't update your copy. See the [check record](docs/installation-check-2026-11-04.md).
 
-Read the [privacy guide](PRIVACY.md) before supplying real material. You do not need
-to open the skill's Markdown files yourself.
+Read the [privacy guide](PRIVACY.md) before you use real material. You don't need to open the skill's Markdown files yourself.
 
 ## Optional manual use
 
-Open a trusted copy of the whole repository in an agent able to read
-[SKILL.md](SKILL.md) and its references/assets. Ask it to read and follow SKILL.md,
-then describe your situation. This needs no automatic installation, but is not
-proof of native discovery, activation or compatibility in another host.
+Open a trusted copy of the whole repository in an agent that can read [SKILL.md](SKILL.md) and its references. Ask it to read and follow SKILL.md, then describe your situation. This works without installing, but it doesn't show that a host will find and load the skill on its own.
 
 ## Three ways to start
 
-After native activation, use a prompt such as these. They are alternative starting
-points, not commands or a required sequence. For manual use, ask the agent to read
-SKILL.md first.
+After you invoke the skill, try one of these. They're starting points, not commands or steps. For manual use, ask the agent to read SKILL.md first.
 
 ### Find a useful contribution
 
@@ -141,131 +106,75 @@ SKILL.md first.
 
 > Help me prepare a private case for sustaining this work. Separate observations from proposals, use only known costs and commitments, and keep uncertainty visible. Do not invent impact, submit an application or contact a funder.
 
-The current source includes an optional [support-brief playbook](playbooks/support-brief.md)
-for this task. The earlier host-tested pins above do not include it.
+For this task, the current source includes a [support-brief playbook](playbooks/support-brief.md). The host-tested pins above don't include it.
 
-A few sentences can be enough. A useful result may be a contribution possibility,
-a clearer question, a revised commitment or a decision to stop—not a formal report.
-The [usage guide](docs/usage.md) has more prompts and incomplete-evidence examples.
+A few sentences are enough to start. A useful result might be a possible contribution, a clearer question, a smaller commitment or a decision to stop. It doesn't have to be a report. The [usage guide](docs/usage.md) has more prompts and examples with incomplete evidence.
 
 ## Outputs and examples
 
-**Fictional illustration, not an observed model result:** 60 copies of an access
-guide were distributed—but that does not establish that 60 households repaired
-appliances. The [worked example](examples/builder-assessment.md) separates copies
-distributed, a small self-reported information benefit, unmeasured repairs and
-unconfirmed future costs. It retains a smaller alternative to another print run.
+**A fictional illustration, not a real model result:** 60 copies of an access guide were handed out. That doesn't mean 60 households repaired appliances. The [worked example](examples/builder-assessment.md) separates the copies handed out, a small self-reported benefit, repairs nobody measured and future costs nobody confirmed. It also keeps a cheaper alternative to another print run.
 
-That is the kind of distinction ItF aims to help with: describe your actual role,
-keep claims within their evidence, and learn whether the next contribution is
-worthwhile. A careful account is not itself verified impact or funding approval.
+ItF helps with that kind of distinction. Describe your actual role, keep claims within their evidence and learn whether the next contribution is worth it. A careful account still isn't verified impact or a funding decision.
 
-Other starting points: a [five-project portfolio](examples/portfolio-assessment.md)
-with shared work and capacity conflicts, or optional
-[assessment](assets/assessment.md)/[report](assets/report.md) sections. Project-only
-work needs no personal theory; supporting existing work or reducing a commitment
-can be responsible outcomes.
+Other starting points:
+
+- a [five-project portfolio](examples/portfolio-assessment.md) with shared work and competing commitments,
+- optional [assessment](assets/assessment.md) and [report](assets/report.md) templates.
+
+Project work doesn't need a personal theory. Supporting existing work or taking on less can be the right outcome.
 
 ## What is available?
 
-**Current repository source—not everything in every host's installation pin.**
-Ordinary skill use does not require the optional software or a manifest.
+This table describes the current source. Older host-tested pins may not have everything. Ordinary use needs none of the optional software and no manifest.
 
-| Capability | Current status | Important boundary |
+| Capability | What it does | Main limit |
 |---|---|---|
-| [Conversational skill](SKILL.md), contribution/claim guidance and optional templates | Source instructions and authored examples for exploration, collaboration, learning and support. | Host capabilities and model behaviour vary; no matching, funding or independent evaluation is supplied. |
-| [Reference library](references/library/README.md) and optional [framework](references/frameworks.md)/[systems](references/systems-and-complexity.md) lenses | A small source-linked collection of cases, candidate patterns and questions; selectively read when useful. | Not universal recipes, comprehensive coverage, automatic recommendations or a required framework. |
-| [Evidence planning and audience-specific drafting](docs/evidence-reporting-design.md) | Current source routes to manual guidance and an [optional private crosswalk](assets/evidence-crosswalk.md). | Reuse permitted evidence; evidence fit, disclosure permission and presentation checks are separate. No collector or funding-provider integration. |
-| [Local reference-library MCP](mcp/README.md) | Implemented optional stdio server with three read-only discovery/detail/coverage tools over a prepared public snapshot. Separate Node.js 22+ setup. | Not a hosted service, live source search, semantic ranking or automatic refresh; see the [implementation checks](docs/reference-library-mcp-checks.md). |
-| [Support-profile authoring and tools](docs/support-profile-tools.md) | Optional worksheet plus implemented local inspection and explicit OSS financial binding/projection. Tools need separate Node.js 22+ setup. | General support cases are not OSS-only. No report fetching, publication, application, payment or consumer-acceptance guarantee; see the [check record](docs/support-profile-checks.md). |
-| [Skill versions and managed updates](docs/managed-skill-updates.md) | Optional CLI for explicit install/check/update/adopt/rollback/recovery and opt-in [in-skill notices](docs/update-notices.md), using complete source snapshots. Node.js 22+ and Git; no package dependencies. | Experimental source; host-visible notices are unverified. No automatic update, hidden hook, telemetry or global configuration change; local Git alone is not publisher authentication. |
-| [Additional practice guides](docs/README.md) | Manual guidance and fictional cases for affected-person accounts, scoped review, coordination, supplied signals and publishing plans. | No reviewer pool, recruitment, monitoring, publishing service or automatic integration. |
+| [Conversational skill](SKILL.md), contribution and claim guidance, optional templates | Guides exploration, collaboration, learning and support, with authored examples. | Behaviour varies by host and model. It doesn't match people, fund work or evaluate it independently. |
+| [Reference library](references/library/README.md) and optional [framework](references/frameworks.md) and [systems](references/systems-and-complexity.md) lenses | A small, source-linked set of cases, candidate patterns and questions. The agent reads them when useful. | It covers few domains. Patterns aren't recipes, and no framework is required. |
+| [Evidence planning and audience-specific drafting](docs/evidence-reporting-design.md) | Manual guidance and an [optional private worksheet](assets/evidence-crosswalk.md) for reusing evidence across funders. | Whether evidence fits, may be disclosed and is presented well are separate checks. It doesn't collect evidence or connect to funders. |
+| [Local reference-library MCP](mcp/README.md) | An optional local server with three read-only tools over a prepared public snapshot. Needs Node.js 22+. | It isn't hosted, doesn't search live sources and doesn't refresh itself. See the [check record](docs/reference-library-mcp-checks.md). |
+| [Support-profile authoring and tools](docs/support-profile-tools.md) | An optional worksheet and local tools to inspect profiles and bind open-source financial plans. Needs Node.js 22+. | Support profiles aren't limited to open source. The tools don't fetch, publish, apply or pay. See the [check record](docs/support-profile-checks.md). |
+| [Skill versions and managed updates](docs/managed-skill-updates.md) | An optional CLI to install, check, update, adopt, roll back and recover copies, plus opt-in [update notices](docs/update-notices.md). Needs Node.js 22+ and Git. | Experimental. It never updates automatically and changes no global settings. Hosts may not show the notices. |
+| [Readability check](tools/readability/README.md) | A local check that flags long sentences, passive voice and adverbs in drafts and manifest descriptions. Needs Node.js 22+. | Simple rules for English. A low score doesn't make writing accurate. |
+| [Additional practice guides](docs/README.md) | Manual guidance and fictional cases for accounts from affected people, scoped review, coordination, supplied signals and publishing plans. | No reviewer pool, recruitment, monitoring or publishing service. |
 
-For a machine-readable public support candidate, **`itf-manifest.json`** is the
-preferred filename under the [accepted support profile](docs/support-profile-contract.md),
-not a mandatory endpoint or automatic discovery feature. The repository's own
-`funding.json` is separate upstream-format metadata for maintaining ItF; its
-financial plan remains inactive. Neither file is needed to develop a contribution.
+For a public, machine-readable support profile, name the file **`itf-manifest.json`**, as the [support-profile contract](docs/support-profile-contract.md) recommends. Nothing requires it or discovers it automatically. This repository's own `funding.json` describes funding for maintaining ItF, and its financial plan is inactive. You don't need either file to develop a contribution.
 
 ## Direction and design-only work
 
-The longer-term aim includes connections with peers, communities and funders.
-Belonging, reciprocal help and shared learning matter in their own right—not only
-as steps towards funding. Existing communities may support that vision; a new
-platform is not assumed and no introductions or opportunities are promised.
+The longer-term aim includes connections with peers, communities and funders. Belonging, mutual help and shared learning matter in their own right, not only as steps towards funding. Existing communities may help. We aren't assuming a new platform, and we can't promise introductions or opportunities.
 
-The [guild concept](docs/guilds-itfti-atproto.md), completed
-[native workflow](docs/guild-workflow-assessment.md) and
-[curation](docs/guild-curation-assessment.md) assessments explore voluntary guilds
-of people working together, including optional individual/collective support views.
-They are **offline designs**, not deployed Atmospheric Groups collaboration, a
-registry, compulsory public roster or new relationship schema. Other hosted
-integrations and automatic allocation remain future work. See the
-[design index](docs/README.md) for scope, sources and unresolved runtime boundaries.
+The [guild concept](docs/guilds-itfti-atproto.md) and the [workflow](docs/guild-workflow-assessment.md) and [curation](docs/guild-curation-assessment.md) assessments explore voluntary guilds of people working together. They're offline designs. Nothing runs on Atmospheric Groups yet. Other hosted integrations and automatic allocation are future work. See the [design index](docs/README.md).
 
 ## Status and limits
 
-- **Private by default.** A local file may still enter a remote model's context.
-  Use only material authorised for that host/provider and keep private evidence
-  and saved outputs outside this distributable repository. `.gitignore` is not a
-  privacy boundary; read [PRIVACY.md](PRIVACY.md).
-- **No automatic external action.** Drafting does not authorise publishing,
-  contacting people, evidence uploads, applications, account changes or payments.
-  A link to unavailable evidence is not inspected evidence.
-- **No certification or moral ranking.** Outputs, donations, signatures and
-  completed assessments do not establish impact. The source's
-  [responsible-assistance rules](docs/responsible-assistance.md) address concrete
-  harmful conduct and deception, not sector labels or people's worth.
-- **Evidence limits stay visible.** [Development trials](docs/validation-2026-11-04.md)
-  are limited; the examples are authored fiction. Reliable model routing,
-  unchecked hosts/surfaces, human usefulness and funding effectiveness remain unverified. A passing
-  package check or published source is not an install-tested release.
-- **No implied affiliation.** ItF draws on public Moral Ambition principles but is
-  not affiliated with or endorsed by the School for Moral Ambition or Rutger
-  Bregman. [Sources and rights](SOURCES.md) distinguish original material from
-  third-party sources.
+- **Private by default.** A local file can still go to a remote model when the agent reads it. Use only material you may share with that provider. Keep private evidence and saved outputs outside this repository; `.gitignore` won't protect them. Read [PRIVACY.md](PRIVACY.md).
+- **No action without your say-so.** A draft doesn't authorise publishing, contacting people, uploading evidence, applying, changing accounts or paying. A link to evidence nobody could open isn't inspected evidence.
+- **No certification or ranking.** Outputs, donations, signatures and completed assessments don't prove impact. The [responsible-assistance rules](docs/responsible-assistance.md) address concrete harm and deception, not sectors or people's worth.
+- **Limited evidence.** [Development trials](docs/validation-2026-11-04.md) were small, and the examples are fiction. We haven't verified reliable model behaviour, untested hosts, usefulness to people or fundraising results. A passing package check confirms the files. It doesn't test installation.
+- **No affiliation.** ItF draws on public Moral Ambition principles. It isn't affiliated with or endorsed by the School for Moral Ambition or Rutger Bregman. [Sources and rights](SOURCES.md) separates original material from third-party sources.
 
 ### Licence
 
-Current original written content uses [CC BY-SA 4.0](LICENSE-CONTENT.md); commercial
-reuse is allowed with applicable attribution/ShareAlike obligations. Original
-software, tests and executable schemas remain [MIT](LICENSE-CODE). The older OpenCode
-snapshot retains its earlier MIT licence; those grants remain valid. See the
-[licence scope](LICENSE) for the transition and third-party exceptions, including
-the vendored funding.json schema. Your inputs and generated outputs are not
-automatically relicensed; copied/adapted protected ItF text can carry obligations.
+Original written content is [CC BY-SA 4.0](LICENSE-CONTENT.md). Commercial reuse is allowed with attribution and ShareAlike. Original software, tests and executable schemas are [MIT](LICENSE-CODE). The older OpenCode snapshot keeps its earlier MIT licence, and those grants stay valid. The [licence scope](LICENSE) covers the transition and third-party exceptions, including the vendored funding.json schema. Your inputs and outputs aren't relicensed. Copied or adapted ItF text can carry obligations.
 
 ## Local package checks
 
-Development-only requirement: a Node.js version supporting `node:test` (Node 18 or later).
+For development only, you need a Node.js version with `node:test` (Node 18 or later).
 
 ```sh
 node --test tests/package.test.mjs
 ```
 
-These check package structure, metadata, local links and accidental local-machine
-paths—not reasoning, privacy completeness, host compatibility or social impact.
-The [MCP](mcp/README.md#checks-and-compatibility),
-[support-profile](tools/support-profile/README.md#local-checks) and
-[skill metadata](tools/skill-package/README.md#checks) packages document their
-own optional setup and checks; ordinary conversation needs none of them.
+These checks cover package structure, metadata, local links and accidental local paths. They don't test reasoning, privacy, host compatibility or impact. The [MCP](mcp/README.md#checks-and-compatibility), [support-profile](tools/support-profile/README.md#local-checks) and [skill metadata](tools/skill-package/README.md#checks) packages have their own optional checks. Ordinary conversation needs none of them.
 
 ## Contents and release boundary
 
-- [Install/update/remove](docs/install.md), [usage](docs/usage.md) and
-  [audience](docs/audience-and-positioning.md): native routes, starting prompts
-  and intended users.
-- [Skill instructions](SKILL.md), [claims](references/claims.md) and
-  [contributions](references/contributions.md): the core workflow and distinctions.
-- [Design/documentation index](docs/README.md): practice guides, contracts, examples
-  and integration designs with their individual status and source limits.
-- [Installation evidence](docs/installation-check-2026-11-04.md): successful
-  exact-version discovery/activation/reference checks, earlier probes and limits.
-- [Development validation](docs/validation-2026-11-04.md) and
-  [historical release-preparation review](docs/release-readiness-2026-11-04.md):
-  bounded observations and earlier source-rights review, not current-release proof.
-- [Contributing](CONTRIBUTING.md): safe reports, source rights and checks.
+- [Install, update and remove](docs/install.md), [usage](docs/usage.md) and [audience](docs/audience-and-positioning.md): how to install, how to start and who ItF is for.
+- [Skill instructions](SKILL.md), [claims](references/claims.md) and [contributions](references/contributions.md): the core workflow.
+- [Docs index](docs/README.md): practice guides, contracts, examples and designs, each with its own status.
+- [Installation evidence](docs/installation-check-2026-11-04.md): the exact-version checks, earlier attempts and their limits.
+- [Development validation](docs/validation-2026-11-04.md) and [earlier release review](docs/release-readiness-2026-11-04.md): small observations and an earlier rights review. They don't prove the current release.
+- [Contributing](CONTRIBUTING.md): how to report problems safely, source rights and checks.
 
-A newer install-tested release needs verification of that exact package in a
-supported host. Publishing source does not update an installed copy or establish
-a new distribution channel.
+A new install-tested release needs its exact package checked in a supported host. Publishing new source doesn't update installed copies.
