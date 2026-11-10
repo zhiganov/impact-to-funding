@@ -1,0 +1,25 @@
+{
+  "profile": "itf.support/0.1-proposal",
+  "id": "lantern-support",
+  "revision": "3",
+  "publisher": { "name": "Lantern repair guide maintainers (fictional)" },
+  "subject": {
+    "id": "lantern",
+    "name": "Lantern repair guide (fictional)",
+    "kind": "project",
+    "description": "A fictional community guide to repairing household appliances."
+  },
+  "reports": [
+    {
+      "id": "report-2026-q3",
+      "url": "https://example.org/lantern/report-2026-q3",
+      "scope": "Fictional report on printing and handing out the guide.",
+      "period": "2026 Q3",
+      "published": "2026-10-05",
+      "revision": "1",
+      "limitations": "Entirely fictional example data."
+    }
+  ],
+  "statusUrl": "https://example.org/lantern/status",
+  "limitations": "Entirely fictional example for the impact badge tool."
+}

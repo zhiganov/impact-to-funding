@@ -2,7 +2,7 @@
 
 A badge or card points to one approved public report and says what kind of evidence it rests on. It doesn't show that the work had impact.
 
-This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4). No generator exists yet.
+This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4). The [impact badge tool](../tools/impact-badge/README.md) implements it.
 
 ## Inputs
 
@@ -13,9 +13,10 @@ This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4)
 | Field | Required | Meaning |
 |---|---|---|
 | `reportId` | Yes | Which `reports` entry the badge points to. |
-| `provenance` | Yes | The strongest review basis that applies to every shown claim: `self-report`, `ai-assisted`, `peer-review` or `independent-evaluation`, as defined in the [claim reference](../references/claims.md). |
+| `provenance` | Yes | The strongest review basis that applies to every shown claim, so never stronger than the weakest claim's: `self-report`, `ai-assisted`, `peer-review` or `independent-evaluation`, as defined in the [claim reference](../references/claims.md). |
 | `state` | Yes | `current`, `corrected`, `out-of-date` or `withdrawn`. |
-| `claims` | No | Up to three items for the card: `text` (60 characters at most), `support` (`supported`, `partly-supported`, `insufficient`, `conflicting` or `not-assessed`) and `provenance`. Each claim must appear in the linked report. |
+| `stateNote` | No | A short note for the out-of-date or withdrawn banner (80 characters at most), such as "on 2026-11-02". Without it, the banner points to `statusUrl`. |
+| `claims` | No | Up to three items for the card: `text` (60 characters at most), `support` (`supported`, `partly-supported`, `insufficient`, `conflicting` or `not-assessed`) and `provenance`. A `not-assessed` claim has no `provenance`. Each claim must appear in the linked report. |
 
 ## Outputs
 
