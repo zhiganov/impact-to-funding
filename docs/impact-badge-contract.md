@@ -20,7 +20,19 @@ This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4)
 ## Outputs
 
 - **`itf-badge.json`**, in the shields.io [endpoint badge](https://shields.io/badges/endpoint-badge) format. The label is "impact report". The message is the period plus the provenance, for example "2026 Q3 · self-reported". It becomes "withdrawn" or "out of date" in those states.
-- **`itf-card.svg`**: the subject name, period, each claim with its support and provenance labels, the published date and the report URL as text. It has a `<title>` and an `aria-label` with the same content.
+- **`itf-card-light.svg`** and **`itf-card-dark.svg`**: the subject name, period, each claim with its support and provenance labels, the published date and the report URL as text. Each has a `<title>` and an `aria-label` with the same content. The dark card uses colours that read well on GitHub's dark theme.
+
+## Display labels
+
+Input values stay short. Both outputs show them the same way:
+
+| Value | Shown as |
+|---|---|
+| `self-report` | self-reported |
+| `ai-assisted` | AI-assisted |
+| `peer-review` | peer-reviewed |
+| `independent-evaluation` | independently evaluated |
+| `partly-supported`, `not-assessed` and other support values | the same words with spaces: "partly supported", "not assessed" |
 
 ## Wording and display rules
 
@@ -29,6 +41,16 @@ This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4)
 - The person sets `out-of-date` themselves. The tool may suggest it when `published` is a parseable date more than 12 months old.
 - A withdrawn badge keeps the period, so readers can see what was withdrawn.
 - In a README, wrap the badge in a link to the report, with alt text such as "Impact report 2026 Q3, self-reported".
+- Show the card that matches the reader's theme with `<picture>`:
+
+  ```html
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="itf-card-dark.svg">
+    <img src="itf-card-light.svg" alt="Impact report 2026 Q3, self-reported">
+  </picture>
+  ```
+
+- The compact badge needs no dark version: its colours sit on their own background.
 - Offer a badge only after the person has an approved public report.
 
 ## Open questions
