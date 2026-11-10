@@ -1,10 +1,6 @@
 # Managed skill installation and updates
 
-The optional ItF CLI installs a complete source snapshot into a chosen native
-Claude Code, Codex CLI or OpenCode folder. It uses the
-[version/provenance contract](skill-version-provenance.md), existing public GitHub
-releases and Git—not a registry, hosted service, plugin or background updater.
-Node.js 22+, npm/npx and Git are needed for this route, not for conversation.
+The optional ItF CLI installs a complete source snapshot into a Claude Code, Codex CLI or OpenCode skills folder. It uses Git, public GitHub releases and the [version and provenance contract](skill-version-provenance.md). It isn't a registry, hosted service, plugin or background updater. It needs Node.js 22+, npm and Git. Conversation with the skill doesn't.
 
 ## Start with a plan
 
@@ -14,98 +10,49 @@ From the project where you want to use ItF:
 npx --yes --package=github:zhiganov/impact-to-funding#main itf install --harness codex --scope project --channel prerelease
 ```
 
-This runs the experimental CLI from GitHub's **mutable default branch**, not
-`v0.2.0`, which predates the manager. For a reviewed, repeatable CLI, replace
-`#main` with `#<full-cli-commit>`. The CLI version and the skill source selected
-for installation are separate. No npm registry publication is required; npm
-obtains the public Git package and uses its normal local cache.
-The cached npm artifact is a **CLI bootstrap**, not an installable skill bundle;
-it excludes unrelated local dependencies. The manager separately stages the
-complete selected Git snapshot, including its references, assets and licences.
+- **Which CLI runs:** this takes the experimental CLI from GitHub's default branch, which changes over time. For a repeatable result, replace `#main` with `#<full-cli-commit>` after reviewing it. `v0.2.0` is older than the manager and doesn't include it.
+- **CLI versus skill:** the CLI version and the skill version it installs are separate. npm fetches the CLI from GitHub, not the npm registry, and caches it as usual. The cached package is only the CLI. The manager fetches the full skill snapshot separately, with its references, assets and licences.
+- **Nothing changes yet:** without `--apply`, the command only prints a plan. Review the target, current and new source, scope, duplicates and where private state will go. To install, run the same command with `--apply`. It prints the plan again before it changes anything. Add `--commit <full-sha>` if you want exactly the source you reviewed, since a channel may move after your preview.
 
-Without `--apply`, the command only reports a plan. Review the exact target,
-current/target source, scope, duplicates and private-state location. To install,
-repeat the selected command with `--apply`. It prints that execution's plan
-before changing files. Use `--commit <full-sha>` if you want exactly a reviewed
-source rather than a channel that may have changed since preview.
+**Hosts and folders:** choose `--harness claude`, `codex` or `opencode`. Project scope uses `.claude/skills`, `.agents/skills` or `.opencode/skills`. `--scope personal` uses the matching folder in your home directory; for OpenCode that's `XDG_CONFIG_HOME` or the default `.config/opencode/skills`. `--project <directory>` sets the project. Nothing else changes: no other host, scope, global setting or project file.
 
-Choose `--harness claude`, `codex` or `opencode`. Project scope uses `.claude/skills`,
-`.agents/skills` or `.opencode/skills`, respectively. `--scope personal` deliberately
-chooses the corresponding home folder; OpenCode follows `XDG_CONFIG_HOME` or the
-default `.config/opencode/skills`. `--project <directory>` selects project context.
-No other harness, scope, global settings or project content is changed.
-
-The equivalent from a complete trusted local checkout is
-`node tools/skill-package/itf.mjs ...`. Use an external CLI copy, such as the npx
-package, when replacing an installation; the manager refuses to replace itself
-while executing from inside that selected skill.
+From a complete trusted local checkout, the same commands run as `node tools/skill-package/itf.mjs ...`. To replace an installation, run the CLI from a copy outside it, such as the npx package. The manager won't replace the copy it's running from.
 
 ## Check, select, update and restore
 
-Use the same CLI prefix, explicit harness and scope:
+Use the same CLI prefix, host and scope each time:
 
-| Command/options | Effect |
+| Command or option | What it does |
 |---|---|
-| `install --channel prerelease` | Preview the newest eligible public source release. `--apply` installs only into an unused destination. |
-| `check` | Read-only comparison using the managed copy's saved channel/pin. It never writes, even with `--apply`. Errors/incomplete metadata are not “up to date.” |
-| `update` | Preview the saved policy's source; `--apply` replaces only this managed copy after validation. |
-| `--release vX.Y.Z` | Select and lock a published tag and its resolved full SHA. A moved locked tag is refused. |
-| `--commit <full-sha>` | Pin an explicit source commit from the fixed public ItF repository; it need not be a release or host-tested. |
-| `--follow-channel` | Deliberately leave a pin. `--apply` is needed to persist the changed policy. |
-| `adopt --commit <full-sha>` | Assert ownership and preview adoption of an existing Git/manual copy. `--apply` records provenance only after matching the complete source; it does not overwrite it. |
-| `rollback` | Preview the previous retained complete copy; `--apply` restores it locally and keeps the displaced version recoverable. |
-| `recover` | Inspect interrupted state. `--apply` clears a provably stopped lock and restores the previous state only when files are still identifiable. |
+| `install --channel prerelease` | Previews the newest eligible public release. With `--apply`, installs only into an empty destination. |
+| `check` | Compares the copy with its saved channel or pin. Read-only, even with `--apply`. An error or missing data never counts as "up to date". |
+| `update` | Previews the source the saved policy points to. With `--apply`, replaces only this managed copy, after validation. |
+| `--release vX.Y.Z` | Selects a published tag and locks its full SHA. If the tag later moves, the manager refuses it. |
+| `--commit <full-sha>` | Pins a commit from the public ItF repository. It doesn't have to be a release or host-checked. |
+| `--follow-channel` | Leaves a pin and follows the channel again. Needs `--apply` to save the change. |
+| `adopt --commit <full-sha>` | Takes over an existing Git or manual copy you own. With `--apply`, it records where the copy came from, after confirming the files match. It doesn't overwrite them. |
+| `rollback` | Previews the previous saved copy. With `--apply`, restores it and keeps the replaced version recoverable. |
+| `recover` | Inspects an interrupted run. With `--apply`, clears a lock whose process has stopped, and restores the previous state if the files can still be identified. |
 
-A saved pin is intentionally not a claim of the newest channel version. Use
-`check --follow-channel` for a read-only comparison outside the pin. An update to
-an older version requires `--allow-downgrade`; rollback is itself an explicit
-older-state selection. Published prereleases are excluded from the stable channel,
-even when their tags have no SemVer prerelease suffix.
+A pinned copy stays on its pin even when the channel has a newer version. To compare with the channel anyway, run `check --follow-channel`; it's read-only. Moving to an older version needs `--allow-downgrade`, except through `rollback`. The stable channel skips anything published as a prerelease, even if its tag has no prerelease suffix.
 
-No change is automatic. Do not update during the turn that first notices a newer
-version; request it separately and begin a new agent session afterward. This is
-not an enforced cross-harness turn detector. Claude's skill watching, Codex's
-discovery/restart fallback and OpenCode's refresh behaviour are described in the
-[installation guide](install.md#3-check-discovery-then-try-a-bounded-conversation).
+Nothing updates automatically. If the agent notices a newer version, don't update in that same turn. Ask for the update separately, then start a new agent session. The manager can't enforce this across hosts. How each host picks up changed files is in the [installation guide](install.md#3-check-discovery-then-try-a-bounded-conversation).
 
-For an optional per-copy notice during skill use, see
-[in-skill update notices](update-notices.md). The installed source must contain
-its helper, and the person must explicitly enable it; actual host delivery has
-not been verified.
+For an optional notice while you use the skill, see [in-skill update notices](update-notices.md). The installed source must include its helper, and you have to turn it on. We haven't confirmed that hosts show it.
 
 ## Protect existing work
 
-Default-folder discovery checks project ancestors within the repository boundary
-and known personal roots for same-name skills, including OpenCode compatibility
-folders. It does not query a live harness registry or inspect arbitrary configured,
-enterprise, admin, cloud or hosted sources. Verify the host actually uses your
-selected copy. Other discoverable copies require `--ack-duplicates` to apply;
-acknowledgement neither changes nor removes those copies.
+**Duplicates:** before installing, the manager looks for other copies with the same name in parent folders inside the repository and in known personal folders, including OpenCode's compatibility folders. It doesn't query the host or check enterprise, admin, cloud or custom locations, so confirm the host uses your copy. If other copies exist, `--apply` needs `--ack-duplicates`. That only acknowledges them; it doesn't change or remove them.
 
-Linked installations, symlinked install/state paths and submodule/worktree Git
-metadata are refused, not silently replaced. Keep their existing source/team
-management route. Adoption requires an explicitly owned complete copy with
-matching source, not an unverified directory that happens to contain `SKILL.md`.
+**What it refuses:** linked installations, symlinked install or state paths, and Git submodules or worktrees. Keep managing those the way you already do. `adopt` needs a complete copy that you own and whose files match the source. A folder that merely contains `SKILL.md` isn't enough.
 
-Changed, untracked, ignored or unknown files stop replacement; the manager never
-discards them. It stages a fresh complete Git checkout, verifies the selected SHA,
-actual bytes, inventory, references and licences, then replaces the live directory.
-Git hooks, global Git filters/configuration and credential prompts are disabled
-for source preparation. Package source files are not executed by installation.
+**How replacement works:** changed, untracked, ignored or unknown files stop a replacement. The manager never discards them. It prepares a fresh Git checkout, checks the SHA, file contents, inventory, references and licences, and only then replaces the live folder. Git hooks, global Git filters and settings, and credential prompts are turned off while it prepares the source. Installation never runs the package's own files.
 
 ### Adopting a Windows clone
 
-A copy cloned on Windows with Git's default `core.autocrlf=true`, which includes
-any clone made by following the [installation guide](install.md) before
-`.gitattributes` fixed line endings, has CRLF text files. The manager compares
-exact bytes, so `adopt` refuses it as modified even when `git status` is clean.
-This is deliberate: integrity checks do not ignore line endings.
+On Windows, Git's default `core.autocrlf=true` gives text files CRLF line endings. That includes any clone made with the [installation guide](install.md) before `.gitattributes` fixed line endings. The manager compares exact bytes, so `adopt` treats these files as modified even when `git status` is clean. This is deliberate: the integrity check doesn't ignore line endings.
 
-First back up the entire owned installation, including Git metadata, ignored
-files and private material, to an unused safe location. Inspect local work
-carefully; ordinary `git status` omits ignored files. Only if the status below
-prints nothing and you have preserved any other edits, re-check out the same
-commit with LF endings and preview adoption again:
+First back up the whole installation, including Git data, ignored files and anything private, to a safe unused location. Check for local work carefully; plain `git status` doesn't list ignored files. Then, only if the first command below prints nothing and you've saved any other edits, check out the same commit again with LF endings and preview adoption again:
 
 ```sh
 git -C "$target" status --porcelain --untracked-files=all --ignored=matching   # must print nothing
@@ -114,53 +61,22 @@ git -C "$target" rm -q -r --cached .
 git -C "$target" reset -q --hard
 ```
 
-This rewrites the index and tracked files; `git rev-parse HEAD` stays the same.
-`reset --hard` discards tracked modifications and may remove untracked files or
-directories obstructing checkout. A clean status alone is not a backup.
+This rewrites the index and tracked files. `git rev-parse HEAD` stays the same. `reset --hard` discards tracked changes and may remove untracked files that get in the way. A clean status isn't a backup.
 
 ## Private state and recovery
 
-Receipts, locks, journals, staging and retained backups live under the home
-directory's `.local/state/impact-to-funding/`, keyed by target path and outside
-every skills-discovery root. The plan reports the exact location. State may contain
-private paths or previous local Git configuration: do not publish it. No project
-ignore rules are edited. Backups are retained, not automatically purged; inspect
-and preserve needed data before manually removing owned state.
+**Where state lives:** receipts, locks, journals, staging and backups go under `.local/state/impact-to-funding/` in your home directory, one entry per target, outside every skills folder. The plan shows the exact location. State may include private paths or old Git settings, so don't publish it. The manager never edits project ignore rules. Backups are kept until you remove them; check them for anything you need first.
 
-The previous copy moves to private backup before the validated candidate moves
-into place. This uses **two directory renames**, not an uninterrupted atomic swap.
-Ordinary errors restore the prior copy; an interrupted process can leave a pending
-journal for explicit recovery. Recovery validates its restore source before
-displacing a usable current installation. New edits, unknown ownership or ambiguous
-state stop recovery rather than being overwritten. A running/unknown lock owner
-is not displaced; a stopped lock is recoverable even without a pending journal.
+**How a replacement can be interrupted:** the old copy moves to a private backup, then the checked new copy moves into place. That's two folder renames, not one atomic swap. On an ordinary error, the old copy comes back. If the process is interrupted, a pending journal stays for `recover`. Recovery checks its backup before replacing a working copy. It stops, rather than overwriting, if it finds new edits, unclear ownership or unclear state. It won't take over a lock from a running or unknown process; a lock from a stopped process can be cleared.
 
-Directory renames require compatible filesystems. A cross-device failure leaves
-the prior installation intact; successful cross-volume replacement is not claimed.
-This is process-interruption recovery, not power-loss durability or an atomic
-filesystem snapshot. Do not delete state or a lock simply to retry.
+**Limits:** renames need compatible filesystems. A failure across devices leaves the old installation in place; we don't claim replacement across volumes works. This handles interrupted processes, not power loss. Don't delete state or a lock just to retry.
 
-Release metadata uses anonymous, bounded public GitHub reads: five seconds per
-request and a 15-second overall catalogue deadline, with complete pagination and
-actual tag peeling. No prompt, project content or local path is sent. Rate limits,
-offline access or incomplete responses stop selection; they do not trigger sign-in
-requests or imply no updates. Git source preparation also requires public access.
+**Network use:** release data comes from anonymous public GitHub reads, with a five-second limit per request and 15 seconds overall. The manager reads every page and resolves tags fully. It sends no prompts, project content or local paths. Rate limits, offline use or incomplete responses stop the selection. They never trigger a sign-in prompt or mean there are no updates. Fetching the source also needs public Git access.
 
 ## Compatibility and source choice
 
-File placement and local lifecycle tests do not establish native activation,
-model reliability or usefulness. Existing limited Claude, Codex and OpenCode
-checks retain their older exact-source SHAs and limits, including the limited
-Claude Code check at `4566892`. These tools do not supply a host sign-in, model
-trial, guaranteed host notice, hook, telemetry or global configuration change.
+The local install and update tests check file placement only. They don't show that a host loads the skill, that a model follows it or that it's useful. The earlier limited host checks keep their own exact SHAs and limits, including the Claude Code check at `4566892`. The manager adds no sign-in, model trial, host notice, hook, telemetry or global setting change.
 
-The bounded comparison with Vercel Skills CLI at
-[`d3701c1`](https://github.com/vercel-labs/skills/tree/d3701c11b1101251af14c9d148f026e1a47ebe17)
-found root-package discovery/copy support, but its
-[live replacement path](https://github.com/vercel-labs/skills/blob/d3701c11b1101251af14c9d148f026e1a47ebe17/src/installer.ts#L193-L208)
-deletes the destination without ItF's local-material preservation or rollback.
-The small Git-based wrapper therefore owns those safeguards; no Skills CLI
-installation, telemetry event or extra dependency was required for that decision.
+We compared it with Vercel Skills CLI at [`d3701c1`](https://github.com/vercel-labs/skills/tree/d3701c11b1101251af14c9d148f026e1a47ebe17). That tool can find and copy a root package, but its [replacement step](https://github.com/vercel-labs/skills/blob/d3701c11b1101251af14c9d148f026e1a47ebe17/src/installer.ts#L193-L208) deletes the destination. It doesn't preserve local material or support rollback, so ItF uses its own small Git-based wrapper for those safeguards. The comparison needed no Skills CLI install, telemetry or extra dependency.
 
-See the [tool usage and checks](../tools/skill-package/README.md) and
-[#55](https://github.com/zhiganov/impact-to-funding/issues/55).
+See the [tool usage and checks](../tools/skill-package/README.md) and [#55](https://github.com/zhiganov/impact-to-funding/issues/55).
