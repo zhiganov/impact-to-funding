@@ -81,6 +81,8 @@ Ordinary unstructured Markdown can be kept as an explicit narrative field in a
 packet. The importer does not infer claims or reviewers from prose.
 
 The round trip preserves supplied JSON values. Formatting and key order may change.
+Escaped lone UTF-16 surrogates appear as literal escapes in the readable view;
+their original JSON values survive the UTF-8 file round trip.
 The receipt records this transformation and the source's audience. Missing evidence
 produces an incomplete binding result even when a review was declared performed.
 

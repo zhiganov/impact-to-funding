@@ -30,7 +30,12 @@ function jsonValues(value, depth = 0, ancestors = new Set()) {
     return;
   }
   if (!object(value) && !Array.isArray(value)) fail('invalid_json_value', 'Expected JSON values.');
-  if (Array.isArray(value) && Object.keys(value).length !== value.length) fail('invalid_json_value', 'Sparse or extended arrays are not JSON values.');
+  if (Array.isArray(value)) {
+    const keys = Object.keys(value);
+    if (keys.length !== value.length || keys.some((name, index) => name !== String(index))) {
+      fail('invalid_json_value', 'Sparse or extended arrays are not JSON values.');
+    }
+  }
   if (Object.getOwnPropertySymbols(value).length) fail('invalid_json_value', 'Symbol properties cannot be exchanged as JSON.');
   if (ancestors.has(value)) fail('invalid_json_value', 'Cyclic objects cannot be exchanged as JSON.');
   if (object(value) && ![Object.prototype, null].includes(Object.getPrototypeOf(value))) {
@@ -216,7 +221,11 @@ export function encodePacket(packet) {
 }
 
 function escapeMarkdown(text) {
-  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  // JSON can carry escaped lone UTF-16 surrogates. Show those as literal escapes
+  // so a UTF-8 file write cannot replace them and desynchronise the readable view.
+  return text.replace(/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/g,
+    (unit) => `\\u${unit.charCodeAt(0).toString(16).padStart(4, '0')}`)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/[\\`*_{}\[\]()#!|~]/g, '\\$&').replace(/\r/g, '&#13;').replace(/\n/g, '\n> ');
 }
 

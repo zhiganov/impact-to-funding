@@ -141,6 +141,30 @@ test('hostile strings, HTML, backtick fences and prototype keys stay data', () =
   assert.equal({}.hidden, undefined);
 });
 
+test('escaped lone surrogates survive a real UTF-8 encoding boundary', () => {
+  const packet = sample();
+  packet.narrative = 'High \ud800, low \udc00, valid pair 😀 and literal \\ud800.';
+  packet['key-\ud800'] = 'Supplied property name.';
+  packet.objects[0].id = 'theory-\ud800';
+  packet.objects.at(-1).earlierTheory.id = packet.objects[0].id;
+  const markdown = Buffer.from(toMarkdown(packet), 'utf8').toString('utf8');
+  assert.ok(markdown.includes('😀'));
+  assert.ok(!markdown.includes('\ufffd'));
+  assert.deepEqual(fromMarkdown(markdown), packet);
+});
+
+test('API rejects sparse arrays even when named properties fill the key count', () => {
+  const packet = sample();
+  packet.extra = Array(2);
+  packet.extra.first = 'one';
+  packet.extra.second = 'two';
+  for (const operation of [inspectPacket, encodePacket, toMarkdown, recordDigest]) {
+    assert.throws(() => operation(packet), errorCode('invalid_json_value'));
+  }
+  packet.extra = ['one', 'two'];
+  assert.deepEqual(fromMarkdown(toMarkdown(packet)).extra, packet.extra);
+});
+
 test('canonical content bindings and raw-source receipts have distinct meanings', () => {
   const packet = sample();
   assert.equal(recordDigest({ a: 'same', b: 'content' }), recordDigest({ b: 'content', a: 'same' }));
@@ -164,16 +188,18 @@ test('CLI export/import works in fresh private directories and refuses overwrite
   const directory = mkdtempSync(path.join(os.tmpdir(), 'itf-records-test-'));
   t.after(() => rmSync(directory, { recursive: true, force: true }));
   const input = path.join(directory, 'input.json');
-  writeFileSync(input, sampleText);
+  const packet = sample();
+  packet.narrative = 'UTF-8 file test: \ud800 / \udc00 / 😀.';
+  writeFileSync(input, JSON.stringify(packet));
   const run = (...args) => spawnSync(process.execPath, [cli, ...args], { encoding: 'utf8', timeout: 10000 });
   const exported = path.join(directory, 'exported');
   assert.equal(run('export', input, '--output', exported).status, 0);
   const md = path.join(exported, 'packet.md');
-  assert.deepEqual(fromMarkdown(readFileSync(md, 'utf8')), sample());
+  assert.deepEqual(fromMarkdown(readFileSync(md, 'utf8')), packet);
   assert.equal(run('export', input, '--output', exported).status, 1);
   const imported = path.join(directory, 'imported');
   assert.equal(run('import', md, '--output', imported).status, 0);
-  assert.deepEqual(JSON.parse(readFileSync(path.join(imported, 'packet.json'), 'utf8')), sample());
+  assert.deepEqual(JSON.parse(readFileSync(path.join(imported, 'packet.json'), 'utf8')), packet);
   assert.equal(JSON.parse(run('inspect', md).stdout).reviewBindings[0].subjectSuperseded, true);
   assert.equal(run('inspect', input, '--public').status, 1);
   if (process.platform !== 'win32') {
