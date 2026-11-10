@@ -83,6 +83,12 @@ curated candidate: use `itf-manifest.json` if desired, including for nonfinancia
 support. Follow the [support-profile guide](../docs/support-profile-tools.md).
 Leave missing facts open rather than inventing an account or funding destination.
 
+Once the person has an approved public report and a support profile, you can offer
+a repo badge and card that link to it, using the [impact badge tool](../tools/impact-badge/README.md).
+Help them write the badge input from the public report only. The badge shows the
+report's period and review basis, never "proven" or "verified". Offer it only when
+it would help, and only for a report they've approved for publication.
+
 ## Limits
 
 Eligibility, legal or tax status, recipient authority, impact and funding received
