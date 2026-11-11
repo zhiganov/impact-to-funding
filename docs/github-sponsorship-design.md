@@ -1,15 +1,16 @@
 # GitHub sponsorship: an optional ItF publishing path
 
-**Date:** 2026-11-11. **Status:** design capture. The playbook and adapter described
-below are proposals. This change adds documentation only.
+**Date:** 2026-11-11. **Status:** the optional playbook is implemented as source
+guidance. The local adapter remains a proposal. Host behaviour has not been checked.
 
 ## Recommendation
 
 Use ItF to explain what support enables and report what happened. Use GitHub's
 existing sponsorship features to present funding options and handle its payments.
 
-Start with an optional sponsorship playbook inside the existing ItF package. It
-can help someone draft a profile, funding links and updates without a new service.
+Use the optional [sponsorship playbook](../playbooks/github-sponsorship.md) inside
+the existing ItF package to draft a profile, funding links and updates without a
+new service.
 Scope a local link adapter separately if repeated mapping work warrants it.
 Neither needs to become an entry requirement for ordinary ItF use.
 
@@ -35,16 +36,17 @@ GitHub documents `FUNDING.yml`, not automatic interpretation of ItF's support
 profile or funding.json. A repo's Sponsor button and a working GitHub Sponsors
 payout arrangement are separate facts.
 
-## Proposed playbook
+## Sponsorship playbook
 
-The playbook would be an optional `playbooks/github-sponsorship.md`, reached from
-the existing skill when someone asks for GitHub sponsorship help. It would reuse
+The optional [playbook](../playbooks/github-sponsorship.md) is reached from the
+existing skill when someone asks for GitHub Sponsors material or `FUNDING.yml`.
+It reuses
 the [support-brief playbook](../playbooks/support-brief.md),
 [funding guidance](../references/funding-and-review.md) and
-[support-profile tools](support-profile-tools.md), rather than duplicate their
+[support-profile tools](support-profile-tools.md), rather than duplicating their
 evidence and disclosure rules. This follows the [one-package playbook design](task-playbooks-design.md).
 
-The person could ask for any of these outputs independently:
+The person can ask for any of these outputs independently:
 
 1. **Sponsors introduction:** explain the contribution, actual role, who benefits
    and what additional support could enable. Separate observed results from plans.
@@ -186,10 +188,13 @@ though it guarantees ItF-specific allocation.
 
 ## Limits and delivery state
 
-The documentation captures a proposed integration. It adds no playbook route,
-schema field, YAML tool, API client or funding configuration. The existing
-`funding.json`, account settings, installed skill copies and payment destinations
-are unchanged.
+The source includes the playbook route, [usage prompt](usage.md#prepare-github-sponsorship-material)
+and [fictional authoring cases](../examples/github-sponsorship.md). Package tests
+check source structure and links. They do not test model behaviour.
+
+The YAML adapter and API integration remain design proposals. The existing
+`funding.json`, profile schema, account settings, installed skill copies and payment
+destinations are unchanged.
 
 Public candidates need approval of the exact content and destination. Account
 setup, payout verification, publication and money movement retain their own

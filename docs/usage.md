@@ -74,6 +74,22 @@ The playbook is in the v0.4.0 source. The older host-tested pins don't include i
 
 For example, say a fictional repair guide needs printing money, and an existing grant may already cover part of that cost. The brief should name the overlap as an open question. The uncovered amount stays unknown until the real terms and costs are known. This is an authored example, not a model response.
 
+### Prepare GitHub sponsorship material
+
+The optional [GitHub sponsorship playbook](../playbooks/github-sponsorship.md)
+helps draft an introduction, tiers, funding links or an update. Ask for just the
+part you need. It is current source guidance, not a separate command; the older
+host-tested pins don't include it. Host routing remains unverified.
+
+> @impact-to-funding Help me draft a GitHub Sponsors introduction and a
+> FUNDING.yml candidate from the material I supply. Preserve existing destinations,
+> flag unknown recipients and inherited links, and explain what support could
+> enable. Keep the draft private. Do not browse, edit accounts or publish.
+
+The [fictional examples](../examples/github-sponsorship.md) include a missing
+recipient, inherited defaults, a fiscal-host mismatch and private sponsorship data.
+No GitHub account or manifest is needed to prepare an introduction.
+
 ### Plan evidence or reuse it for different audiences
 
 Use the [evidence and reporting guidance](evidence-reporting-design.md) and the [optional private worksheet](../assets/evidence-crosswalk.md) when they help. Keep one set of claims and evidence, and prepare a separate view for each audience. You don't need a funder, account, requirements file or evidence register to start.

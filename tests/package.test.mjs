@@ -79,11 +79,28 @@ test('support-brief routing is optional and the shared funding reference leaves 
   assert.match(playbook, /A named or completed\s+theory of change is optional/i);
 });
 
+test('GitHub sponsorship source routing is optional and preserves drafting boundaries', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  const playbook = readFileSync(path.join(root, 'playbooks/github-sponsorship.md'), 'utf8');
+  const examples = readFileSync(path.join(root, 'examples/github-sponsorship.md'), 'utf8');
+  assert.match(skill, /Only when the person asks for GitHub Sponsors material or a repository's `FUNDING\.yml`/);
+  assert.match(skill, /\[GitHub sponsorship playbook\]\(playbooks\/github-sponsorship\.md\)/);
+  assert.match(playbook, /\[support-brief playbook\]\(support-brief\.md\)/);
+  assert.match(playbook, /Preserve existing entries/);
+  assert.match(playbook, /inherited links as unknown/);
+  assert.match(playbook, /A funding link does not activate an inactive plan/);
+  assert.match(playbook, /Private sponsorship data stays private/);
+  assert.match(playbook, /authoring guidance, not a YAML adapter or payment service/);
+  assert.match(examples, /Entirely fictional/);
+  assert.match(examples, /not model\s+responses/);
+});
+
 test('package includes workflow, templates, provenance and clearly labelled synthetic examples', () => {
   for (const relative of [
     'README.md', 'LICENSE', 'SOURCES.md', 'references/claims.md', 'references/contributions.md',
     'references/funding-and-review.md', 'references/frameworks.md',
     'assets/assessment.md', 'assets/report.md', 'playbooks/support-brief.md',
+    'playbooks/github-sponsorship.md', 'examples/github-sponsorship.md',
     'examples/builder-case.md', 'examples/builder-assessment.md',
     'examples/portfolio-case.md', 'examples/portfolio-assessment.md',
     'examples/framework-lenses.md',
