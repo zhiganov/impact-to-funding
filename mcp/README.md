@@ -59,9 +59,9 @@ claim an installed OpenCode integration.
 
 Search is Unicode NFKC + trim + lowercase, all literal whitespace-delimited tokens,
 and ascending ASCII ID order. It is not semantic search, relevance ranking or an
-impact score. L001 and L002 share a document: a match may come from the other
-section. Search discloses `shared_document`; detail returns the whole file, both
-IDs, the requested anchor and all common evidence/rights caveats.
+impact score. L001, L002 and L003 share a document: a match may come from another
+section. Search discloses `shared_document`; detail returns the whole file, every
+co-located ID, the requested anchor and all common evidence/rights caveats.
 
 The full [application contract](../docs/reference-library-mcp-contract.md) defines
 bounds, result shapes and distinct errors. [Executable schemas](schemas.mjs) are

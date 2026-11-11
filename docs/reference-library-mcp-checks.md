@@ -36,6 +36,13 @@ snapshot; it was checked directly, not presented as another client round trip.
   revision is 2. Catalogue completeness is not comprehensive domain coverage or
   evidence that all interventions succeeded.
 
+**Snapshot update, 2026-11-11:** the mapping moved to `itf.library.mapping/2` to add
+L003 (EAT-Lancet Planetary Health Diet) after index revision 3. The pinned tests now
+prepare from source commit `fa9e91e2601e4656a8d3600db3fc06c1bf5e4fa7`, giving snapshot
+`sha256:08a170927779dec20e5d70144c0bcdd0256cba37a471e8d8e175be68d41fea91` with ten
+records: five cases, two patterns and three shared-file lenses. The package and stdio
+tests passed against it. The client round trips recorded below were not repeated.
+
 The snapshot source commit identifies the records, not the implementation's Git
 revision, the source papers' editions or the date of independent review. Snapshot
 preparation is separate from queries and performs no network fetch.
