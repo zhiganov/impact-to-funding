@@ -13,7 +13,7 @@ import Ajv from 'ajv';
 const ROOT = fileURLToPath(new URL('../../', import.meta.url));
 const SERVER = fileURLToPath(new URL('../server.mjs', import.meta.url));
 const PREPARE = fileURLToPath(new URL('../prepare.mjs', import.meta.url));
-const SOURCE_REVISION = '7b36169f00b8d6185d16629b7784ac17ce7ea346';
+const SOURCE_REVISION = 'fa9e91e2601e4656a8d3600db3fc06c1bf5e4fa7';
 const CONTRACT_VERSION = 'itf.library/0.1-draft';
 const TOOL_NAMES = ['get_reference', 'library_info', 'search_references'];
 const BOUNDS = {
@@ -143,8 +143,8 @@ test('prepared public snapshot works over official SDK stdio in legacy and moder
       stdio: ['ignore', 'pipe', 'pipe'],
     }));
     assert.equal(preparation.sourceRevision, SOURCE_REVISION);
-    assert.equal(preparation.declaredRecords, 9);
-    assert.equal(preparation.availableRecords, 9);
+    assert.equal(preparation.declaredRecords, 10);
+    assert.equal(preparation.availableRecords, 10);
     const snapshot = JSON.parse(await readFile(snapshotPath, 'utf8'));
     assert.equal(snapshot.snapshotId, preparation.snapshotId);
     // Independent expected committed bytes, read before tool calls; never fetch links.
@@ -160,10 +160,10 @@ test('prepared public snapshot works over official SDK stdio in legacy and moder
         const info = await call('library_info');
         assert.equal(info.snapshotId, snapshot.snapshotId);
         assert.equal(info.coverage.status, 'complete');
-        assert.equal(info.coverage.declaredRecords, 9);
-        assert.equal(info.coverage.availableRecords, 9);
+        assert.equal(info.coverage.declaredRecords, 10);
+        assert.equal(info.coverage.availableRecords, 10);
         assert.equal(info.coverage.unavailableRecords, 0);
-        assert.deepEqual(info.data.availableByKind, { case: 5, pattern: 2, lens: 2 });
+        assert.deepEqual(info.data.availableByKind, { case: 5, pattern: 2, lens: 3 });
         assert.deepEqual(info.data.bounds, BOUNDS);
         assert.equal(info.data.searchMode, 'literal_all_tokens_id_order');
         assert.equal(info.data.history, 'not_guaranteed');
@@ -194,12 +194,13 @@ test('prepared public snapshot works over official SDK stdio in legacy and moder
         assert.deepEqual(detail.data.record.coLocatedIds, ['C001']);
         assert.equal(detail.data.record.contentMarkdown, expectedCase.toString('utf8'));
         assert.equal(detail.data.record.contentSha256, hash(expectedCase));
-        for (const id of ['L001', 'L002']) {
+        for (const id of ['L001', 'L002', 'L003']) {
           const lens = await call('get_reference', { id, revision: 1, snapshotId: first.snapshotId });
           assert.equal(lens.data.record.id, id);
           assert.equal(lens.data.record.contentScope, 'shared_document');
-          assert.deepEqual(lens.data.record.coLocatedIds, ['L001', 'L002']);
-          assert.equal(lens.data.record.anchor, id === 'L001' ? 'l001--doughnut-economics' : 'l002--planetary-boundaries');
+          assert.deepEqual(lens.data.record.coLocatedIds, ['L001', 'L002', 'L003']);
+          assert.equal(lens.data.record.anchor, { L001: 'l001--doughnut-economics', L002: 'l002--planetary-boundaries',
+            L003: 'l003--eat-lancet-planetary-health-diet' }[id]);
           assert.equal(lens.data.record.contentMarkdown, expectedLenses.toString('utf8'));
           assert.equal(lens.data.record.contentSha256, hash(expectedLenses));
         }

@@ -8,13 +8,13 @@ import test from 'node:test';
 import { prepare } from '../prepare.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
-const revision = '7b36169f00b8d6185d16629b7784ac17ce7ea346';
+const revision = 'fa9e91e2601e4656a8d3600db3fc06c1bf5e4fa7';
 
 test('preparation keeps the actual commit and the already-checked public snapshot identity', () => {
   const snapshot = prepare(revision);
   assert.equal(snapshot.sourceRevision, revision);
-  assert.equal(snapshot.snapshotId, 'sha256:53cf94cbc6ecf1740ba683e6f4376b4e8a9701015e9463091dc2c0d63e8442e3');
-  assert.equal(snapshot.records.filter((record) => record.available).length, 9);
+  assert.equal(snapshot.snapshotId, 'sha256:08a170927779dec20e5d70144c0bcdd0256cba37a471e8d8e175be68d41fea91');
+  assert.equal(snapshot.records.filter((record) => record.available).length, 10);
 });
 
 test('annotated tag object hashes are rejected, not peeled and mislabelled as commits', () => {

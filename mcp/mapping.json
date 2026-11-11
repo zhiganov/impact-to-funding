@@ -1,11 +1,11 @@
 {
-  "mappingRevision": "itf.library.mapping/1",
+  "mappingRevision": "itf.library.mapping/2",
   "indexPath": "references/library/README.md",
-  "indexRevision": 2,
+  "indexRevision": 3,
   "limitations": [
     "This is a small, deliberately selected seed collection, not comprehensive coverage, universal best practices or an independent impact assessment. Historical evaluations do not establish current programme operation; candidate patterns are ItF interpretations, not practitioner-validated findings.",
     "Food systems are not represented in this seed. The proposed WFP Purchase for Progress case was omitted because its programme/theory and evaluation texts could not be inspected within the bounded retrieval attempt; this is not a finding of ineffectiveness or absence of worthwhile food-system work.",
-    "L001 and L002 share a backing document. Search within that document may match text outside the requested lens section; the anchor identifies the requested section, but detail returns the full shared document with its common caveats."
+    "L001, L002 and L003 share a backing document. Search within that document may match text outside the requested lens section; the anchor identifies the requested section, but detail returns the full shared document with its common caveats."
   ],
   "records": [
     {
@@ -106,6 +106,17 @@
       "anchor": "l002--planetary-boundaries",
       "discoveryText": "Examine relevant environmental dependencies, interacting pressures and possible burden shifting rather than treating a single local output as evidence of overall ecological sustainability. This collection provides no method for assigning local or personal shares of global boundaries.",
       "discoverySource": "references/library/lenses.md#l002--planetary-boundaries"
+    },
+    {
+      "id": "L003",
+      "kind": "lens",
+      "title": "EAT-Lancet Planetary Health Diet",
+      "recordRevision": 1,
+      "documentPath": "references/library/lenses.md",
+      "contentScope": "shared_document",
+      "anchor": "l003--eat-lancet-planetary-health-diet",
+      "discoveryText": "For food-related work, consider health, environmental limits and fairness together, using the 2025 EAT-Lancet Commission's reference diet, food's share of the planetary boundaries and nine social foundations. Records affordability and micronutrient critiques. A lens, not a food-system case; its headline figures are modelled estimates.",
+      "discoverySource": "references/library/lenses.md#l003--eat-lancet-planetary-health-diet"
     }
   ]
 }
