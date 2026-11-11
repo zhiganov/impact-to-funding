@@ -11,6 +11,14 @@
 
 This applies to the skill, the docs and issues. Accuracy still matters: keep every limit that changes what a reader would do, and state it once.
 
+## Product strategy
+
+- Keep strategic backlog capture separate from implementation readiness. Record
+  agreed product directions in strategy or scoping issues, with delivered coverage,
+  remaining outcomes and open choices. Evidence needed to choose an implementation
+  is not a prerequisite for recording the direction. A delivered first slice does
+  not establish that the broader capability is complete.
+
 ## Pull requests
 
 - Push docs-only changes straight to `main`. Don't open a pull request for them.
