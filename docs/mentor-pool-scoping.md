@@ -97,3 +97,177 @@ A later human trial needs a willing host, consenting participants, clear data ar
 ## Limits
 
 This is desk scoping only. No mentors, builders or programmes were contacted, and nothing was tested with people. It relates to, but doesn't depend on, [#36](https://github.com/zhiganov/impact-to-funding/issues/36) check-ins. Groups deployment and native installation aren't needed.
+
+## Appendix: a mentor note as an ATProto record (sketch)
+
+A possible shape if mentor notes ever live on ATProto. The NSID `org.example.itf.mentorNote` is a placeholder; no namespace is chosen. Checked with `@atproto/lexicon` 0.7.19 on 2026-11-11: the schema and example are valid, and missing, oversized and badly dated values are rejected.
+
+What it would give a mentor:
+
+- **Ownership:** the note lives in the mentor's own repository. They edit or delete it with any compatible app. Deleting it is how they leave.
+- **Doesn't go stale:** `availability.until` lets apps hide a note after a date unless it's renewed. `paused` and `full` let a mentor step back without deleting.
+- **No ranking:** there are no ratings or counts.
+
+What to watch:
+
+- **It's public.** Ordinary ATProto records can be read by anyone, so the note holds only what's safe to publish: no email or phone, just a channel the mentor chooses to name. A private note would need Spaces, which is still alpha ([#10](https://github.com/zhiganov/impact-to-funding/issues/10)).
+- **Someone must index notes** for people to find them, through a relay, a feed or an Atmospheric Group for mentors. That's the maintainer role above.
+- **Requests stay outside it,** in the channel the mentor names.
+- `arrangements` and `status` use open `knownValues`, so apps should treat unfamiliar values as "other".
+
+### Schema
+
+```json
+{
+  "lexicon": 1,
+  "id": "org.example.itf.mentorNote",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "A mentor's own description of the help they offer. Public: write only what you're happy for anyone to read.",
+      "key": "literal:self",
+      "record": {
+        "type": "object",
+        "required": [
+          "areas",
+          "arrangements",
+          "availability",
+          "basis",
+          "createdAt"
+        ],
+        "properties": {
+          "areas": {
+            "type": "array",
+            "maxLength": 8,
+            "items": {
+              "type": "string",
+              "maxLength": 1200,
+              "maxGraphemes": 120
+            },
+            "description": "What they can help with, in their own words."
+          },
+          "notOffered": {
+            "type": "array",
+            "maxLength": 8,
+            "items": {
+              "type": "string",
+              "maxLength": 1200,
+              "maxGraphemes": 120
+            },
+            "description": "What they won't help with."
+          },
+          "arrangements": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "knownValues": [
+                "one-off-question",
+                "office-hour",
+                "time-bounded"
+              ]
+            }
+          },
+          "availability": {
+            "type": "ref",
+            "ref": "#availability"
+          },
+          "basis": {
+            "type": "ref",
+            "ref": "#basis"
+          },
+          "conflicts": {
+            "type": "array",
+            "maxLength": 8,
+            "items": {
+              "type": "string",
+              "maxLength": 2000,
+              "maxGraphemes": 200
+            },
+            "description": "Known conflicts, such as grant panels or projects they fund or review."
+          },
+          "howToAsk": {
+            "type": "string",
+            "maxLength": 3000,
+            "description": "How to send a request, using a channel they choose to publish.",
+            "maxGraphemes": 300
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "datetime"
+          }
+        }
+      }
+    },
+    "availability": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "knownValues": [
+            "open",
+            "full",
+            "paused"
+          ]
+        },
+        "until": {
+          "type": "string",
+          "format": "datetime",
+          "description": "When this note should stop being shown unless renewed."
+        },
+        "effort": {
+          "type": "string",
+          "maxLength": 1200,
+          "maxGraphemes": 120
+        }
+      },
+      "description": "Whether the mentor is taking requests, and until when."
+    },
+    "basis": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "knownValues": [
+            "voluntary",
+            "paid",
+            "sponsored"
+          ]
+        },
+        "sponsor": {
+          "type": "string",
+          "maxLength": 1200,
+          "maxGraphemes": 120
+        }
+      },
+      "description": "Whether help is voluntary, paid or sponsored."
+    }
+  }
+}
+```
+
+### Fictional example record
+
+```json
+{
+  "$type": "org.example.itf.mentorNote",
+  "areas": ["Handing a small open-source tool to a bigger project", "Maintainer burnout and sharing the load"],
+  "notOffered": ["Fundraising applications", "Code review"],
+  "arrangements": ["one-off-question", "time-bounded"],
+  "availability": { "status": "open", "until": "2027-02-28T00:00:00Z", "effort": "About two hours a month" },
+  "basis": { "kind": "voluntary" },
+  "conflicts": ["I sit on a small open-source grant panel; I won't advise on applications to it."],
+  "howToAsk": "Send a short request by Bluesky DM with your question and the kind of help you'd like.",
+  "createdAt": "2026-11-11T10:00:00Z",
+  "updatedAt": "2026-11-11T10:00:00Z"
+}
+```
