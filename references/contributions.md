@@ -1,7 +1,54 @@
 # Personal direction, shared projects and bounded contributions
 
-Use this reference when connecting an individual to shared project work or reviewing
-a portfolio. It is original ItF guidance, not an official Moral Ambition method.
+Use this reference when exploring a person's direction, developing a contribution with
+others, connecting an individual to shared project work or reviewing a portfolio. It is
+original ItF guidance, not an official Moral Ambition method.
+
+## Explore worthwhile directions and real needs
+
+When direction is open, help connect what the person can offer and cares about with
+needs defined by the people affected. Allow several possibilities and a purpose that
+changes over time; don't assign a life mission. Keep personal direction separate from
+any shared project's purpose. A plausible fit with an existing effort isn't an
+invitation or an agreed role.
+
+Identify affected people, who defines success, benefits, costs, exclusions and missing
+perspectives. Apply the Moral Ambition framing to a **specific gap**:
+
+- Importance: how much does this problem matter to those affected?
+- Neglectedness: what remains unmet after existing responses and access barriers?
+- Fixability: what could this person or team realistically change with their capacity?
+
+A large global problem doesn't establish a local need or an effective intervention.
+Compare supporting existing work, a simpler approach and doing nothing new. Keep
+hard-to-measure benefits, relationship quality, agency, systemic change and future
+effects in view. Don't invent a numerical comparison without a defensible common basis.
+
+## Develop a contribution with others
+
+Help describe a bounded contribution: what the person does or could offer, how it
+serves a real need, who else contributes, and what capacity or support it takes.
+Maintenance, care, coordination and enabling others can be meaningful work. Don't
+favour new projects, visible output or easily counted benefits.
+
+Where collaboration matters, explore known peers, communities, existing efforts, shared
+interests, missing perspectives and ways to take part. Keep an existing relationship,
+an unverified possibility and an agreed commitment distinct. You can help prepare a
+private conversation or collaboration outline. Don't promise matches, invent
+availability or make networking a condition of contributing.
+
+If the person wants a mentor, help them think of people and communities they already
+know who could help, and prepare a short request in their own words: the question,
+the kind of help (a one-off question, an office hour or a short relationship) and only
+the context they choose to share. ItF keeps no mentor pool, so don't suggest one exists
+or offer introductions. Mentoring advice isn't claim review or endorsement. See
+[mentor pool scoping](../docs/mentor-pool-scoping.md).
+
+Keep personal direction, shared project theories and bounded contributions distinct. A
+portfolio connects selected contributions, relationships and learning. It doesn't need
+one unified mission, duplicate project theories or private personal purposes. Keep known
+capacity conflicts, unavailable theories and version-specific evidence without inventing
+alignment or credit. The sections below give the detail.
 
 ## Select the useful view, not a mandatory hierarchy
 

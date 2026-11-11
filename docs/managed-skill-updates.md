@@ -28,7 +28,7 @@ Use the same CLI prefix, host and scope each time:
 | `check` | Compares the copy with its saved channel or pin. Read-only, even with `--apply`. An error or missing data never counts as "up to date". |
 | `update` | Previews the source the saved policy points to. With `--apply`, replaces only this managed copy, after validation. |
 | `--release vX.Y.Z` | Selects a published tag and locks its full SHA. If the tag later moves, the manager refuses it. |
-| `--commit <full-sha>` | Pins a commit from the public ItF repository. It doesn't have to be a release or host-checked. |
+| `--commit <full-sha>` | Pins a commit from the public ItF repository. It doesn't have to be a release or host-checked. If it's the commit of exactly one published release, the plan and receipt record that release's tag and version. |
 | `--follow-channel` | Leaves a pin and follows the channel again. Needs `--apply` to save the change. |
 | `adopt --commit <full-sha>` | Takes over an existing Git or manual copy you own. With `--apply`, it records where the copy came from, after confirming the files match. It doesn't overwrite them. |
 | `rollback` | Previews the previous saved copy. With `--apply`, restores it and keeps the replaced version recoverable. |
@@ -72,6 +72,8 @@ This rewrites the index and tracked files. `git rev-parse HEAD` stays the same. 
 **Limits:** renames need compatible filesystems. A failure across devices leaves the old installation in place; we don't claim replacement across volumes works. This handles interrupted processes, not power loss. Don't delete state or a lock just to retry.
 
 **Network use:** release data comes from anonymous public GitHub reads, with a five-second limit per request and 15 seconds overall. The manager reads every page and resolves tags fully. It sends no prompts, project content or local paths. Rate limits, offline use or incomplete responses stop the selection. They never trigger a sign-in prompt or mean there are no updates. Fetching the source also needs public Git access.
+
+**Behind a proxy:** the manager uses Node's built-in `fetch`, which ignores `HTTPS_PROXY` by default. Release reads then fail, often as "Public release metadata unavailable (HTTP 403)". On Node 22.21 or later, run the CLI with `NODE_USE_ENV_PROXY=1`, for example `NODE_USE_ENV_PROXY=1 npx --yes --package=github:zhiganov/impact-to-funding#main itf check ...`. Git already follows your proxy settings.
 
 ## Compatibility and source choice
 

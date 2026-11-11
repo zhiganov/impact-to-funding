@@ -49,6 +49,10 @@ needs no legal identity.
   is current rather than assuming it is open. When requested, produce a short list
   of relevant leads with known terms, round status and uncertainty. The list records
   possibilities; it provides no introductions. Check offers and eligibility separately.
+  Prefer each funder's own page to aggregator listings, and label which one each
+  lead comes from. Record open, rolling or closed status with the date you checked,
+  and list the checks still needed, such as eligibility or minimum amounts. Offer to
+  save the list privately with the date in its name; write it only if they agree.
 - **Application rules:** Before drafting for a named funder, read its form and
   guidance for rules that shape the draft. These include the exact questions, word
   and format limits, required attachments, eligibility conditions, deadlines and
@@ -70,6 +74,11 @@ Before the person shares a draft, offer to run the local
 It flags long sentences, passive voice and adverbs. Suggest plainer wording for
 what it flags; the person decides what to change.
 
+If the person has the Pangram MCP server connected and wants to know whether a
+public draft reads as AI-written, offer to check it with Pangram. That sends the
+text to Pangram, so use only text they may share and never private evidence. A
+score isn't a judgement of quality. See [optional writing tools](../docs/optional-writing-tools.md).
+
 If useful information is missing, offer a clear provisional draft or a short
 outline. The person can correct it without first completing a questionnaire,
 register or evidence packet. Keep a working draft private by default; write a
@@ -82,6 +91,12 @@ work and supplied financial facts. A general support profile is a separate,
 curated candidate: use `itf-manifest.json` if desired, including for nonfinancial
 support. Follow the [support-profile guide](../docs/support-profile-tools.md).
 Leave missing facts open rather than inventing an account or funding destination.
+
+Once the person has an approved public report and a support profile, you can offer
+a repo badge and card that link to it, using the [impact badge tool](../tools/impact-badge/README.md).
+Help them write the badge input from the public report only. The badge shows the
+report's period and review basis, never "proven" or "verified". Offer it only when
+it would help, and only for a report they've approved for publication.
 
 ## Limits
 

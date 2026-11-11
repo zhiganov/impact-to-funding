@@ -9,6 +9,6 @@
   "bin": { "itf": "tools/skill-package/itf.mjs" },
   "files": ["tools/skill-package", "docs/managed-skill-updates.md", "docs/skill-version-provenance.md", "docs/update-notices.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "PRIVACY.md"],
   "scripts": {
-    "test": "node --test tests/package.test.mjs tools/skill-package/tests/*.test.mjs tools/readability/tests/*.test.mjs"
+    "test": "node --test tests/package.test.mjs tools/skill-package/tests/*.test.mjs tools/readability/tests/*.test.mjs tools/impact-badge/tests/*.test.mjs tools/portable-records/tests/*.test.mjs"
   }
 }

@@ -16,6 +16,8 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Responsible assistance](responsible-assistance.md): the skill's conduct rules. It doesn't blacklist sectors, screen people or rank causes. See the [nine fictional cases](../examples/responsible-assistance.md).
 - [Task playbooks](task-playbooks-design.md): maps common jobs to guidance. The first playbook is the [support brief](../playbooks/support-brief.md).
 - [Individual theories and shared projects](individual-project-contributions.md): how a person's own theory of change connects to shared projects through bounded contributions. The [contribution reference](../references/contributions.md) is the working guidance. Tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22) and [#16](https://github.com/zhiganov/impact-to-funding/issues/16).
+- [Mentor pool scoping](mentor-pool-scoping.md): whether ItF should keep a pool of willing mentors. It recommends referring people to communities they know first, with no pool yet.
+- [Builder check-ins](builder-check-in-assessment.md): a short, private six-question check-in with an optional request for one peer's feedback. Recommended as documentation only.
 - [User feedback guide](user-feedback.md) and [initial-user learning plan](user-learning-plan.md): earlier plans for manual-use feedback. No feedback is being collected through them now.
 
 ## Reference library
@@ -33,6 +35,8 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Support-profile contract](support-profile-contract.md): the accepted fields, types, money rules and how the financial view handles losses.
 - [Support-profile tools](support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](support-profile-checks.md).
 - [Readability check](../tools/readability/README.md): a local check for drafts and manifest descriptions. It flags long sentences, passive voice and adverbs.
+- [Impact badge contract](impact-badge-contract.md) and [tool](../tools/impact-badge/README.md): a repo badge and card that link to an approved public report and state its evidence basis.
+- [Optional writing tools](optional-writing-tools.md): the readability check and Pangram, an online AI-text detector you can use from your agent through MCP.
 - [Standard.site publishing](standard-site-publishing.md): how approved public reports could use existing Standard.site metadata and tools.
 - [AI Registry and Skills CLI](ai-registry-distribution.md): compares registry listings with direct Git distribution.
 
@@ -41,6 +45,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Guilds concept note](guilds-itfti-atproto.md) and [fictional Atmospheric Group walkthrough](../examples/guilds-itfti-atproto.md): ItF users working together as guilds, sharing practice, recognition and learning before any funding.
 - [Guild workflow assessment](guild-workflow-assessment.md): how a guild could cooperate, mapped onto Atmospheric Groups ([#53](https://github.com/zhiganov/impact-to-funding/issues/53)). It recommends documentation only.
 - [Guild curation assessment](guild-curation-assessment.md) and [fictional policy-change case](../examples/guild-curation.md): how a guild's attributed selection of work can travel between tools ([#52](https://github.com/zhiganov/impact-to-funding/issues/52)). It adds no schema, registry or ranking.
+- [Local portable records](../tools/portable-records/README.md): a JSON/Markdown round trip from #14's record design. It preserves version-bound reviews, dissent and source restrictions. Live ATProto transport remains separate.
 
 ## History
 
@@ -48,7 +53,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 
 ## Limits
 
-- A design note describes a proposal. Only five pieces are working code: the support-profile tools, the local library MCP, the version inspector, the managed-update tool and the readability check.
+- A design note describes a proposal. Working code includes the support-profile tools, local library MCP, version inspector, managed-update tool, readability check, impact badge and local portable-record converter. Each tool's guide states its checks and limits.
 - Skill guidance tells the agent what to do. Whether a given host and model follow it hasn't been checked.
 - Fictional cases and walkthroughs show what we expect. They aren't observed model behaviour.
 - Check records list what was run. They don't show that any host, consumer, directory, funder or Atmospheric Groups deployment works with ItF beyond those checks.
