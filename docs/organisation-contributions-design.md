@@ -3,8 +3,9 @@
 **Date:** 2026-11-11
 
 **Status:** design for [#94](https://github.com/zhiganov/impact-to-funding/issues/94).
-It describes the intended journey and a bounded implementation scope. The current
-skill offers contribution guidance; needs discovery is not implemented.
+It describes the intended journey and a bounded implementation scope. The
+[source playbook](../playbooks/organisation-contributions.md) now covers supplied
+needs and available compatible discovery tools. No live catalogue is bundled.
 
 ## Product outcome
 
@@ -181,13 +182,15 @@ design expectations, not observed matching or model results.
    This note defines the consumer outcome; compatible sources must supply explicit
    versions, provenance and compensation semantics. Their private implementation
    choices stay outside public ItF guidance.
-2. **Deliver provider-neutral supplied-record guidance.** Add optional skill
-   routing/playbook and fictional cases using the existing contribution and
-   responsible-assistance references. Source checks should cover no-project entry,
-   hard pay constraints, unknowns, refusal and changed terms.
+2. **Provider-neutral guidance is source-delivered.** Optional skill routing,
+   the [playbook](../playbooks/organisation-contributions.md) and
+   [fictional cases](../examples/organisation-contributions.md) reuse the existing
+   contribution and responsible-assistance references. Source checks cover
+   no-project entry, hard pay constraints, unknowns, refusal and changed terms.
 3. **Connect supported read-only discovery.** A service first needs typed
    publication validation, source preparation and snapshot/query support. ItF
-   then uses its advertised interface, also usable by generic clients. Supplied
+   then uses its advertised interface through the playbook, also usable by generic
+   clients. Service availability and checks belong to that service. Supplied
    records remain a valid fallback, not a replacement for the intended integration.
 4. **Verify the bounded source behaviour.** Use existing package checks and local
    client fixtures for schemas, errors and exact versions. Any later host trial

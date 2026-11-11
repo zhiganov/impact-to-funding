@@ -116,6 +116,12 @@ A few sentences are enough to start. A useful result might be a possible contrib
 
 ItF helps with that kind of distinction. Describe your actual role, keep claims within their evidence and learn whether the next contribution is worth it. A careful account still isn't verified impact or a funding decision.
 
+To help an existing organisation without founding a project, the optional
+[organisation contribution playbook](playbooks/organisation-contributions.md)
+covers supplied needs, paid/pro bono arrangements and available compatible
+discovery tools. Its [cases](examples/organisation-contributions.md) are fictional;
+the host-tested pins above do not include this playbook.
+
 Other starting points:
 
 - a [five-project portfolio](examples/portfolio-assessment.md) with shared work and competing commitments,

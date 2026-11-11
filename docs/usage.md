@@ -197,3 +197,10 @@ To try one fresh, give an agent the input and the skill files, but not our examp
 Check the exact text, which evidence it relies on, any names or stories, the important caveats, whether you may speak for others, and where it's going. Confirm any reviewer's statement and which version it covers. Check any funding link's owner and provider rules yourself. The skill isn't a legal, tax, financial or emergency authority.
 
 Share only the approved version, not your whole private working packet. Public copies may stay online after you correct or delete them.
+## Contribute skills to an existing organisation
+
+> I build websites and have ten hours this month. Help me inspect this supplied organisation need for a bounded paid contribution. I have no project of my own. Keep compensation, expenses and hosting budgets separate; preserve unknowns. Keep any response draft private and unsent.
+
+If compatible needs-discovery tools are available, you can authorise a bounded
+search instead. The [organisation contribution playbook](../playbooks/organisation-contributions.md)
+uses the advertised capabilities and preserves hard compensation constraints.
