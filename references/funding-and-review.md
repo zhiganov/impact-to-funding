@@ -2,6 +2,10 @@
 
 The goal is a useful, honest decision—not conversion at any cost. Do not use moral pressure, manufacture urgency, promise returns, or present need as proof of intervention effectiveness.
 
+## Explore what support would help
+
+When sustaining the contribution matters, explore what continuing would take: time, income, collaborators, access, care, infrastructure or other resources. Treat financial needs as real without making funding the only measure of value, assuming unpaid capacity, or implying an impact story replaces a livelihood. Support may be a paid role, shared resources or support for existing work. Keep possibilities separate from actual offers, eligibility, commitments and support received.
+
 ## Prospective funding versus retrospective impact
 
 An early-stage person can seek support for discovery or learning. Say what is not known, what funding will test, who will do the work and what would change or stop it. Historical success can inform a proposal without guaranteeing the marginal benefit of the next grant.
@@ -19,11 +23,13 @@ A funding brief should explain:
 - How useful progress will be assessed and reported with proportionate burden.
 - A supplied funding destination if appropriate, with verification limits and no implied ownership, eligibility, tax status or guarantee of receipt.
 
+Never turn a target or forecast into a result or promised return. Don't infer ownership, legal eligibility, tax status or payment receipt from a URL; if a destination is unknown, leave it out. A funding profile isn't an allocation algorithm or an endorsement of eligibility.
+
 Payment-provider configuration, grant eligibility, donor screening, automated allocation and money movement are outside this skill. A funding ask does not authorise submitting it, creating an account, contacting a donor, setting up a payment integration or making a public claim.
 
 ## Proportionate reports
 
-Use the reporting period and earlier intentions as the baseline. Include what happened, what did not, what evidence was inspected, missingness, other contributors, expenditure information if appropriate, adverse effects and what changed in the theory or next ask. Do not quietly drop unsuccessful actions or inflate impact to justify past donations.
+Use the reporting period and earlier intentions as the baseline. Include what happened, what did not, what evidence was inspected, missingness, other contributors, expenditure information if appropriate, adverse effects and what changed in the theory or next ask. Do not quietly drop unsuccessful actions or inflate impact to justify past donations. Explain how an update changes an earlier claim or review.
 
 Choose timing for its decision value, capacity and funder/community agreements—not to reward constant posting. Existing records and consented qualitative accounts may be more useful than a new metrics system. No universal score or activity leaderboard.
 

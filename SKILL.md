@@ -50,18 +50,19 @@ Understand only what the conversation needs:
 3. **Help wanted now:** explore, develop a contribution, work with others, learn, seek support, make a choice or prepare something. Uncertainty is a fine starting point.
 4. **Audience:** a private conversation or draft, or a separately approved public candidate.
 
-Infer an approach from context rather than offering a menu, and cover only the areas below that help. Ask only questions that move the person forward. Don't turn every conversation into an assessment, plan, report or fundraising exercise.
+Infer an approach from context rather than offering a menu, and read only the resources below that help. Ask only questions that move the person forward. Don't turn every conversation into an assessment, plan, report or fundraising exercise.
 
 ## Choose only the resources needed
 
 - For any assessment or funding claim, read [claim review](references/claims.md).
 - When concrete harm, disputed legality, accusations or risky fundraising matter to the request, read [responsible assistance](docs/responsible-assistance.md). It isn't mandatory screening; fair, evidence-based criticism is still possible.
-- For an individual's contribution, working with others or a portfolio of shared projects, read [contribution relationships](references/contributions.md). Project-only work needs no personal theories from contributors.
+- When exploring direction and real needs, developing a contribution with others, or connecting shared projects in a portfolio, read [contribution relationships](references/contributions.md). Project-only work needs no personal theories from contributors.
+- For a theory of change, understanding what difference work makes, examining impact claims or planning proportionate evidence, read [understanding and learning](references/learning.md).
 - Only when useful or requested, read [optional framework lenses](references/frameworks.md) for choosing a lens, Planetary Boundaries and Doughnut notes, and scale limits. No framework or framework score is required.
-- When concrete examples or patterns would help, or the person asks, read the [reference-library index](references/library/README.md), then only the relevant case, pattern or lens notes. Don't load the whole collection or require an example before helping.
+- When concrete examples or patterns would help, or the person asks, read the [reference-library index](references/library/README.md), including how to use it, then only the relevant case, pattern or lens notes. Don't load the whole collection or require an example before helping.
 - When interactions, delays, changing conditions or unexpected effects matter, or the person asks, read the relevant parts of [systems and complexity](references/systems-and-complexity.md). It supports inquiry; no map, classification or maturity ladder is required.
 - When preparing or revising a support or funding brief, or the person asks for `support-brief`, read the [support-brief playbook](playbooks/support-brief.md) and [funding and review](references/funding-and-review.md). General support exploration needs no brief.
-- For a public candidate or report, also read [funding and review](references/funding-and-review.md).
+- When sustaining the work comes up, or for a public candidate or report, read [funding and review](references/funding-and-review.md).
 - When planning evidence collection or drafting for a particular audience or funder, read the [evidence and reporting guidance](docs/evidence-reporting-design.md) and use relevant parts of the [optional private worksheet](assets/evidence-crosswalk.md). Reuse existing claims and evidence. Keep requirement and source versions, evidence fit, destination permission and presentation checks separate.
 - Only when a machine-readable public support profile or local inspection is requested, read [support-profile authoring and tools](docs/support-profile-tools.md) and use relevant parts of the [optional worksheet](assets/support-profile.md). It's separate from private evidence and per-funder packets. Local validation doesn't approve disclosure or establish impact.
 - Use relevant sections of the [assessment packet](assets/assessment.md). Don't fill every section mechanically or leave placeholder text in final prose.
@@ -72,68 +73,6 @@ Infer an approach from context rather than offering a menu, and cover only the a
 - For attribution and rights questions, see [sources and rights](SOURCES.md).
 - The [synthetic input](examples/builder-case.md) and [illustrative output](examples/builder-assessment.md) are examples only, never evidence about the person's work.
 - The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) illustrate linked theories, shared work and capacity limits. They aren't observed behaviour.
-
-## Use reference knowledge selectively
-
-The library is an optional source of examples and hypotheses. It isn't a catalogue of proven solutions or a list to work through. Choose notes by the relevant need, mechanism, relationships and constraints, not domain labels alone. Start small and read more only when the comparison needs it. Read the notes yourself through the host's tools; don't ask the person to open the Markdown files.
-
-Read a case before relying on its findings, and the pattern note before proposing that pattern. Keep a source-published theory, a case-note reconstruction, observed findings and an ItF pattern hypothesis distinct. Keep mixed and null results, evaluator relationships and inspection limits. Cite the note's identifier, revision and source link where useful. If you only read the library note, attribute its account; don't claim you read the underlying paper.
-
-For a local adaptation, explain the connection and the important differences in authority, incentives, capacity, relationships, scale and affected people's perspectives. A cross-domain analogy is a proposal, not evidence that the outcome will recur. A tested bundle doesn't isolate each component. Use a framework question only if it adds something; shared lens labels don't corroborate cases.
-
-Check the index's coverage and each note's limits. If no suitable case exists, say so. Don't invent an example, fill in a missing report from its summary, or treat an unavailable source as nonexistent. Continue with supplied material or a clearly labelled hypothesis. A library link doesn't authorise new collection or live retrieval. Keep private applications out of the public collection.
-
-## Explore worthwhile directions and real needs
-
-When direction is open, help connect what the person can offer and cares about with needs defined by the people affected. Allow several possibilities and a purpose that changes over time; don't assign a life mission. Keep personal direction separate from any shared project's purpose. A plausible fit with an existing effort isn't an invitation or an agreed role.
-
-Identify affected people, who defines success, benefits, costs, exclusions and missing perspectives. Apply the Moral Ambition framing to a **specific gap**:
-
-- Importance: how much does this problem matter to those affected?
-- Neglectedness: what remains unmet after existing responses and access barriers?
-- Fixability: what could this person or team realistically change with their capacity?
-
-A large global problem doesn't establish a local need or an effective intervention. Compare supporting existing work, a simpler approach and doing nothing new. Keep hard-to-measure benefits, relationship quality, agency, systemic change and future effects in view. Don't invent a numerical comparison without a defensible common basis.
-
-## Develop a contribution with others
-
-Help describe a bounded contribution: what the person does or could offer, how it serves a real need, who else contributes, and what capacity or support it takes. Maintenance, care, coordination and enabling others can be meaningful work. Don't favour new projects, visible output or easily counted benefits.
-
-Where collaboration matters, explore known peers, communities, existing efforts, shared interests, missing perspectives and ways to take part. Keep an existing relationship, an unverified possibility and an agreed commitment distinct. You can help prepare a private conversation or collaboration outline. Don't promise matches, invent availability or make networking a condition of contributing.
-
-Keep personal direction, shared project theories and bounded contributions distinct, using the contribution reference. A portfolio connects selected contributions, relationships and learning. It doesn't need one unified mission, duplicate project theories or private personal purposes. Keep known capacity conflicts, unavailable theories and version-specific evidence without inventing alignment or credit.
-
-## Understand and learn from the contribution
-
-Use a theory of change when it helps explain or examine the work.
-
-Explain activities → outputs → outcomes → intended impact in ordinary language. For each important link, name the mechanism, assumptions, control and dependencies, supporting basis and plausible failure. Ask what would likely happen without this contribution, and what evidence would change the theory.
-
-Treat the pathway as a partial, revisable hypothesis, not a promise or a one-way chain. Allow branches, feedback and unplanned effects; leave unknown relationships unknown.
-
-Separate the individual's role from shared project results, and don't count joint outcomes twice across people or projects. A missing community agreement stays missing; a simulated stakeholder view can't supply consent or local judgement.
-
-For exploratory work, a clearer sense of fit, a possible contribution or a useful question may be enough. Don't assume a programme, beneficiary group, partner, budget or field study is already chosen. When a choice really is needed, compare acting, supporting existing work, reframing, deferring and stopping.
-
-When examining or communicating impact claims, apply the claim reference. Make statements, sources, dates, scope and limits traceable. Keep contrary evidence, failures, unreviewed material, inaccessible sources and gaps. A retrieval date isn't an observation date or proof the source is current. Don't require an evidence register just to discuss interests or possible work.
-
-Help the person learn whether and how the work helps, what isn't working, and how contributions or relationships could develop. Choose evidence proportionate to the question, stakes and capacity. Reuse existing records, and combine quantitative and qualitative evidence where it fits. Baseline and follow-up data can show change without proving cause. A safe exercise can test a capability without proving real-disaster performance. Don't recommend new infrastructure, surveys or comparison studies just to look rigorous.
-
-For any proposed evidence collection, name who would collect or review it, for what purpose, at what cost and burden, under what consent and access limits, and when it would be checked or stopped.
-
-## Explore sustainable support
-
-When sustaining the contribution matters, explore what continuing would take: time, income, collaborators, access, care, infrastructure or other resources. Treat financial needs as real without making funding the only measure of value, assuming unpaid capacity, or implying an impact story replaces a livelihood. Support may be a paid role, shared resources or support for existing work. Keep possibilities separate from actual offers, eligibility, commitments and support received.
-
-Help explain what support would enable. An honest prospective proposal doesn't need proven past impact.
-
-## Prepare a funding brief, profile or report when requested
-
-Use the funding reference. Explain what additional support enables, the actual cost basis if known, milestones or learning goals, dependencies and how progress will be reported. Never turn a target or forecast into a result or promised return.
-
-For reports, compare earlier expectations with observed evidence, spending where appropriate, changed beliefs, other contributors, harms and unresolved needs. Keep abandoned and failed work, not just successes. Explain how an update changes an earlier claim or review.
-
-Don't infer ownership, legal eligibility, tax status or payment receipt from a URL. If a destination is unknown, leave it out. A funding profile isn't an allocation algorithm or an endorsement of eligibility.
 
 ## Leave a useful, honest point of continuation
 
