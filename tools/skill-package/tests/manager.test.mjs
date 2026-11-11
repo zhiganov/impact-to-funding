@@ -362,3 +362,43 @@ test('quoted same-name skills in noncanonical folders still require duplicate ac
     await assert.rejects(f.manager.run('install', { ...f.options, apply: true }), /acknowledge/);
   }
 });
+
+test('an explicit commit that is a published release records that release (#64)', async (t) => {
+  const f = fixture(t);
+  mkdirSync(path.dirname(f.paths().target), { recursive: true });
+  f.prepare(f.paths().target, f.commits[1]);
+  const plan = await f.manager.run('adopt', { ...f.options, commit: f.commits[1] });
+  assert.equal(plan.targetSource.tag, 'v0.2.0');
+  assert.equal(plan.targetSource.versionSource, 'release');
+  await f.manager.run('adopt', { ...f.options, commit: f.commits[1], apply: true });
+  const receipt = currentReceipt(f.paths());
+  assert.equal(receipt.version, '0.2.0');
+  assert.equal(receipt.versionSource, 'release');
+  assert.equal(receipt.policy.pin, f.commits[1]);
+});
+
+test('an explicit commit stays usable without a release match or catalogue (#64)', async (t) => {
+  const f = fixture(t);
+  f.git('commit', '--quiet', '--allow-empty', '-m', 'Synthetic unreleased commit');
+  const unreleased = f.git('rev-parse', 'HEAD');
+  const planned = await f.manager.run('install', { ...f.options, commit: unreleased });
+  assert.equal(planned.targetSource.tag, null);
+  assert.equal(planned.targetSource.versionSource, 'unknown');
+  const offline = createManager({ catalogue: async () => { throw new Error('offline'); }, prepare: f.prepare });
+  const result = await offline.run('install', { ...f.options, commit: f.commits[0], apply: true });
+  assert.equal(result.status, 'installed');
+  assert.equal(currentReceipt(f.paths()).versionSource, 'declared');
+});
+
+test('a pin-only update to a release also records the release version (#64)', async (t) => {
+  const f = fixture(t);
+  const offline = createManager({ catalogue: async () => { throw new Error('offline'); }, prepare: f.prepare });
+  await offline.run('install', { ...f.options, commit: f.commits[0], apply: true });
+  assert.equal(currentReceipt(f.paths()).versionSource, 'declared');
+  const result = await f.manager.run('update', { ...f.options, release: 'v0.1.0', apply: true });
+  assert.equal(result.status, 'policy-updated');
+  const receipt = currentReceipt(f.paths());
+  assert.deepEqual(receipt.policy.pin, { tag: 'v0.1.0', sourceCommit: f.commits[0] });
+  assert.equal(receipt.version, '0.1.0');
+  assert.equal(receipt.versionSource, 'release');
+});

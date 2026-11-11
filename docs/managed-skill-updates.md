@@ -28,7 +28,7 @@ Use the same CLI prefix, host and scope each time:
 | `check` | Compares the copy with its saved channel or pin. Read-only, even with `--apply`. An error or missing data never counts as "up to date". |
 | `update` | Previews the source the saved policy points to. With `--apply`, replaces only this managed copy, after validation. |
 | `--release vX.Y.Z` | Selects a published tag and locks its full SHA. If the tag later moves, the manager refuses it. |
-| `--commit <full-sha>` | Pins a commit from the public ItF repository. It doesn't have to be a release or host-checked. |
+| `--commit <full-sha>` | Pins a commit from the public ItF repository. It doesn't have to be a release or host-checked. If it's the commit of exactly one published release, the plan and receipt record that release's tag and version. |
 | `--follow-channel` | Leaves a pin and follows the channel again. Needs `--apply` to save the change. |
 | `adopt --commit <full-sha>` | Takes over an existing Git or manual copy you own. With `--apply`, it records where the copy came from, after confirming the files match. It doesn't overwrite them. |
 | `rollback` | Previews the previous saved copy. With `--apply`, restores it and keeps the replaced version recoverable. |
