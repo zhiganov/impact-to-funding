@@ -73,6 +73,8 @@ This rewrites the index and tracked files. `git rev-parse HEAD` stays the same. 
 
 **Network use:** release data comes from anonymous public GitHub reads, with a five-second limit per request and 15 seconds overall. The manager reads every page and resolves tags fully. It sends no prompts, project content or local paths. Rate limits, offline use or incomplete responses stop the selection. They never trigger a sign-in prompt or mean there are no updates. Fetching the source also needs public Git access.
 
+**Behind a proxy:** the manager uses Node's built-in `fetch`, which ignores `HTTPS_PROXY` by default. Release reads then fail, often as "Public release metadata unavailable (HTTP 403)". On Node 22.21 or later, run the CLI with `NODE_USE_ENV_PROXY=1`, for example `NODE_USE_ENV_PROXY=1 npx --yes --package=github:zhiganov/impact-to-funding#main itf check ...`. Git already follows your proxy settings.
+
 ## Compatibility and source choice
 
 The local install and update tests check file placement only. They don't show that a host loads the skill, that a model follows it or that it's useful. The earlier limited host checks keep their own exact SHAs and limits, including the Claude Code check at `4566892`. The manager adds no sign-in, model trial, host notice, hook, telemetry or global setting change.
