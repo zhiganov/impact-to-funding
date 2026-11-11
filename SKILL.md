@@ -56,7 +56,7 @@ Infer an approach from context rather than offering a menu, and read only the re
 
 - For any assessment or funding claim, read [claim review](references/claims.md).
 - When concrete harm, disputed legality, accusations or risky fundraising matter to the request, read [responsible assistance](docs/responsible-assistance.md). It isn't mandatory screening; fair, evidence-based criticism is still possible.
-- When exploring direction and real needs, developing a contribution with others, or connecting shared projects in a portfolio, read [contribution relationships](references/contributions.md). Project-only work needs no personal theories from contributors.
+- When exploring direction and real needs, developing a contribution with others, looking for a mentor, or connecting shared projects in a portfolio, read [contribution relationships](references/contributions.md). Project-only work needs no personal theories from contributors.
 - For a theory of change, understanding what difference work makes, examining impact claims, planning proportionate evidence or taking stock with a short check-in, read [understanding and learning](references/learning.md).
 - Only when useful or requested, read [optional framework lenses](references/frameworks.md) for choosing a lens, Planetary Boundaries and Doughnut notes, and scale limits. No framework or framework score is required.
 - When concrete examples or patterns would help, or the person asks, read the [reference-library index](references/library/README.md), including how to use it, then only the relevant case, pattern or lens notes. Don't load the whole collection or require an example before helping.
