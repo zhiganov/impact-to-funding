@@ -1,7 +1,8 @@
 # GitHub sponsorship: an optional ItF publishing path
 
-**Date:** 2026-11-11. **Status:** the optional playbook is implemented as source
-guidance. The local adapter remains a proposal. Host behaviour has not been checked.
+**Date:** 2026-11-11. **Status:** the optional playbook is source guidance. The
+separate funding-readiness tool implements local comparison and read-only GitHub
+source inspection. Installed-host behaviour has not been checked.
 
 ## Recommendation
 
@@ -11,8 +12,9 @@ existing sponsorship features to present funding options and handle its payments
 Use the optional [sponsorship playbook](../playbooks/github-sponsorship.md) inside
 the existing ItF package to draft a profile, funding links and updates without a
 new service.
-Scope a local link adapter separately if repeated mapping work warrants it.
-Neither needs to become an entry requirement for ordinary ItF use.
+Use the optional [funding-readiness review](github-funding-readiness.md) when the
+maintainer wants source-qualified configuration findings and a private proposed
+diff. Neither tool nor playbook is an entry requirement for ordinary ItF use.
 
 This serves two different jobs:
 
@@ -128,12 +130,15 @@ payout setup. Comparisons should expose conflicts rather than synchronise them
 silently. A funding link supplies no amount, currency, active-plan status, existing
 support total or known net funding gap.
 
-## Separately scoped local adapter
+## Optional funding-readiness review
 
-The smallest proposed adapter is **inspect → draft → show a diff** over supplied
-files and explicit mappings. Manual playbook use remains useful without it.
+The implemented tool follows **inspect → draft → show a diff** over supplied
+files or deliberately selected remote configuration, with explicit mappings.
+Manual playbook use remains useful without it. Its
+[interface and limits](../tools/github-sponsorship/README.md) distinguish local
+snapshots, remote default-branch commits, account defaults and API-reported links.
 
-An initial scope could handle `github`, `open_collective` and `custom`. It should:
+It proposes edits for `github`, `open_collective` and `custom`:
 
 - Treat YAML as data, with bounded input and rejection of ambiguous or unsafe
   structures. Source content cannot instruct the tool to change destinations.
@@ -145,14 +150,16 @@ An initial scope could handle `github`, `open_collective` and `custom`. It shoul
   Never drop links to fit the limits or activate an inactive plan to make an export.
 - Keep the selected recipient and exact source basis visible in its preview.
   List what the funding-link view omits from the support case.
-- Write a candidate to a fresh output location only when requested. Leave the
-  source file intact. It should make no network calls, commits or account changes.
+- Write the private packet to a fresh requested location and leave source files
+  intact. Local mode makes no network calls. Remote mode uses existing GitHub CLI
+  access for bounded read-only requests; it makes no commits or account changes.
 
-This is a proposed scope, not an implemented command or a new mapping standard.
-An implementation would need its own selection and the project's skill/code PR
-workflow. Its local acceptance cases would include inherited-default uncertainty,
-multiple recipients, unrelated existing entries, conflicting mappings, missing
-destinations, link limits, inactive plans and explicit projection losses.
+This is an optional implementation, not a new mapping standard. Local cases cover
+inherited-default uncertainty, multiple recipients, unrelated existing entries,
+conflicting mappings, missing destinations, link limits, inactive plans and explicit
+projection losses. Source tests and real GitHub observations are separate evidence.
+Broader Sponsors account/tier views, transaction imports and webhooks remain later
+scopes in [#93](https://github.com/zhiganov/impact-to-funding/issues/93).
 
 ## When API or reporting integration becomes useful
 
@@ -192,7 +199,9 @@ The source includes the playbook route, [usage prompt](usage.md#prepare-github-s
 and [fictional authoring cases](../examples/github-sponsorship.md). Package tests
 check source structure and links. They do not test model behaviour.
 
-The YAML adapter and API integration remain design proposals. The existing
+The optional funding-readiness tool adds the YAML comparison and bounded read-only
+repository-funding inspection. Sponsors account configuration and payout handling,
+transaction imports and webhook integration remain separate. The existing
 `funding.json`, profile schema, account settings, installed skill copies and payment
 destinations are unchanged.
 
