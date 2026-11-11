@@ -16,6 +16,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Responsible assistance](responsible-assistance.md): the skill's conduct rules. It doesn't blacklist sectors, screen people or rank causes. See the [nine fictional cases](../examples/responsible-assistance.md).
 - [Task playbooks](task-playbooks-design.md): maps common jobs to guidance. The first playbook is the [support brief](../playbooks/support-brief.md).
 - [Individual theories and shared projects](individual-project-contributions.md): how a person's own theory of change connects to shared projects through bounded contributions. The [contribution reference](../references/contributions.md) is the working guidance. Tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22) and [#16](https://github.com/zhiganov/impact-to-funding/issues/16).
+- [Mentor pool scoping](mentor-pool-scoping.md): whether ItF should keep a pool of willing mentors. It recommends referring people to communities they know first, with no pool yet.
 - [User feedback guide](user-feedback.md) and [initial-user learning plan](user-learning-plan.md): earlier plans for manual-use feedback. No feedback is being collected through them now.
 
 ## Reference library
