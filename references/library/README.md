@@ -61,8 +61,26 @@ introduce questions rather than certify a case or pattern.
 4. Use optional [framework questions](lenses.md) to expose needs, distribution,
    ecological pressures or omissions. Frameworks do not supply missing empirical
    evidence, local consent or a combined alignment score.
-5. Examine differences in authority, incentives, capacity, relationships and scale
-   before proposing a local adaptation. Keep expectations and open questions clear.
+5. Examine differences in authority, incentives, capacity, relationships, scale and
+   affected people's perspectives before proposing a local adaptation. Keep expectations and open questions clear.
+
+When you use the collection as the agent:
+
+- Choose notes by the relevant need, mechanism, relationships and constraints, not
+  domain labels alone. Start small and read more only when the comparison needs it.
+  Read the notes yourself through the host's tools; don't ask the person to open them.
+- Read a case before relying on its findings, and the pattern note before proposing
+  that pattern. Keep mixed and null results, evaluator relationships and inspection
+  limits.
+- Cite the note's identifier, revision and source link where useful. If you only read
+  the library note, attribute its account; don't claim you read the underlying paper.
+- A cross-domain analogy is a proposal, not evidence the outcome will recur. Shared
+  lens labels don't corroborate cases.
+- Check the coverage below and each note's limits. If no suitable case exists, say
+  so. Don't invent an example, fill in a missing report from its summary, or treat an
+  unavailable source as nonexistent. Continue with supplied material or a clearly
+  labelled hypothesis.
+- A library link doesn't authorise new collection or live retrieval.
 
 There is no requirement to create a personal theory, complete a template, make an
 immediate decision or adopt a framework. Existing local knowledge may be more
