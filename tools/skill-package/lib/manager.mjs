@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { githubCatalogue } from './github.mjs';
 import { prepareFromGitHub } from './git.mjs';
 import { HELPER_VERSION, inspectInstallation } from './installation.mjs';
-import { selectRelease } from './releases.mjs';
+import { selectRelease, validateRelease } from './releases.mjs';
 import { compareVersions, parseVersion } from './version.mjs';
 import { assertPlainPath, discoverCopies, targetPaths } from './targets.mjs';
 import {
@@ -127,6 +127,18 @@ function recoverPending(paths, rename = renameSync) {
 }
 
 export function createManager({ catalogue = githubCatalogue, prepare = prepareFromGitHub, rename = renameSync } = {}) {
+  // Best effort: name the published release an explicit commit belongs to. Offline or
+  // ambiguous results leave the commit without a release, as before.
+  async function releaseForCommit(commit) {
+    try {
+      const data = await catalogue();
+      const matches = data.records.map(validateRelease).filter((record) => !record.draft && record.sourceCommit === commit);
+      return matches.length === 1 ? matches[0] : null;
+    } catch {
+      return null;
+    }
+  }
+
   async function plan(command, options) {
     const paths = targetPaths(options);
     assertPlainPath(paths.state);
@@ -163,6 +175,8 @@ export function createManager({ catalogue = githubCatalogue, prepare = prepareFr
       if (!/^[a-f0-9]{40}$/.test(options.commit)) throw new TypeError('Commit must be a full lowercase SHA');
       pin = options.commit;
       source = { sourceCommit: pin, version: null, tag: null, channel };
+      const release = await releaseForCommit(pin);
+      if (release) source = { ...source, version: release.version, tag: release.tag, versionSource: 'release' };
     } else {
       if (options.release) {
         if (!options.release.startsWith('v')) throw new TypeError('Choose an exact version tag');
@@ -228,7 +242,8 @@ export function createManager({ catalogue = githubCatalogue, prepare = prepareFr
       }
       if (receipt) checkCurrent(paths, receipt);
       if (result.status === 'policy-change') {
-        writeJson(receiptFile(paths), { ...receipt, policy: result.policy });
+        const release = source.tag && source.version ? { version: source.version, versionSource: 'release' } : {};
+        writeJson(receiptFile(paths), { ...receipt, ...release, policy: result.policy });
         return { ...publicResult, applied: true, status: 'policy-updated' };
       }
       stateDirectory(paths, `staging/${id}`, true);
