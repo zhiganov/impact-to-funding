@@ -106,7 +106,7 @@ After you invoke the skill, try one of these. They're starting points, not comma
 
 > Help me prepare a private case for sustaining this work. Separate observations from proposals, use only known costs and commitments, and keep uncertainty visible. Do not invent impact, submit an application or contact a funder.
 
-For this task, the current source includes a [support-brief playbook](playbooks/support-brief.md). The host-tested pins above don't include it.
+For this task, the current source includes a [support-brief playbook](playbooks/support-brief.md). For GitHub-specific drafts, use the optional [sponsorship playbook](playbooks/github-sponsorship.md). The host-tested pins above don't include these playbooks.
 
 A few sentences are enough to start. A useful result might be a possible contribution, a clearer question, a smaller commitment or a decision to stop. It doesn't have to be a report. The [usage guide](docs/usage.md) has more prompts and examples with incomplete evidence.
 
