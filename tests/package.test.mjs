@@ -37,7 +37,7 @@ test('reciprocal content and MIT software have separate explicit licence scopes'
   assert.match(scope, /does not revoke MIT permissions/);
   assert.match(readFileSync(path.join(root, 'LICENSE-CODE'), 'utf8'), /^MIT License\n/);
   assert.match(readFileSync(path.join(root, 'LICENSE-CONTENT.md'), 'utf8'), /creativecommons\.org\/licenses\/by-sa\/4\.0\/legalcode\.en/);
-  for (const packagePath of ['mcp/package.json', 'tools/support-profile/package.json', 'tools/skill-package/package.json', 'tools/readability/package.json', 'tools/impact-badge/package.json', 'tools/portable-records/package.json']) {
+  for (const packagePath of ['mcp/package.json', 'tools/support-profile/package.json', 'tools/skill-package/package.json', 'tools/readability/package.json', 'tools/impact-badge/package.json', 'tools/portable-records/package.json', 'tools/github-sponsorship/package.json']) {
     assert.equal(JSON.parse(readFileSync(path.join(root, packagePath), 'utf8')).license, 'MIT');
   }
   const manifest = JSON.parse(readFileSync(path.join(root, 'funding.json'), 'utf8'));

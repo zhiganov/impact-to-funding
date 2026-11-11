@@ -73,6 +73,12 @@ explicit separate mapping; don't invent a profile field or infer a payment route
 from a subject's name. The [integration design](../docs/github-sponsorship-design.md#destination-mapping)
 explains the mapping and the information lost in a funding-link view.
 
+For a source-qualified repository review, the optional
+[funding-readiness tool](../docs/github-funding-readiness.md) can inspect supplied
+files or deliberately selected remote configuration and prepare a private diff.
+Use it only when that inspection is requested. Its packet does not authorise
+publication or verify the recipient.
+
 Keep budgets, plan status, periods, evidence and nonfinancial needs in their
 authoritative records. A funding link does not activate an inactive plan. Several
 repo links to one account do not create project allocations or multiply its ask.
