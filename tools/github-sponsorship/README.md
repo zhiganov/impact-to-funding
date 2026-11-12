@@ -1,8 +1,9 @@
-# GitHub funding-readiness review
+# GitHub sponsorship review tools
 
 An optional local tool for inspecting one repository's funding links and preparing
-a private review packet. It preserves the source files. Ordinary ItF use needs
-neither this tool nor a GitHub account.
+a private review packet. The separate `account` command reviews a Sponsors profile
+and visible tiers. Both preserve sources. Ordinary ItF use needs neither tool nor
+a GitHub account.
 
 ## Setup
 
@@ -134,6 +135,35 @@ page URLs are not fetched. A URL match is a comparison, not recipient verificati
 Financial plans remain authoritative in their supplied source; links do not
 activate them. Private sponsorship imports and webhooks remain separate work.
 
+## Sponsors account overview
+
+Use `account` for one deliberately selected account's profile and visible tiers:
+
+```sh
+node ./impact-to-funding/tools/github-sponsorship/cli.mjs account --account example-maintainer --remote --output ./work/account-review
+node ./impact-to-funding/tools/github-sponsorship/cli.mjs account --account example-maintainer --local ./work/earlier-review/source-observations.json --output ./work/offline-account-review
+```
+
+The account is fictional. Select and authorise the actual target before remote
+inspection. Public mode is the default. `--visibility viewer` explicitly requests
+the nonpublic profile and unpublished tiers visible to existing credentials. It
+does not expand their permissions. `--draft FILE` compares an account-bound JSON
+proposal without applying it.
+
+The [account overview guide](../../docs/github-sponsors-account-overview.md) explains
+the proposal format, tier IDs, visibility, pagination and output. A local snapshot
+is supplied evidence rather than a current account read. Prices remain integer
+USD cents with monthly or one-time cadence; tier offers are not income. The
+account command writes the same private evidence/report files, with no funding-file
+candidate. Input files are read up to 1 MiB; each parsed snapshot or draft must
+also fit the core's conservative 512 KiB, 12-level and 12,000-node limits.
+
+The account collector has its own fixed GraphQL query allowlist. It permits at
+most six requests, five tier pages and 250 tiers, with 15-second request and
+90-second total limits, 1 MiB responses and a normalized snapshot below 480 KiB.
+It makes no retries. Partial sources stay partial. Viewer-visible tiers are not a
+complete admin inventory. It excludes sponsor identities and financial activity.
+
 Source data cannot authorise a change or publication. Review the exact candidate,
 intended recipient and destination before any separately authorised use. Permission
 to process information with an agent/provider is separate from public disclosure.
@@ -146,5 +176,7 @@ npm test
 
 Tests use fictional local inputs, injected API responses and a fake `gh` executable.
 They are distinct from a real GitHub observation or installed-host/model check.
+See the [account-overview check record](../../docs/github-sponsors-account-checks.md)
+for the implemented scope and measured results.
 Original code/tests are MIT; written guidance is CC BY-SA 4.0. See the root
 [licence scope](../../LICENSE). GitHub API/platform rules remain GitHub's own.

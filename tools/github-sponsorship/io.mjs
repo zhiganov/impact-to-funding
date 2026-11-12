@@ -1,11 +1,23 @@
 import { constants } from 'node:fs';
-import { open } from 'node:fs/promises';
+import { open, realpath } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseDocument, isMap, isSeq } from 'yaml';
 
 export class InputError extends Error {
   constructor(code, message) { super(message); this.code = code; }
+}
+
+export async function privateOutputDirectory(directory) {
+  const root = await realpath(fileURLToPath(new URL('../../', import.meta.url)));
+  const parent = await realpath(path.dirname(directory));
+  const resolved = path.join(parent, path.basename(directory));
+  const relative = path.relative(root, resolved);
+  if (relative === '' || (!relative.startsWith(`..${path.sep}`) && relative !== '..' && !path.isAbsolute(relative))) {
+    throw new InputError('private_output_required', 'The private review directory must be outside this skill checkout.');
+  }
+  return resolved;
 }
 
 export async function readInput(file, maximum = 65536) {

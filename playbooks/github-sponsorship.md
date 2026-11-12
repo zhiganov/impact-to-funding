@@ -79,6 +79,13 @@ files or deliberately selected remote configuration and prepare a private diff.
 Use it only when that inspection is requested. Its packet does not authorise
 publication or verify the recipient.
 
+For a selected account's existing profile and tier context, the optional
+[account overview](../docs/github-sponsors-account-overview.md) can review public
+or explicitly permitted viewer-visible information and compare supplied drafts.
+It leaves account settings unchanged. Keep source visibility and incomplete tier
+coverage explicit; a public view cannot establish the absence of drafts or retired
+tiers.
+
 Keep budgets, plan status, periods, evidence and nonfinancial needs in their
 authoritative records. A funding link does not activate an inactive plan. Several
 repo links to one account do not create project allocations or multiply its ask.
