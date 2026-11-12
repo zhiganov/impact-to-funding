@@ -130,10 +130,11 @@ provider responses at 1 MiB. Optional support/financial inputs use their existin
 ## Limits
 
 The tool writes only the requested private packet. It makes no source edits,
-commits, account changes, sponsor/transaction reads or payments. Report and support
+commits, account changes, remote sponsor/transaction reads or payments. Report and support
 page URLs are not fetched. A URL match is a comparison, not recipient verification.
 Financial plans remain authoritative in their supplied source; links do not
-activate them. Private sponsorship imports and webhooks remain separate work.
+activate them. The offline transaction command below handles supplied exports;
+webhooks remain separate work.
 
 ## Sponsors account overview
 
@@ -167,6 +168,22 @@ complete admin inventory. It excludes sponsor identities and financial activity.
 Source data cannot authorise a change or publication. Review the exact candidate,
 intended recipient and destination before any separately authorised use. Permission
 to process information with an agent/provider is separate from public disclosure.
+
+## Offline export reporting
+
+The `transactions` command reviews deliberately supplied native-shaped CSV exports
+for one account and UTC month. It saves a private period review with exact source
+digests, overlap checks and unknown financial facts. It makes no network calls.
+
+```sh
+node ./impact-to-funding/tools/github-sponsorship/cli.mjs transactions --account example-maintainer --month 2026-11 --input ./work/exports.json --output ./work/transaction-review
+```
+
+The account is fictional. See the [export-reporting guide](../../docs/github-sponsors-export-reporting.md)
+for the source manifest, supported observed headers, private output and limits.
+The first adapter supports CSV, settled-record dollar amounts and explicitly
+supplied USD context. Unsupported records stay visible as gaps. Account-wide
+income, payouts and project allocation are not inferred from a partial summary.
 
 ## Checks and rights
 

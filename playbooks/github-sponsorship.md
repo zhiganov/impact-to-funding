@@ -86,6 +86,12 @@ It leaves account settings unchanged. Keep source visibility and incomplete tier
 coverage explicit; a public view cannot establish the absence of drafts or retired
 tiers.
 
+For a period update from deliberately supplied exports, the optional
+[offline transaction review](../docs/github-sponsors-export-reporting.md) can inspect
+supported CSV records and unresolved overlap. Keep its source-qualified financial
+summary separate from evidence about work and outcomes. Its private packet is not
+a public sponsor list or payout statement.
+
 Keep budgets, plan status, periods, evidence and nonfinancial needs in their
 authoritative records. A funding link does not activate an inactive plan. Several
 repo links to one account do not create project allocations or multiply its ask.

@@ -29,7 +29,8 @@ The playbook still drafts introductions, tiers and updates independently. GitHub
 owns account eligibility, tier configuration and payouts. This tool handles the
 read-only repository-funding review. The optional
 [account overview](github-sponsors-account-overview.md) handles profile and tier
-context separately. Transaction imports and recurring webhooks remain later scopes.
+context separately. [Offline export reporting](github-sponsors-export-reporting.md)
+reviews supplied transaction records; recurring webhooks remain a later scope.
 
 The [integration design](github-sponsorship-design.md) preserves the boundaries
 between `itf-manifest.json`, `funding.json`, `FUNDING.yml`, a public support page

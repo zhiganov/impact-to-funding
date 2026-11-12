@@ -6,11 +6,13 @@ import { collectGithub } from './github.mjs';
 import { inspectFunding, reviewSources, FundingError } from './funding.mjs';
 import { InputError, privateOutputDirectory, readInput, strictJson, writePrivate } from './io.mjs';
 import { accountMain } from './account-cli.mjs';
+import { transactionsMain } from './transactions-cli.mjs';
 
 const HELP = `GitHub funding-readiness review (Node.js 22+).
   node tools/github-sponsorship/cli.mjs review --repository OWNER/REPO --remote --output NEWDIR [OPTIONS]
   node tools/github-sponsorship/cli.mjs review --repository OWNER/REPO --local FILE --output NEWDIR [OPTIONS]
   node tools/github-sponsorship/cli.mjs account --account LOGIN (--remote|--local SNAPSHOT.json) --output NEWDIR [--visibility public|viewer] [--draft FILE]
+  node tools/github-sponsorship/cli.mjs transactions --account LOGIN --month YYYY-MM --input MANIFEST.json --output NEWDIR
 
 OPTIONS: --defaults FILE (local mode only), --mapping FILE, --support FILE,
   --funding FILE, --support-source-url URL, --funding-source-url URL.
@@ -128,6 +130,7 @@ function markdown(report) {
 }
 
 export async function main(args, output = process.stdout, { collect = collectGithub, collectAccount } = {}) {
+  if (args[0] === 'transactions') return transactionsMain(args, output);
   if (args[0] === 'account') return accountMain(args, output, { collect: collectAccount });
   const opts = options(args);
   const inputs = {};
