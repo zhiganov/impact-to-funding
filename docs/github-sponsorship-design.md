@@ -1,8 +1,9 @@
 # GitHub sponsorship: an optional ItF publishing path
 
-**Date:** 2026-11-11. **Status:** the optional playbook is source guidance. The
+**Date:** 2026-11-12. **Status:** the optional playbook is source guidance. The
 separate funding-readiness tool implements local comparison and read-only GitHub
-source inspection. Installed-host behaviour has not been checked.
+source inspection. Its account command adds profile/tier context and draft
+comparison. Installed-host behaviour has not been checked.
 
 ## Recommendation
 
@@ -158,8 +159,11 @@ This is an optional implementation, not a new mapping standard. Local cases cove
 inherited-default uncertainty, multiple recipients, unrelated existing entries,
 conflicting mappings, missing destinations, link limits, inactive plans and explicit
 projection losses. Source tests and real GitHub observations are separate evidence.
-Broader Sponsors account/tier views, transaction imports and webhooks remain later
-scopes in [#93](https://github.com/zhiganov/impact-to-funding/issues/93).
+The separate [account overview](github-sponsors-account-overview.md) adds a
+source-qualified profile/tier view with optional draft comparison. Public mode is
+the default; viewer-visible unpublished information requires an explicit scope.
+Incomplete or unavailable information stays limited. Transaction imports and
+webhooks remain later scopes in [#93](https://github.com/zhiganov/impact-to-funding/issues/93).
 
 ## When API or reporting integration becomes useful
 
@@ -200,8 +204,9 @@ and [fictional authoring cases](../examples/github-sponsorship.md). Package test
 check source structure and links. They do not test model behaviour.
 
 The optional funding-readiness tool adds the YAML comparison and bounded read-only
-repository-funding inspection. Sponsors account configuration and payout handling,
-transaction imports and webhook integration remain separate. The existing
+repository-funding inspection. The account command adds a read-only profile/tier
+overview. Account writes, payout handling, transaction imports and webhook
+integration remain separate. The existing
 `funding.json`, profile schema, account settings, installed skill copies and payment
 destinations are unchanged.
 

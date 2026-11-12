@@ -91,6 +91,8 @@ test('GitHub sponsorship source routing is optional and preserves drafting bound
   assert.match(playbook, /A funding link does not activate an inactive plan/);
   assert.match(playbook, /Private sponsorship data stays private/);
   assert.match(playbook, /authoring guidance, not a YAML adapter or payment service/);
+  assert.match(playbook, /\[account overview\]\(\.\.\/docs\/github-sponsors-account-overview\.md\)/);
+  assert.match(readFileSync(path.join(root, 'docs/github-sponsors-account-overview.md'), 'utf8'), /leaves the account unchanged/);
   assert.match(examples, /Entirely fictional/);
   assert.match(examples, /not model\s+responses/);
 });
