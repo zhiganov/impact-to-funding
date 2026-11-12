@@ -93,6 +93,8 @@ test('GitHub sponsorship source routing is optional and preserves drafting bound
   assert.match(playbook, /authoring guidance, not a YAML adapter or payment service/);
   assert.match(playbook, /\[account overview\]\(\.\.\/docs\/github-sponsors-account-overview\.md\)/);
   assert.match(readFileSync(path.join(root, 'docs/github-sponsors-account-overview.md'), 'utf8'), /leaves the account unchanged/);
+  assert.match(playbook, /\[offline transaction review\]\(\.\.\/docs\/github-sponsors-export-reporting\.md\)/);
+  assert.match(readFileSync(path.join(root, 'docs/github-sponsors-export-reporting.md'), 'utf8'), /supplied context/);
   assert.match(examples, /Entirely fictional/);
   assert.match(examples, /not model\s+responses/);
 });

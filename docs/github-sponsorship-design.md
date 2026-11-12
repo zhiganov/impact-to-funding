@@ -3,7 +3,8 @@
 **Date:** 2026-11-12. **Status:** the optional playbook is source guidance. The
 separate funding-readiness tool implements local comparison and read-only GitHub
 source inspection. Its account command adds profile/tier context and draft
-comparison. Installed-host behaviour has not been checked.
+comparison. Offline export reporting reviews supported supplied CSV transactions.
+Installed-host behaviour has not been checked.
 
 ## Recommendation
 
@@ -162,15 +163,19 @@ projection losses. Source tests and real GitHub observations are separate eviden
 The separate [account overview](github-sponsors-account-overview.md) adds a
 source-qualified profile/tier view with optional draft comparison. Public mode is
 the default; viewer-visible unpublished information requires an explicit scope.
-Incomplete or unavailable information stays limited. Transaction imports and
-webhooks remain later scopes in [#93](https://github.com/zhiganov/impact-to-funding/issues/93).
+Incomplete or unavailable information stays limited. The
+[offline export review](github-sponsors-export-reporting.md) adds a bounded CSV
+reporting slice. Broader reporting and webhooks remain in
+[#93](https://github.com/zhiganov/impact-to-funding/issues/93).
 
 ## When API or reporting integration becomes useful
 
-GitHub can export sponsorship data as CSV or JSON. An optional import could help
-someone reconcile support and prepare updates using an export they deliberately
-supply.[G4] Before building it, establish the concrete reporting question and the
-minimum data required.
+GitHub can export sponsorship data as CSV or JSON.[G4] The optional
+[offline export review](github-sponsors-export-reporting.md) inspects supported CSV
+records for a selected account and UTC month. It preserves source digests, exact
+amounts, repeated-file and transaction conflicts, private identities and missing
+financial facts. The first adapter uses observed header layouts and fictional
+fixtures; current native-export compatibility remains unverified.
 
 Preserve private sponsorship visibility. Importing data is separate from publishing
 sponsor names. Keep expected recurring amounts, actual transactions, refunds, fees,
@@ -205,8 +210,8 @@ check source structure and links. They do not test model behaviour.
 
 The optional funding-readiness tool adds the YAML comparison and bounded read-only
 repository-funding inspection. The account command adds a read-only profile/tier
-overview. Account writes, payout handling, transaction imports and webhook
-integration remain separate. The existing
+overview. Offline export reporting adds a private review of supplied CSV records.
+Account writes, payout handling and webhook integration remain separate. The existing
 `funding.json`, profile schema, account settings, installed skill copies and payment
 destinations are unchanged.
 
