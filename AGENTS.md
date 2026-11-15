@@ -30,3 +30,4 @@ This applies to the skill, the docs and issues. Accuracy still matters: keep eve
 - Say the issue's goal back in one sentence, and check it against what the owner has said about it. If the framing is unclear, or a comment points somewhere else, ask the owner before drafting.
 - Keep the goal, every acceptance item and its ticked state, and every limit that changes what a reader would do. Move long notes into a comment instead of deleting them.
 - Show the draft to the owner before editing the issue.
+- After editing, compare the new text with the old and confirm only the approved changes were made.
