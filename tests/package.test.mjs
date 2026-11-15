@@ -99,12 +99,52 @@ test('GitHub sponsorship source routing is optional and preserves drafting bound
   assert.match(examples, /not model\s+responses/);
 });
 
+test('theory reconstruction has an optional task route and reuses shared guidance', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  const playbook = readFileSync(path.join(root, 'playbooks/reconstruct-theory-of-change.md'), 'utf8');
+  assert.match(skill, /When asked to reconstruct a theory of change from existing work/);
+  assert.match(skill, /\[reconstruction playbook\]\(playbooks\/reconstruct-theory-of-change\.md\)/);
+  assert.match(skill, /ordinary theory development stays with the learning reference/);
+  assert.match(playbook, /\[learning\]\(\.\.\/references\/learning\.md\)/);
+  assert.match(playbook, /\[claim\]\(\.\.\/references\/claims\.md\)/);
+  assert.match(playbook, /A short conversational account can be enough/);
+  assert.match(playbook, /ways to continue, not commands, stages everyone must complete or new tool APIs/);
+  assert.match(playbook, /Keep one source of claims rather\s+than another ledger/);
+});
+
+test('reconstruction source separates views, causal support, roles and permissions', () => {
+  const playbook = readFileSync(path.join(root, 'playbooks/reconstruct-theory-of-change.md'), 'utf8');
+  for (const view of ['Stated theory', 'Inferred working theory', 'Attributed experience', 'Supported observations and gaps']) {
+    assert.ok(playbook.includes(view), view);
+  }
+  assert.match(playbook, /Keep individual contributions separate from shared results/);
+  assert.match(playbook, /unmeasured counterfactual unknown/);
+  assert.match(playbook, /stop at unsupported connections/);
+  assert.match(playbook, /exact source versions and\s+corrections/);
+  assert.match(playbook, /outside\s+this distributable package/);
+  assert.match(playbook, /Further collection, contact\s+and publication need their own authority/);
+});
+
+test('fictional reconstruction preserves the source correction and missing outcomes', () => {
+  const example = readFileSync(path.join(root, 'examples/theory-reconstruction.md'), 'utf8');
+  assert.match(example, /Entirely fictional/);
+  assert.match(example, /not model responses or a behavioural test result/);
+  for (const source of ['A1:', 'A2:', 'A3:', 'A4:', 'A5:', 'A6:']) assert.ok(example.includes(source), source);
+  assert.match(example, /Version 1 counted five submissions; v2 corrects one to a saved draft/);
+  assert.match(example, /Twelve attendance events are not twelve people/);
+  assert.match(example, /Mentor compensation stays unknown/);
+  assert.match(example, /Possible further benefit — analyst hypothesis/);
+  assert.match(example, /More workshop counts would not resolve it/);
+  assert.match(example, /private real-world working records belong outside/i);
+});
+
 test('package includes workflow, templates, provenance and clearly labelled synthetic examples', () => {
   for (const relative of [
     'README.md', 'LICENSE', 'SOURCES.md', 'references/claims.md', 'references/contributions.md',
     'references/funding-and-review.md', 'references/frameworks.md',
     'assets/assessment.md', 'assets/report.md', 'playbooks/support-brief.md',
     'playbooks/github-sponsorship.md', 'examples/github-sponsorship.md',
+    'playbooks/reconstruct-theory-of-change.md', 'examples/theory-reconstruction.md',
     'examples/builder-case.md', 'examples/builder-assessment.md',
     'examples/portfolio-case.md', 'examples/portfolio-assessment.md',
     'examples/framework-lenses.md',
