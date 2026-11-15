@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Private feedback
+    url: https://github.com/zhiganov/impact-to-funding/blob/main/docs/user-feedback.md
+    about: Issues are public. For feedback you don't want anyone to read, follow the feedback guide instead.

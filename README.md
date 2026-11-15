@@ -31,6 +31,8 @@ Use the CLI agent you already have and are signed in to. Install ItF once, in th
 
 The [installation guide](docs/install.md) has safe install commands, personal installs, discovery checks, updates, removal and troubleshooting. Conversation with ItF needs no signup, Node.js, MCP server or plugin. Your host's model costs and privacy terms still apply.
 
+**Official source:** ItF is published only from [this repository](https://github.com/zhiganov/impact-to-funding) and its [releases](https://github.com/zhiganov/impact-to-funding/releases). A copy elsewhere, a similar name or a copied README doesn't make a download official. Check that install commands point here.
+
 **Updates:** on GitHub, choose **Watch → Custom → Releases**, or check the [releases page](https://github.com/zhiganov/impact-to-funding/releases). A notification tells you a version exists. It doesn't change your installed copy. See [release and update guidance](docs/releases.md).
 
 You can also turn on an [in-skill update notice](docs/update-notices.md) for managed copies. It never updates the copy itself. We haven't confirmed that hosts show the notice.
