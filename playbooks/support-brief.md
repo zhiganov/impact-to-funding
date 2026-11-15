@@ -53,6 +53,8 @@ needs no legal identity.
   lead comes from. Record open, rolling or closed status with the date you checked,
   and list the checks still needed, such as eligibility or minimum amounts. Offer to
   save the list privately with the date in its name; write it only if they agree.
+  If you find no suitable lead, say which sources you checked and when. That
+  describes this search; it doesn't show that no suitable funder exists.
 - **Application rules:** Before drafting for a named funder, read its form and
   guidance for rules that shape the draft. These include the exact questions, word
   and format limits, required attachments, eligibility conditions, deadlines and
@@ -78,6 +80,10 @@ If the person has the Pangram MCP server connected and wants to know whether a
 public draft reads as AI-written, offer to check it with Pangram. That sends the
 text to Pangram, so use only text they may share and never private evidence. A
 score isn't a judgement of quality. See [optional writing tools](../docs/optional-writing-tools.md).
+
+Before you finish, go back to what the person asked for. Say which of their
+questions are answered, which are partly answered and which are still open.
+Don't present the brief as complete while a question it depends on is open.
 
 If useful information is missing, offer a clear provisional draft or a short
 outline. The person can correct it without first completing a questionnaire,

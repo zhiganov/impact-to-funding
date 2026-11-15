@@ -54,7 +54,7 @@ Who benefited or bore costs, whose view is missing, unintended effects, privacy/
 
 ## What changed and what comes next
 
-Changed assumptions/theory; the next useful action or learning question; actual responsibility, resources and review conditions if agreed; explicit unknowns otherwise. A revised funding ask remains prospective.
+Changed assumptions/theory; which questions from the earlier plan are answered, partly answered or still open; the next useful action or learning question; actual responsibility, resources and review conditions if agreed; explicit unknowns otherwise. A revised funding ask remains prospective.
 
 ## Disclosure review
 
