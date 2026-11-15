@@ -74,10 +74,76 @@ already covers much of the intended behaviour.
   These links track upstream main; the local observations above identify the
   inspected installation.
 
-The status and file comparisons are observations. Evidence reuse, revision
-handling, export/import and recovery behaviour were inspected as contracts,
-not tested. A separate bounded synthetic trial could examine those behaviours;
-it is not a delivery requirement for ItF.
+At that stage, only the status and file comparisons were observations. The
+following trial exercises selected parts of the evidence workflow. Revision
+conflict handling and failure recovery remain contract-only observations.
+
+## Bounded synthetic evidence trial
+
+On 2026-11-15, REA `6.9.0` inspected a fictional, two-file JavaScript package:
+129 bytes of package metadata and 292 bytes of source. The source declares one
+Electron IPC handler, `fixture:read-sample`, returning a fictional title and an
+unknown outcome. It has no network, filesystem or subprocess operations.
+
+The package was inspected statically and never executed. No dependencies were
+installed. One producer call succeeded without a correction, using a 30,000 ms
+per-source analysis budget and a 256 MiB analyzer old-space budget. Those bounds
+are not a total-process-memory or end-to-end time guarantee.
+
+### What happened
+
+| Question | Observation |
+|---|---|
+| Does a summary distinguish itself from its source? | Yes. The returned summary had its own Evidence ID and named a different complete parent ID. |
+| Can a later operation reuse that parent? | Yes. A four-row module page and a literal-channel trace used the retained parent. The trace named that same source and matched one seed, with five nodes and four edges. There was one application-analysis producer call. |
+| Does complete graph coverage imply complete understanding? | No. The application graph was marked complete, while semantic coverage stayed unknown with three semantic unknowns. The trace retained both observed and inferred facts, plus an explicit runtime-reachability limitation. |
+| Do records survive export, reset and import? | Yes. Six Evidence records and one explicitly tracked question were exported. Reset cleared the ledger; import restored all six records and the question. Reading the same module page returned its original Evidence ID. The re-export was byte-for-byte identical to the pre-reset bundle. |
+| Does an unresolved runtime question become resolved during reuse? | No. The question about whether the handler had processed a real message stayed open at revision 1, with no resolution and a requirement for observed controlled-replay evidence. |
+| Was the investigation cleaned up? | Yes. A final bundle was saved, then the investigation was cleared. Final status reported no open target, retained records, question revisions, retained bytes or pending cleanup. |
+
+The module page contained four graph nodes for the same source path. These were
+different graph identities, not four independent sources. The three embedded
+semantic unknowns also remained distinct from the one question explicitly added
+to the question registry. That question had null target scope because this
+target-free analysis opened no binary session; linking supporting Evidence did
+not select its scope.
+
+### Evidence anchors
+
+The complete bundles remain private. These IDs identify the retained records in
+those bundles; they are not public download or access links.
+
+- Source: `ev_e4750c0201b6f47add05a2fce050925325ba4a97747e38507390525e6ffb7ddf`.
+- Initial summary: `ev_9873d22217cbf20f89ecf56b9fb2b52195b18442d28fc14a83905a9e72b3c929`.
+- Module page before and after import: `ev_d3f62e073257cc86e1d4c0bff0e9abb7f0b1a216039de8df4925de2cca37fab7`.
+- Trace: `ev_24cb5a32c4fb799e907de67201420282f77db7cb799dcf9a6544d573793b9e87`.
+- Open question: `unk_0880039794a7ec4f8bd25bfa608ea9feaef4365238d04b16d893ff984375b243`.
+- Before-reset, checkpoint, round-trip and final bundles: 126,994 bytes each,
+  SHA-256 `f3e56e03023041171626faf7a84f25c1d1c37216b5ab48b23a7aa53c517b98b0`.
+
+### What this changes for ItF
+
+These mechanisms now have a small observed example behind the contract review:
+exact source/view identity, reuse without another producer call, explicit
+unresolved questions, and lossless export/import within the tested scope.
+
+For [#110](https://github.com/zhiganov/impact-to-funding/issues/110), compare the
+existing worksheet and portable records with these behaviours. Preserve the
+difference between reading all supplied material, understanding its meaning and
+establishing an outcome. Source and question scope should be deliberate.
+Existing version and review bindings already cover much of this.
+
+The result supports that focused comparison, not a new evidence service or a
+mandatory ledger. No further REA fixture is needed for the agreed trial.
+
+### Trial limits
+
+This was one 421-byte synthetic package. Export/reset/import used the same
+running REA server; it did not test restart or crash recovery. The trial did not
+exercise malformed imports, stale revisions, timeout/cancellation handling,
+native engines, application execution or model behaviour. A successful
+round trip preserves recorded content and uncertainty; it does not validate the
+real-world truth of that content.
 
 ## Not worth copying
 
@@ -88,6 +154,7 @@ it is not a delivery requirement for ItF.
 ## Limits
 
 The earlier review is a desk reading at one source commit. The second adds
-installed-file comparisons, connected contracts and one status response. Neither
-checks REA's setup, plugins or target-analysis behaviour, or establishes benefit
-to users. The tables distinguish existing delivery from ideas still being assessed.
+installed-file comparisons, connected contracts and a status response. The third
+adds the bounded static-analysis and evidence round trip described above.
+Setup, plugins and user benefit remain untested. The tables distinguish existing
+delivery from ideas still being assessed.
