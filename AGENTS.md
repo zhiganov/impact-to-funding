@@ -23,3 +23,10 @@ This applies to the skill, the docs and issues. Accuracy still matters: keep eve
 
 - Push docs-only changes straight to `main`. Don't open a pull request for them.
 - Open a pull request for any change that touches code, tests, the skill (`SKILL.md`, `playbooks/`, `references/`, `assets/`) or package files.
+
+## Rewriting issues
+
+- Before rewriting an issue, read its whole body and every comment, including the newest. Also read the issues it links to when they could change its goal.
+- Say the issue's goal back in one sentence, and check it against what the owner has said about it. If the framing is unclear, or a comment points somewhere else, ask the owner before drafting.
+- Keep the goal, every acceptance item and its ticked state, and every limit that changes what a reader would do. Move long notes into a comment instead of deleting them.
+- Show the draft to the owner before editing the issue.
