@@ -16,7 +16,7 @@ For exploratory work, a clearer sense of fit, a possible contribution or a usefu
 
 ## Examine and communicate claims
 
-When examining or communicating impact claims, apply the claim reference. Make statements, sources, dates, scope and limits traceable. Keep contrary evidence, failures, unreviewed material, inaccessible sources and gaps. A retrieval date isn't an observation date or proof the source is current. Don't require an evidence register just to discuss interests or possible work.
+When examining or communicating impact claims, apply the claim reference. Make statements, sources, dates, scope and limits traceable. Keep contrary evidence, failures, unreviewed material, inaccessible sources and gaps. A retrieval date isn't an observation date or proof the source is current. If you looked for evidence and found none, say where you looked and when; that doesn't show the evidence doesn't exist. Don't require an evidence register just to discuss interests or possible work.
 
 ## Learn in proportion
 
