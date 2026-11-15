@@ -9,6 +9,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Version and provenance](skill-version-provenance.md): how released versions, channels and pins are recorded. The [local inspector](../tools/skill-package/README.md) reads them.
 - [Managed updates](managed-skill-updates.md): a command-line tool to install, check, update, adopt, roll back and recover copies of the skill.
 - [Update notices](update-notices.md): optional notices inside the skill. Each copy needs its own consent.
+- [Lessons from REA](lessons-from-rea.md): what ItF could learn from another skill-and-MCP project about setup, plugins, evidence reporting and maintenance. Nothing adopted yet.
 
 ## Who ItF is for and how it behaves
 
