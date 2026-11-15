@@ -62,6 +62,23 @@ These prompts use OpenCode's `@impact-to-funding`. In Claude Code use `/impact-t
 
 > @impact-to-funding Assess the following claim against the supplied evidence. Distinguish what the sources actually measure, what changed, my contribution and what remains unsupported. Do not browse, contact anyone or treat linked-but-unread evidence as inspected. Suggest honest wording and the smallest useful next decision.
 
+### Reconstruct a theory from existing work
+
+Use the optional [reconstruction playbook](../playbooks/reconstruct-theory-of-change.md)
+when you want to infer an implicit pathway or compare intentions with practice.
+Ordinary theory development can stay with the learning guidance.
+
+> @impact-to-funding Reconstruct how this project's work could lead to change
+> from the material below. Separate stated intentions, inferred pathways,
+> people's attributed experiences and supported observations. Trace the most
+> important missing connection. Use only what I supply and keep the result
+> private; do not browse, contact anyone or publish.
+
+The [fictional Maple Desk example](../examples/theory-reconstruction.md)
+separates immediate assisted completion from later independence. This is current
+source guidance; the older host-tested pins omit it. Host/model routing to the
+playbook remains unverified.
+
 ### Prepare a support or funding brief
 
 The [support-brief playbook](../playbooks/support-brief.md) helps with this task. Ask in ordinary words. `support-brief` in the prompt below is optional text, not a separate command.
