@@ -2,7 +2,7 @@
 
 [REA](https://github.com/morluto/rea) ("Reverse Engineer Anything") is an MCP server and agent skill for inspecting apps and binaries. Its job is very different from ItF's, but it solves several of the same problems: packaging a skill with a server, getting it into many hosts, and keeping conclusions tied to evidence. This note records what ItF could learn from it.
 
-Read on 2026-11-15 at commit `04cb416`: the README, the main skill (`.agents/skills/reverse-engineer-anything/SKILL.md`, about 43,600 characters), the plugin manifests and the release-notes maintainer skill. REA wasn't installed or run. REA is MIT-licensed; any ItF text would be our own.
+The earlier repository review, on 2026-11-15 at commit `04cb416`, read the README, the main skill (`.agents/skills/reverse-engineer-anything/SKILL.md`, about 43,600 characters), the plugin manifests and the release-notes maintainer skill. That review did not install or run REA. A later installed-skill and connected-contract check is recorded below. REA is MIT-licensed; any ItF text would be our own.
 
 ## Worth learning from
 
@@ -18,6 +18,67 @@ Read on 2026-11-15 at commit `04cb416`: the README, the main skill (`.agents/ski
 | 8 | **Maintainer skills in the repo** (`.agents/skills/`): release notes, CI audits and tool design. The release-notes skill works from pinned Git history, thanks contributors only by verified identity, never guesses handles, and doesn't authorise tagging or publishing. | A maintainer skill for release notes, based on how [v0.5.0's notes](releases/v0.5.0.md) were built, and another for rewriting issues under the rules in [`AGENTS.md`](../AGENTS.md). Release notes: tracked in [#107](https://github.com/zhiganov/impact-to-funding/issues/107). Issue rewrites: [#108](https://github.com/zhiganov/impact-to-funding/issues/108) was closed, because `AGENTS.md` already covers it; its missing step was added there instead. |
 | 9 | **A notice about official sources:** a similar repo name or copied README doesn't make a download official. | A short note in the README, once ItF is listed in marketplaces. Done: the README's "Official source" note. |
 
+## Installed skill and connected contracts
+
+A second check on 2026-11-15 read the installed skill and its evidence,
+JavaScript and recovery guides, inspected focused connected tool schemas, and
+called `binary_session({})`. It opened no target and ran no analysis.
+
+### What was observed
+
+| Check | Result and scope |
+|---|---|
+| Connected server identity | The status response reported `rea-agents` and server version `6.9.0`, expected skill version `62`, and a catalogue of 255 MCP tools. |
+| Installed skill | Its metadata declared version `62` and 255 tools. All nine installed skill/reference files had the same SHA-256 hashes as the copies bundled with the local server package. |
+| Exact skill bytes | `SKILL.md` SHA-256: `9312fa145b251ea428809634f039fb4ac15f18d59a32d6004a638b2de7d22016`. |
+| Current state | No open target, retained Evidence, tracked question history or pending cleanup was reported. |
+| Availability | The status advertised target-free operations, including JavaScript analysis and evidence handling. Native decompiler candidates were unavailable in this installation. Availability remains operation- and host-specific. |
+
+The server reported no build commit. Matching installed and bundled files
+establishes byte consistency, not an authenticated source revision. The status
+response left its own alignment assessment unknown because no expected identity
+was supplied. The local comparisons above are separate observations.
+
+Reading an installed skill is not inherently stronger than reading the same
+text on GitHub. The extra evidence here is the match to the installed package,
+the connected contracts and the successful status call. No advertised analysis
+operation has been exercised by this check.
+
+### More precise lessons for ItF
+
+| Connected contract or skill instruction | Implication for ItF and existing work |
+|---|---|
+| **A view and its source have different identities.** `inspect_analysis_view` gives a summary or page its own Evidence ID; `normalized_result.parent_evidence_id` identifies its complete retained source. Referencing it does not rerun the producer. | A report excerpt or funder-facing summary should remain linked to the exact evidence and claim versions it derives from. A summary must not silently replace its source or inherit a broader review. Assess this in [#110](https://github.com/zhiganov/impact-to-funding/issues/110), reusing the [evidence worksheet](../assets/evidence-crosswalk.md) and [portable records](../tools/portable-records/README.md). |
+| **Retention, source coverage and page coverage are separate.** A complete retained record can describe partial analysis. Exhausting its pages says nothing more about the unexamined source. `detail: "summary"` reduces delivery, not analysis work. | Keep “all supplied records read” separate from “the relevant population covered” and “the outcome established.” A shorter answer is not evidence of less processing. #110 can compare these distinctions with existing evidence guidance rather than introduce another completeness score. |
+| **Questions have history, not just a final label.** `record_unknown` links supporting and contradicting evidence. `update_unknown` requires the expected revision and appends a revision. `verify_unknown_resolution` distinguishes verified, withdrawn and out-of-scope dispositions. | Preserve why an earlier claim or question changed. Dropping a question is different from answering it. Reuse exact review bindings and correction links; #110 owns the remaining gap assessment, while [#29](https://github.com/zhiganov/impact-to-funding/issues/29) owns portable handoffs. REA's technical verification rules are not a social-impact certification model. |
+| **Reuse and persistence have explicit boundaries.** Retained references belong to the current connection. `close_binary` keeps Evidence in memory; export saves a bundle, import validates and merges it, and reset clears history unless it is saved first. | A later session needs the permitted source records, not merely an identifier or a polished summary. Assess continuity with the existing private files and converters in #110. Exporting a record neither grants a new audience permission nor establishes that it contains every linked source. |
+| **Tool registration and actual capability are distinct.** `binary_session` separates server identity, client features, provider candidates and operation availability. Recovery guidance distinguishes plugin-owned from setup-owned registration and client rejection from provider failure. | Refine [#105](https://github.com/zhiganov/impact-to-funding/issues/105) and the [#106](https://github.com/zhiganov/impact-to-funding/issues/106) plugin alternative. Keep skill, helper, server and host versions distinct using the existing [provenance design](skill-version-provenance.md). Optional setup should not silently add funding discovery or broaden permission. |
+| **The material and question select the route.** Static JavaScript analysis accepts its target directly; it needs no preliminary binary session. Guidance sends recovery work to a separate reference when a failure warrants it. | [#111](https://github.com/zhiganov/impact-to-funding/issues/111) assesses starting useful work from supplied material. [#109](https://github.com/zhiganov/impact-to-funding/issues/109) keeps update details out of the core. Both preserve a lightweight conversation; ordinary use needs no forensic workflow. |
+
+These are refinements to existing scopes. They do not select a new evidence
+database, mandatory ledger, integration or REA dependency. Existing ItF work
+already covers much of the intended behaviour.
+
+### Sources and evidence level
+
+- Installed skill version `62`: `SKILL.md`,
+  `references/evidence-workflows.md`, `references/javascript-applications.md`
+  and `references/connection-and-recovery.md`.
+- Connected contracts: `binary_session`, `analyze_javascript_application`,
+  `inspect_analysis_view`, `trace_application_feature`, `get_evidence_bundle`,
+  `export_evidence_bundle`, `import_evidence_bundle`, `compare_bundles`,
+  `record_unknown`, `update_unknown`, `verify_unknown_resolution`,
+  `close_binary` and `reset_investigation`.
+- Upstream explanation: [retained application Evidence](https://github.com/morluto/rea/blob/main/docs/mcp-contracts.md)
+  and [CLI evidence reuse](https://github.com/morluto/rea/blob/main/docs/cli.md).
+  These links track upstream main; the local observations above identify the
+  inspected installation.
+
+The status and file comparisons are observations. Evidence reuse, revision
+handling, export/import and recovery behaviour were inspected as contracts,
+not tested. A separate bounded synthetic trial could examine those behaviours;
+it is not a delivery requirement for ItF.
+
 ## Not worth copying
 
 - **Skill size.** REA's skill is about three times the size of ItF's core, which was trimmed on purpose (#83, #84).
@@ -26,4 +87,7 @@ Read on 2026-11-15 at commit `04cb416`: the README, the main skill (`.agents/ski
 
 ## Limits
 
-This is a desk reading of documentation and skill text at one commit. It doesn't check whether REA's setup or plugins work as described, or that the practices help REA's users. The table notes which ideas are done and which have their own issue.
+The earlier review is a desk reading at one source commit. The second adds
+installed-file comparisons, connected contracts and one status response. Neither
+checks REA's setup, plugins or target-analysis behaviour, or establishes benefit
+to users. The tables distinguish existing delivery from ideas still being assessed.
