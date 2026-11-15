@@ -101,6 +101,8 @@ Wait for a named collection owner to explain the response channel, who can read
 it, its use and retention, and how to request a correction or withdrawal. Until
 then, keep responses with you. No confidential or anonymous channel is promised
 by this repository. Do not put private feedback into public GitHub issues.
+If you're happy for anyone to read it, you can instead share a short public note
+with the [field-note form](https://github.com/zhiganov/impact-to-funding/issues/new?template=field-note.yml).
 
 Permission to review feedback is not permission to publish it or quote you. Any
 public quotation or identifying example needs separate, exact-content approval.

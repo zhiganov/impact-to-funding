@@ -1,0 +1,59 @@
+name: Field note
+description: Share a short public note on how ItF helped, or didn't, with something you worked on.
+title: "Field note: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Anyone can read it, and copies may remain after you edit or delete it. Share only what you're happy for anyone to read.
+
+        - Describe your work in general terms. You don't need to name yourself, your project or anyone else.
+        - Don't include private evidence, donor or beneficiary details, confidential conversations, or anything that identifies other people. A lightly disguised real case can still identify someone.
+        - "It didn't help" is as useful as "it helped".
+        - For private feedback, don't use this form. See the [feedback guide](https://github.com/zhiganov/impact-to-funding/blob/main/docs/user-feedback.md).
+
+        A field note isn't a review of your work, a funding request or evidence of ItF's impact. ItF won't quote it in its docs without asking you first.
+  - type: input
+    id: version
+    attributes:
+      label: Version and host
+      description: ItF version or commit, and the agent you used, if known. "Unknown" is fine.
+      placeholder: "v0.5.0, Claude Code"
+  - type: textarea
+    id: working-on
+    attributes:
+      label: What were you working on?
+      description: In general terms.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What did you ask ItF to help with?
+      description: For example a theory of change, a claim, a support brief, a report or finding a direction.
+    validations:
+      required: true
+  - type: textarea
+    id: how-it-helped
+    attributes:
+      label: How did ItF help, or not?
+      description: What became clearer, what stayed unresolved, and anything it got wrong, overstated or invented.
+    validations:
+      required: true
+  - type: textarea
+    id: what-changed
+    attributes:
+      label: What changed afterwards?
+      description: A decision, a draft you used or edited, something you stopped, or nothing. An ask sent isn't funding received, and funding received isn't impact.
+  - type: textarea
+    id: improvement
+    attributes:
+      label: One improvement
+      description: What would have made it more useful or less work?
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Before you submit
+      options:
+        - label: Everything here is mine to share publicly, and nothing identifies other people or reveals private evidence.
+          required: true
