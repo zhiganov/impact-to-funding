@@ -8,7 +8,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 
 function files(directory = root) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    if (['.git', 'node_modules', 'private', 'outputs', 'evidence'].includes(entry.name)
+    if (['.git', '.DS_Store', 'node_modules', 'private', 'outputs', 'evidence'].includes(entry.name)
       || /^\.env(?:\.|$)/.test(entry.name)) return [];
     assert.ok(!entry.isSymbolicLink(), `Unexpected symlink: ${entry.name}`);
     const absolute = path.join(directory, entry.name);
@@ -97,6 +97,25 @@ test('GitHub sponsorship source routing is optional and preserves drafting bound
   assert.match(readFileSync(path.join(root, 'docs/github-sponsors-export-reporting.md'), 'utf8'), /supplied context/);
   assert.match(examples, /Entirely fictional/);
   assert.match(examples, /not model\s+responses/);
+});
+
+test('task focus keeps supporting context separate from a selected relationship task', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  const examples = readFileSync(path.join(root, 'examples/task-focus.md'), 'utf8');
+  const checks = readFileSync(path.join(root, 'docs/task-focus-checks.md'), 'utf8');
+  assert.match(skill, /Keep the person's requested work central when they add supporting context/);
+  assert.match(skill, /then continue it before asking another supporting-detail question/);
+  assert.match(skill, /Follow a relationship or scheduling thread when the person asks/);
+  assert.match(skill, /a specific missing fact blocks the next useful part/);
+  assert.match(skill, /continue any part that can proceed/);
+  assert.match(examples, /Entirely fictional/);
+  assert.match(examples, /authored examples, not model responses or behavioural test results/);
+  assert.match(examples, /The centre\s+hasn't agreed to participate/);
+  assert.match(examples, /Pause the theory/);
+  assert.match(examples, /Keep it unsent/);
+  assert.match(examples, /approved the specific words for\s+public quotation/);
+  assert.match(checks, /These are source checks/);
+  assert.match(checks, /not fresh model\s+observations/);
 });
 
 test('theory reconstruction has an optional task route and reuses shared guidance', () => {

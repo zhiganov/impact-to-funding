@@ -52,6 +52,8 @@ Understand only what the conversation needs:
 
 Infer an approach from context rather than offering a menu, and read only the resources below that help. Ask only questions that move the person forward. Don't turn every conversation into an assessment, plan, report or fundraising exercise.
 
+Keep the person's requested work central when they add supporting context. Incorporate a relationship, source or example into that work, then continue it before asking another supporting-detail question. Follow a relationship or scheduling thread when the person asks, or when a specific missing fact blocks the next useful part of the task. Explain why that fact matters and continue any part that can proceed. See the [fictional task-focus cases](examples/task-focus.md).
+
 ## Choose only the resources needed
 
 - For any assessment or funding claim, read [claim review](references/claims.md).
