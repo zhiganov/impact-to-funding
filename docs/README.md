@@ -27,7 +27,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 ## Reference library
 
 - [Pattern language design](pattern-language-design.md): linked cases, contextual patterns and optional framework lenses, across any domain.
-- [Seed collection](../references/library/README.md): the first original, source-linked notes. Its pattern links are provisional, and it covers few domains. The [skill reads relevant notes](../SKILL.md#use-reference-knowledge-selectively) when they help.
+- [Seed collection](../references/library/README.md): the first original, source-linked notes. Its pattern links are provisional, and it covers few domains. The [skill reads relevant notes](../SKILL.md#choose-only-the-resources-needed) when they help.
 - [Library MCP decision](reference-library-mcp-decision.md): why the library gets its own optional MCP interface, separate from funding discovery. Plain Markdown use stays independent of it.
 - [Library MCP contract](reference-library-mcp-contract.md) and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md): the read-only `itf.library/0.1-draft` interface from [#44](https://github.com/zhiganov/impact-to-funding/issues/44).
 - [Local library MCP](../mcp/README.md): a local stdio server for that interface, using prepared public snapshots. Its [check record](reference-library-mcp-checks.md) lists what was tested and the limits of each client.
@@ -35,6 +35,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 ## Evidence, reporting and support
 
 - [Evidence and reporting design](evidence-reporting-design.md): link private evidence to claims, plan collection in proportion and adapt one body of evidence to different funders' reports. See the [fictional walkthrough](../examples/evidence-reporting.md), the [evidence worksheet](../assets/evidence-crosswalk.md) and the [check record](evidence-reporting-checks.md).
+- [Finding-ledger assessment](finding-ledger-assessment.md): #110 compares the existing worksheet, report and portable records with REA's evidence workflow. A fictional multi-session continuation supports keeping the existing records; no new ledger or skill behaviour is added.
 - [Support profiles and funding.json](funding-interchange-design.md): why ItF uses its own support profile, which works beyond open-source projects and can project financial facts into funding.json. See the [direction decision](funding-interchange-direction-decision.md), the [field decision](support-profile-baseline-decision.md) and the [fictional examples](../examples/funding-interchange.md).
 - [Support-profile contract](support-profile-contract.md): the accepted fields, types, money rules and how the financial view handles losses.
 - [Support-profile tools](support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](support-profile-checks.md).
