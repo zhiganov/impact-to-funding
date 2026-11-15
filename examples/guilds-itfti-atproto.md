@@ -193,31 +193,33 @@ native readiness is unresolved. That preserves useful collaboration but does not
 demonstrate the intended cross-application ATProto experience. The existing host/
 client readiness and synthetic pilot gates still apply before a live experiment.
 
-## In a companion app: a need, a decision and a rule change
+## In a community dashboard: a need, a decision and a rule change
 
-This section imagines Harbour using the guild space scoped in
-[#102](https://github.com/zhiganov/impact-to-funding/issues/102). No such app exists.
-The screens, records and actions below are invented.
+This section imagines Harbour using the guild view scoped in
+[#102](https://github.com/zhiganov/impact-to-funding/issues/102): an ItF module in a
+community dashboard, such as My Community, with membership kept in the community's
+admin tool. No such module exists. The screens, records and actions below are invented.
 
-**What members see.** The public guild view lists the members on Harbour's roster.
-Each name links to that person's own profile, read live from their own account.
-Mira's profile shows her coordination work. Ren's shows the guides. Sol's shows the
-maintenance account. Tavi's profile has nothing for this period, and the view shows
-no count, ranking or "most active" list. Ivo isn't a member, so he isn't listed.
-His testing appears on the guide's page, as he agreed.
+**What members see.** Harbour's admin tool holds its member list. The dashboard's
+ItF tile reads each member's profile live from their own account. Mira's profile
+shows her coordination work. Ren's shows the guides. Sol's shows the maintenance
+account. Tavi's profile has nothing for this period, and the tile shows no count,
+ranking or "most active" list. Ivo isn't a member, so he isn't listed. His testing
+appears on the guide's page, as he agreed.
 
-**Posting a need.** In the members-only part of the app, Mira posts a need:
+**Posting a need.** Mira saves a need to her own account:
 "one more editing pass on the meeting guide, about two hours, before the next session."
-Ren is busy this month and says so. Ivo can't see the post because he isn't a member.
-Mira asks him directly, by email, and he agrees. The app records Mira's request and
-Ivo's acceptance as separate entries. It doesn't assign the task to anyone.
-The members-only part needs Spaces. Until #10 confirms a working setup, Harbour
-does this step in a shared document.
+It appears in the members' dashboards. Ren is busy this month and says so. Ivo
+can't see the need because he isn't a member. Mira asks him directly, by email,
+and he agrees. Mira's request and Ivo's acceptance stay separate entries. Nothing
+assigns the task to anyone. Ordinary records are public, so a members-only need
+needs Spaces or a gated store. Until #10 confirms a working setup, Harbour keeps
+this step in a shared document.
 
 **A decision with dissent.** The guide decision earlier in this walkthrough appears
-in the guild's decision log. The log shows candidate v2, who approved it (Mira and Ren),
-the rule they used, and Ren's open concern, quoted in Ren's words. The app shows the
-concern next to the decision. It doesn't mark the decision as unanimous.
+in the dashboard's decisions feed. It shows candidate v2, who approved it (Mira and
+Ren), the rule they used, and Ren's open concern, quoted in Ren's words. The concern
+sits next to the decision. Nothing marks the decision as unanimous.
 
 **A rule change.** Harbour's written rules, v1, say a new member joins once two
 members sponsor them. Tavi proposes v2: a newcomer first joins a meeting, then
@@ -225,19 +227,19 @@ any member can sponsor them. The rules also say how to change the rules:
 proposals stay open for two weeks, and a change needs agreement from most members
 with no unresolved strong objection.
 
-- The app shows v1, the v2 proposal and its two-week window.
+- The proposal goes to the dashboard's existing decisions feed, with v1, v2 and
+  the two-week window. ItF adds no voting tool of its own.
 - Sol objects: one sponsor is too few. Tavi narrows the proposal to "one sponsor,
   after a meeting". Sol withdraws the objection but asks that it stay on record.
-- After two weeks, most members agree. The log records v2, its date, the decision
+- After two weeks, most members agree. The record keeps v2, its date, the decision
   under v1's change rule, and Sol's withdrawn objection.
 - v1 stays readable. Members admitted under v1 keep their membership.
 
-The app follows Harbour's own rule. It doesn't count votes unless the rules say to,
-and it doesn't decide when a proposal passes. Changing who can join doesn't change
-anyone's access. The technical administrator updates the group's role settings
-separately, after the decision.
+The tools follow Harbour's own rule. They don't count votes unless the rules say to,
+and they don't decide when a proposal passes. Changing who can join doesn't change
+anyone's access. A steward updates the member list in the admin tool separately,
+after the decision.
 
 **What this doesn't show.** The scenario tests whether the design covers ordinary
-guild moments. It doesn't show that a real guild would use the app or find it
-easier than the tools it already has. #102's first acceptance item asks that
-question of a real guild.
+guild moments. It doesn't show that a real guild would use the module or find it
+easier than the tools it already has. #102's questions ask that of a real community.
