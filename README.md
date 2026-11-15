@@ -112,6 +112,13 @@ For this task, the current source includes a [support-brief playbook](playbooks/
 
 A few sentences are enough to start. A useful result might be a possible contribution, a clearer question, a smaller commitment or a decision to stop. It doesn't have to be a report. The [usage guide](docs/usage.md) has more prompts and examples with incomplete evidence.
 
+To understand an existing project's implicit theory of change, the current source
+adds an optional [reconstruction playbook](playbooks/reconstruct-theory-of-change.md).
+It separates stated intentions, inferred pathways, people's accounts and supported
+observations. The [fictional walkthrough](examples/theory-reconstruction.md) shows
+the intended treatment. Older host-tested pins omit this addition; routing and
+usefulness remain unverified.
+
 ## Outputs and examples
 
 **A fictional illustration, not a real model result:** 60 copies of an access guide were handed out. That doesn't mean 60 households repaired appliances. The [worked example](examples/builder-assessment.md) separates the copies handed out, a small self-reported benefit, repairs nobody measured and future costs nobody confirmed. It also keeps a cheaper alternative to another print run.
