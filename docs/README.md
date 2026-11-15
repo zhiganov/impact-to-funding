@@ -20,7 +20,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Organisation contribution playbook](../playbooks/organisation-contributions.md): source guidance for builders without projects, supplied organisation needs and compatible read-only discovery, with [fictional cases](../examples/organisation-contributions.md). The [design](organisation-contributions-design.md) records the broader path. No live catalogue or placement is supplied.
 - [Mentor pool scoping](mentor-pool-scoping.md): whether ItF should keep a pool of willing mentors. It recommends referring people to communities they know first, with no pool yet.
 - [ItF records for community dashboards](itf-records-sketch.md): a validated sketch of profile, contribution and need records for #102. Placeholder namespace; nothing adopted.
-- [Draft My Community issue](my-community-itf-module-issue.md): a proposed issue for an ItF module in the My Community dashboard, for #102. Not filed yet.
+- [My Community issue draft](my-community-itf-module-issue.md): the proposed ItF module for the My Community dashboard, for #102. Filed as [my-community#140](https://github.com/Citizen-Infra/my-community/issues/140).
 - [Builder check-ins](builder-check-in-assessment.md): a short, private six-question check-in with an optional request for one peer's feedback. Recommended as documentation only.
 - [User feedback guide](user-feedback.md) and [initial-user learning plan](user-learning-plan.md): earlier plans for manual-use feedback. No feedback is being collected through them now.
 

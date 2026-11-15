@@ -1,6 +1,6 @@
-# Draft issue for My Community: ItF module
+# Filed issue for My Community: ItF module
 
-A draft issue for [Citizen-Infra/my-community](https://github.com/Citizen-Infra/my-community), written for [#102](https://github.com/zhiganov/impact-to-funding/issues/102) on 2026-11-15. It hasn't been filed. Issue numbers carry their repository name so they don't link to ItF issues here. When filing it in my-community, drop the `my-community` prefixes.
+A draft issue for [Citizen-Infra/my-community](https://github.com/Citizen-Infra/my-community), written for [#102](https://github.com/zhiganov/impact-to-funding/issues/102) on 2026-11-15. Filed on 2026-11-15 as [my-community#140](https://github.com/Citizen-Infra/my-community/issues/140), from this draft at `6391045`; follow that issue for changes. Issue numbers carry their repository name so they don't link to ItF issues here. 
 
 **Proposed title:** ItF module: members' profiles, contributions and needs
 
