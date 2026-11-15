@@ -31,6 +31,7 @@ ItF has a validated sketch of the three records: [`docs/itf-records-sketch.md`](
 
 - [ ] Decide placement: a tile of its own, or needs inside Participation and profiles elsewhere.
 - [ ] Show loading, empty, stale, expired and source-error states, as other feeds do.
+- [ ] Show each report link's ItF state (`current`, `corrected`, `out-of-date` or `withdrawn`), matched to the draft, approved, superseded and unavailable labels in my-community#139. A `corrected` or `withdrawn` link points to its `statusUrl`. See the [handoff answer in ItF #29](https://github.com/zhiganov/impact-to-funding/issues/29#issuecomment-6892201609).
 - [ ] Show no counts, rankings or "most active" lists. A member with nothing this period looks the same as anyone else.
 - [ ] Hide the module for private communities until there's a members-only route, as availability publishing does today. Ordinary ATProto records are public.
 - [ ] Decide what email-only members see. They can read; they can't publish records without an ATProto account.
