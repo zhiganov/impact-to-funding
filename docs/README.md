@@ -2,9 +2,17 @@
 
 Guides, design notes and check records for Impact to Funding (ItF). Most of these notes are designs. The [Limits](#limits) section says what that means.
 
+## Reports and check records
+
+- [Reports](reports/README.md): shareable analyses of real projects, starting with the [OpenHaven reconstruction](reports/openhaven-theory-of-change-review-2026-11-16.md).
+- [Check records](checks/README.md): source reviews, local tests and host observations, with their original dates, revisions and limits.
+
+Guides, contracts and design notes stay in this folder. Fictional cases stay in
+`examples/`, and release notes stay in `docs/releases/`.
+
 ## Install and update
 
-- [Install guide](install.md): install in a project or personal folder, invoke the skill in each host, update, remove and troubleshoot. The [installation check record](installation-check-2026-11-04.md) lists limited command-line checks in Codex, Claude Code and OpenCode.
+- [Install guide](install.md): install in a project or personal folder, invoke the skill in each host, update, remove and troubleshoot. The [installation check record](checks/installation-check-2026-11-04.md) lists limited command-line checks in Codex, Claude Code and OpenCode.
 - [Releases](releases.md): how to follow releases and pick a version. [v0.5.0](releases/v0.5.0.md) is the current experimental prerelease. [v0.4.0](releases/v0.4.0.md), [v0.3.0](releases/v0.3.0.md) and [v0.2.0](releases/v0.2.0.md) are kept for history.
 - [Version and provenance](skill-version-provenance.md): how released versions, channels and pins are recorded. The [local inspector](../tools/skill-package/README.md) reads them.
 - [Managed updates](managed-skill-updates.md): a command-line tool to install, check, update, adopt, roll back and recover copies of the skill.
@@ -18,7 +26,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Task playbooks](task-playbooks-design.md): maps common jobs to guidance. The first playbook is the [support brief](../playbooks/support-brief.md).
 - [Theory reconstruction playbook](../playbooks/reconstruct-theory-of-change.md): infer pathways from existing work and compare intention with practice. The [fictional walkthrough](../examples/theory-reconstruction.md) shows expected treatment; host/model behaviour remains unverified.
 - [Supplied-material routing assessment](supplied-material-routing-assessment.md): #111 checks task-first use of existing material against eight fictional cases. Current guidance is retained; host/model routing remains unverified.
-- [Task-focus repair](task-focus-checks.md): #101 adds a continuation rule and fictional cases for relationship context, an explicit change of task and a material missing fact. Checks cover the source, not observed model behaviour.
+- [Task-focus repair](checks/task-focus-checks.md): #101 adds a continuation rule and fictional cases for relationship context, an explicit change of task and a material missing fact. Checks cover the source, not observed model behaviour.
 - [Individual theories and shared projects](individual-project-contributions.md): how a person's own theory of change connects to shared projects through bounded contributions. The [contribution reference](../references/contributions.md) is the working guidance. Tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22) and [#16](https://github.com/zhiganov/impact-to-funding/issues/16).
 - [Organisation contribution playbook](../playbooks/organisation-contributions.md): source guidance for builders without projects, supplied organisation needs and compatible read-only discovery, with [fictional cases](../examples/organisation-contributions.md). The [design](organisation-contributions-design.md) records the broader path. No live catalogue or placement is supplied.
 - [Mentor pool scoping](mentor-pool-scoping.md): whether ItF should keep a pool of willing mentors. It recommends referring people to communities they know first, with no pool yet.
@@ -33,18 +41,18 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 - [Seed collection](../references/library/README.md): the first original, source-linked notes. Its pattern links are provisional, and it covers few domains. The [skill reads relevant notes](../SKILL.md#choose-only-the-resources-needed) when they help.
 - [Library MCP decision](reference-library-mcp-decision.md): why the library gets its own optional MCP interface, separate from funding discovery. Plain Markdown use stays independent of it.
 - [Library MCP contract](reference-library-mcp-contract.md) and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md): the read-only `itf.library/0.1-draft` interface from [#44](https://github.com/zhiganov/impact-to-funding/issues/44).
-- [Local library MCP](../mcp/README.md): a local stdio server for that interface, using prepared public snapshots. Its [check record](reference-library-mcp-checks.md) lists what was tested and the limits of each client.
+- [Local library MCP](../mcp/README.md): a local stdio server for that interface, using prepared public snapshots. Its [check record](checks/reference-library-mcp-checks.md) lists what was tested and the limits of each client.
 
 ## Evidence, reporting and support
 
-- [Evidence and reporting design](evidence-reporting-design.md): link private evidence to claims, plan collection in proportion and adapt one body of evidence to different funders' reports. See the [fictional walkthrough](../examples/evidence-reporting.md), the [evidence worksheet](../assets/evidence-crosswalk.md) and the [check record](evidence-reporting-checks.md).
+- [Evidence and reporting design](evidence-reporting-design.md): link private evidence to claims, plan collection in proportion and adapt one body of evidence to different funders' reports. See the [fictional walkthrough](../examples/evidence-reporting.md), the [evidence worksheet](../assets/evidence-crosswalk.md) and the [check record](checks/evidence-reporting-checks.md).
 - [Finding-ledger assessment](finding-ledger-assessment.md): #110 compares the existing worksheet, report and portable records with REA's evidence workflow. A fictional multi-session continuation supports keeping the existing records; no new ledger or skill behaviour is added.
 - [Support profiles and funding.json](funding-interchange-design.md): why ItF uses its own support profile, which works beyond open-source projects and can project financial facts into funding.json. See the [direction decision](funding-interchange-direction-decision.md), the [field decision](support-profile-baseline-decision.md) and the [fictional examples](../examples/funding-interchange.md).
 - [Support-profile contract](support-profile-contract.md): the accepted fields, types, money rules and how the financial view handles losses.
-- [Support-profile tools](support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](support-profile-checks.md).
+- [Support-profile tools](support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](checks/support-profile-checks.md).
 - [GitHub sponsorship playbook](../playbooks/github-sponsorship.md): source guidance for drafting profiles, tiers, funding links and updates, with [fictional cases](../examples/github-sponsorship.md). The optional [funding-readiness review](github-funding-readiness.md) inspects configuration and prepares private diffs. The [account overview](github-sponsors-account-overview.md) reviews profile and tier context. The [design](github-sponsorship-design.md) retains import, account-write and webhook scopes. Both tools leave sources and accounts unchanged.
 - [Readability check](../tools/readability/README.md): a local check for drafts and manifest descriptions. It flags long sentences, passive voice and adverbs.
-- [Sponsorship export reporting](github-sponsors-export-reporting.md): private offline period review of supplied CSV transactions, with overlap, source and missing-fact notes. See the [check record](github-sponsors-export-checks.md).
+- [Sponsorship export reporting](github-sponsors-export-reporting.md): private offline period review of supplied CSV transactions, with overlap, source and missing-fact notes. See the [check record](checks/github-sponsors-export-checks.md).
 - [Impact badge contract](impact-badge-contract.md) and [tool](../tools/impact-badge/README.md): a repo badge and card that link to an approved public report and state its evidence basis.
 - [Optional writing tools](optional-writing-tools.md): the readability check and Pangram, an online AI-text detector you can use from your agent through MCP.
 - [Standard.site publishing](standard-site-publishing.md): how approved public reports could use existing Standard.site metadata and tools.

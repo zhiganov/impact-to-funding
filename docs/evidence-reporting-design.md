@@ -6,7 +6,7 @@ This defines an optional conversational/manual path, not an implemented collecto
 database, provider adapter, form filler or change to the installed skill.
 The later source support for [#48](https://github.com/zhiganov/impact-to-funding/issues/48)
 adds conditional skill routing, the [private worksheet](../assets/evidence-crosswalk.md)
-and links from existing templates; see the [source/template check record](evidence-reporting-checks.md).
+and links from existing templates; see the [source/template check record](checks/evidence-reporting-checks.md).
 Those changes do not turn the original design walkthrough into observed model behaviour.
 
 ## Purpose and boundaries
@@ -229,7 +229,7 @@ repository tasks are generated:
    permissions are destination-specific, and changed definitions stay unresolved
    where necessary. Use existing package checks; source/package success alone
    does not establish model behaviour or funder interoperability. The
-   [check record](evidence-reporting-checks.md) reports the actual review and limits.
+   [check record](checks/evidence-reporting-checks.md) reports the actual review and limits.
 
 The manual path does not depend on #35, a hosted store, another collector, native
 app orchestration, recruitment or a new test platform. Live collection, provider

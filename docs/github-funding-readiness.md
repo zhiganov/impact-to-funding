@@ -37,7 +37,7 @@ between `itf-manifest.json`, `funding.json`, `FUNDING.yml`, a public support pag
 and GitHub account settings. The wider direction remains tracked in
 [ItF #93](https://github.com/zhiganov/impact-to-funding/issues/93).
 
-The [check record](github-funding-readiness-checks.md) separates local tests, the
+The [check record](checks/github-funding-readiness-checks.md) separates local tests, the
 bounded GitHub observation and the final retained-source replay.
 
 ## Limits

@@ -115,7 +115,7 @@ with an ordinary SDK client spawning the normal prepare/start path. They cover
 schema-checked structured/text results, literal search, shared documents, exact
 identity/revision semantics, partial coverage, byte bounds, errors and pagination.
 Compatibility observations and exact dependency versions are recorded in
-[implementation checks](../docs/reference-library-mcp-checks.md).
+[implementation checks](../docs/checks/reference-library-mcp-checks.md).
 
 These checks are not a model trial, native-host certification, human usefulness
 test, fresh source review, independent impact evaluation or hosted deployment.

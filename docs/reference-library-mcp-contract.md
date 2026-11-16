@@ -33,7 +33,7 @@ publication format or a change to funding.json or a funding-discovery contract.
 The [V2 guide](https://opencode.ai/v2/docs/mcp-servers) documents tool exposure and
 resource-reading helpers; generic tool-capable MCP clients are also intended.
 This design did not establish client/transport compatibility and mandates no SDK
-or transport. Later [implementation checks](reference-library-mcp-checks.md) state
+or transport. Later [implementation checks](checks/reference-library-mcp-checks.md) state
 the actually tested clients and wire revisions separately. The MCP wire
 revision is negotiated separately from this application contract; the current
 OpenCode guide documents both legacy and 2026-07-28 modes. Implementation must use

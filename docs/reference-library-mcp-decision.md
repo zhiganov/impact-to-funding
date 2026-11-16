@@ -53,7 +53,7 @@ Its tool names, snapshot/record mapping and error semantics form the initial
 `itf.library/0.1-draft` application baseline. That design alone supplied no executable
 schemas or client verification. The later [local implementation](../mcp/README.md)
 provides schemas and a stdio server; its
-[compatibility checks](reference-library-mcp-checks.md) identify the actually tested
+[compatibility checks](checks/reference-library-mcp-checks.md) identify the actually tested
 client and wire revisions separately from the design.
 MCP resources can expose contextual records and tools can support parameterised
 queries; the [protocol overview](https://modelcontextprotocol.io/specification/2026-07-28/server)

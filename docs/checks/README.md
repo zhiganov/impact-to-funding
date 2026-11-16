@@ -1,0 +1,24 @@
+# Check records
+
+Records of ItF's source reviews, local tests and host observations.
+Each record keeps its original dates, source versions, results and limits.
+A move into this folder does not refresh the evidence.
+
+## Installation and development
+
+- [Native CLI installation checks](installation-check-2026-11-04.md): exact-version observations for OpenCode, Codex and Claude Code, including earlier unsuccessful probes.
+- [Manual development validation](validation-2026-11-04.md): limited behavioural trials, a retained failure and one targeted recheck.
+- [Release-preparation review](release-readiness-2026-11-04.md): historical content, rights and disclosure review.
+
+## Guidance and local tools
+
+- [Evidence and crosswalk source checks](evidence-reporting-checks.md): source/template review against authored fictional cases.
+- [Task-focus repair and source checks](task-focus-checks.md): source review and fictional continuation cases.
+- [Local reference-library MCP checks](reference-library-mcp-checks.md): local application, protocol and prepared-snapshot checks.
+- [Local support-profile checks](support-profile-checks.md): profile inspection, financial projection and binding checks.
+- [Funding-readiness checks](github-funding-readiness-checks.md): local tests, a bounded GitHub observation and retained-source replay.
+- [Sponsors account overview checks](github-sponsors-account-checks.md): source and fictional account fixtures.
+- [Sponsorship export-reporting checks](github-sponsors-export-checks.md): offline interpretation of fictional CSV exports.
+
+Project analyses prepared for sharing belong in [reports](../reports/README.md).
+Return to the [docs index](../README.md).

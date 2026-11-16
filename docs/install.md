@@ -12,7 +12,7 @@ The commands below pin source `4566892ad990131fb36f760e14c73e5f275600cc`.
 - **Claude Code 2.1.321:** a matching limited check passed. In one non-interactive `claude -p` run, `/impact-to-funding` loaded the skill and read the same reference, with no files changed and no web or MCP calls.
 - **OpenCode:** not checked at this source. Earlier OpenCode v2.2.5 checks cover source `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
 
-These checks cover those exact sources only. They didn't test a clean account, the interactive UI, IDEs or usefulness. Personal installs, manual copying, updates and removal below are documented but not checked. See the [check record](installation-check-2026-11-04.md).
+These checks cover those exact sources only. They didn't test a clean account, the interactive UI, IDEs or usefulness. Personal installs, manual copying, updates and removal below are documented but not checked. See the [check record](checks/installation-check-2026-11-04.md).
 
 ## 1. Choose one host and scope
 

@@ -133,5 +133,5 @@ After optional dependency setup, run `npm test` from this directory. The tests u
 the authored fictional examples and temporary local candidates; they do not run a
 directory, funder, hosted service or model. Repository package integrity remains
 the separate root command `node --test tests/package.test.mjs`.
-See the [observed check record](../../docs/support-profile-checks.md) for the
+See the [observed check record](../../docs/checks/support-profile-checks.md) for the
 tested environment, findings, repairs and precise unverified limits.

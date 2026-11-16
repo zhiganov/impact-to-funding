@@ -128,7 +128,7 @@ disclosure boundaries. Review the exact proposed content before publishing it.
 Source tests establish the tool's tested behavior. Installed-host routing and
 maintainer usefulness require their own evidence. No live account target or
 private account inspection was part of this implementation's validation. See the
-[check record](github-sponsors-account-checks.md).
+[check record](checks/github-sponsors-account-checks.md).
 
 ## Sources
 

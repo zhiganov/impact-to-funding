@@ -188,7 +188,7 @@ the collaborative workflow design. Live Groups integration is separate work.
 
 Source instructions, collaborative design and runtime integration are distinct
 deliverables. These changes do not provide hosting or Groups integration, and
-contain no private pilot facts. The [installation record](installation-check-2026-11-04.md)
+contain no private pilot facts. The [installation record](checks/installation-check-2026-11-04.md)
 documents native host checks separately from this source-level design.
 
 ## Basis and limits
