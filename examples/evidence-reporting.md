@@ -9,7 +9,7 @@ lead. No collection, URL retrieval, application or publication occurred.
 
 The source skill's [optional private worksheet](../assets/evidence-crosswalk.md)
 uses this walkthrough for source/template review. The
-[check record](../docs/evidence-reporting-checks.md) separates those actual checks
+[check record](../docs/checks/evidence-reporting-checks.md) separates those actual checks
 from the authored scenario and untested model behaviour. The facts and original
 destination views below are unchanged by adding the worksheet.
 

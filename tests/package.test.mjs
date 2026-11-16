@@ -102,7 +102,7 @@ test('GitHub sponsorship source routing is optional and preserves drafting bound
 test('task focus keeps supporting context separate from a selected relationship task', () => {
   const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
   const examples = readFileSync(path.join(root, 'examples/task-focus.md'), 'utf8');
-  const checks = readFileSync(path.join(root, 'docs/task-focus-checks.md'), 'utf8');
+  const checks = readFileSync(path.join(root, 'docs/checks/task-focus-checks.md'), 'utf8');
   assert.match(skill, /Keep the person's requested work central when they add supporting context/);
   assert.match(skill, /then continue it before asking another supporting-detail question/);
   assert.match(skill, /Follow a relationship or scheduling thread when the person asks/);

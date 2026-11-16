@@ -8,7 +8,7 @@ Install the complete package with the [installation guide](install.md). Each hos
 | Codex CLI | `$impact-to-funding`, or select it with `/skills` |
 | OpenCode V2 | `@impact-to-funding` |
 
-Limited command-line checks passed for `4566892` in Codex 0.166.0 and Claude Code 2.1.321, and earlier ones for `fbb8993` in OpenCode v2.2.5. They didn't test the interactive UI, IDEs, reliable model behaviour or usefulness. See the [check record](installation-check-2026-11-04.md).
+Limited command-line checks passed for `4566892` in Codex 0.166.0 and Claude Code 2.1.321, and earlier ones for `fbb8993` in OpenCode v2.2.5. They didn't test the interactive UI, IDEs, reliable model behaviour or usefulness. See the [check record](checks/installation-check-2026-11-04.md).
 
 ## Before you start
 

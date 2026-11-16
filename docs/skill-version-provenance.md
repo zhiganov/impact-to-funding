@@ -37,7 +37,7 @@ Host checks remain external, source-specific evidence: the limited Codex and
 Claude CLI checks used `4566892ad990131fb36f760e14c73e5f275600cc`, while OpenCode's
 historical check used `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
 This metadata change and any later helper/package release inherit none of those
-exact-package checks. See the [installation record](installation-check-2026-11-04.md).
+exact-package checks. See the [installation record](checks/installation-check-2026-11-04.md).
 
 ## Release record
 

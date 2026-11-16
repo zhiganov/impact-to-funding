@@ -115,4 +115,4 @@ not establish that a campaign caused support.
 
 Validation uses fictional rows in the observed layout. A current native-export
 check, installed-host routing and usefulness to maintainers remain unverified.
-See the [check record](github-sponsors-export-checks.md).
+See the [check record](checks/github-sponsors-export-checks.md).

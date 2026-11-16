@@ -193,7 +193,7 @@ npm test
 
 Tests use fictional local inputs, injected API responses and a fake `gh` executable.
 They are distinct from a real GitHub observation or installed-host/model check.
-See the [account-overview check record](../../docs/github-sponsors-account-checks.md)
+See the [account-overview check record](../../docs/checks/github-sponsors-account-checks.md)
 for the implemented scope and measured results.
 Original code/tests are MIT; written guidance is CC BY-SA 4.0. See the root
 [licence scope](../../LICENSE). GitHub API/platform rules remain GitHub's own.

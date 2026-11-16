@@ -64,7 +64,7 @@ At the inspected source revision, the project describes a draft v0.1 file specif
 
 AI Registry's CLI README lists Claude Code, Codex, Cursor and a generic `.agents` target. That is documentation of intended targets, not a test of native OpenCode discovery or activation. It does not establish that the current ItF package works in any particular host, and no absence-of-support claim about other targets is inferred.
 
-The [native installation record](installation-check-2026-11-04.md) now includes
+The [native installation record](checks/installation-check-2026-11-04.md) now includes
 later successful OpenCode v2.2.5 checks. Those checks used the documented direct
 installation route, not AI Registry or Vercel's CLI, and do not establish
 compatibility with either distribution tool.

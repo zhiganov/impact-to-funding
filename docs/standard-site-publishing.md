@@ -28,7 +28,7 @@ The preferred baseline is an existing publisher plus ordinary human-readable fil
 
 This note applies the [#17 public-discovery/export baseline](https://github.com/zhiganov/impact-to-funding/issues/17#issuecomment-6665579580), preserving its public-derivative, access, exact-version, correction and stale-copy boundaries. It supplies no runtime proof or implementation of discovery, sync/indexing, widgets or the #21 pilot.
 
-[#29](https://github.com/zhiganov/impact-to-funding/issues/29) tracks the optional skill/platform relationship. This note describes one possible public-output connection without requiring any particular community platform, group account, Spaces deployment or Groups beta. Native skill compatibility is documented separately in the [installation record](installation-check-2026-11-04.md).
+[#29](https://github.com/zhiganov/impact-to-funding/issues/29) tracks the optional skill/platform relationship. This note describes one possible public-output connection without requiring any particular community platform, group account, Spaces deployment or Groups beta. Native skill compatibility is documented separately in the [installation record](checks/installation-check-2026-11-04.md).
 
 ## Minimal document mapping
 

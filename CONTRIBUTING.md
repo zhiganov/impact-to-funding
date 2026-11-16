@@ -44,7 +44,7 @@ Node.js is a development-only requirement; there are no package dependencies to 
 
 For host/API installation checks, use the host's supported authenticated client and pass or verify the intended project context. A private or loopback server is not automatically authentication-free; an authentication error does not establish a skill defect. Preserve the captured error and actual discovery result before interpreting capability or changing the test route.
 
-For behavioural observations, record the exact revision or source changes, actual host/model details where exposed, supplied input, whether the expected answer was withheld, observed output, review basis and limits. Respect the input's disclosure rights. Keep private outputs private; do not present an unshareable case as a public benchmark. Do not add paid runs, new evaluation infrastructure or repeated trials without a justified scope and applicable permission. See the [existing validation notes](docs/validation-2026-11-04.md) for the limited development evidence—not a guarantee or required universal test suite.
+For behavioural observations, record the exact revision or source changes, actual host/model details where exposed, supplied input, whether the expected answer was withheld, observed output, review basis and limits. Respect the input's disclosure rights. Keep private outputs private; do not present an unshareable case as a public benchmark. Do not add paid runs, new evaluation infrastructure or repeated trials without a justified scope and applicable permission. See the [existing validation notes](docs/checks/validation-2026-11-04.md) for the limited development evidence—not a guarantee or required universal test suite.
 
 ## Sources, licensing and external actions
 

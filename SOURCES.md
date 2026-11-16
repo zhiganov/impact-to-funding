@@ -77,7 +77,7 @@ choices, not MCP standard methods or source-author endorsements.
 |---|---|
 | [MCP tools specification, 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/server/tools), consulted through Context7 | Object tool inputs, output schemas, structured/text results and tool/protocol errors. The original contract review executed no SDK/schema code. Later local implementation checks are recorded separately; read-only hints are not access enforcement. |
 | [OpenCode V2 MCP guide](https://opencode.ai/v2/docs/mcp-servers) | Documented tool/resource exposure, protocol modes and optional session metadata. The page was read; current installed host was previously observed as v2.2.5. This does not prove the proposed server exists, a client uses it correctly or every detail of the evolving guide matches that installed binary. No configuration or authentication was changed. |
-| [MCP TypeScript SDK 2.4.0](https://github.com/modelcontextprotocol/typescript-sdk/tree/v2.4.0), low-level server, stdio and 2026-07-28 migration documentation consulted through Context7 | The optional implementation uses the official server package and tests with the official client. Actual local protocol checks are in the [implementation record](docs/reference-library-mcp-checks.md), not inferred from documentation. SDK packages use Apache-2.0; Ajv uses MIT. Dependency versions, integrity hashes and declared licences are pinned in the separate [lockfile](mcp/package-lock.json). Dependencies are not copied into the skill or relicensed by ItF. |
+| [MCP TypeScript SDK 2.4.0](https://github.com/modelcontextprotocol/typescript-sdk/tree/v2.4.0), low-level server, stdio and 2026-07-28 migration documentation consulted through Context7 | The optional implementation uses the official server package and tests with the official client. Actual local protocol checks are in the [implementation record](docs/checks/reference-library-mcp-checks.md), not inferred from documentation. SDK packages use Apache-2.0; Ajv uses MIT. Dependency versions, integrity hashes and declared licences are pinned in the separate [lockfile](mcp/package-lock.json). Dependencies are not copied into the skill or relicensed by ItF. |
 
 ## Optional support-profile tool sources
 
@@ -119,7 +119,7 @@ rights and compatibility before adding such material or dependencies.
 
 Users' project records and generated outputs are not automatically covered by this repository's software/documentation licence. Consent, confidentiality and other rights remain separate.
 
-The [release-preparation review](docs/release-readiness-2026-11-04.md) records the current material classes and compatibility/disclosure boundaries. It is a content review, not a legal opinion or a claim of rights over linked works. See [contribution guidance](CONTRIBUTING.md) before adding source-derived material.
+The [release-preparation review](docs/checks/release-readiness-2026-11-04.md) records the current material classes and compatibility/disclosure boundaries. It is a content review, not a legal opinion or a claim of rights over linked works. See [contribution guidance](CONTRIBUTING.md) before adding source-derived material.
 
 ## Private and external material
 

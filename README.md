@@ -84,7 +84,7 @@ This installs the complete package for that project only. It doesn't change glob
 
 > @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I supply, mark assumptions and keep the result private. Do not contact anyone.
 
-**Version note:** the OpenCode snapshot `fbb8993` is older than the Codex and Claude Code pin `4566892`. It lacks the responsible-assistance guidance, the evidence and reporting worksheets and the optional local tools. Later commits on `main` aren't host-checked and don't update your copy. See the [check record](docs/installation-check-2026-11-04.md).
+**Version note:** the OpenCode snapshot `fbb8993` is older than the Codex and Claude Code pin `4566892`. It lacks the responsible-assistance guidance, the evidence and reporting worksheets and the optional local tools. Later commits on `main` aren't host-checked and don't update your copy. See the [check record](docs/checks/installation-check-2026-11-04.md).
 
 Read the [privacy guide](PRIVACY.md) before you use real material. You don't need to open the skill's Markdown files yourself.
 
@@ -147,8 +147,8 @@ This table describes the current source. Older host-tested pins may not have eve
 | [Conversational skill](SKILL.md), contribution and claim guidance, optional templates | Guides exploration, collaboration, learning and support, with authored examples. | Behaviour varies by host and model. It doesn't match people, fund work or evaluate it independently. |
 | [Reference library](references/library/README.md) and optional [framework](references/frameworks.md) and [systems](references/systems-and-complexity.md) lenses | A small, source-linked set of cases, candidate patterns and questions. The agent reads them when useful. | It covers few domains. Patterns aren't recipes, and no framework is required. |
 | [Evidence planning and audience-specific drafting](docs/evidence-reporting-design.md) | Manual guidance and an [optional private worksheet](assets/evidence-crosswalk.md) for reusing evidence across funders. | Whether evidence fits, may be disclosed and is presented well are separate checks. It doesn't collect evidence or connect to funders. |
-| [Local reference-library MCP](mcp/README.md) | An optional local server with three read-only tools over a prepared public snapshot. Needs Node.js 22+. | It isn't hosted, doesn't search live sources and doesn't refresh itself. See the [check record](docs/reference-library-mcp-checks.md). |
-| [Support-profile authoring and tools](docs/support-profile-tools.md) | An optional worksheet and local tools to inspect profiles and bind open-source financial plans. Needs Node.js 22+. | Support profiles aren't limited to open source. The tools don't fetch, publish, apply or pay. See the [check record](docs/support-profile-checks.md). |
+| [Local reference-library MCP](mcp/README.md) | An optional local server with three read-only tools over a prepared public snapshot. Needs Node.js 22+. | It isn't hosted, doesn't search live sources and doesn't refresh itself. See the [check record](docs/checks/reference-library-mcp-checks.md). |
+| [Support-profile authoring and tools](docs/support-profile-tools.md) | An optional worksheet and local tools to inspect profiles and bind open-source financial plans. Needs Node.js 22+. | Support profiles aren't limited to open source. The tools don't fetch, publish, apply or pay. See the [check record](docs/checks/support-profile-checks.md). |
 | [Skill versions and managed updates](docs/managed-skill-updates.md) | An optional CLI to install, check, update, adopt, roll back and recover copies, plus opt-in [update notices](docs/update-notices.md). Needs Node.js 22+ and Git. | Experimental. It never updates automatically and changes no global settings. Hosts may not show the notices. |
 | [Readability check](tools/readability/README.md) | A local check that flags long sentences, passive voice and adverbs in drafts and manifest descriptions. Needs Node.js 22+. | Simple rules for English. A low score doesn't make writing accurate. |
 | [Portable records](tools/portable-records/README.md) | A local JSON/Markdown round trip for versioned records, with exact review bindings and conversion receipts. Needs Node.js 22+. | File interchange only; live ATProto/Groups transport remains separate. |
@@ -170,7 +170,7 @@ The [guild concept](docs/guilds-itfti-atproto.md) and the [workflow](docs/guild-
 - **Private by default.** A local file can still go to a remote model when the agent reads it. Use only material you may share with that provider. Keep private evidence and saved outputs outside this repository; `.gitignore` won't protect them. Read [PRIVACY.md](PRIVACY.md).
 - **No action without your say-so.** A draft doesn't authorise publishing, contacting people, uploading evidence, applying, changing accounts or paying. A link to evidence nobody could open isn't inspected evidence.
 - **No certification or ranking.** Outputs, donations, signatures and completed assessments don't prove impact. The [responsible-assistance rules](docs/responsible-assistance.md) address concrete harm and deception, not sectors or people's worth.
-- **Limited evidence.** [Development trials](docs/validation-2026-11-04.md) were small, and the examples are fiction. We haven't verified reliable model behaviour, untested hosts, usefulness to people or fundraising results. A passing package check confirms the files. It doesn't test installation.
+- **Limited evidence.** [Development trials](docs/checks/validation-2026-11-04.md) were small, and the examples are fiction. We haven't verified reliable model behaviour, untested hosts, usefulness to people or fundraising results. A passing package check confirms the files. It doesn't test installation.
 - **No affiliation.** ItF draws on public Moral Ambition principles. It isn't affiliated with or endorsed by the School for Moral Ambition or Rutger Bregman. [Sources and rights](SOURCES.md) separates original material from third-party sources.
 
 ### Licence
@@ -192,8 +192,10 @@ These checks cover package structure, metadata, local links and accidental local
 - [Install, update and remove](docs/install.md), [usage](docs/usage.md) and [audience](docs/audience-and-positioning.md): how to install, how to start and who ItF is for.
 - [Skill instructions](SKILL.md), [claims](references/claims.md) and [contributions](references/contributions.md): the core workflow.
 - [Docs index](docs/README.md): practice guides, contracts, examples and designs, each with its own status.
-- [Installation evidence](docs/installation-check-2026-11-04.md): the exact-version checks, earlier attempts and their limits.
-- [Development validation](docs/validation-2026-11-04.md) and [earlier release review](docs/release-readiness-2026-11-04.md): small observations and an earlier rights review. They don't prove the current release.
+- [Reports](docs/reports/README.md): shareable project analyses, including the OpenHaven theory-of-change reconstruction.
+- [Check records](docs/checks/README.md): ItF source reviews, tests and host observations.
+- [Installation evidence](docs/checks/installation-check-2026-11-04.md): the exact-version checks, earlier attempts and their limits.
+- [Development validation](docs/checks/validation-2026-11-04.md) and [earlier release review](docs/checks/release-readiness-2026-11-04.md): small observations and an earlier rights review. They don't prove the current release.
 - [Contributing](CONTRIBUTING.md): how to report problems safely, source rights and checks.
 
 A new install-tested release needs its exact package checked in a supported host. Publishing new source doesn't update installed copies.

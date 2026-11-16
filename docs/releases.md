@@ -37,7 +37,7 @@ package update.
 the distributed source. Host evidence applies only to its recorded source SHA,
 host/version, installation scope and invocation. Later documentation does not
 inherit exact-package verification, even if the skill instructions are unchanged.
-Read the [check record](installation-check-2026-11-04.md); do not treat a newer
+Read the [check record](checks/installation-check-2026-11-04.md); do not treat a newer
 tag, passing package checks or an experimental prerelease as broad compatibility
 or evidence of human usefulness.
 
