@@ -4,10 +4,10 @@
 OpenCode V2 project. It previews every operation before changing anything.
 The conversational skill still works without this setup.
 
-**Experimental implementation; native-host verification is incomplete.** The
-runtime SDK check passed, but OpenCode V2.3.0 did not expose the generated server.
-Use this as a reviewable candidate, not a verified one-step installation.
-See the [check record](checks/library-mcp-setup-2026-11-17.md).
+**Experimental implementation.** Runtime preparation, SDK reads, undo and an
+OpenCode V2.3.0 native connection check passed. Native connection was checked
+using the byte-identical setup-generated config after built-in plugin activation.
+No model run was performed. See the [check record](checks/library-mcp-setup-2026-11-17.md).
 
 **Implemented target:** POSIX, Node.js 22+, npm, Git, and OpenCode V2.3 or later within V2.
 Claude Code, Codex and personal/global setup are not implemented. The separate
@@ -87,6 +87,11 @@ was not checked**. Host connection requires separate verification. A cold
 `opencode mcp list` can read the registry before it is populated; an empty list
 does not establish that the configuration is absent. OpenCode manages the
 configured server's lifetime.
+
+For an automated native check, OpenCode's read-only `GET /api/provider`
+inventory endpoint awaits plugin activation. Registry/config reads and a location
+reload alone do not await it. This is a diagnostic lifecycle boundary, not an
+extra setup step for every conversation.
 
 The result reports the runtime source, declared skill/server versions, snapshot
 and operation checks separately. A config entry is not proof of a connection;
