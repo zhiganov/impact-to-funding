@@ -23,8 +23,8 @@ contact a service or change an installed copy; the managed commands are separate
    resolved full commit SHA. Exact source is determined after checkout or tag
    resolution, not inferred from a version string.
 3. **Helper version:** the optional metadata tool is independently versioned
-   `0.3.0` after the notice addition (`0.1.0` for the original #54
-   inspector and `0.2.0` for the managed CLI).
+   `0.4.0` after library setup (`0.1.0` for the original #54
+   inspector, `0.2.0` for the managed CLI and `0.3.0` for notices).
    Its version is not the installed skill's version.
 
 The [Agent Skills specification](https://agentskills.io/specification#metadata-field)

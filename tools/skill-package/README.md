@@ -4,6 +4,9 @@ Optional Node.js 22+ and Git tooling for the [version/provenance contract](../..
 and [managed installation/update/rollback](../../docs/managed-skill-updates.md).
 There are no package dependencies; ordinary conversation needs neither this
 helper nor Node. No hooks, global configuration, telemetry or model call is run.
+The optional [`setup` command](../../docs/library-mcp-setup.md) separately prepares
+a local library runtime and edits one OpenCode V2 project's MCP configuration.
+Its MCP dependencies are installed only during explicit setup apply.
 An optional [in-skill notice](../../docs/update-notices.md) requires per-copy
 consent and host tool/network permissions; user-visible delivery is unverified.
 
@@ -22,6 +25,12 @@ complete checkout, use `node tools/skill-package/itf.mjs ...` instead.
 harness and project/personal scope. Changes require `--apply`; `check` never
 writes. Read the [managed guide](../../docs/managed-skill-updates.md) for source
 pins, duplicates, private receipts/backups, failure recovery and limitations.
+
+`setup --harness opencode --scope project --commit <full-sha>` previews library
+preparation and registration. Use `--apply` to perform it, `--check` for a
+read-only SDK connection/operation check, or `--undo` to preview selective removal.
+This first adapter supports POSIX/OpenCode V2.3+ only. It neither installs a skill
+nor registers funding discovery. Its receipt is separate from the skill manager.
 
 ## Inspect one explicitly selected installation
 

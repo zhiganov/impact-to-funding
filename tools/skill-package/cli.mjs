@@ -1,9 +1,14 @@
 import { fileURLToPath } from 'node:url';
 import { configureNotice, createManager, HELPER_VERSION, inspectInstallation } from './index.mjs';
+import { createSetup } from './lib/setup.mjs';
 
 const usage = `ItF skill manager ${HELPER_VERSION}
 Usage:
   itf inspect --root <selected-installation>
+  itf setup --harness opencode --scope project [--project <directory>]
+      --commit <full-sha> [--source <local-git-checkout>] [--name <server-name>] [--apply]
+  itf setup --harness opencode --scope project [--project <directory>]
+      [--name <server-name>] <--check | --undo [--apply]>
   itf notice <enable|disable|status> --harness <claude|codex|opencode>
       --scope <project|personal> [--project <directory>] [--apply]
   itf notice <enable|disable|status> --root <loaded-skill-directory> [--apply]
@@ -15,7 +20,8 @@ Usage:
 Without --apply, operations only report a plan. check never changes files.
 adopt asserts ownership of an existing copy; rollback/recover preserve recovery.
 Output contains private local paths: do not publish it or send it to a version API.
-No hooks, global configuration, telemetry or host/model call is installed/run.`;
+No hooks, global configuration, telemetry or model call is installed/run.
+setup explicitly prepares a private library runtime and edits one project MCP entry.`;
 
 export async function run(args, { onPlan } = {}) {
   if (args.length === 0 || args.includes('--help')) return { help: usage };
@@ -23,6 +29,21 @@ export async function run(args, { onPlan } = {}) {
   if (args[0] === 'inspect') {
     if (args.length !== 3 || args[1] !== '--root') throw new TypeError('Use inspect --root <selected-installation>');
     return inspectInstallation(args[2]);
+  }
+  if (args[0] === 'setup') {
+    const options = { onPlan };
+    const values = { '--harness': 'harness', '--scope': 'scope', '--project': 'project',
+      '--commit': 'commit', '--source': 'source', '--name': 'name' };
+    const flags = { '--apply': 'apply', '--undo': 'undo', '--check': 'check' };
+    for (let i = 1; i < args.length; i += 1) {
+      const key = args[i];
+      const property = values[key] ?? flags[key];
+      if (!property || Object.hasOwn(options, property)) throw new TypeError('Unknown or repeated setup option');
+      if (Object.hasOwn(flags, key)) options[property] = true;
+      else if (args[i + 1] && !args[i + 1].startsWith('--')) options[property] = args[++i];
+      else throw new TypeError('Missing setup option value');
+    }
+    return createSetup().run(options);
   }
   if (args[0] === 'notice') {
     const action = args[1];

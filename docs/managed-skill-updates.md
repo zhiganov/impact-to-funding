@@ -2,6 +2,11 @@
 
 The optional ItF CLI installs a complete source snapshot into a Claude Code, Codex CLI or OpenCode skills folder. It uses Git, public GitHub releases and the [version and provenance contract](skill-version-provenance.md). It isn't a registry, hosted service, plugin or background updater. It needs Node.js 22+, npm and Git. Conversation with the skill doesn't.
 
+The separate [`itf setup` command](library-mcp-setup.md) can prepare and register
+the optional library MCP for one OpenCode V2 project. It requires its own reviewed
+apply, tracks configuration separately, and supports selective undo. Ordinary
+`install` and `update` still change only the skill copy.
+
 ## Start with a plan
 
 From the project where you want to use ItF:
