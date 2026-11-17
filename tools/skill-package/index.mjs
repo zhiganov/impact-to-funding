@@ -4,3 +4,4 @@ export { HELPER_VERSION, INSTALLATION_CONTRACT, inspectInstallation } from './li
 export { createManager } from './lib/manager.mjs';
 export { githubCatalogue } from './lib/github.mjs';
 export { checkNotice, configureNotice, formatNotice } from './lib/notice.mjs';
+export { createSetup } from './lib/setup.mjs';
