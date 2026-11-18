@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -42,6 +43,24 @@ test('reciprocal content and MIT software have separate explicit licence scopes'
   }
   const manifest = JSON.parse(readFileSync(path.join(root, 'funding.json'), 'utf8'));
   assert.deepEqual(manifest.projects[0].licenses, ['spdx:CC-BY-SA-4.0', 'spdx:MIT']);
+});
+
+test('optional notice routing reads the reference, runs the check and preserves the moved rules', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  const section = skill.split('## Optional update notice\n\n')[1]?.split('## Start:')[0];
+  assert.ok(section, 'The core retains the optional notice route');
+  assert.ok(section.length < 450, 'Host-specific detail stays outside the core');
+  assert.match(section, /actual base directory and permits local execution, read \[update-notice instructions\]\(references\/update-notice\.md\) and run the check it describes, once per activation/);
+  assert.match(section, /Skip an unavailable or denied check silently unless the person asks about updates/);
+  assert.match(section, /Never block the conversation, enable notices without consent, retry a denied check, or update during this turn/);
+  assert.doesNotMatch(section, /NOTICE_OFFER|UPDATE_AVAILABLE|RELEASE_AVAILABLE|CLAUDE_SKILL_DIR/);
+  const reference = readFileSync(path.join(root, 'references/update-notice.md'), 'utf8');
+  const moved = reference.split('# Optional update-notice instructions\n\n')[1]
+    .replace('(../docs/update-notices.md)', '(docs/update-notices.md)').trim();
+  // The two paragraphs from the pre-refactor core at 2776604 are unchanged,
+  // apart from the relative link necessitated by their new directory.
+  assert.equal(createHash('sha256').update(moved).digest('hex'),
+    'e97ce8801d947a3ac97660c21026ac37e6f2ac65b17b98c0b06f39f0d22d25ab');
 });
 
 test('all Markdown local links resolve inside the distributable package', () => {
@@ -160,6 +179,7 @@ test('fictional reconstruction preserves the source correction and missing outco
 test('package includes workflow, templates, provenance and clearly labelled synthetic examples', () => {
   for (const relative of [
     'README.md', 'LICENSE', 'SOURCES.md', 'references/claims.md', 'references/contributions.md',
+    'references/update-notice.md',
     'references/funding-and-review.md', 'references/frameworks.md',
     'assets/assessment.md', 'assets/report.md', 'playbooks/support-brief.md',
     'playbooks/github-sponsorship.md', 'examples/github-sponsorship.md',
