@@ -31,9 +31,7 @@ These rules hold everywhere in this skill. Later sections don't repeat them.
 
 ## Optional update notice
 
-When the host gives this skill's actual base directory and allows local execution, run Node once per activation with `<loaded-base-directory>/tools/skill-package/notice-entry.mjs` as a literal argument. Add `--allow-network` only if the host also allows public GitHub metadata access. Pass the path without shell expansion; skip the check if you can't pass it safely. Use the loaded copy's directory, never a guessed path or another copy: Claude Code provides `${CLAUDE_SKILL_DIR}`, Codex supplies the selected skill path, and OpenCode's skill tool supplies its base directory. If the host gives no path, or Node, the helper, permission or network is unavailable, skip the check and continue. Don't mention a skipped check unless the person asks about updates. The helper makes network requests only if the person enabled notices for this managed copy, and it caches version-only metadata locally. Never bypass a host's network or tool limits.
-
-If it returns `NOTICE_OFFER`, briefly mention the optional, off-by-default check alongside your help, unless you already offered it or the person declined in this conversation. If it returns `UPDATE_AVAILABLE` or `RELEASE_AVAILABLE`, briefly relay it without overstating freshness. Never block the conversation, enable checks without consent, update during this turn, treat a notice as approval to update, or retry a denied check. The [notice guide](docs/update-notices.md) covers consent and opt-out.
+When the host supplies this skill’s actual base directory and permits local execution, read [update-notice instructions](references/update-notice.md) before running the optional check, at most once per activation. Skip an unavailable or denied check silently unless the person asks about updates. Never block the conversation, enable notices without consent, retry a denied check, or update during this turn.
 
 ## Start: meet the person where they are
 
