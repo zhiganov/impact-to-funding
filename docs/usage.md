@@ -155,6 +155,10 @@ The optional [systems and complexity reference](../references/systems-and-comple
 
 The agent should use this only where it helps. A gap in information isn't automatically "complexity", and a suggested feedback loop isn't an observed finding. Cynefin is one optional perspective. ItF has no detailed Cynefin workflow, and we haven't tested how well models apply it.
 
+For funded work, bring the original agreement and any records you can share with the agent. The [repair-library example](../examples/builder-assessment.md#when-funded-work-changes-course) shows how two grant agreements could handle the same change of plan.
+
+> @impact-to-funding Help me explain a change of course. Keep the original commitment visible. Use the records I supply to show what changed, whose input shaped our response, and what we knew at the time. Separate completed work, proposed spending and outcomes we still need to check. Use the agreement to identify who can approve the change and draft the question for them if needed.
+
 ## Optional framework lens
 
 The [framework starter](../references/frameworks.md) helps you pick a lens if one would help, or keep your own model. You don't need a framework, a statement of personal purpose or a full assessment.

@@ -52,3 +52,30 @@ No funding URL is supplied. Do not invent one or submit this text anywhere.
 ## Next decision and disclosure
 
 Decide whether a new edition is justified compared with improving existing information. Until local willingness and need are established, retain a prospective learning proposal rather than a verified-impact profile. Any real public candidate requires a separate review of exact claims, evidence disclosure and permission; this fictional example is not a model endorsement of a real project.
+
+## When funded work changes course
+
+In this fictional continuation, a funder approves EUR 240 to edit and print
+120 updated guides. Before the print order, the library posts a closure notice.
+Repairs will keep its usual venue shut for six weeks. The library arranges
+sessions at two temporary sites. A regular visitor and a volunteer point out
+that the new guides would still direct people to the closed venue. Alex pauses
+the order and proposes updating the library's access page and posting notices
+at both sites.
+
+Alex keeps the original agreement and budget, the closure notice and a dated
+note of who informed the proposal. The note explains why the new approach still
+serves the original purpose and records the editing costs already incurred
+separately from the proposed cost of making and posting notices.
+
+| Fictional grant terms | How the decision works |
+|---|---|
+| The grant reimburses the agreed printed edition. | Alex asks the grant officer to approve a revised scope and budget before charging for notices. The officer can compare the closure notice, decision note and proposed costs with the original terms. |
+| The grant supports access to repair sessions and asks the team to share what it learns. | Under these terms, the library coordinator can approve the change of format within the original budget. The grant officer approves any increase. Alex records the coordinator's decision and includes a short account of what the team learned in the next update. |
+
+Suppose the coordinator approves the change under the second agreement and both
+sites confirm that they posted the notices. Alex can report where updated
+information was posted and explain why a new print run made less sense once the
+venue closed. Whether visitors found the notices or attended remains unknown.
+The public lesson can describe the decision and the evidence without sharing
+the visitor's or volunteer's personal details.
