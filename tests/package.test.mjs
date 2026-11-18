@@ -45,13 +45,12 @@ test('reciprocal content and MIT software have separate explicit licence scopes'
   assert.deepEqual(manifest.projects[0].licenses, ['spdx:CC-BY-SA-4.0', 'spdx:MIT']);
 });
 
-test('optional notice routing reads the reference before checking and preserves the moved rules', () => {
+test('optional notice routing reads the reference, runs the check and preserves the moved rules', () => {
   const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
   const section = skill.split('## Optional update notice\n\n')[1]?.split('## Start:')[0];
   assert.ok(section, 'The core retains the optional notice route');
   assert.ok(section.length < 450, 'Host-specific detail stays outside the core');
-  assert.match(section, /actual base directory and permits local execution, read \[update-notice instructions\]\(references\/update-notice\.md\) before running/);
-  assert.match(section, /at most once per activation/);
+  assert.match(section, /actual base directory and permits local execution, read \[update-notice instructions\]\(references\/update-notice\.md\) and run the check it describes, once per activation/);
   assert.match(section, /Skip an unavailable or denied check silently unless the person asks about updates/);
   assert.match(section, /Never block the conversation, enable notices without consent, retry a denied check, or update during this turn/);
   assert.doesNotMatch(section, /NOTICE_OFFER|UPDATE_AVAILABLE|RELEASE_AVAILABLE|CLAUDE_SKILL_DIR/);
