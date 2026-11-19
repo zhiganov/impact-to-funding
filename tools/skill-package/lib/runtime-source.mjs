@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { prepareFromGitHub, SOURCE_URL, sourceGit } from './git.mjs';
 import { inspectInstallation } from './installation.mjs';
@@ -31,14 +31,24 @@ function checkRuntimeLock(root) {
   }
 }
 
+// How to start npm without a shell. On Windows npm is a .cmd script, and Node
+// refuses to run one without a shell (EINVAL), so run the npm CLI that ships
+// with this Node install directly instead.
+export function npmCommand({ platform = process.platform, execPath = process.execPath, exists = existsSync } = {}) {
+  if (platform !== 'win32') return { file: 'npm', prefix: [] };
+  const cli = path.win32.join(path.win32.dirname(execPath), 'node_modules', 'npm', 'bin', 'npm-cli.js');
+  if (!exists(cli)) throw new Error('npm was not found next to this Node install; install Node with its bundled npm');
+  return { file: execPath, prefix: [cli] };
+}
+
 function installWithNpm(root, includeDev) {
   const output = path.join(root, 'outputs');
   mkdirSync(output, { mode: 0o700 });
   const userConfig = path.join(output, 'npm-user.config');
   const globalConfig = path.join(output, 'npm-global.config');
   for (const file of [userConfig, globalConfig]) writeFileSync(file, '', { flag: 'wx', mode: 0o600 });
-  const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-  execFileSync(npm, ['ci', '--ignore-scripts', includeDev ? '--include=dev' : '--omit=dev', '--no-audit', '--no-fund',
+  const npm = npmCommand();
+  execFileSync(npm.file, [...npm.prefix, 'ci', '--ignore-scripts', includeDev ? '--include=dev' : '--omit=dev', '--no-audit', '--no-fund',
     '--registry=https://registry.npmjs.org', `--userconfig=${userConfig}`, `--globalconfig=${globalConfig}`], {
     cwd: path.join(root, 'mcp'), env: commandEnvironment(), timeout: 180000,
     maxBuffer: 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'],
