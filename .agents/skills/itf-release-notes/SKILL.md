@@ -67,6 +67,16 @@ commit (see `tools/library-runtime/README.md`) and add its provenance summary to
 the GitHub release text. The notes in `docs/releases/` can't hold it: the release
 commit doesn't exist while they're written.
 
+With the same tag, build the Claude Code plugin for the tagged commit (see
+`tools/claude-plugin/README.md`), validate it with `claude plugin validate`, and
+zip the built folder. Attach the zip to the GitHub release, then create or
+update `.claude-plugin/marketplace.json` so the `itf` entry points at that
+release's zip URL with the zip's SHA-256. Name the marketplace
+`impact-to-funding`: `docs/install.md` tells people to install
+`itf@impact-to-funding`. Commit the marketplace update. Built files themselves
+stay out of Git. After the first plugin release, remove the "Available from the
+first release after v0.5.0" line from `docs/install.md`.
+
 ## Contributors
 
 Thank contributors only by verified GitHub identity, from commit authors or
