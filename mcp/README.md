@@ -11,9 +11,9 @@ derived access view, not a new record standard or a hosted service.
 Requirements: Node.js 22 or later, npm and Git, with a checkout of this repository.
 Installing the ordinary skill does **not** require these dependencies.
 
-For OpenCode V2 project scope on POSIX, [`itf setup`](../docs/library-mcp-setup.md)
-can prepare the local runtime/snapshot and register it after a reviewable plan.
-It provides private backups and selective undo. The manual route below remains
+For OpenCode V2 project scope or Claude Code local scope on POSIX,
+[`itf setup`](../docs/library-mcp-setup.md) can prepare the local runtime/snapshot
+and register it after a reviewable plan. It provides selective undo. The manual route below remains
 available for other clients.
 
 From the repository root:

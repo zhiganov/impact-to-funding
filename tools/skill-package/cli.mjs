@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url';
 import { configureNotice, createManager, HELPER_VERSION, inspectInstallation } from './index.mjs';
 import { createSetup } from './lib/setup.mjs';
+import { createClaudeSetup } from './lib/setup-claude.mjs';
 
 const usage = `ItF skill manager ${HELPER_VERSION}
 Usage:
@@ -8,6 +9,10 @@ Usage:
   itf setup --harness opencode --scope project [--project <directory>]
       --commit <full-sha> [--source <local-git-checkout>] [--name <server-name>] [--apply]
   itf setup --harness opencode --scope project [--project <directory>]
+      [--name <server-name>] <--check | --undo [--apply]>
+  itf setup --harness claude --scope local [--project <directory>]
+      --commit <full-sha> [--source <local-git-checkout>] [--name <server-name>] [--apply]
+  itf setup --harness claude --scope local [--project <directory>]
       [--name <server-name>] <--check | --undo [--apply]>
   itf notice <enable|disable|status> --harness <claude|codex|opencode>
       --scope <project|personal> [--project <directory>] [--apply]
@@ -21,7 +26,8 @@ Without --apply, operations only report a plan. check never changes files.
 adopt asserts ownership of an existing copy; rollback/recover preserve recovery.
 Output contains private local paths: do not publish it or send it to a version API.
 No hooks, global configuration, telemetry or model call is installed/run.
-setup explicitly prepares a private library runtime and edits one project MCP entry.`;
+setup explicitly prepares a private library runtime and registers one MCP entry:
+in the OpenCode project config, or through the Claude Code CLI at local scope.`;
 
 export async function run(args, { onPlan } = {}) {
   if (args.length === 0 || args.includes('--help')) return { help: usage };
@@ -43,7 +49,7 @@ export async function run(args, { onPlan } = {}) {
       else if (args[i + 1] && !args[i + 1].startsWith('--')) options[property] = args[++i];
       else throw new TypeError('Missing setup option value');
     }
-    return createSetup().run(options);
+    return (options.harness === 'claude' ? createClaudeSetup() : createSetup()).run(options);
   }
   if (args[0] === 'notice') {
     const action = args[1];

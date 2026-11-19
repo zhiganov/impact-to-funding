@@ -1,16 +1,21 @@
 # Set up the optional library MCP
 
 `itf setup` prepares a private local library runtime and registers it in one
-OpenCode V2 project. It previews every operation before changing anything.
+OpenCode V2 project, or for one project at Claude Code's local scope. It previews
+every operation before changing anything.
 The conversational skill still works without this setup.
 
 **Experimental implementation.** Runtime preparation, SDK reads, undo and an
 OpenCode V2.3.0 native connection check passed. Native connection was checked
 using the byte-identical setup-generated config after built-in plugin activation.
 No model run was performed. See the [check record](checks/library-mcp-setup-2026-11-17.md).
+For Claude Code, setup, a Claude Code 2.1.328 connection check and undo passed;
+see its [check record](checks/library-mcp-setup-claude-2026-11-19.md).
 
-**Implemented target:** POSIX, Node.js 22+, npm, Git, and OpenCode V2.3 or later within V2.
-Claude Code, Codex and personal/global setup are not implemented. The separate
+**Implemented targets:** POSIX, Node.js 22+, npm and Git, with either OpenCode
+V2.3 or later within V2 (project scope) or Claude Code 2 or later (local scope).
+Codex, Claude Code's user and project scopes, and personal/global setup are not
+implemented. The separate
 [plugin proposal](https://github.com/zhiganov/impact-to-funding/issues/106) is
 optional.
 
@@ -118,6 +123,40 @@ Runtime-preparation failures leave the project config unchanged.
 Failed attempts and completed/undone runtimes remain in private state for
 inspection; a later explicit attempt uses a fresh directory. Backups and runtime
 data are not automatically deleted.
+
+## Claude Code: local scope
+
+Claude Code's local scope is a private entry for one project, kept in Claude
+Code's own config file (`~/.claude.json`, or `$CLAUDE_CONFIG_DIR/.claude.json`).
+From the project:
+
+```sh
+npx --yes --package=github:zhiganov/impact-to-funding#main itf setup \
+  --harness claude --scope local \
+  --commit <reviewed-full-commit>
+```
+
+Add `--apply` to perform the plan, and use `--check`, `--undo` and
+`--undo --apply` as for OpenCode. Runtime preparation and the SDK check are the
+same. The registration step differs:
+
+- **Setup writes through the Claude Code CLI.** It runs
+  `claude mcp add-json --scope local` for one entry, then reads the file back
+  and checks the entry matches. Undo runs `claude mcp remove --scope local`
+  only if the entry still matches what setup wrote.
+- **Setup never copies or rewrites Claude Code's config file.** That file also
+  holds account data, so there is no file backup. The private receipt records
+  only the setup-owned entry.
+- **Names owned elsewhere are refused.** Setup stops if the name already exists
+  in this project's local entries, in user-scope servers, or in the project's
+  shared `.mcp.json`. Claude Code itself would accept a local entry with the same
+  name as a shared one, so setup checks this itself.
+
+To confirm Claude Code can connect, run `claude mcp get itf_library` from the
+project. It should report `Connected`. That checks the connection, not model use.
+
+User scope and the shared project `.mcp.json` aren't offered: the entry contains
+absolute paths into private setup state, which suit neither.
 
 ## Limits
 
