@@ -9,6 +9,8 @@ A move into this folder does not refresh the evidence.
 - [Native CLI installation checks](installation-check-2026-11-04.md): exact-version observations for OpenCode, Codex and Claude Code, including earlier unsuccessful probes.
 - [Manual development validation](validation-2026-11-04.md): limited behavioural trials, a retained failure and one targeted recheck.
 - [Release-preparation review](release-readiness-2026-11-04.md): historical content, rights and disclosure review.
+- [Library setup checks: OpenCode](library-mcp-setup-2026-11-17.md): OpenCode V2 project-scope setup, local and native connection checks.
+- [Library setup checks: Claude Code](library-mcp-setup-claude-2026-11-19.md): Claude Code local-scope setup, a native connection check and undo.
 
 ## Guidance and local tools
 

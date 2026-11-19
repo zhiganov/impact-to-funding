@@ -30,7 +30,7 @@ const text = (value) => value === null ? '{}\n' : new TextDecoder('utf-8', { fat
 
 function pathsFor(options) {
   if (options.harness !== 'opencode' || options.scope !== 'project') {
-    throw new TypeError('Library setup currently supports only --harness opencode --scope project');
+    throw new TypeError('Library setup supports only --harness opencode --scope project or --harness claude --scope local');
   }
   if (process.platform === 'win32') throw new Error('Library setup currently supports POSIX hosts only');
   const project = realpathSync(path.resolve(options.project ?? process.cwd()));
