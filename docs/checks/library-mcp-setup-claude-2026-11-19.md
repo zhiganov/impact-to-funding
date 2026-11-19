@@ -50,6 +50,22 @@ Run in a disposable project and an isolated Claude Code config folder
   name. All other top-level keys of the config file were unchanged.
 - The test's private state was deleted afterwards.
 
+## Plugin guard (added later the same day)
+
+Setup now stops when an enabled plugin already provides the library for the
+project ([#106](https://github.com/zhiganov/impact-to-funding/issues/106)).
+
+- Tests: 113/113 in `tools/skill-package`, with 3 new tests for named plugins,
+  plugins declaring the same server name, project-scoped and disabled plugins,
+  an unavailable plugin list, and a plugin appearing between plan and write.
+- Real check on Claude Code 2.1.328, in the isolated config folder, with a probe
+  plugin from a local test marketplace declaring `itf_library`: setup refused
+  while the plugin was enabled, naming it, and offered a plan once it was
+  disabled. Neither preview wrote any setup state.
+- Behind the guard: in the same probe, Claude Code hid the plugin's server only
+  when a local server had the identical command. With different commands, both
+  were listed.
+
 ## Limits
 
 The native check shows Claude Code can start and connect to the server. It

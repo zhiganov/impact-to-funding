@@ -151,6 +151,12 @@ same. The registration step differs:
   in this project's local entries, in user-scope servers, or in the project's
   shared `.mcp.json`. Claude Code itself would accept a local entry with the same
   name as a shared one, so setup checks this itself.
+- **One owner per project.** Setup stops if an enabled plugin already provides
+  the library here: a plugin named `itf` or `impact-to-funding`, or one that
+  declares a server with the same name. Claude Code would otherwise load both,
+  because it hides a plugin's server only when a manual server has the identical
+  command. Setup reads `claude plugin list --json`; if that list is unavailable,
+  the plan says so. Disable the plugin first, or keep it and skip setup.
 
 To confirm Claude Code can connect, run `claude mcp get itf_library` from the
 project. It should report `Connected`. That checks the connection, not model use.
