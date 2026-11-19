@@ -31,3 +31,7 @@ This applies to the skill, the docs and issues. Accuracy still matters: keep eve
 - Keep the goal, every acceptance item and its ticked state, and every limit that changes what a reader would do. Move long notes into a comment instead of deleting them.
 - Show the draft to the owner before editing the issue.
 - After editing, compare the new text with the old and confirm only the approved changes were made.
+
+## Maintainer skills
+
+- When preparing a release, follow `.agents/skills/itf-release-notes/SKILL.md`. It's for maintainers only: the ItF skill never loads it.
