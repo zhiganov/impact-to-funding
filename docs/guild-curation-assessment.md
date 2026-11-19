@@ -33,13 +33,15 @@ attributed curator's own interpretation, not a purportedly approved guild view.
 These are prose facts, not required JSON properties, a new schema or a public
 policy store. Combine them in one suitable document where that is enough; leave
 unknowns explicit and keep protected agreements outside public presentations.
+A small guild can state its policy in a few sentences: its purpose, who curates
+and how to ask for a correction.
 
 | Useful fact | What the reader needs to understand |
 |---|---|
 | Purpose and scope | The actual domain, period or other selection boundary, why work is selected, and what selection/omission does and does not mean. Selection is partial, not a complete roster or proof of no other work. |
 | Policy identity/version | Which policy and actual revision this selection uses. A new policy does not retroactively relabel old selections. A mutable link alone is not a version. |
 | Curation and change authority | Who actually curated, the basis for representing the guild, who may revise the policy, and the decision/approval basis actually established for this version. Reuse the community's real rule; do not appoint a committee or assume consensus. |
-| Selected work | The minimum cleared subject/work references, actual source versions where known, role/period and the curator's own interpretation and limits. Keep source declarations, actual inspection and version-match evidence distinct. |
+| Selected work | The minimum cleared subject/work references, actual source versions where known, role/period and the curator's own interpretation and limits, labelled AI-assisted where AI helped draft it. Keep source declarations, actual inspection and version-match evidence distinct. |
 | Conflicts and qualifications | Relevant known interests, coauthorship or limits on independence. Do not disclose a protected association to make a conflict field complete; narrow or omit an independence claim if its necessary basis cannot be safely shown. |
 | Correction and contestation | The actual available way to question or correct the selection/policy, who can change which statement and any known limits. Unknown responsibility stays unknown; a status link is not a staffed appeal service. |
 | Disclosure and continuity | What may be shared for the intended audience/use; how declined recognition, changed permissions, corrections and historical association are handled within actual authority and retention limits. No complete public graph or recall of third-party copies. |
