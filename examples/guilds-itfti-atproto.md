@@ -223,20 +223,25 @@ sits next to the decision. Nothing marks the decision as unanimous.
 
 **A rule change.** Harbour's written rules, v1, say a new member joins once two
 members sponsor them. Tavi proposes v2: a newcomer first joins a meeting, then
-any member can sponsor them. The rules also say how to change the rules:
-proposals stay open for two weeks, and a change needs agreement from most members
-with no unresolved strong objection.
+any member can sponsor them. The rules also say how to change the rules,
+by consent: a proposal stays open for two weeks and passes if no objection is
+still open when it closes. Silence counts as agreement.
 
 - The proposal goes to the dashboard's existing decisions feed, with v1, v2 and
   the two-week window. ItF adds no voting tool of its own.
-- Sol objects: one sponsor is too few. Tavi narrows the proposal to "one sponsor,
-  after a meeting". Sol withdraws the objection but asks that it stay on record.
-- After two weeks, most members agree. The record keeps v2, its date, the decision
-  under v1's change rule, and Sol's withdrawn objection.
+- Sol objects, with a reason: one sponsor is too few. Tavi narrows the proposal to
+  "one sponsor, after a meeting" and re-posts it as an amended version, linked to
+  the first. Sol withdraws the objection but asks that it stay on record.
+- After two weeks, no objection is open, so v2 passes. The record keeps v2, its
+  date and the decision under v1's change rule.
+- The decisions feed shows only each member's current answer, so it may not keep
+  Sol's withdrawn objection. A steward adds it to the rules page's history, with
+  Sol's agreement, until the tool can keep it.
 - v1 stays readable. Members admitted under v1 keep their membership.
 
-The tools follow Harbour's own rule. They don't count votes unless the rules say to,
-and they don't decide when a proposal passes. Changing who can join doesn't change
+The tools follow Harbour's own rule, which here is consent. A community whose rule
+needs a majority would read the count of agreements itself; the decisions feed
+decides by open objections only. Changing who can join doesn't change
 anyone's access. A steward updates the member list in the admin tool separately,
 after the decision.
 
