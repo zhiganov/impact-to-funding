@@ -62,6 +62,11 @@ Don't create the tag, publish the GitHub release or announce it. Give the
 maintainer the exact commands for the merge commit, and offer to check the
 release once it's published.
 
+Once the tag exists, build the release-prepared library runtime for the tagged
+commit (see `tools/library-runtime/README.md`) and add its provenance summary to
+the GitHub release text. The notes in `docs/releases/` can't hold it: the release
+commit doesn't exist while they're written.
+
 ## Contributors
 
 Thank contributors only by verified GitHub identity, from commit authors or
