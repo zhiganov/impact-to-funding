@@ -24,6 +24,11 @@ repair, new runner, application, MCP service or fresh release is required.
 
 ## Artifact and access readiness
 
+**Updated 2026-11-19:** the participant guide and the invitation below now pin
+`190c1de4050124d1a70f09a35d7785fe65476a92`. Its source archive returned HTTP 200 on 2026-11-19. The
+readiness checks in this section were made for the earlier pin and weren't
+repeated for the new one.
+
 This historical preparation used source `22d4c8d31aa32e98609341eb7fd4eadc85a8608a`,
 recorded on 2026-11-08. It contains contribution portfolios, the withdrawal
 clarification, the report template's review-status and confidential-challenge
@@ -107,7 +112,7 @@ this as a request to return feedback. No recipients or distribution list are sto
 > Would you be interested in trying Impact to Funding on one small task of your
 > choice, such as clarifying a theory of change or reviewing a funding draft?
 > It is experimental, not certification or a promise of funding. The trial uses
-> published source revision 22d4c8d with an AI assistant you already use that can
+> published source revision 190c1de with an AI assistant you already use that can
 > read local files; automatic installation is not verified and your host's normal
 > costs and privacy terms apply. You can use fictional material, skip questions
 > or stop at any time. The guide has optional questions about usefulness, effort,
@@ -117,7 +122,7 @@ this as a request to return feedback. No recipients or distribution list are sto
 > retain it until [agreed point], with [actual correction/withdrawal route].
 > Nothing will be quoted publicly and no follow-up contact will occur without
 > your separate permission. The source folder is available at:
-> https://github.com/zhiganov/impact-to-funding/archive/22d4c8d31aa32e98609341eb7fd4eadc85a8608a.zip
+> https://github.com/zhiganov/impact-to-funding/archive/190c1de4050124d1a70f09a35d7785fe65476a92.zip
 
 Study invitations, community introductions and partnership outreach serve
 different purposes and should not be conflated.
