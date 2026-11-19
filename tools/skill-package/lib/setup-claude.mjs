@@ -141,6 +141,34 @@ function runClaude(args, paths) {
   });
 }
 
+// One owner per project: a plugin-owned library server and a setup-owned entry
+// would both load, because Claude Code only hides a plugin server whose command
+// matches a manual one exactly. Reads the host's own plugin inventory.
+function installedPlugins(paths) {
+  const output = execFileSync('claude', ['plugin', 'list', '--json'], {
+    cwd: paths.project, env: claudeEnvironment(paths), encoding: 'utf8', timeout: 60000,
+    maxBuffer: 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  return JSON.parse(output);
+}
+
+const itfPluginName = /^(?:itf|impact-to-funding)$/;
+
+function pluginConflict(list, paths) {
+  if (!Array.isArray(list)) throw new Error('Unrecognised Claude Code plugin list');
+  for (const plugin of list) {
+    if (!object(plugin) || plugin.enabled !== true) continue;
+    if (['local', 'project'].includes(plugin.scope) && plugin.projectPath !== paths.project) continue;
+    const name = typeof plugin.id === 'string' ? plugin.id.split('@')[0] : '';
+    const servers = object(plugin.mcpServers) ? plugin.mcpServers : {};
+    if (itfPluginName.test(name) || Object.hasOwn(servers, paths.name)) {
+      const id = typeof plugin.id === 'string' && /^[\w.@-]{1,200}$/.test(plugin.id) ? plugin.id : 'an enabled plugin';
+      throw new Error(`${id} already provides the ItF library here. Use one owner per project: `
+        + `disable it with claude plugin disable, or keep it and skip setup`);
+    }
+  }
+}
+
 function installedHostVersion() {
   let version;
   try {
@@ -156,6 +184,7 @@ function installedHostVersion() {
 export function createClaudeSetup({
   prepare = prepareRuntime, snapshot = prepareRuntimeSnapshot, probe = probeRuntime,
   verifySource = checkRuntimeSource, hostVersion = installedHostVersion, claude = runClaude,
+  plugins = installedPlugins,
 } = {}) {
   async function plan(options) {
     const paths = pathsFor(options);
@@ -183,6 +212,11 @@ export function createClaudeSetup({
     if (Number(process.versions.node.split('.')[0]) < 22) throw new Error('Library setup needs Node.js 22+; use the plain skill without it');
     const host = hostVersion();
     otherScopeConflict(config, paths.project, paths.name);
+    let pluginCheck = 'none-found';
+    let pluginList;
+    try { pluginList = plugins(paths); }
+    catch { pluginCheck = 'not-available'; }
+    if (pluginList !== undefined) pluginConflict(pluginList, paths);
     const active = receipt?.status === 'registered';
     const runtime = active ? receipt.runtime : path.join(paths.state, 'runtimes', `${commit}-${options.generation}`);
     const snapshotPath = path.join(runtime, 'outputs/library-snapshot.json');
@@ -201,7 +235,7 @@ export function createClaudeSetup({
       throw new Error('Existing runtime artifacts have no active receipt; preserve them before another setup');
     }
     return { paths, receipt, current, entry, runtime, snapshotPath, commit, ...base,
-      operation: options.check ? 'check' : 'register', hostVersion: host,
+      operation: options.check ? 'check' : 'register', hostVersion: host, pluginCheck,
       status: active ? 'registered' : 'setup-available',
       sourceCommit: commit, source: paths.source ? 'selected local Git repository' : 'public ItF Git repository',
       backup: null,
@@ -214,7 +248,10 @@ export function createClaudeSetup({
         'Prepare the public library snapshot from the selected Git commit',
         'Check library_info, search_references and get_reference over local stdio',
       ],
-      limits: ['No skill installation or update', 'No user-scope or shared .mcp.json registration',
+      limits: [
+        ...(pluginCheck === 'not-available'
+          ? ['Claude Code plugin list was unavailable: check no ItF plugin is enabled before applying'] : []),
+        'No skill installation or update', 'No user-scope or shared .mcp.json registration',
         'No funding-service registration, model run or hosting', 'Host connection is checked separately'],
     };
   }
