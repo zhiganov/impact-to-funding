@@ -13,7 +13,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 ## Install and update
 
 - [Install guide](install.md): install in a project or personal folder, invoke the skill in each host, update, remove and troubleshoot. The [installation check record](checks/installation-check-2026-11-04.md) lists limited command-line checks in Codex, Claude Code and OpenCode.
-- [Releases](releases.md): how to follow releases and pick a version. [v0.5.0](releases/v0.5.0.md) is the current experimental prerelease. [v0.4.0](releases/v0.4.0.md), [v0.3.0](releases/v0.3.0.md) and [v0.2.0](releases/v0.2.0.md) are kept for history.
+- [Releases](releases.md): how to follow releases and pick a version. [v0.6.0](releases/v0.6.0.md) is the current experimental prerelease. [v0.5.0](releases/v0.5.0.md), [v0.4.0](releases/v0.4.0.md), [v0.3.0](releases/v0.3.0.md) and [v0.2.0](releases/v0.2.0.md) are kept for history.
 - [Version and provenance](skill-version-provenance.md): how released versions, channels and pins are recorded. The [local inspector](../tools/skill-package/README.md) reads them.
 - [Managed updates](managed-skill-updates.md): a command-line tool to install, check, update, adopt, roll back and recover copies of the skill.
 - [Update notices](update-notices.md): optional notices inside the skill. Each copy needs its own consent.
