@@ -6,11 +6,11 @@ The optional [managed CLI](managed-skill-updates.md) can install, check, update 
 
 ## What has been checked
 
-The commands below pin source `4566892ad990131fb36f760e14c73e5f275600cc`.
+Each host's commands pin the newest source checked in that host: `22baeceae63d8090aca1afb71ccf745e3335979b` (v0.6.0) for Claude Code, `4566892ad990131fb36f760e14c73e5f275600cc` for Codex CLI, and `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b` for OpenCode.
 
 - **Codex CLI 0.166.0:** a limited check passed. In one read-only `codex exec` run, `$impact-to-funding` loaded the skill and read its bundled `references/contributions.md`. The file contents matched the source, all 106 tracked files stayed unchanged, and no web or MCP calls happened. User configuration was left out, but user-level agent instructions still applied.
-- **Claude Code 2.1.321:** a matching limited check passed. In one non-interactive `claude -p` run, `/impact-to-funding` loaded the skill and read the same reference, with no files changed and no web or MCP calls.
-- **OpenCode:** not checked at this source. Earlier OpenCode v2.2.5 checks cover source `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
+- **Claude Code 2.1.328:** at `22baece` (v0.6.0), a matching limited check passed. In one non-interactive `claude -p` run, `/impact-to-funding` loaded the skill and read its bundled `references/learning.md`, with no files changed and no MCP calls. An earlier Claude Code 2.1.321 check covers `4566892`.
+- **OpenCode:** not checked at either newer source. Earlier OpenCode v2.2.5 checks cover source `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
 
 These checks cover those exact sources only. They didn't test a clean account, the interactive UI, IDEs or usefulness. Personal installs, manual copying, updates and removal below are documented but not checked. See the [check record](checks/installation-check-2026-11-04.md).
 
@@ -18,11 +18,11 @@ These checks cover those exact sources only. They didn't test a clean account, t
 
 Start in the project where you'll use ItF. Install into the project by default: it changes no global settings. Pick **one** row:
 
-| Host | Project folder | Invoke | Checked at `4566892` |
+| Host | Project folder | Invoke | Checked source |
 |---|---|---|---|
-| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | Yes, with `claude -p` (not the interactive menu) |
-| Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding`, or select it in `/skills` | Yes, with `$impact-to-funding` (not the interactive menu) |
-| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | No; earlier checks cover `fbb8993` |
+| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `22baece` (v0.6.0), with `claude -p` (not the interactive menu) |
+| Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding`, or select it in `/skills` | `4566892`, with `$impact-to-funding` (not the interactive menu) |
+| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | `fbb8993` |
 
 Set the target for your host in your terminal:
 
@@ -41,14 +41,16 @@ Follow any host-specific settings and your organisation's policy.
 
 **Look for existing copies first.** Check the project, parent folders and your personal folder for another ItF skill. Claude Code may prefer a personal copy over a project copy. Codex may list duplicates without merging them. OpenCode also reads `.claude/skills` and `.agents/skills`. If the skill seems missing, find out which copy the host sees before adding another.
 
-These steps use CLI skill folders. They aren't a plugin release. OpenAI's documentation prefers plugins for sharing skills across ChatGPT surfaces. This guide doesn't cover desktop apps, cloud marketplaces or Cowork, and you don't need a plugin marketplace.
+These steps use CLI skill folders. Claude Code users can instead [install the plugin](#optional-install-as-a-claude-code-plugin). OpenAI's documentation prefers plugins for sharing skills across ChatGPT surfaces. This guide doesn't cover desktop apps, cloud marketplaces or Cowork.
 
 ## 2. Clone the complete package at an exact revision
 
 With `target` set, run this from your project. It stops if anything already exists at the target, so you can inspect it instead of overwriting it.
 
 ```sh
-revision='4566892ad990131fb36f760e14c73e5f275600cc'
+# Claude Code (v0.6.0). For Codex CLI use 4566892ad990131fb36f760e14c73e5f275600cc;
+# for OpenCode, fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b.
+revision='22baeceae63d8090aca1afb71ccf745e3335979b'
 if [ -e "$target" ] || [ -L "$target" ]; then
   echo "Destination already exists; stop and inspect: $target"
 else

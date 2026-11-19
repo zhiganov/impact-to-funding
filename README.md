@@ -26,10 +26,10 @@ Use the CLI agent you already have and are signed in to. Install ItF once, in th
 | Host | Project skill folder | Invoke in the agent | Version checked |
 |---|---|---|---|
 | Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or `/skills` | `4566892` on Codex 0.166.0 |
-| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `4566892` on Claude Code 2.1.321 |
-| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | `fbb8993` on OpenCode v2.2.5 (not `4566892`) |
+| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `22baece` (v0.6.0) on Claude Code 2.1.328 |
+| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | `fbb8993` on OpenCode v2.2.5 |
 
-The [installation guide](docs/install.md) has safe install commands, personal installs, discovery checks, updates, removal and troubleshooting. Conversation with ItF needs no signup, Node.js, MCP server or plugin. Your host's model costs and privacy terms still apply.
+The [installation guide](docs/install.md) has safe install commands, personal installs, discovery checks, updates, removal and troubleshooting. Claude Code users can instead [install ItF as a plugin](docs/install.md#optional-install-as-a-claude-code-plugin), which also brings the optional library MCP. Conversation with ItF needs no signup, Node.js, MCP server or plugin. Your host's model costs and privacy terms still apply.
 
 **Official source:** ItF is published only from [this repository](https://github.com/zhiganov/impact-to-funding) and its [releases](https://github.com/zhiganov/impact-to-funding/releases). A copy elsewhere, a similar name or a copied README doesn't make a download official. Check that install commands point here.
 
@@ -69,7 +69,7 @@ The check confirmed that Codex selected the skill, read a bundled reference and 
 
 ### Claude Code
 
-Use the `.claude/skills/impact-to-funding` folder from the guide and invoke `/impact-to-funding`. A limited check passed for `4566892` on Claude Code 2.1.321: one non-interactive `claude -p` run loaded the skill and read a bundled reference, and changed no files. It didn't test the `/` menu, automatic triggering, IDE or desktop apps, personal installs or usefulness.
+Use the `.claude/skills/impact-to-funding` folder from the guide and invoke `/impact-to-funding`. A limited check passed for `22baece` (v0.6.0) on Claude Code 2.1.328: one non-interactive `claude -p` run loaded the skill and read a bundled reference, and changed no files. An earlier check covers `4566892` on Claude Code 2.1.321. It didn't test the `/` menu, automatic triggering, IDE or desktop apps, personal installs or usefulness.
 
 ### Install and use in OpenCode
 
@@ -84,7 +84,7 @@ This installs the complete package for that project only. It doesn't change glob
 
 > @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I supply, mark assumptions and keep the result private. Do not contact anyone.
 
-**Version note:** the OpenCode snapshot `fbb8993` is older than the Codex and Claude Code pin `4566892`. It lacks the responsible-assistance guidance, the evidence and reporting worksheets and the optional local tools. Later commits on `main` aren't host-checked and don't update your copy. See the [check record](docs/checks/installation-check-2026-11-04.md).
+**Version note:** the OpenCode snapshot `fbb8993` is older than the Codex pin `4566892` and the Claude Code pin `22baece`. It lacks the responsible-assistance guidance, the evidence and reporting worksheets and the optional local tools. Later commits on `main` aren't host-checked and don't update your copy. See the [check record](docs/checks/installation-check-2026-11-04.md).
 
 Read the [privacy guide](PRIVACY.md) before you use real material. You don't need to open the skill's Markdown files yourself.
 

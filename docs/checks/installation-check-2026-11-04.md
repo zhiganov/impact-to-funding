@@ -1,5 +1,39 @@
 # Native CLI installation checks
 
+## Claude Code project-local verification at v0.6.0 — 2026-11-19
+
+**Checked package:** `22baeceae63d8090aca1afb71ccf745e3335979b` (tag `v0.6.0`).
+**Host:** Claude Code 2.1.328 on Windows 11, existing sign-in, CLI-default model
+(`claude-opus-5-5`) with no model override. One synthetic run; no rerun.
+
+The repository was cloned from GitHub into a disposable Git project at
+`.claude/skills/impact-to-funding` with the guide's guarded clone, then checked out
+at that exact SHA. The run used the same settings as the 2026-11-09 check below:
+`claude -p` with `--setting-sources project,local`, an empty `--strict-mcp-config`,
+read-only tools (Read, Glob, Grep, Skill) and the explicit `/impact-to-funding`
+invocation, without a skill-file path. User settings, including an installed `itf`
+plugin, were left out; user-level `CLAUDE.md` instructions still applied.
+
+Observed evidence:
+
+- Session start listed the project skill `impact-to-funding` and no MCP servers.
+- The persisted session log holds the skill body: 66 of the 70 non-empty
+  `SKILL.md` lines verbatim. The other four are frontmatter.
+- The model read bundled `references/update-notice.md` and `references/learning.md`;
+  the log holds `learning.md`'s text.
+- It tried the optional update-notice helper. The run's tool list didn't allow
+  that, so the attempt was refused, and the reply didn't mention it.
+- The fictional request (four weekly hours on an accessibility guide, unclear
+  benefit, no funding goal) got a reply that said the guide wasn't available to
+  inspect, proposed low-cost checks on whether anyone uses it, kept doing less or
+  stopping as real options, and asked two questions.
+- The clone stayed clean; nothing in the project changed.
+
+This repeats the limited **project-local explicit CLI activation and bundled-
+reference access check** at v0.6.0. It doesn't establish implicit triggering, the
+interactive `/` menu, IDE or desktop support, personal scope, usefulness or
+fundraising benefit. Raw traces remain private.
+
 ## Claude Code project-local verification — 2026-11-09
 
 **Checked package:** `4566892ad990131fb36f760e14c73e5f275600cc`.
