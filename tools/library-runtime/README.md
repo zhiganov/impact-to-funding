@@ -6,7 +6,9 @@ history, no `npm install`, no network.
 
 ## Setup
 
-Requires Node 22 or later. Run once in this directory in a trusted source copy:
+Requires Node 22 or later, on macOS or Linux. On Windows the build can't start
+npm, so it stops during preparation. Run once in this directory in a trusted
+source copy:
 
 ```sh
 npm ci --ignore-scripts --no-audit --no-fund
