@@ -33,7 +33,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 - [ItF records for community dashboards](itf-records-sketch.md): a validated sketch of profile, contribution and need records for #102. Placeholder namespace; nothing adopted.
 - [My Community issue draft](my-community-itf-module-issue.md): the proposed ItF module for the My Community dashboard, for #102. Filed as [my-community#140](https://github.com/Citizen-Infra/my-community/issues/140).
 - [Platform handoff](platform-handoff.md): how ItF and a community platform hand off reports, records and funding links, collected from [#29](https://github.com/zhiganov/impact-to-funding/issues/29)'s answers. Design only.
-- [Community Admin issue draft](community-admin-consent-issue.md): asks Community Admin to keep withdrawn objections on record and to say who may propose, for #102. Not filed yet.
+- [Community Admin issue draft](community-admin-consent-issue.md): asks Community Admin to keep withdrawn objections on record and to say who may propose, for #102. Filed as Citizen-Infra/community-admin#175 (private).
 - [Builder check-ins](builder-check-in-assessment.md): a short, private six-question check-in with an optional request for one peer's feedback. Recommended as documentation only.
 - [User feedback guide](user-feedback.md) and [initial-user learning plan](user-learning-plan.md): earlier plans for manual-use feedback. No feedback is being collected through them now.
 

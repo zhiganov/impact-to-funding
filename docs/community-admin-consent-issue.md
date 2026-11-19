@@ -1,6 +1,6 @@
-# Draft issue for Community Admin: consent decisions
+# Filed issue for Community Admin: consent decisions
 
-A draft issue for Citizen Infra's Community Admin, written for [#102](https://github.com/zhiganov/impact-to-funding/issues/102) on 2026-11-19. Community Admin is private, so a maintainer files it. It hasn't been filed yet. The check behind it is in [#102's coordination comment](https://github.com/zhiganov/impact-to-funding/issues/102#issuecomment-6999416354).
+A draft issue for Citizen Infra's Community Admin, written for [#102](https://github.com/zhiganov/impact-to-funding/issues/102) on 2026-11-19. Community Admin is private. Filed on 2026-11-19 as Citizen-Infra/community-admin#175; follow that issue for changes. The check behind it is in [#102's coordination comment](https://github.com/zhiganov/impact-to-funding/issues/102#issuecomment-6999416354).
 
 **Proposed title:** Consent decisions: keep withdrawn objections on record, and say who may propose
 
