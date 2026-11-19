@@ -76,11 +76,13 @@ Map a selected GitHub Sponsors account with `github:`, a selected Open
 Collective project with `open_collective:` and its own slug — the collective's,
 not its fiscal host's, unless the host is the intended recipient — and an
 approved custom funding page with `custom:`. A matching project name or URL
-does not prove payout authority. Budgets, plan status, periods, reports and
+does not prove payout authority, and a custom link's existence doesn't prove its
+checkout or allocation works. Budgets, plan status, periods, reports and
 nonfinancial needs have no funding-link field; leaving them out of the YAML
 loses that information without cancelling the need. For each proposed mapping,
 retain the actual source, its known revision, the selected destination and the
-reason for including it. The publisher, subject, maintainer, collective and
+reason for including it. If the source is unversioned, record that limit;
+retrieval time isn't a content revision. The publisher, subject, maintainer, collective and
 payment recipient can differ; explain those roles on the support page where
 material. A funding link supplies no amount, currency, active-plan status,
 existing support total or known net funding gap.
