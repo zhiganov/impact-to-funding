@@ -23,6 +23,7 @@ This applies to the skill, the docs and issues. Accuracy still matters: keep eve
 
 - Push docs-only changes straight to `main`. Don't open a pull request for them.
 - Open a pull request for any change that touches code, tests, the skill (`SKILL.md`, `playbooks/`, `references/`, `assets/`) or package files.
+- Open a pull request for release preparation, even when it changes only docs. The release tag points at its merge commit.
 
 ## Rewriting issues
 
