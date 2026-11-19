@@ -6,7 +6,7 @@ names. Their later [field-contract adoption](support-profile-baseline-decision.m
 is separate; neither decision implements an exporter or establishes compatibility.
 
 The bounded design slice below has produced a
-[field/carrier/projection contract](support-profile-contract.md) and reconciled
+[field/carrier/projection contract](../references/support-profile-contract.md) and reconciled
 fictional examples, now accepted in the separate field-contract decision.
 
 ## Accepted direction

@@ -14,7 +14,7 @@ A sketch for [#102](https://github.com/zhiganov/impact-to-funding/issues/102), 2
 
 - **The community scope** uses the same shape as My Community's availability record: `{"type": "ca-community", "value": <community id>}`.
 - **Needs expire by default.** `validUntil` is required, as on the availability record, so old requests stop showing.
-- **Report links follow ItF's contracts.** Field names come from the [support-profile manifest](support-profile-contract.md)'s report entries (`id`, `url`, `period`, `published`, `revision`) and the [impact badge](impact-badge-contract.md) input (`provenance`, `state`).
+- **Report links follow ItF's contracts.** Field names come from the [support-profile manifest](../references/support-profile-contract.md)'s report entries (`id`, `url`, `period`, `published`, `revision`) and the [impact badge](impact-badge-contract.md) input (`provenance`, `state`).
 - **Closed lists where the contract is strict.** `provenance` and `state` accept only the contract's values, so "verified" or a score can't be stored. Other lists, such as `kind`, stay open so apps can add values.
 - **Text limits count visible characters** (`maxGraphemes`), so non-Latin text isn't cut short.
 - **The namespace.** `org.example.itf.*` was a placeholder; [#10](https://github.com/zhiganov/impact-to-funding/issues/10) says not to invent a production namespace without a decision.

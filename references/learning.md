@@ -22,7 +22,7 @@ When examining or communicating impact claims, apply the claim reference. Make s
 
 Help the person learn whether and how the work helps, what isn't working, and how contributions or relationships could develop. Choose evidence proportionate to the question, stakes and capacity. Reuse existing records, and combine quantitative and qualitative evidence where it fits. Baseline and follow-up data can show change without proving cause. A safe exercise can test a capability without proving real-disaster performance. Don't recommend new infrastructure, surveys or comparison studies just to look rigorous.
 
-For any proposed evidence collection, name who would collect or review it, for what purpose, at what cost and burden, under what consent and access limits, and when it would be checked or stopped. For audience- or funder-specific planning, see the [evidence and reporting guidance](../docs/evidence-reporting-design.md).
+For any proposed evidence collection, name who would collect or review it, for what purpose, at what cost and burden, under what consent and access limits, and when it would be checked or stopped. For audience- or funder-specific planning, see the [evidence and reporting guidance](evidence-reporting-design.md).
 
 ## Take stock with a short check-in
 
@@ -35,4 +35,4 @@ When someone wants to take stock, offer these six questions. They can answer bri
 5. What's the next decision you face, if any?
 6. Is there one specific question you'd like to ask one person?
 
-Keep the check-in private unless they choose otherwise. There's no required rhythm. If they want feedback, help them ask one named peer one question through a channel they already use; the peer can decline. A peer's comment isn't claim review, endorsement or a funding decision, and the person decides what to do with it. See the [builder check-in assessment](../docs/builder-check-in-assessment.md).
+Keep the check-in private unless they choose otherwise. There's no required rhythm. If they want feedback, help them ask one named peer one question through a channel they already use; the peer can decline. A peer's comment isn't claim review, endorsement or a funding decision, and the person decides what to do with it.

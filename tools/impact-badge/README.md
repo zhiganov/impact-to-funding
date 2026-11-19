@@ -12,7 +12,7 @@ node tools/impact-badge/cli.mjs itf-manifest.json itf-badge-input.json --output 
 
 It reads two files:
 
-- **`itf-manifest.json`:** your public [support profile](../../docs/support-profile-contract.md). The tool reads `subject.name`, one entry in `reports` and `statusUrl`.
+- **`itf-manifest.json`:** your public [support profile](../../references/support-profile-contract.md). The tool reads `subject.name`, one entry in `reports` and `statusUrl`.
 - **`itf-badge-input.json`:** a small file you write from your approved public report. It names the report, the review basis, the state and up to three claims.
 
 It writes five files into the output folder:

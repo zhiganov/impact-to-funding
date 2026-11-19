@@ -36,7 +36,7 @@ without preparing a funding brief.
 |---|---|---|
 | Explore a direction | [Skill entry](../SKILL.md) and [starting prompts](usage.md) | The root already handles an open conversation. Keep it the default. |
 | Develop a contribution with others | [Contribution relationships](../references/contributions.md) | Existing guidance separates personal direction, shared projects, roles and capacity. No distinct routing problem is established. |
-| Understand what work changes | [Claim review](../references/claims.md) and [evidence planning](evidence-reporting-design.md) | Existing guidance supports proportionate learning and uncertain claims. Add a playbook later if a specific need emerges. |
+| Understand what work changes | [Claim review](../references/claims.md) and [evidence planning](../references/evidence-reporting-design.md) | Existing guidance supports proportionate learning and uncertain claims. Add a playbook later if a specific need emerges. |
 | Explore sustainable support | [Skill entry](../SKILL.md) and [audience guidance](audience-and-positioning.md) | Support can mean income, time, access or help from others. A grant brief is only one possible task. |
 | Prepare a support brief | [Funding and disclosure](../references/funding-and-review.md), [assessment](../assets/assessment.md) and [evidence crosswalk](../assets/evidence-crosswalk.md) | A focused playbook can connect the steps reported in the field note. It should reuse these sources. |
 | Report progress | [Report template](../assets/report.md) and [funding/reporting guidance](../references/funding-and-review.md) | Reporting is its own job. The existing template is available when requested. |
@@ -67,7 +67,7 @@ is settled.
    learning or progress the person can reasonably describe.
 7. **Optional representation:** only if requested and appropriate, prepare a
    `funding.json` candidate using real financial facts. A general support document
-   can instead use the [support-profile guidance](support-profile-tools.md).
+   can instead use the [support-profile guidance](../references/support-profile-tools.md).
 
 At the reviewed revision, the funding reference called for a concise theory of
 change. Current source explains the rationale where useful and makes a named or

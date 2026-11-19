@@ -67,27 +67,41 @@ For a custom link, prefer a human-readable funding page. Link the approved repor
 and optional `itf-manifest.json` from that page or the README. Keep report data and
 extra ItF keys out of `FUNDING.yml`.
 
-The [support-profile contract](../docs/support-profile-contract.md) has no defined
+The [support-profile contract](../references/support-profile-contract.md) has no defined
 standalone payment-channel field. Reuse supplied funding.json channels or an
 explicit separate mapping; don't invent a profile field or infer a payment route
-from a subject's name. The [integration design](../docs/github-sponsorship-design.md#destination-mapping)
-explains the mapping and the information lost in a funding-link view.
+from a subject's name.
+
+Map a selected GitHub Sponsors account with `github:`, a selected Open
+Collective project with `open_collective:` and its own slug — the collective's,
+not its fiscal host's, unless the host is the intended recipient — and an
+approved custom funding page with `custom:`. A matching project name or URL
+does not prove payout authority, and a custom link's existence doesn't prove its
+checkout or allocation works. Budgets, plan status, periods, reports and
+nonfinancial needs have no funding-link field; leaving them out of the YAML
+loses that information without cancelling the need. For each proposed mapping,
+retain the actual source, its known revision, the selected destination and the
+reason for including it. If the source is unversioned, record that limit;
+retrieval time isn't a content revision. The publisher, subject, maintainer, collective and
+payment recipient can differ; explain those roles on the support page where
+material. A funding link supplies no amount, currency, active-plan status,
+existing support total or known net funding gap.
 
 For a source-qualified repository review, the optional
-[funding-readiness tool](../docs/github-funding-readiness.md) can inspect supplied
+[funding-readiness tool](../tools/github-sponsorship/README.md#run-a-review) can inspect supplied
 files or deliberately selected remote configuration and prepare a private diff.
 Use it only when that inspection is requested. Its packet does not authorise
 publication or verify the recipient.
 
 For a selected account's existing profile and tier context, the optional
-[account overview](../docs/github-sponsors-account-overview.md) can review public
+[account overview](../tools/github-sponsorship/README.md#sponsors-account-overview) can review public
 or explicitly permitted viewer-visible information and compare supplied drafts.
 It leaves account settings unchanged. Keep source visibility and incomplete tier
 coverage explicit; a public view cannot establish the absence of drafts or retired
 tiers.
 
 For a period update from deliberately supplied exports, the optional
-[offline transaction review](../docs/github-sponsors-export-reporting.md) can inspect
+[offline transaction review](../tools/github-sponsorship/README.md#offline-export-reporting) can inspect
 supported CSV records and unresolved overlap. Keep its source-qualified financial
 summary separate from evidence about work and outcomes. Its private packet is not
 a public sponsor list or payout statement.

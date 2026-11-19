@@ -6,7 +6,7 @@ This is a draft for [#4](https://github.com/zhiganov/impact-to-funding/issues/4)
 
 ## Inputs
 
-**From `itf-manifest.json`** (read only, unchanged): `subject.name`, and one entry from `reports`: `id`, `url`, `period`, `published` and `revision`. Also `statusUrl`, if present. These fields are defined in the [support-profile contract](support-profile-contract.md).
+**From `itf-manifest.json`** (read only, unchanged): `subject.name`, and one entry from `reports`: `id`, `url`, `period`, `published` and `revision`. Also `statusUrl`, if present. These fields are defined in the [support-profile contract](../references/support-profile-contract.md).
 
 **From `itf-badge-input.json`** (new and small, written by the person from their approved public report):
 

@@ -4,7 +4,7 @@
 private exports or live applications were retrieved. Labels below are internal
 fixture references, not real URLs, DIDs, CIDs, commit hashes or valid schemas.
 Expected treatment is not observed tool/model behaviour. Use with the
-[discovery guide](../docs/signal-discovery.md).
+[discovery guide](../references/signal-discovery.md).
 
 ## Bounded plan, not a retrieval job
 
@@ -60,7 +60,7 @@ Retention/use: only the fictional permitted context is represented publicly;
 ```
 
 The next possible step is responsible selection of a permitted note for the
-[enrichment workflow](../docs/signal-enrichment.md), not an automatic report
+[enrichment workflow](../references/signal-enrichment.md), not an automatic report
 revision, new read or invitation. Unknown versions are not replaced by realistic
 fake IDs, and a matched account is not a verified person or project spokesperson.
 

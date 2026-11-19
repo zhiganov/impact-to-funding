@@ -109,7 +109,7 @@ No GitHub account or manifest is needed to prepare an introduction.
 
 ### Plan evidence or reuse it for different audiences
 
-Use the [evidence and reporting guidance](evidence-reporting-design.md) and the [optional private worksheet](../assets/evidence-crosswalk.md) when they help. Keep one set of claims and evidence, and prepare a separate view for each audience. You don't need a funder, account, requirements file or evidence register to start.
+Use the [evidence and reporting guidance](../references/evidence-reporting-design.md) and the [optional private worksheet](../assets/evidence-crosswalk.md) when they help. Keep one set of claims and evidence, and prepare a separate view for each audience. You don't need a funder, account, requirements file or evidence register to start.
 
 > @impact-to-funding Using only the permitted material supplied here, help me plan the smallest useful evidence collection, or explain why no new collection is needed. Keep actual versus proposed actors, missing baselines, cost/capacity, host processing, consent, retention and stopping conditions explicit. Do not recruit, collect, browse, schedule or publish anything.
 
@@ -174,9 +174,9 @@ These guides each have a fictional example. They work with ordinary documents an
 - **Accounts from people affected by the work:** the [account guide](beneficiary-accounts.md) and [fictional library walkthrough](../examples/beneficiary-accounts.md). Use it when someone's experience could change a specific decision. It covers neutral questions, letting people correct a recap, sharing only what they allow and revising the report. Harmonica facilitation is optional. Declining or not replying is fine.
 - **Claim-specific expert review:** the [review guide](expert-review.md) and [fictional walkthrough](../examples/expert-review.md). They show how to ask a bounded question, record conflicts and exact versions, and cite an existing evaluation honestly. A request doesn't authorise contact or sharing evidence, and a finding isn't certification.
 - **Coordination over time:** the [coordination guide](session-coordination.md) and [fictional index](../examples/coordination-index.md), for when several conversations or reporting periods need organising. The index doesn't send evidence or move sessions forward. A dedicated Harmonica project type is proposed but not built.
-- **Enrichment from supplied records:** the [supplied-signal guide](signal-enrichment.md) and [fictional cases](../examples/signal-enrichment.md). Revisit one claim using social, code-forge or app material you chose and may share. Keep what a source says, what the analyst suggests and what you accept separate.
-- **Bounded source discovery:** the [discovery guide](signal-discovery.md) and [fictional candidate notes](../examples/signal-discovery.md). Plan one finite search and separate possible matches from inspected evidence. The guide runs no searches, and you can always use excerpts you supply instead.
-- **Bluesky publication planning:** the [publishing guide](bluesky-publishing.md) and [fictional previews and corrections](../examples/bluesky-publishing.md). Keep private evidence apart from the public version, and get approval for the exact action before sending. Don't resend automatically if you're unsure a post went out. The guide posts nothing.
+- **Enrichment from supplied records:** the [supplied-signal guide](../references/signal-enrichment.md) and [fictional cases](../examples/signal-enrichment.md). Revisit one claim using social, code-forge or app material you chose and may share. Keep what a source says, what the analyst suggests and what you accept separate.
+- **Bounded source discovery:** the [discovery guide](../references/signal-discovery.md) and [fictional candidate notes](../examples/signal-discovery.md). Plan one finite search and separate possible matches from inspected evidence. The guide runs no searches, and you can always use excerpts you supply instead.
+- **Bluesky publication planning:** the [publishing guide](../references/bluesky-publishing.md) and [fictional previews and corrections](../examples/bluesky-publishing.md). Keep private evidence apart from the public version, and get approval for the exact action before sending. Don't resend automatically if you're unsure a post went out. The guide posts nothing.
 
 ## What a useful result looks like
 

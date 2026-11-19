@@ -5,8 +5,8 @@ candidate**. It is an agent-authoring aid, not a form everyone must complete, a
 JSON template, evidence register or publication approval. An ordinary conversation,
 private draft or non-financial contribution needs no tool, account or manifest.
 
-Read the [usage guide](../docs/support-profile-tools.md),
-[adopted field contract](../docs/support-profile-contract.md) and relevant
+Read the [usage guide](../references/support-profile-tools.md),
+[adopted field contract](../references/support-profile-contract.md) and relevant
 [claim](../references/claims.md), [contribution](../references/contributions.md)
 and [disclosure](../references/funding-and-review.md) guidance. The contract, not
 this worksheet, defines exact fields. Select only relevant prompts, use actual
@@ -44,7 +44,7 @@ the same support shape can appear at
 `extensions["org.impact-to-funding.support"]` in funding.json v1.1.0. This is an
 ItF convention, not an upstream namespace agreement. Embedded monetary cases
 reference the enclosing financial plan; they do not carry a second money record.
-The [local bind operation](../docs/support-profile-tools.md#bind-a-standalone-oss-candidate)
+The [local bind operation](../references/support-profile-tools.md#bind-a-standalone-oss-candidate)
 requires a separately supplied financial base and explicit mapping, not inferred
 facts from this worksheet.
 

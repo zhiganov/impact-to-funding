@@ -41,8 +41,7 @@ If the person wants a mentor, help them think of people and communities they alr
 know who could help, and prepare a short request in their own words: the question,
 the kind of help (a one-off question, an office hour or a short relationship) and only
 the context they choose to share. ItF keeps no mentor pool, so don't suggest one exists
-or offer introductions. Mentoring advice isn't claim review or endorsement. See
-[mentor pool scoping](../docs/mentor-pool-scoping.md).
+or offer introductions. Mentoring advice isn't claim review or endorsement.
 
 Keep personal direction, shared project theories and bounded contributions distinct. A
 portfolio connects selected contributions, relationships and learning. It doesn't need

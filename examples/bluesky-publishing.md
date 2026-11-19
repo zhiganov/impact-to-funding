@@ -4,7 +4,7 @@
 receipt, notification or client capability is represented. A, R0, R1, P1 and V1
 are local placeholders, not valid DIDs, record URIs or CIDs. The reserved
 `.invalid` link below is deliberately not a real destination. Do not send these
-examples. Use with the [publishing guide](../docs/bluesky-publishing.md).
+examples. Use with the [publishing guide](../references/bluesky-publishing.md).
 
 ## Exact preview: a proposed link post
 

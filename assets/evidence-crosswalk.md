@@ -3,7 +3,7 @@
 Use only the sections that help the current learning question or requested draft.
 This is not a mandatory register, assessment engine, application form or sequence.
 Learning needs no funder, personal theory, account, formal manifest or past outcome.
-Use the [manual guidance](../docs/evidence-reporting-design.md),
+Use the [manual guidance](../references/evidence-reporting-design.md),
 [claim review](../references/claims.md) and [disclosure rules](../references/funding-and-review.md).
 Replace prompts with known facts or explicit unknowns; omit irrelevant sections.
 

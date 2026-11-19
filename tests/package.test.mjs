@@ -56,9 +56,10 @@ test('optional notice routing reads the reference, runs the check and preserves 
   assert.doesNotMatch(section, /NOTICE_OFFER|UPDATE_AVAILABLE|RELEASE_AVAILABLE|CLAUDE_SKILL_DIR/);
   const reference = readFileSync(path.join(root, 'references/update-notice.md'), 'utf8');
   const moved = reference.split('# Optional update-notice instructions\n\n')[1]
-    .replace('(../docs/update-notices.md)', '(docs/update-notices.md)').trim();
+    .replace('(https://github.com/zhiganov/impact-to-funding/blob/main/docs/update-notices.md)', '(docs/update-notices.md)').trim();
   // The two paragraphs from the pre-refactor core at 2776604 are unchanged,
-  // apart from the relative link necessitated by their new directory.
+  // apart from the human-guide link, which now points at the GitHub URL and is
+  // normalised here back to the form pinned above.
   assert.equal(createHash('sha256').update(moved).digest('hex'),
     'e97ce8801d947a3ac97660c21026ac37e6f2ac65b17b98c0b06f39f0d22d25ab');
 });
@@ -73,6 +74,24 @@ test('all Markdown local links resolve inside the distributable package', () => 
       const resolved = path.resolve(path.dirname(file), target.split('#')[0]);
       assert.ok(resolved.startsWith(root), `Outside-package link: ${target}`);
       assert.ok(statSync(resolved).isFile(), `Missing file: ${target}`);
+    }
+  }
+});
+
+test('runtime files link to nothing in docs/', () => {
+  const runtime = [path.join(root, 'SKILL.md')];
+  for (const directory of ['playbooks', 'references', 'assets']) {
+    runtime.push(...files(path.join(root, directory)));
+  }
+  const docsRoot = path.join(root, 'docs');
+  for (const file of runtime) {
+    const text = readFileSync(file, 'utf8');
+    for (const match of text.matchAll(/\]\(([^)]+)\)/g)) {
+      const target = match[1];
+      if (/^https?:\/\//.test(target) || target.startsWith('#')) continue;
+      const resolved = path.resolve(path.dirname(file), target.split('#')[0]);
+      assert.ok(resolved !== docsRoot && !resolved.startsWith(docsRoot + path.sep),
+        `Runtime file links into docs/: ${path.relative(root, file)}: ${target}`);
     }
   }
 });
@@ -110,10 +129,10 @@ test('GitHub sponsorship source routing is optional and preserves drafting bound
   assert.match(playbook, /A funding link does not activate an inactive plan/);
   assert.match(playbook, /Private sponsorship data stays private/);
   assert.match(playbook, /authoring guidance, not a YAML adapter or payment service/);
-  assert.match(playbook, /\[account overview\]\(\.\.\/docs\/github-sponsors-account-overview\.md\)/);
-  assert.match(readFileSync(path.join(root, 'docs/github-sponsors-account-overview.md'), 'utf8'), /leaves the account unchanged/);
-  assert.match(playbook, /\[offline transaction review\]\(\.\.\/docs\/github-sponsors-export-reporting\.md\)/);
-  assert.match(readFileSync(path.join(root, 'docs/github-sponsors-export-reporting.md'), 'utf8'), /supplied context/);
+  assert.match(playbook, /\[account overview\]\(\.\.\/tools\/github-sponsorship\/README\.md#sponsors-account-overview\)/);
+  assert.match(readFileSync(path.join(root, 'tools/github-sponsorship/README.md'), 'utf8'), /leaves the account unchanged/);
+  assert.match(playbook, /\[offline transaction review\]\(\.\.\/tools\/github-sponsorship\/README\.md#offline-export-reporting\)/);
+  assert.match(readFileSync(path.join(root, 'tools/github-sponsorship/README.md'), 'utf8'), /supplied context/);
   assert.match(examples, /Entirely fictional/);
   assert.match(examples, /not model\s+responses/);
 });

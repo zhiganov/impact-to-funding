@@ -22,7 +22,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 ## Who ItF is for and how it behaves
 
 - [Audience and positioning](audience-and-positioning.md): builders who work with AI agents are the first audience. Others are welcome. Losing a job or struggling to get hired is one reason people come, not a requirement.
-- [Responsible assistance](responsible-assistance.md): the skill's conduct rules. It doesn't blacklist sectors, screen people or rank causes. See the [nine fictional cases](../examples/responsible-assistance.md).
+- [Responsible assistance](../references/responsible-assistance.md): the skill's conduct rules. It doesn't blacklist sectors, screen people or rank causes. See the [nine fictional cases](../examples/responsible-assistance.md).
 - [Task playbooks](task-playbooks-design.md): maps common jobs to guidance. The first playbook is the [support brief](../playbooks/support-brief.md).
 - [Theory reconstruction playbook](../playbooks/reconstruct-theory-of-change.md): infer pathways from existing work and compare intention with practice. The [fictional walkthrough](../examples/theory-reconstruction.md) shows expected treatment; host/model behaviour remains unverified.
 - [Supplied-material routing assessment](supplied-material-routing-assessment.md): #111 checks task-first use of existing material against eight fictional cases. Current guidance is retained; host/model routing remains unverified.
@@ -47,11 +47,11 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 
 ## Evidence, reporting and support
 
-- [Evidence and reporting design](evidence-reporting-design.md): link private evidence to claims, plan collection in proportion and adapt one body of evidence to different funders' reports. See the [fictional walkthrough](../examples/evidence-reporting.md), the [evidence worksheet](../assets/evidence-crosswalk.md) and the [check record](checks/evidence-reporting-checks.md).
+- [Evidence and reporting design](../references/evidence-reporting-design.md): link private evidence to claims, plan collection in proportion and adapt one body of evidence to different funders' reports. See the [fictional walkthrough](../examples/evidence-reporting.md), the [evidence worksheet](../assets/evidence-crosswalk.md) and the [check record](checks/evidence-reporting-checks.md).
 - [Finding-ledger assessment](finding-ledger-assessment.md): #110 compares the existing worksheet, report and portable records with REA's evidence workflow. A fictional multi-session continuation supports keeping the existing records; no new ledger or skill behaviour is added.
 - [Support profiles and funding.json](funding-interchange-design.md): why ItF uses its own support profile, which works beyond open-source projects and can project financial facts into funding.json. See the [direction decision](funding-interchange-direction-decision.md), the [field decision](support-profile-baseline-decision.md) and the [fictional examples](../examples/funding-interchange.md).
-- [Support-profile contract](support-profile-contract.md): the accepted fields, types, money rules and how the financial view handles losses.
-- [Support-profile tools](support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](checks/support-profile-checks.md).
+- [Support-profile contract](../references/support-profile-contract.md): the accepted fields, types, money rules and how the financial view handles losses.
+- [Support-profile tools](../references/support-profile-tools.md): local tools to write, inspect and bind profiles and produce financial views. They make no network calls. See the [check record](checks/support-profile-checks.md).
 - [GitHub sponsorship playbook](../playbooks/github-sponsorship.md): source guidance for drafting profiles, tiers, funding links and updates, with [fictional cases](../examples/github-sponsorship.md). The optional [funding-readiness review](github-funding-readiness.md) inspects configuration and prepares private diffs. The [account overview](github-sponsors-account-overview.md) reviews profile and tier context. The [design](github-sponsorship-design.md) retains import, account-write and webhook scopes. Both tools leave sources and accounts unchanged.
 - [Readability check](../tools/readability/README.md): a local check for drafts and manifest descriptions. It flags long sentences, passive voice and adverbs.
 - [Sponsorship export reporting](github-sponsors-export-reporting.md): private offline period review of supplied CSV transactions, with overlap, source and missing-fact notes. See the [check record](checks/github-sponsors-export-checks.md).

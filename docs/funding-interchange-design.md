@@ -2,12 +2,12 @@
 
 **Date:** 2026-11-09. **Status:** architectural direction accepted; see the
 [architecture decision](funding-interchange-direction-decision.md).
-The [concrete field/carrier contract](support-profile-contract.md) is now an
+The [concrete field/carrier contract](../references/support-profile-contract.md) is now an
 [accepted ItF design baseline](support-profile-baseline-decision.md), not a released
 standard, executable schema, exporter or tested directory integration. See the
 [fictional examples](../examples/funding-interchange.md).
 
-The later [optional local tools](support-profile-tools.md) implement a bounded
+The later [optional local tools](../references/support-profile-tools.md) implement a bounded
 authoring/inspection/projection path. They do not establish upstream directory
 compatibility or change this assessment's original design-only evidence.
 
@@ -44,7 +44,7 @@ scope: unmodified funding.json financial metadata plus human-readable pages link
 richer reports. That remains a usable route, but it does not make the connection
 between an ask, its purpose and exact report versions machine-readable.
 
-The [evidence/reporting design](evidence-reporting-design.md) now supplies a reason
+The [evidence/reporting design](../references/evidence-reporting-design.md) now supplies a reason
 to revisit that limitation. A curated public derivative could connect support needs
 to proposed contributions, learning and permission-cleared evidence/reports. It
 must not export the private evidence register or each funder's application draft.
@@ -65,7 +65,7 @@ webpage-only bridge, and do not market an ItF convention as an upstream standard
 ## 3. Support-profile overview
 
 This section is an architectural overview, not a second editable field contract.
-The [accepted contract](support-profile-contract.md) defines required/optional fields,
+The [accepted contract](../references/support-profile-contract.md) defines required/optional fields,
 types, unknown handling, money rules and exact projection behaviour.
 
 Identifier: **`itf.support/0.1-proposal`**. Its retained suffix is part of the literal
@@ -243,7 +243,7 @@ The relationship to other work is:
 
 1. The [architecture decision](funding-interchange-direction-decision.md) adopts
    the cross-domain path and optional OSS compatibility, not the candidate fields.
-2. The [minimal field/carrier/projection contract](support-profile-contract.md)
+2. The [minimal field/carrier/projection contract](../references/support-profile-contract.md)
    and reconciled fictional walkthrough are accepted as a design baseline by the
    [field-contract decision](support-profile-baseline-decision.md).
 3. After contract adoption, select the smallest authoring/projection implementation.

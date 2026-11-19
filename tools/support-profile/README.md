@@ -1,9 +1,9 @@
 # Optional local support-profile tools
 
 Local inspection and narrow OSS financial projections for the adopted
-[`itf.support/0.1-proposal` contract](../../docs/support-profile-contract.md).
+[`itf.support/0.1-proposal` contract](../../references/support-profile-contract.md).
 This is a separate optional Node package, **not required for ordinary skill use**.
-Start with the [authoring and usage guide](../../docs/support-profile-tools.md)
+Start with the [authoring and usage guide](../../references/support-profile-tools.md)
 and optional [worksheet](../../assets/support-profile.md). General standalone
 profiles include non-software, non-financial and prospective work; OSS projection
 requirements must not become a gate for that work.
@@ -37,7 +37,7 @@ node tools/support-profile/cli.mjs bind INPUT --funding BASE --map MAP --destina
 node tools/support-profile/cli.mjs financial-view INPUT --output NEWDIR [--source-url URL]
 ```
 
-For runnable examples, use the [guide's private-workspace layout](../../docs/support-profile-tools.md#prepare-the-optional-tool-only-if-needed):
+For runnable examples, use the [guide's private-workspace layout](../../references/support-profile-tools.md#prepare-the-optional-tool-only-if-needed):
 a trusted source copy at `./impact-to-funding`, with inputs/mapping/output under
 its sibling `./work`, outside the distributable copy. For example, from that
 private workspace:
@@ -116,7 +116,7 @@ source and reliable model routing have not been established by this change.
 
 ## Schema and rights
 
-The [contract](../../docs/support-profile-contract.md) remains the field-meaning
+The [contract](../../references/support-profile-contract.md) remains the field-meaning
 source; an executable schema or schema pass does not replace those meanings or
 prove consumer acceptance. The [unmodified vendored funding.json v1.1.0 schema](vendor/funding-v1.1.0.schema.json)
 is **CC-BY-SA 4.0**, not MIT; retain its [upstream notice](vendor/NOTICE.md).
