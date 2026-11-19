@@ -67,9 +67,8 @@ Tests use fictional local source repositories and never contact the network.
 
 ## Limits
 
-The build prepares the runtime; it does not publish it. Where the folder is
-published for a Claude Code plugin (a generated branch, a separate repository or
-a committed folder) is a separate decision tracked in
-[#106](https://github.com/zhiganov/impact-to-funding/issues/106). `itf setup` is
-unchanged. Original code/tests are MIT; written guidance is CC BY-SA 4.0. The
+The build prepares the runtime; it does not publish it. The Claude Code plugin
+build (`tools/claude-plugin`) includes it, and each release attaches the plugin
+as a zip, starting with v0.6.0 (#106). `itf setup` prepares its own runtime on
+the user's machine instead. Original code/tests are MIT; written guidance is CC BY-SA 4.0. The
 bundled packages keep their own licences, recorded in `THIRD_PARTY_LICENSES.md`.

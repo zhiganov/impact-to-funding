@@ -12,12 +12,17 @@ No model run was performed. See the [check record](checks/library-mcp-setup-2026
 For Claude Code, setup, a Claude Code 2.1.328 connection check and undo passed;
 see its [check record](checks/library-mcp-setup-claude-2026-11-19.md).
 
-**Implemented targets:** POSIX, Node.js 22+, npm and Git, with either OpenCode
-V2.3 or later within V2 (project scope) or Claude Code 2 or later (local scope).
-Codex, Claude Code's user and project scopes, and personal/global setup are not
-implemented. The separate
-[plugin proposal](https://github.com/zhiganov/impact-to-funding/issues/106) is
-optional.
+**Implemented targets:** macOS and Linux, Node.js 22+, npm and Git, with either
+OpenCode V2.3 or later within V2 (project scope) or Claude Code 2 or later (local
+scope). Windows, Codex, Claude Code's user and project scopes, and
+personal/global setup are not implemented; Windows support is tracked in
+[#132](https://github.com/zhiganov/impact-to-funding/issues/132).
+
+**On Claude Code, the plugin is the simpler route.** From v0.6.0, the
+[Claude Code plugin](install.md#optional-install-as-a-claude-code-plugin) bundles
+the skill, the server and a prepared snapshot, and works on Windows too. Use one
+or the other: setup stops while the plugin is enabled (see "One owner per
+project" below).
 
 ## Preview, then apply
 
