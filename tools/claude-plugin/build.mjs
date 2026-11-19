@@ -9,7 +9,9 @@ import { createBuild as createRuntimeBuild } from '../library-runtime/build.mjs'
 
 const REPOSITORY = 'zhiganov/impact-to-funding';
 const SKILL_DIRECTORIES = ['playbooks', 'references', 'assets'];
-const ROOT_DOCUMENTS = ['SKILL.md', 'LICENSE', 'PRIVACY.md', 'SOURCES.md'];
+// LICENSE is a scope note; LICENSE-CODE carries the MIT text it points to, which
+// the shipped server code needs.
+const ROOT_DOCUMENTS = ['SKILL.md', 'LICENSE', 'LICENSE-CODE', 'PRIVACY.md', 'SOURCES.md'];
 
 export function defaultSourceRoot() {
   // tools/claude-plugin/build.mjs -> the repository root two levels up.
@@ -100,6 +102,26 @@ export function linkClosure(root, files) {
   return [...linked.keys()].sort();
 }
 
+// Files copied in for reference (examples, tool guides, root notes) can link to
+// repository files the plugin leaves out, mostly under docs/. Point those links
+// at the same file on GitHub, pinned to the source commit, so they still work
+// from an installed plugin. Links that resolve inside the package are kept.
+export function pinOutwardLinks(root, files, commit) {
+  for (const file of files) {
+    if (!file.endsWith('.md')) continue;
+    const full = path.join(root, file);
+    const text = readFileSync(full, 'utf8');
+    const rewritten = text.replace(/\]\(([^)\s]+)\)/g, (match, target) => {
+      if (/^https?:\/\//.test(target) || target.startsWith('#') || /^[a-z]+:/.test(target)) return match;
+      const [pathPart, anchor] = target.split('#');
+      const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(file), pathPart)).replace(/\/$/, '');
+      if (!resolved || resolved.startsWith('..') || existsSync(path.join(root, resolved))) return match;
+      return `](https://github.com/${REPOSITORY}/blob/${commit}/${resolved}${anchor ? `#${anchor}` : ''})`;
+    });
+    if (rewritten !== text) writeFileSync(full, rewritten);
+  }
+}
+
 async function buildFolder({ commit, tag, target, prepare, runtimeBuild, source }) {
   mkdirSync(target, { recursive: true, mode: 0o700 });
   const clone = mkdtempSync(path.join(tmpdir(), 'itf-claude-plugin-'));
@@ -114,7 +136,8 @@ async function buildFolder({ commit, tag, target, prepare, runtimeBuild, source 
     // refused rather than silently widened.
     const runtimeFiles = ['SKILL.md', ...listFiles(target, 'playbooks'),
       ...listFiles(target, 'references'), ...listFiles(target, 'assets')];
-    for (const linked of linkClosure(target, runtimeFiles)) {
+    const linkedFiles = linkClosure(target, runtimeFiles);
+    for (const linked of linkedFiles) {
       if (linked === 'docs' || linked.startsWith('docs/')) {
         throw new Error(`The source commit's skill still links into docs/: ${linked}. Build from a commit after the docs/ decoupling.`);
       }
@@ -123,6 +146,8 @@ async function buildFolder({ commit, tag, target, prepare, runtimeBuild, source 
       mkdirSync(path.dirname(path.join(target, linked)), { recursive: true });
       copyFileSync(from, path.join(target, linked));
     }
+
+    pinOutwardLinks(target, [...linkedFiles, ...ROOT_DOCUMENTS.filter((document) => document !== 'SKILL.md')], commit);
 
     const runtime = await runtimeBuild({ commit, output: path.join(target, 'library-runtime'), source });
     const runtimeProvenance = JSON.parse(readFileSync(path.join(target, 'library-runtime', 'provenance.json'), 'utf8'));

@@ -35,6 +35,7 @@ function sourceRepository(t, { docsLink = false } = {}) {
   };
   write('SKILL.md', skill);
   write('LICENSE', 'Fixture licence.\n');
+  write('LICENSE-CODE', 'Fixture MIT text.\n');
   write('PRIVACY.md', 'Fixture privacy note.\n');
   write('SOURCES.md', 'Fixture sources note.\n');
   write('playbooks/guide.md', docsLink
@@ -42,14 +43,15 @@ function sourceRepository(t, { docsLink = false } = {}) {
     : 'A guide with [an example](../examples/bar.md) and [a tool guide](../tools/widget/README.md).\n');
   write('references/claims.md', 'Read [the MCP guide](../mcp/README.md) and [the playbook](../playbooks/guide.md).\n');
   write('assets/report.md', 'Fixture worksheet.\n');
-  write('examples/bar.md', 'Fictional example.\n');
+  write('examples/bar.md', 'Fictional example; see [the design](../docs/design.md#why), [the guide](../tools/widget/README.md) and [above](#top).\n');
+  write('docs/design.md', 'Fictional design note that the plugin leaves out.\n');
   write('tools/widget/README.md', 'Widget guide for humans.\n');
   write('mcp/README.md', 'Library MCP guide.\n');
   write('mcp/package.json', `${JSON.stringify({ name: 'itf-reference-library-mcp', version: '7.8.9', private: true }, null, 2)}\n`);
   write('mcp/package-lock.json', `${JSON.stringify(lock, null, 2)}\n`);
   command('init', '--quiet');
-  command('add', '--', 'SKILL.md', 'LICENSE', 'PRIVACY.md', 'SOURCES.md', 'playbooks', 'references', 'assets',
-    'examples', 'tools', 'mcp');
+  command('add', '--', 'SKILL.md', 'LICENSE', 'LICENSE-CODE', 'PRIVACY.md', 'SOURCES.md', 'playbooks', 'references', 'assets',
+    'examples', 'tools', 'mcp', 'docs');
   command('commit', '--quiet', '-m', 'Fictional plugin source');
   command('remote', 'add', 'origin', 'https://github.com/zhiganov/impact-to-funding.git');
   return { root, commit: command('rev-parse', 'HEAD').trim() };
@@ -137,6 +139,18 @@ test('the link closure keeps every relative runtime link inside the package', as
   assert.ok(!existsSync(path.join(f.output, 'tools/skill-package')));
   assert.ok(!existsSync(path.join(f.output, 'docs')));
   assert.equal(result.deterministic, 'not-checked');
+});
+
+test('the MIT text ships, and links from copied files to left-out files are pinned to GitHub', async (t) => {
+  const f = fixture(t);
+  await run(f.build, f);
+  assert.equal(readFileSync(path.join(f.output, 'LICENSE-CODE'), 'utf8'), 'Fixture MIT text.\n');
+  const example = readFileSync(path.join(f.output, 'examples/bar.md'), 'utf8');
+  assert.match(example, new RegExp(`\\]\\(https://github\\.com/zhiganov/impact-to-funding/blob/${f.source.commit}/docs/design\\.md#why\\)`));
+  // Links that resolve inside the package, and in-page anchors, are unchanged.
+  assert.match(example, /\]\(\.\.\/tools\/widget\/README\.md\)/);
+  assert.match(example, /\]\(#top\)/);
+  assert.ok(!existsSync(path.join(f.output, 'docs')));
 });
 
 test('a source that still links into docs/ is refused, not silently widened', async (t) => {

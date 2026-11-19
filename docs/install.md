@@ -103,12 +103,16 @@ For more prompts, see [Using the skill](usage.md). Read the [privacy guide](../P
 
 ## Optional: install as a Claude Code plugin
 
+**Available from the first release after v0.5.0.** Until that release publishes the plugin, these commands find nothing to install.
+
 Claude Code users can instead install ItF as a plugin, which brings the skill and the optional local reference-library MCP together in one package. The skill appears as `/itf:impact-to-funding`, and the plugin's own update route manages changes. Requires Claude Code 2.1.281 or later and Node.js 22 or later on your `PATH` for the library MCP.
 
 ```sh
-claude plugin marketplace add zhiganov/impact-to-funding
+claude plugin marketplace add https://github.com/zhiganov/impact-to-funding.git
 claude plugin install itf@impact-to-funding
 ```
+
+Use the full HTTPS address: the `owner/repo` shorthand clones over SSH, which fails without a GitHub SSH key.
 
 Each GitHub release carries the plugin as a fixed zip archive; the marketplace entry in the repository points at that release's zip. You get a new version only when you update the plugin yourself (`claude plugin update itf`); a release you haven't installed from doesn't change anything on your machine. Third-party marketplaces don't auto-update by default. The plain skill-folder route above stays fully supported, and the plugin can coexist with a standalone copy.
 

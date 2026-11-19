@@ -57,8 +57,9 @@ recorded check lives in `docs/checks/`.
 The decided route (see the
 [plugin plan](../../docs/plans/2026-11-19-claude-code-plugin.md)) is an
 `archive` source: zip the built folder, attach the zip to the GitHub release,
-and point `.claude-plugin/marketplace.json` in this repository at that release's
-zip URL with its SHA-256. The zip is built and uploaded after the release tag
+and point `.claude-plugin/marketplace.json` in this repository (marketplace name
+`impact-to-funding`) at that release's zip URL with its SHA-256. The zip is built
+and uploaded after the release tag
 exists, by the steps in `.agents/skills/itf-release-notes/SKILL.md`. Built
 files stay out of Git.
 
