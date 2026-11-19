@@ -32,6 +32,13 @@ function fakeClaude(calls, { wrongEntry = false } = {}) {
   };
 }
 
+function createAgain(f, plugins) {
+  return createClaudeSetup({
+    hostVersion() { return '2.1.325 (Claude Code)'; }, verifySource() { return {}; },
+    claude: fakeClaude(f.calls), plugins,
+  });
+}
+
 function fixture(t, config = null, overrides = {}) {
   const root = realpathSync(mkdtempSync(path.join(tmpdir(), 'itf-setup-claude-')));
   t.after(() => rmSync(root, { recursive: true, force: true }));
@@ -51,6 +58,7 @@ function fixture(t, config = null, overrides = {}) {
     snapshot(runtime, revision, output) { calls.push('snapshot'); writeFileSync(output, '{"fictional":true}\n'); },
     async probe() { calls.push('probe'); return { status: 'passed', hostConnection: 'not_checked', modelRun: false }; },
     claude: fakeClaude(calls),
+    plugins() { return []; },
     ...overrides,
   });
   const read = () => JSON.parse(readFileSync(file, 'utf8'));
@@ -174,4 +182,41 @@ test('claude setup refuses an edited owned entry and malformed configuration', a
 test('setup CLI rejects unsupported claude scopes before any write', async () => {
   await assert.rejects(run(['setup', '--harness', 'claude', '--scope', 'project', '--commit', commit]), /--harness claude --scope local/);
   await assert.rejects(run(['setup', '--harness', 'claude', '--scope', 'user', '--commit', commit]), /--harness claude --scope local/);
+});
+
+test('claude setup stops when an ItF plugin already provides the library here', async (t) => {
+  const plugin = (fields) => ({ id: 'itf@market', enabled: true, scope: 'user', mcpServers: {}, ...fields });
+  const named = fixture(t, null, { plugins: () => [plugin({})] });
+  await assert.rejects(named.setup.run(named.options), /itf@market already provides the ItF library/);
+  const byServer = fixture(t, null, { plugins: () => [plugin({ id: 'other@market', mcpServers: { itf_library: {} } })] });
+  await assert.rejects(byServer.setup.run(byServer.options), /other@market already provides/);
+  const local = fixture(t);
+  const here = fixture(t, null, { plugins: () => [plugin({ scope: 'local', projectPath: local.project })] });
+  const plan = await here.setup.run(here.options);
+  assert.equal(plan.pluginCheck, 'none-found');
+  const thisProject = fixture(t);
+  const scoped = createAgain(thisProject, () => [plugin({ scope: 'project', projectPath: thisProject.project })]);
+  await assert.rejects(scoped.run(thisProject.options), /already provides/);
+  for (const f of [named, byServer]) assert.deepEqual(f.calls, []);
+});
+
+test('claude setup ignores disabled and unrelated plugins, and reports an unavailable plugin list', async (t) => {
+  const quiet = fixture(t, null, { plugins: () => [
+    { id: 'itf@market', enabled: false, scope: 'user', mcpServers: {} },
+    { id: 'notes@market', enabled: true, scope: 'user', mcpServers: { notes: {} } },
+  ] });
+  const plan = await quiet.setup.run(quiet.options);
+  assert.equal(plan.pluginCheck, 'none-found');
+  const unknown = fixture(t, null, { plugins() { throw new Error('unknown command'); } });
+  const unknownPlan = await unknown.setup.run(unknown.options);
+  assert.equal(unknownPlan.pluginCheck, 'not-available');
+  assert.match(unknownPlan.limits[0], /plugin list was unavailable/);
+});
+
+test('claude setup rechecks plugins before writing', async (t) => {
+  let seen = 0;
+  const f = fixture(t, null, { plugins: () => (++seen > 1 ? [{ id: 'itf@market', enabled: true, scope: 'user' }] : []) });
+  await assert.rejects(f.setup.run({ ...f.options, apply: true }), /already provides/);
+  assert.equal(f.calls.includes('mcp add-json'), false);
+  assert.equal(existsSync(f.file), false);
 });
