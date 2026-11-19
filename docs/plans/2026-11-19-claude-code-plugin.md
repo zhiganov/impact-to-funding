@@ -60,14 +60,14 @@ itf-plugin/
 - `provenance.json` records the source commit, the runtime build's provenance and the
   SHA-256 of every file, as the runtime build does.
 
-## Distribution: decision for Artem
+## Distribution: decided 2026-11-19
 
-Recommended: **an `archive` source.** Attach the built zip to each GitHub release, and
+**Decision: an `archive` source** (approved by Artem on 2026-11-19). Attach the built zip to each GitHub release, and
 list it in a `.claude-plugin/marketplace.json` in this repo that points at that
 release's zip URL. Built files stay out of Git, each version is a fixed download, and
 a person gets a new version only when the marketplace entry changes and they update.
 
-Alternatives: a `git-subdir` source pinned to a SHA, which means committing the built
+Not chosen: a `git-subdir` source pinned to a SHA, which means committing the built
 runtime (including `node_modules`) to Git; or a separate distribution repo.
 
 A `marketplace.json` in this repo is self-hosted. Listing ItF in any shared or official
@@ -93,8 +93,8 @@ marketplace still needs separate approval, as #106 says.
    - the effective auto-update setting for the marketplace, recorded as observed.
 4. `docs/install.md`: add the plugin as one option after the existing routes, with its
    update behaviour, the Node 22 requirement and how to remove it.
-5. If the archive route is chosen, add the zip build and upload to the release-notes
-   skill's steps, after the tag exists.
+5. Add the zip build, its upload to the GitHub release and the `marketplace.json`
+   update to the release-notes skill's steps, after the tag exists.
 
 ## Limits
 
