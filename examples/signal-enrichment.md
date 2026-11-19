@@ -3,7 +3,7 @@
 **Entirely authored fiction:** no real person, post, forge contribution, app,
 schema, retrieval, model response or tested connector is represented. Labels such
 as S1, K1 and P1 are local fixture references, not valid live IDs or content
-hashes. Use with the [manual guide](../docs/signal-enrichment.md); do not browse
+hashes. Use with the [manual guide](../references/signal-enrichment.md); do not browse
 for these records or treat the expected wording as observed behaviour.
 
 ## One bounded private decision

@@ -11,8 +11,8 @@ are historical runtime evidence, not a new installation or snapshot refresh.
 consumer integration, model trial, installation test or real support-record export.
 
 The [tools](../../tools/support-profile/README.md) implement the adopted
-[`itf.support/0.1-proposal` contract](../support-profile-contract.md). Ordinary skill
-use needs none of their dependencies. The [usage guide](../support-profile-tools.md)
+[`itf.support/0.1-proposal` contract](../../references/support-profile-contract.md). Ordinary skill
+use needs none of their dependencies. The [usage guide](../../references/support-profile-tools.md)
 describes input, disclosure and projection boundaries.
 
 ## Actual environment and commands

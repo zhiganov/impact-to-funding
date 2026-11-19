@@ -99,7 +99,7 @@ into separate claimed outcomes, reviews, ownership or funding needs. Separate
 real support costs remain possible when their scope and overlap are clear.
 
 This is a presentation/design direction, not a JSON example or contract amendment.
-The [current support profile](support-profile-contract.md) already permits `person`
+The [current support profile](../references/support-profile-contract.md) already permits `person`
 and `collective` subjects, but defines no contributor/guild relationship arrays or
 DID fields. Its existing descriptions, scoped report references and limitations
 can explain permitted context. The [curation assessment](guild-curation-assessment.md)

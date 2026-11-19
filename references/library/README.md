@@ -6,10 +6,10 @@ change. This is a small, deliberately selected collection, not comprehensive
 coverage, a set of universal best practices or an independent impact assessment.
 Historical evaluations do not establish that programmes still operate today.
 
-The [design](../../docs/pattern-language-design.md) explains the distinction
-between case evidence, pattern hypotheses, framework lenses and private local
-applications. Record revisions below refer to these notes; source publication,
-observation and retrieval dates are recorded separately in each case.
+Case notes record source-published evidence, patterns are candidate hypotheses
+that cases can challenge, and lenses are optional framework questions; local
+applications stay private. Record revisions below refer to these notes; source
+publication, observation and retrieval dates are recorded separately in each case.
 
 ## Seed records
 
@@ -126,7 +126,7 @@ collection. Its use is optional, and it is not a gate for learning about ItF.
 
 The [optional local MCP implementation](../../mcp/README.md) now provides three
 read-only tools over a separately prepared public snapshot, following the
-[interface decision](../../docs/reference-library-mcp-decision.md) and contract.
+recorded interface decision and contract.
 It is not a hosted service, live collector or automatic library refresh. These
 versioned notes remain canonical; bundled skill use and library expansion remain
 independent of MCP setup or a funding-service account.

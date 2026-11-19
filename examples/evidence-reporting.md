@@ -1,7 +1,7 @@
 # Fictional walkthrough: one evidence base, different funder views
 
 **Entirely fictional**, authored 2026-11-09 for the
-[evidence/reporting design](../docs/evidence-reporting-design.md).
+[evidence/reporting design](../references/evidence-reporting-design.md).
 All projects, people, funders, terms, permissions, results and costs below are
 invented, not modified private cases. This is an expected manual interpretation,
 **not a behavioural test result**, provider response, actual review or real funding

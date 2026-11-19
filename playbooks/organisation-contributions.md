@@ -82,7 +82,7 @@ destination and contact authority are established.
 
 A changed scope needs renewed review and agreement. A three-page website does
 not authorise a donor database or indefinite support. Apply the
-[responsible-assistance guidance](../docs/responsible-assistance.md) to deceptive
+[responsible-assistance guidance](../references/responsible-assistance.md) to deceptive
 campaign claims or harmful access requests. Declining, reducing a scope, refusal
 by the organisation or finding no suitable need are ordinary outcomes.
 

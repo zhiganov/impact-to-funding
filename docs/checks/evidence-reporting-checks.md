@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-09. **Scope:** manual source support for
 [#48](https://github.com/zhiganov/impact-to-funding/issues/48), following the
-[published design](../evidence-reporting-design.md). These are source/template and
+[published design](../../references/evidence-reporting-design.md). These are source/template and
 authored-fixture checks, not observed model behaviour or real funder submissions.
 
 ## Source path reviewed

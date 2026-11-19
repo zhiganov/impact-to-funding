@@ -76,7 +76,7 @@ RSVPs, check-ins, discussions, consent decisions, contribution records and met n
 
 [Full answer](https://github.com/zhiganov/impact-to-funding/issues/29#issuecomment-6998355048).
 
-funding.json v1.1.0 says where money can go. The [support profile](support-profile-contract.md) says what it's for and links the reports, as a standalone `itf-manifest.json` or under `extensions["org.impact-to-funding.support"]`. A support case points to a funding plan with `fundingPlanRef` and to reports with `reportRefs`. A report correction changes only the support profile; a plan change changes only funding.json.
+funding.json v1.1.0 says where money can go. The [support profile](../references/support-profile-contract.md) says what it's for and links the reports, as a standalone `itf-manifest.json` or under `extensions["org.impact-to-funding.support"]`. A support case points to a funding plan with `fundingPlanRef` and to reports with `reportRefs`. A report correction changes only the support profile; a plan change changes only funding.json.
 
 ## 7. Still open: which action would an integration improve?
 

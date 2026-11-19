@@ -1,7 +1,7 @@
 # Fictional review cases for responsible assistance
 
 **Entirely fictional, authored for review.** These are invented requests and
-expected treatments for the [responsible-assistance guidance](../docs/responsible-assistance.md),
+expected treatments for the [responsible-assistance guidance](../references/responsible-assistance.md),
 not observed model behaviour, legal findings or allegations about real people,
 games, financial services or communities. They illustrate accepted source guidance,
 not verified enforcement or an updated installation.

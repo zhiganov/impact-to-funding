@@ -133,7 +133,9 @@ The tool writes only the requested private packet. It makes no source edits,
 commits, account changes, remote sponsor/transaction reads or payments. Report and support
 page URLs are not fetched. A URL match is a comparison, not recipient verification.
 Financial plans remain authoritative in their supplied source; links do not
-activate them. The offline transaction command below handles supplied exports;
+activate them. A useful review can end with a conflict, an unknown default or a
+decision to keep the existing links. A syntactically valid candidate is not a
+payment arrangement. The offline transaction command below handles supplied exports;
 webhooks remain separate work.
 
 ## Sponsors account overview
@@ -146,10 +148,14 @@ node ./impact-to-funding/tools/github-sponsorship/cli.mjs account --account exam
 ```
 
 The account is fictional. Select and authorise the actual target before remote
-inspection. Public mode is the default. `--visibility viewer` explicitly requests
+inspection. The command saves a private review packet and leaves the account unchanged.
+Public mode is the default. `--visibility viewer` explicitly requests
 the nonpublic profile and unpublished tiers visible to existing credentials. It
-does not expand their permissions. `--draft FILE` compares an account-bound JSON
-proposal without applying it.
+does not expand their permissions; GitHub restricts drafts to listing admins,
+and retired tiers may also remain visible to existing sponsors on those tiers.
+`--draft FILE` compares an account-bound JSON proposal without applying it.
+A repository name, support-profile subject or matching URL does not select the
+account's payment recipient.
 
 The [account overview guide](../../docs/github-sponsors-account-overview.md) explains
 the proposal format, tier IDs, visibility, pagination and output. A local snapshot
@@ -179,7 +185,10 @@ digests, overlap checks and unknown financial facts. It makes no network calls.
 node ./impact-to-funding/tools/github-sponsorship/cli.mjs transactions --account example-maintainer --month 2026-11 --input ./work/exports.json --output ./work/transaction-review
 ```
 
-The account is fictional. See the [export-reporting guide](../../docs/github-sponsors-export-reporting.md)
+The account is fictional. The observed CSV layout has no account or currency
+field; the manifest's account and currency stay supplied context rather than
+verified facts. Leave currency out when it is unknown; amounts then stay
+uninterpreted. See the [export-reporting guide](../../docs/github-sponsors-export-reporting.md)
 for the source manifest, supported observed headers, private output and limits.
 The first adapter supports CSV, settled-record dollar amounts and explicitly
 supplied USD context. Unsupported records stay visible as gaps. Account-wide

@@ -30,7 +30,7 @@ This serves two different jobs:
 
 | Surface | What it carries | Authority and limits |
 |---|---|---|
-| `itf-manifest.json` | Optional cross-domain support cases, needs, report references and limitations. | Follow the [support-profile contract](support-profile-contract.md). The filename does not provide automatic discovery. |
+| `itf-manifest.json` | Optional cross-domain support cases, needs, report references and limitations. | Follow the [support-profile contract](../references/support-profile-contract.md). The filename does not provide automatic discovery. |
 | `funding.json` | Financial plans and funding channels for appropriate OSS cases. | Keep one authoritative financial plan and its actual terms. ItF's existing tools can bind a supplied profile to those facts. |
 | `.github/FUNDING.yml` | Platform identifiers and URLs for the repository's Sponsor button. | A destination declaration, not a budget, report, proof of ownership or allocation instruction. |
 | GitHub Sponsors profile | The recipient's presentation, sponsorship options and updates. | GitHub's eligibility, account and payout rules apply. Publishing ItF material does not create a Sponsors account. |
@@ -47,7 +47,7 @@ existing skill when someone asks for GitHub Sponsors material or `FUNDING.yml`.
 It reuses
 the [support-brief playbook](../playbooks/support-brief.md),
 [funding guidance](../references/funding-and-review.md) and
-[support-profile tools](support-profile-tools.md), rather than duplicating their
+[support-profile tools](../references/support-profile-tools.md), rather than duplicating their
 evidence and disclosure rules. This follows the [one-package playbook design](task-playbooks-design.md).
 
 The person can ask for any of these outputs independently:

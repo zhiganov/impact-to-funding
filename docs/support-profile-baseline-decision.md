@@ -4,12 +4,12 @@
 released standard, registered namespace, executable schema or tested integration.
 
 This records the design-adoption stage. The later
-[optional local implementation](support-profile-tools.md) is separate work;
+[optional local implementation](../references/support-profile-tools.md) is separate work;
 its presence does not turn the adoption checks below into runtime evidence.
 
 ## Accepted contract
 
-Accept the reviewed [support-profile contract](support-profile-contract.md) and
+Accept the reviewed [support-profile contract](../references/support-profile-contract.md) and
 its [fictional walkthrough](../examples/funding-interchange.md) under the previously
 accepted [cross-domain architecture](funding-interchange-direction-decision.md).
 This advances from architecture-only acceptance to a concrete field, carrier and

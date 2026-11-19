@@ -9,11 +9,11 @@ the proposed profile. No URL was fetched or submitted.
 
 The [architectural direction](../docs/funding-interchange-direction-decision.md)
 is accepted. These examples now illustrate the
-[concrete contract](../docs/support-profile-contract.md), now an
+[concrete contract](../references/support-profile-contract.md), now an
 [accepted design baseline](../docs/support-profile-baseline-decision.md). They
 remain authored examples, not executed consumer-validation fixtures.
 
-The [optional local tools](../docs/support-profile-tools.md) use copies of these
+The [optional local tools](../references/support-profile-tools.md) use copies of these
 fictional inputs for local checks. That does not make the described people, work,
 permissions, funding or report findings real, or establish upstream consumer support.
 

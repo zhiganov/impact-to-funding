@@ -41,7 +41,7 @@ needs no legal identity.
   omit the claim, or mark it provisional; retain uncertainty. If permission to
   state it is missing, use authorised wording or omit it for that audience. See
   [claim review](../references/claims.md) and
-  [evidence and reporting](../docs/evidence-reporting-design.md).
+  [evidence and reporting](../references/evidence-reporting-design.md).
 - **Possible funders:** Research possible funders only when requested or otherwise
   within the authorised task, and the host permits it. Keep research read-only.
   Inspect relevant primary sources and record source and inspection dates, the
@@ -79,7 +79,7 @@ what it flags; the person decides what to change.
 If the person has the Pangram MCP server connected and wants to know whether a
 public draft reads as AI-written, offer to check it with Pangram. That sends the
 text to Pangram, so use only text they may share and never private evidence. A
-score isn't a judgement of quality. See [optional writing tools](../docs/optional-writing-tools.md).
+score isn't a judgement of quality.
 
 Before you finish, go back to what the person asked for. Say which of their
 questions are answered, which are partly answered and which are still open.
@@ -95,7 +95,7 @@ file only when requested and in an appropriate authorised location.
 Prepare a `funding.json` candidate only if requested and appropriate to real OSS
 work and supplied financial facts. A general support profile is a separate,
 curated candidate: use `itf-manifest.json` if desired, including for nonfinancial
-support. Follow the [support-profile guide](../docs/support-profile-tools.md).
+support. Follow the [support-profile guide](../references/support-profile-tools.md).
 Leave missing facts open rather than inventing an account or funding destination.
 
 Once the person has an approved public report and a support profile, you can offer
