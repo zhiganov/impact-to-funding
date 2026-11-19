@@ -46,6 +46,9 @@ Write in the plain style from `AGENTS.md`. Never claim a check you didn't see pa
 - Pick the version by the convention in `docs/releases.md`: a minor bump for a
   substantial batch, a patch for small corrections.
 - Bump `metadata.version` in `SKILL.md`.
+- Run the release-prepared library runtime build for the release commit and
+  record its provenance summary in the notes' evidence section
+  (see `tools/library-runtime/README.md`).
 - Make the new version the current release in `docs/README.md`.
 - Leave older version mentions that describe history, such as when a feature first shipped.
 - Check coverage: every PR number in the range's commit messages should
