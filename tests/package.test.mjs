@@ -196,3 +196,16 @@ test('package includes workflow, templates, provenance and clearly labelled synt
   assert.match(readFileSync(path.join(root, 'examples/framework-lenses.md'), 'utf8'), /Entirely fictional/);
   assert.match(readFileSync(path.join(root, 'examples/framework-lenses.md'), 'utf8'), /not a behavioural test result/);
 });
+
+test('maintainer skills stay outside the ItF skill', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  assert.ok(!skill.includes('.agents/'), 'SKILL.md must not route to maintainer skills');
+  const maintainer = readFileSync(path.join(root, '.agents/skills/itf-release-notes/SKILL.md'), 'utf8');
+  const name = maintainer.match(/^---\nname: ([a-z0-9-]+)\n/)?.[1];
+  assert.equal(name, 'itf-release-notes');
+  assert.notEqual(name, path.basename(root));
+  assert.match(maintainer, /It doesn't tag, publish or announce anything/);
+  for (const file of files(path.join(root, 'playbooks')).concat(files(path.join(root, 'references')))) {
+    assert.ok(!readFileSync(file, 'utf8').includes('.agents/skills'), `Skill content routes to maintainer skills: ${file}`);
+  }
+});
