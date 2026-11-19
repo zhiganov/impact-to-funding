@@ -1,6 +1,6 @@
 # ItF records for community dashboards: sketch
 
-A sketch for [#102](https://github.com/zhiganov/impact-to-funding/issues/102), 2026-11-15. It defines three record types that a person keeps in their own ATProto account: a profile, contributions and needs. A community dashboard such as My Community could read them to show members each other's work and requests for help. Nothing here is adopted, published or built. All examples are fictional.
+A sketch for [#102](https://github.com/zhiganov/impact-to-funding/issues/102), 2026-11-15. It defines three record types that a person keeps in their own ATProto account: a profile, contributions and needs. A community dashboard such as My Community could read them to show members each other's work and requests for help. The profile record has since been built into a public-profile app as `org.itfti.profile` (see below); the contribution and need records are still sketches. All examples are fictional.
 
 ## The three records
 
@@ -17,7 +17,9 @@ A sketch for [#102](https://github.com/zhiganov/impact-to-funding/issues/102), 2
 - **Report links follow ItF's contracts.** Field names come from the [support-profile manifest](support-profile-contract.md)'s report entries (`id`, `url`, `period`, `published`, `revision`) and the [impact badge](impact-badge-contract.md) input (`provenance`, `state`).
 - **Closed lists where the contract is strict.** `provenance` and `state` accept only the contract's values, so "verified" or a score can't be stored. Other lists, such as `kind`, stay open so apps can add values.
 - **Text limits count visible characters** (`maxGraphemes`), so non-Latin text isn't cut short.
-- **The namespace is a placeholder.** `org.example.itf.*` stands in until a real one is chosen; [#10](https://github.com/zhiganov/impact-to-funding/issues/10) says not to invent a production namespace.
+- **The namespace.** `org.example.itf.*` was a placeholder; [#10](https://github.com/zhiganov/impact-to-funding/issues/10) says not to invent a production namespace without a decision.
+  - **Profile:** the public-profile app for [#7](https://github.com/zhiganov/impact-to-funding/issues/7) uses `org.itfti.profile`, in [itfti-website PR #24](https://github.com/zhiganov/itfti-website/pull/24) (unmerged on 2026-11-19, with namespace control still to be verified). Compared on 2026-11-19, its schema matches the sketch's profile record exactly, apart from the NSID and description text.
+  - **Contribution and need:** still `org.example.itf.*`. If they're adopted, `org.itfti.contribution` and `org.itfti.need` would keep them in the same namespace as the profile.
 
 ## Validation
 
