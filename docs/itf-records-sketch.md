@@ -18,7 +18,7 @@ A sketch for [#102](https://github.com/zhiganov/impact-to-funding/issues/102), 2
 - **Closed lists where the contract is strict.** `provenance` and `state` accept only the contract's values, so "verified" or a score can't be stored. Other lists, such as `kind`, stay open so apps can add values.
 - **Text limits count visible characters** (`maxGraphemes`), so non-Latin text isn't cut short.
 - **The namespace.** `org.example.itf.*` was a placeholder; [#10](https://github.com/zhiganov/impact-to-funding/issues/10) says not to invent a production namespace without a decision.
-  - **Profile:** the public-profile app for [#7](https://github.com/zhiganov/impact-to-funding/issues/7) uses `org.itfti.profile`, in [itfti-website PR #24](https://github.com/zhiganov/itfti-website/pull/24) (unmerged on 2026-11-19, with namespace control still to be verified). Compared on 2026-11-19, its schema matches the sketch's profile record exactly, apart from the NSID and description text.
+  - **Profile:** the public-profile app for [#7](https://github.com/zhiganov/impact-to-funding/issues/7) uses `org.itfti.profile`, from [itfti-website PR #24](https://github.com/zhiganov/itfti-website/pull/24), merged on 2026-11-17. app.itfti.org was serving on 2026-11-20. Compared on 2026-11-19, its schema matches the sketch's profile record exactly, apart from the NSID and description text.
   - **Contribution and need:** still `org.example.itf.*`. If they're adopted, `org.itfti.contribution` and `org.itfti.need` would keep them in the same namespace as the profile.
 
 ## Validation
