@@ -8,3 +8,4 @@ Dated research notes for builders and for ItF's guidance. Each note says where i
 - [How 360Giving won funder adoption](2026-11-21-360giving-adoption.md), 2026-11-21: how a UK open grants-data standard grew to about 355 funders, and where it struggles.
 - [What ItF's research means for FtI](2026-11-21-what-this-means-for-fti.md), 2026-11-21: format additions and an adoption approach for Funding to Impact, drawn from the notes above.
 - [FEST State of the Field 2026](2026-11-21-fest-state-of-the-field.md), 2026-11-21: a reading of FEST's first report on financing systemic transformation, and what it suggests for ItF and FtI.
+- [MTM Together](2026-11-21-mtm-together.md), 2026-11-21: an AI community for nonprofit staff, as a place to test ItF in chat apps and to listen to funders.
