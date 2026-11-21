@@ -41,7 +41,7 @@ A maker that licenses its tool only to people it has trained keeps every use beh
 
 ## How to tell it stuck
 
-The field mostly doesn't measure this. Hey Nabu found nobody researching these, among others:
+The field mostly doesn't measure this. The research found nobody working on these, among others:
 - years a trained teacher stays active;
 - support given to a new teacher after training;
 - share of adopters who would recommend a practice to people they know;

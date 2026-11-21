@@ -55,9 +55,9 @@ Asked on 2026-11-21 (server version 0.17.0). Each entry is Hey Nabu's own summar
   - **Projects:** it's designing a capital orchestrator for regenerative agriculture in the US Midwest. A podcast summary describes $1.4 billion in catalytic capital for it.
   - **Publications:** a [practice guide](https://transcap-initiative.gitbook.io/systemic-investing-practice-guide/introduction/about-systemic-investing), case studies, and a November 2026 [playbook](https://medium.com/transformation-capital/thinking-about-bringing-systemic-investing-to-your-country-d4e38ddd7a6c) for starting in a new country: phased 12-to-18-month experiments led by an orchestrator and four or five core partners.
   - **Events:** it runs the annual [Systemic Investing Summit](https://systemicinvestingsummit.org/about/). The 2026 summit was in Rio de Janeiro on 14 to 16 April, with about 250 people, at $700 a ticket.
-  - **Evidence:** Hey Nabu notes that most evidence on financial backbones is TransCap's own account of work it designed or admires.
+  - **Evidence:** most evidence on financial backbones is TransCap's own account of work it designed or admires.
 - **One of Hey Nabu's tracked measures** fits FtI closely: "understanding among holders of different kinds of capital of each other's constraints and language". It's the same gap the FEST report names.
-- **No critique found.** Hey Nabu found no direct critique of systemic investing or capital orchestration. The nearest are general critiques of blended finance and de-risking, such as Mariana Mazzucato's.
+- **No critique found.** The research found no direct critique of systemic investing or capital orchestration. The nearest are general critiques of blended finance and de-risking, such as Mariana Mazzucato's.
 
 ## Gaps
 

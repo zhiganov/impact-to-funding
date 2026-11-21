@@ -24,6 +24,14 @@ From Hey Nabu (System Change), on coordination. The checking agents disagreed on
 - Field catalysts in Bridgespan's 2023 study had a median budget of $5 million and a median annual funding gap of $2.5 million. 62% of new efforts had gaps of half their budget or more.
 - RE-AMP, a Midwest climate network, shows both halves. Other funders were reluctant to pay for its process in its first year. By 2007, other funders covered 75% of its budget, and 25 foundations contributed in its first ten years.
 
+What was found against this reading:
+
+- **RE-AMP cuts the other way.** Read past its first year, its infrastructure budget grew from $350,000 to $900,000 by 2014, with more than $24 million raised from 2004 to 2013. Bridgespan's collaboratives are pooled funds, not coordinating bodies, so its figure is about running a pooled fund. What's scarce is money to keep coordination going, not money to start it. The field-catalyst funding gap still stands.
+- **Coordination can win without funding.** In a California coalition case, Dignity Not Detention had no funding but carried a policy win through 2017 and 2019 on its members' skills and its relationship with a bill's sponsor. Elsewhere, a funded coordinator helped. So funded coordination is one way a coalition keeps going, not the only one.
+- **Who says coordination needs funding:** intermediaries that host pooled funds, such as NEO Philanthropy, ask funders to pay for their own staffing. Their president says otherwise the costs pass to the projects they sponsor. They gain from the claim being true, which doesn't make it false.
+
+A pattern the research matches: each funder's separate proposal and reporting format draws on the same few people who hold a network together. They burn out, and the network loses what they knew. This is a version of the tragedy of the commons.
+
 The field's own example: the [Participatory Grantmaking Community](https://www.participatorygrantmaking.org/), about 2,000 people in 73 countries, now runs on an estimated £5,500 a year. One funder, Impatience Ltd, gave £193,000 of its £257,000 total between 2021 and 2024, and nothing since.
 
 Grantmakers.io, a free search over US foundation tax filings, runs on about $200 a year, from voluntary gifts and a donated search service.
@@ -51,6 +59,6 @@ Grantmakers.io, a free search over US foundation tax filings, runs on about $200
 
 ## Gaps
 
-- Hey Nabu held no smaller or EU open-source grant programmes. The NLnet, NumFOCUS and Alpha-Omega entries come from the web. A coverage request was filed with Hey Nabu for them.
-- Hey Nabu notes three open questions that nobody has researched yet. One is whether paying for the wellbeing of backbone staff keeps coordination funded for longer.
+- The research behind Hey Nabu hasn't covered smaller or EU open-source grant programmes. The NLnet, NumFOCUS and Alpha-Omega entries come from the web. A coverage request was filed for them.
+- Three questions haven't been researched yet. One is whether paying for the wellbeing of backbone staff keeps coordination funded for longer.
 - This note covers one question on one day. It isn't a full list of funders.

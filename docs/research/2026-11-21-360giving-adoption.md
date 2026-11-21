@@ -32,7 +32,7 @@ It took ten years, and keeping files current is still the weak point.
 | October 2026 | About 355 funders on the home page | 2 million grants, £338bn |
 
 - **Government:** 17 to 18 UK government departments publish. Hey Nabu reports that the UK government tells its own grant-makers to use the standard. The UK government lists it as an [open standard for grant-making](https://www.gov.uk/government/publications/open-standards-for-government/data-standard-for-grant-making).
-- **Outside the UK:** Hey Nabu found no open grants standard adopted in the USA or Canada. US funders report voluntarily to Candid instead. A 2012 US Reporting Commitment had 15 large foundations publishing quarterly.
+- **Outside the UK:** the research found no open grants standard adopted in the USA or Canada. US funders report voluntarily to Candid instead. A 2012 US Reporting Commitment had 15 large foundations publishing quarterly.
 
 ## What makes it work
 

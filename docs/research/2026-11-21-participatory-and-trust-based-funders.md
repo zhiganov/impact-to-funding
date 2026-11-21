@@ -64,7 +64,7 @@ It says 6 in 10 grantmakers have embraced them, citing a 2025 study by Grantmake
 
 ## Open-source and software examples (web)
 
-Hey Nabu held one 2022 podcast on Gitcoin and nothing current. The web search found:
+The research behind Hey Nabu holds one 2022 podcast on Gitcoin and nothing current. The web search found:
 
 - **[Gitcoin Grants](https://grants.gitcoin.co):** community-voted funding through quadratic funding, where many small donations decide how a matching pool is split. It also has retroactive rounds that pay for proven past work. Gitcoin says it has distributed over $60 million to 3,700+ projects. Its GG23 round in April 2025 gave $1.4 million across 265 projects. These figures are Gitcoin's own, and some pages describe older rounds, so check round dates.
 - **[FundOSS](https://opencollective.com/fundoss)** on Open Collective, another quadratic-funding effort for open source. Its current status wasn't checked.
@@ -79,6 +79,6 @@ Hey Nabu held one 2022 podcast on Gitcoin and nothing current. The web search fo
 
 ## Gaps
 
-- Hey Nabu held almost nothing on participatory funding for software or open-source builders. The Gitcoin and FundOSS entries come from the web. A coverage request was filed with Hey Nabu.
+- The research behind Hey Nabu has barely looked at participatory funding for software or open-source builders. The Gitcoin and FundOSS entries come from the web. A coverage request was filed for it.
 - No source here measures how often an unknown applicant reaches an invitation-only funder.
 - This note covers one question on one day. It isn't a full list of funders.
