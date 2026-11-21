@@ -13,7 +13,7 @@ A move into this folder does not refresh the evidence.
 - [Library setup checks: Claude Code](library-mcp-setup-claude-2026-11-19.md): Claude Code local-scope setup, a native connection check and undo.
 - [Claude Code plugin check](claude-plugin-2026-11-19.md): the plugin build, validation, an isolated real install, the one-owner guard, missing-Node behaviour and removal.
 - [Three-month check-back: Claude Code](check-back-claude-2026-11-21.md): offer, opt-in, a due check-back and the pre-filled public note, run once each.
-- [Claim objections: Claude Code](claim-objections-claude-2026-11-21.md): the new pre-publication claim step on one fictional brief; steps 1 and 3 followed, step 2 skipped.
+- [Claim objections: Claude Code](claim-objections-claude-2026-11-21.md): the new pre-publication claim step on two fictional briefs. Who gains was named for a partner's interest, not for the person's own.
 
 ## Guidance and local tools
 
