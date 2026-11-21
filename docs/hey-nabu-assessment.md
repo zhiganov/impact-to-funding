@@ -47,6 +47,34 @@ The full findings are in [Who pays for maintenance and coordination](research/20
 | Ladder (`read_ladder`) | Not built for the Systemic Philanthropy expert yet. | Not usable for ItF's questions today. |
 | What's new (`top_scoring`) | The strongest recent stories, scored for fit. The week to 2026-11-21 included IVAR on recruiting residents to make grants. | A quick way to see what changed this week in funder practice. |
 
+## How it seems to work
+
+This is inferred from the connector's answers on 2026-11-21. We haven't seen Hey Nabu's code, database or research pipeline.
+
+**Shown clearly by the answers:**
+
+- **Front door:** a hosted MCP server at `https://heynabu.ai/api/mcp`. People sign in with an emailed link. The token lasts an hour and renews itself. Every answer gives the server version (0.17.0 on that date). The usage guide is served live by the same server, with a separate guide for people allowed to change experts.
+- **Experts are separate collections.** Each has a written focus paragraph, a relevance threshold (usually 60 out of 100) and, for some, a longer written definition.
+- **Two stores behind each expert:**
+  - **Stories:** articles from feeds, each with a generated summary, a relevance score, a genre and a date. Summaries never include the article text.
+  - **A register** of about 16 record types: organisations, funders, grants, initiatives, events, sources, saved searches, and a cause-and-effect map of the field made of nodes, edges, loops, patterns, regimes, transitions, roles and money flows.
+- **Every register field records where it came from:** stated by a source, parsed, inferred, copied, absent or unknown. Each record has a review status and says whether checking supported or contradicted it.
+
+**Inferred, fairly confidently:**
+
+- **Search combines keywords and meaning.** Results say whether they matched by keyword, by meaning or by name, and give a distance to the nearest match.
+- **A language model scores each story** against the expert's focus paragraph, not against the reader's question.
+- **AI research passes write the register, and other agents check it.** Records mention passes, retries and three "refuters" per claim. A person approves an expert before it goes live, but doesn't read every record.
+- **"How a field works" walks the cause-and-effect map** from the nodes nearest the question. It matches known traps, and attaches objections and who gains from each claim. That's why its answers are large.
+- **Design decisions are kept as a numbered log,** cited in tool descriptions as "decisions/078" and similar.
+
+**Not known:**
+- hosting, database or search engine;
+- which models summarise, score and research;
+- how often feeds are read, and how often each register is refreshed;
+- how the ladder's "heat map" is built;
+- why two early searches failed, and why many stories have no summary.
+
 ## How it fits ItF's funder-research rules
 
 The [support-brief playbook](../playbooks/support-brief.md) asks the agent to:
