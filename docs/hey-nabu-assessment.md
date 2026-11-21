@@ -82,6 +82,22 @@ From the connector's answers on 2026-11-21, and from its [privacy page](https://
 - how the ladder's "heat map" is built;
 - why two early searches failed, and why many stories have no summary.
 
+## How it compares with ItF's architecture
+
+The two are built in nearly opposite ways.
+
+| | Hey Nabu | ItF |
+|---|---|---|
+| **What it is** | A hosted service: a web app, a database and a remote MCP server. | A skill: Markdown instructions the person's own agent loads, plus optional local tools. |
+| **Where it runs** | On its servers: Vercel, Supabase in London, and scheduled jobs on Trigger.dev. | On the person's machine, inside their agent. There's no ItF server. |
+| **Knowledge** | A large, growing store: stories from feeds read daily, and a register written by AI research passes. | A curated [reference library](../references/library/README.md) in the repo: five cases, two patterns and three lenses. An optional local, read-only [MCP server](../mcp/README.md) serves the same library through three tools, from a snapshot prepared at a given commit. |
+| **Who does the AI work** | Hey Nabu calls Anthropic to score and summarise, and Voyage AI for search. | The person's agent does the reasoning. ItF makes no model calls of its own. |
+| **Data about the person** | An account and sign-in, search notes kept per account, and usage counted for licences. | No account. Nothing leaves the machine unless the person chooses, for example a public check-back note. |
+| **Freshness** | Continuous: feeds are read on a schedule. | At install or update: a new release, and a new library snapshot for the MCP server. |
+| **Business model** | Licences, with fees shared between the people who make each expert. | Free and open: MIT for software, CC BY-SA 4.0 for written content. |
+
+In short, Hey Nabu is a curated, server-side knowledge service an agent queries. ItF is guidance that shapes how the agent works, with the person's material staying local. They fit together: ItF can treat Hey Nabu as one optional source, like an aggregator.
+
 ## How it fits ItF's funder-research rules
 
 The [support-brief playbook](../playbooks/support-brief.md) asks the agent to:
