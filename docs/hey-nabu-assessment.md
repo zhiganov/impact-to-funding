@@ -89,6 +89,7 @@ The two are built in nearly opposite ways.
 | | Hey Nabu | ItF |
 |---|---|---|
 | **What it is** | A hosted service: a web app, a database and a remote MCP server. | A skill: Markdown instructions the person's own agent loads, plus optional local tools. |
+| **Hosting plans** | Already hosted. | Optional hosted endpoints are planned but not scheduled: the reference library on Railway ([#96](https://github.com/zhiganov/impact-to-funding/issues/96)), and FtI's funding-discovery server. Local use would stay available, and the library would still be the repo's curated one. |
 | **Where it runs** | On its servers: Vercel, Supabase in London, and scheduled jobs on Trigger.dev. | On the person's machine, inside their agent. There's no ItF server. |
 | **Knowledge** | A large, growing store: stories from feeds read daily, and a register written by AI research passes. | A curated [reference library](../references/library/README.md) in the repo: five cases, two patterns and three lenses. An optional local, read-only [MCP server](../mcp/README.md) serves the same library through three tools, from a snapshot prepared at a given commit. |
 | **Who does the AI work** | Hey Nabu calls Anthropic to score and summarise, and Voyage AI for search. | The person's agent does the reasoning. ItF makes no model calls of its own. |
