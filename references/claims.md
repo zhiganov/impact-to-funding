@@ -47,7 +47,7 @@ If the decision does not justify more evidence, preserve uncertainty rather than
 
 The checks above work with what the person supplies. Before a claim goes into a public brief, report or profile, offer one more step. The person can skip it.
 
-1. **Find the strongest objection.** Look in the supplied material first. Search outside it only if the person allows it and the host permits it. Give the objection's source and date, and say whether you inspected it.
+1. **Find the strongest objection.** Look in the supplied material first. Search outside it only if the person allows it and the host permits it, and keep private details out of the search terms. Give the objection's source and date, and say whether you inspected it.
 2. **Say who gains if the claim is true,** including the person making it, a partner or a funder. Gaining from a claim doesn't make it false. It changes how much weight an unchecked statement can carry.
 3. **Decide and say which:** keep the claim as it is, narrow it to what still holds, or mark it disputed. Don't drop it silently.
 4. **Record the objection in the private assessment.** Put it in the public version only if the person approves the wording.
