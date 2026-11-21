@@ -51,6 +51,13 @@ body:
       label: One improvement
       description: What would have made it more useful or less work?
   - type: checkboxes
+    id: check-back
+    attributes:
+      label: Three-month check-back (optional)
+      description: We'll comment on this note in about three months with four short questions. GitHub notifies you. You can ignore it.
+      options:
+        - label: You can check back with me here in about three months.
+  - type: checkboxes
     id: consent
     attributes:
       label: Before you submit

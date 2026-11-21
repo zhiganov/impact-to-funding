@@ -96,17 +96,31 @@ requires a separate opt-in through an agreed route; it is not automatic.
 
 ### Three months later: a short check-back, only if you agreed to be asked
 
-If you agreed to be contacted, we may ask four questions about three months after
-your first use. Each takes a sentence, and "no" is a useful answer.
+About three months after your first use, we'd like to ask four questions. Each
+takes a sentence, and "no" is a useful answer.
 
 - **Did you use it again?** For a second task, or not at all?
 - **What for?** The kind of task is enough.
 - **Did you show it to anyone?** For example, did you help someone else set it up?
 - **What stopped you, if you stopped?**
 
-We count someone as an active user if they finished a second task, or helped one
-other person set it up, within three months of their first use. We count by hand
-and track no one. See [#134](https://github.com/zhiganov/impact-to-funding/issues/134).
+There are two ways to agree to be asked. Neither needs an email.
+
+- **In the skill.** After a finished task, your agent may offer the check-back.
+  If you agree, it saves only the date on your computer. The first time you use
+  ItF after three months, it asks the questions. If you want to share your
+  answers, it fills in a public [check-back form](https://github.com/zhiganov/impact-to-funding/issues/new?template=check-back.yml)
+  for you to review and submit. This works where your agent can run local
+  helpers, such as Claude Code or OpenCode.
+- **On a field note.** Tick "You can check back with me" on the
+  [field-note form](https://github.com/zhiganov/impact-to-funding/issues/new?template=field-note.yml).
+  We'll comment on your note in about three months, and GitHub notifies you.
+  This reaches you even if you stopped using ItF.
+
+Both routes are public. We count someone as an active user if they finished a
+second task, or helped one other person set it up, within three months of their
+first use. We count by hand and track no one. See
+[#134](https://github.com/zhiganov/impact-to-funding/issues/134).
 
 ## Before returning feedback
 

@@ -12,6 +12,7 @@ A move into this folder does not refresh the evidence.
 - [Library setup checks: OpenCode](library-mcp-setup-2026-11-17.md): OpenCode V2 project-scope setup, local and native connection checks.
 - [Library setup checks: Claude Code](library-mcp-setup-claude-2026-11-19.md): Claude Code local-scope setup, a native connection check and undo.
 - [Claude Code plugin check](claude-plugin-2026-11-19.md): the plugin build, validation, an isolated real install, the one-owner guard, missing-Node behaviour and removal.
+- [Three-month check-back: Claude Code](check-back-claude-2026-11-21.md): offer, opt-in, a due check-back and the pre-filled public note, run once each.
 
 ## Guidance and local tools
 

@@ -1,0 +1,44 @@
+name: Three-month check-back
+description: Answer four short questions about three months after you first used ItF.
+title: "Check-back: three months on"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Anyone can read it, and copies may remain after you edit or delete it. Share only what you're happy for anyone to read.
+
+        Thanks for coming back. "No" and "I stopped" are as useful as "yes". You don't need to name yourself, your project or anyone else, and you can skip any question.
+
+        This helps ItF count active users: people who finished a second task, or helped one other person set it up, within three months ([#134](https://github.com/zhiganov/impact-to-funding/issues/134)).
+  - type: input
+    id: version
+    attributes:
+      label: Version and host
+      description: ItF version or commit, and the agent you used, if known. "Unknown" is fine.
+      placeholder: "v0.6.0, Claude Code"
+  - type: textarea
+    id: used-again
+    attributes:
+      label: Did you use it again?
+      description: For a second task, or not at all?
+  - type: textarea
+    id: what-for
+    attributes:
+      label: What for?
+      description: The kind of task is enough, for example a support brief or a report.
+  - type: textarea
+    id: shown
+    attributes:
+      label: Did you show it to anyone?
+      description: For example, did you help someone else set it up?
+  - type: textarea
+    id: stopped
+    attributes:
+      label: What stopped you, if you stopped?
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Before you submit
+      options:
+        - label: Everything here is mine to share publicly, and nothing identifies other people or reveals private evidence.
+          required: true
