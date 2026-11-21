@@ -47,31 +47,38 @@ The full findings are in [Who pays for maintenance and coordination](research/20
 | Ladder (`read_ladder`) | Not built for the Systemic Philanthropy expert yet. | Not usable for ItF's questions today. |
 | What's new (`top_scoring`) | The strongest recent stories, scored for fit. The week to 2026-11-21 included IVAR on recruiting residents to make grants. | A quick way to see what changed this week in funder practice. |
 
-## How it seems to work
+## How it works
 
-This is inferred from the connector's answers on 2026-11-21. We haven't seen Hey Nabu's code, database or research pipeline.
+From the connector's answers on 2026-11-21, and from its [privacy page](https://heynabu.ai/privacy), read the same day. We haven't seen its code.
+
+**Confirmed by its privacy page.** It names six services it runs on:
+- **Supabase:** the database and sign-in, with servers in London.
+- **Vercel:** runs the site, a Next.js app.
+- **Trigger.dev:** runs the scheduled jobs that read the feeds.
+- **Voyage AI:** turns a question into numbers (embeddings), so search can match by meaning. It sees the question.
+- **Anthropic:** reads the articles, scores them and writes the summaries. It also reads notes sent to the editors, and any exchange a person chooses to send. It never receives searches.
+- **Resend:** sends sign-in and account emails. It also receives the newsletters experts subscribe to, which are one kind of source.
 
 **Shown clearly by the answers:**
 
-- **Front door:** a hosted MCP server at `https://heynabu.ai/api/mcp`. People sign in with an emailed link. The token lasts an hour and renews itself. Every answer gives the server version (0.17.0 on that date). The usage guide is served live by the same server, with a separate guide for people allowed to change experts.
+- **Front door:** a hosted MCP server at `https://heynabu.ai/api/mcp`. People sign in with an emailed link; there's no password. A connector's tokens renew themselves and expire within thirty days. Every answer gives the server version (0.17.0 on that date). The usage guide is served live by the same server, with a separate guide for people allowed to change experts.
 - **Experts are separate collections.** Each has a written focus paragraph, a relevance threshold (usually 60 out of 100) and, for some, a longer written definition.
 - **Two stores behind each expert:**
-  - **Stories:** articles from feeds, each with a generated summary, a relevance score, a genre and a date. Summaries never include the article text.
+  - **Stories:** articles from feeds and newsletters, each with a generated summary, a relevance score, a genre and a date. Summaries never include the article text.
   - **A register** of about 16 record types: organisations, funders, grants, initiatives, events, sources, saved searches, and a cause-and-effect map of the field made of nodes, edges, loops, patterns, regimes, transitions, roles and money flows.
 - **Every register field records where it came from:** stated by a source, parsed, inferred, copied, absent or unknown. Each record has a review status and says whether checking supported or contradicted it.
+- **It's a licensed service.** Organisations and people hold licences. Each month a licence's fee is shared between the experts its look-ups used, and the people who made an expert are paid a part.
 
 **Inferred, fairly confidently:**
 
-- **Search combines keywords and meaning.** Results say whether they matched by keyword, by meaning or by name, and give a distance to the nearest match.
-- **A language model scores each story** against the expert's focus paragraph, not against the reader's question.
+- **Search combines keywords and meaning.** Results say whether they matched by keyword, by meaning or by name.
 - **AI research passes write the register, and other agents check it.** Records mention passes, retries and three "refuters" per claim. A person approves an expert before it goes live, but doesn't read every record.
-- **"How a field works" walks the cause-and-effect map** from the nodes nearest the question. It matches known traps, and attaches objections and who gains from each claim. That's why its answers are large.
-- **Design decisions are kept as a numbered log,** cited in tool descriptions as "decisions/078" and similar.
+- **"How a field works" walks the cause-and-effect map** from the nodes nearest the question, matches known traps, and attaches objections. That's why its answers are large.
+- **Design decisions are kept as a numbered log,** cited as "decisions/078" and similar.
 
 **Not known:**
-- hosting, database or search engine;
-- which models summarise, score and research;
-- how often feeds are read, and how often each register is refreshed;
+- how often feeds are read and registers refreshed;
+- which Anthropic models it uses, and how the research passes run;
 - how the ladder's "heat map" is built;
 - why two early searches failed, and why many stories have no summary.
 
@@ -93,7 +100,16 @@ Its strength is context a funder page doesn't give. It shows who funds coordinat
 
 ## Privacy
 
-Hey Nabu's guidance says it doesn't store what a person is deciding or their question. Two of its tools file notes for its editors: coverage requests and suggestions. An agent should file only the missing subject, never the builder's situation. Don't send private evidence or other people's details in a question.
+From its [privacy page](https://heynabu.ai/privacy), read on 2026-11-21:
+
+- **Searches aren't stored.** A question is sent to Voyage AI to be matched, then discarded. It's never sent to Anthropic.
+- **A note of each search is kept, linked to your account:** which sources were searched, how many results came back, how close the nearest was, and how long it took. It doesn't contain the question. It stays, without your name, after you delete your account.
+- **Usage is counted.** Administrators see how many look-ups each person makes and which experts they read, never what they searched. An organisation's owners see its monthly total once at least five people made look-ups.
+- **Notes to the editors are kept until you ask for deletion.** These are coverage requests and suggestions. An agent should file only the missing subject, never the builder's situation.
+- **An exchange you choose to send** (question, answer and your correction) is kept for 90 days, with identifying details removed.
+- **Rights:** a copy, correction and deletion, through your account page or privacy@ml.heynabu.ai. Complaints go to the UK Information Commissioner's Office.
+
+Don't send private evidence or other people's details in a question.
 
 ## Limits
 

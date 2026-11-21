@@ -44,7 +44,7 @@ Without `-s user`, it's added only for the folder you're in. Then ask, for examp
 
 **Treat its leads like an aggregator's.** Label each lead as from Hey Nabu, with the date you asked. Check the funder's own page before relying on terms or round status. Search the web for what it lacks.
 
-**Privacy:** its guidance says it doesn't store what you're deciding or your question. Two of its tools send notes to its editors: coverage requests and suggestions. Don't put private evidence or other people's details in a question.
+**Privacy** (from its [privacy page](https://heynabu.ai/privacy), read 2026-11-21): it doesn't store your questions, but keeps a note of each search, without the question, linked to your account. Two of its tools send notes to its editors: coverage requests and suggestions. Don't put private evidence or other people's details in a question.
 
 ## Limits
 
