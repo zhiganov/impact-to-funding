@@ -44,7 +44,7 @@ These are suggestions drawn from the report, not findings about ItF or FtI:
 - **FtI explains allocators' rules to the people asking.** A funder file that says what the money may pay for, who decides and how people are found is one answer to the "misunderstanding of the constraints" this report names. It also suits the call for "interoperable languages": FtI reuses CommonGrants rather than inventing another schema.
 - **FEST is a convenor route, not a funder cluster.** Its members are mostly intermediaries, advisers and builders, not people who control funds. For FtI's [adoption plan](2026-11-21-what-this-means-for-fti.md), FEST is a place to learn what intermediaries need from funder information, and to reach funders through them.
 - **ItF fits the "infrastructure steward" role.** The report's complexity problem is the one ItF works on for builders: plain language about impact and funding.
-- **The November call is the next chance to take part.** The report gives no date. It points to FEST's LinkedIn page and a contact in its footer.
+- **The next chance to take part is June 2027.** The report was presented at FEST's November call, around 2026-11-19. The next gathering, which feeds the 2027 report, is planned for June.
 
 ## What Hey Nabu holds on FEST and TransCap
 
