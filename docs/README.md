@@ -5,6 +5,7 @@ Guides, design notes and check records for Impact to Funding (ItF). Most of thes
 ## Reports and check records
 
 - [Reports](reports/README.md): shareable analyses of real projects, starting with the [OpenHaven reconstruction](reports/openhaven-theory-of-change-review-2026-11-16.md).
+- [Research](research/README.md): dated research notes, starting with [who pays for maintenance and coordination](research/2026-11-21-maintenance-and-coordination-funding.md).
 - [Check records](checks/README.md): source reviews, local tests and host observations, with their original dates, revisions and limits.
 
 Guides, contracts and design notes stay in this folder. Fictional cases stay in

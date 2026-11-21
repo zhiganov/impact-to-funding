@@ -35,6 +35,8 @@ One question, asked through the connector on 2026-11-21 (server version 0.17.0):
 - **Some summaries:** many story results had no summary, only a title and link.
 - **Reliability:** two of five searches failed with a server error. Simpler wording worked.
 
+The full findings are in [Who pays for maintenance and coordination](research/2026-11-21-maintenance-and-coordination-funding.md).
+
 ## How it fits ItF's funder-research rules
 
 The [support-brief playbook](../playbooks/support-brief.md) asks the agent to:
