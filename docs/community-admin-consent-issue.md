@@ -29,3 +29,10 @@ A guild whose rules let any member propose a change needs that, or a documented 
 ## Out of scope
 
 Majority voting. Communities whose rules need a majority can read the agree count; this asks for no new decision rule.
+
+## What the code shows (2026-11-21)
+
+Checked in Community Admin's code at `9e164fd`:
+
+- **Withdrawn objections aren't kept.** Each member has one vote row per proposal. Changing an answer overwrites the value and reason, and withdrawing deletes the row. No history table exists. The only trace is the alert posted to the organizers' private Telegram channel when an objection is raised.
+- **Only organizers can propose.** Creating a proposal requires an organizer. No per-community setting lets members propose. Members can vote, change or withdraw their vote, and read proposals.

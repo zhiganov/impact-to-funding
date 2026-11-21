@@ -228,20 +228,23 @@ by consent: a proposal stays open for two weeks and passes if no objection is
 still open when it closes. Silence counts as agreement.
 
 - The proposal goes to the dashboard's existing decisions feed, with v1, v2 and
-  the two-week window. ItF adds no voting tool of its own.
+  the two-week window. ItF adds no voting tool of its own. Only organizers can
+  post a decision there, so a steward posts Tavi's proposal for Tavi.
 - Sol objects, with a reason: one sponsor is too few. Tavi narrows the proposal to
   "one sponsor, after a meeting" and re-posts it as an amended version, linked to
   the first. Sol withdraws the objection but asks that it stay on record.
 - After two weeks, no objection is open, so v2 passes. The record keeps v2, its
   date and the decision under v1's change rule.
-- The decisions feed shows only each member's current answer, so it may not keep
-  Sol's withdrawn objection. A steward adds it to the rules page's history, with
-  Sol's agreement, until the tool can keep it.
+- The decisions feed keeps only each member's current answer. Withdrawing Sol's
+  objection removes it, reason and all; only the organizers' alert about it
+  remains, in their own channel. A steward adds it to the rules page's history,
+  with Sol's agreement, until the tool can keep it.
 - v1 stays readable. Members admitted under v1 keep their membership.
 
 The tools follow Harbour's own rule, which here is consent. A community whose rule
 needs a majority would read the count of agreements itself; the decisions feed
-decides by open objections only. Changing who can join doesn't change
+decides by open objections only. Both tool limits above were checked in Community
+Admin's code on 2026-11-21 and are tracked in Community Admin issue #175. Changing who can join doesn't change
 anyone's access. A steward updates the member list in the admin tool separately,
 after the decision.
 
