@@ -1,6 +1,6 @@
 # What ItF's research means for FtI
 
-A note from 2026-11-21. It applies four research notes to [Funding to Impact (FtI)](https://itfti.org/fti), ItF's funder-side sibling: a file format funders publish on their own sites, at draft 0.1 with no funder adoption yet. It's based on FtI's public pages on itfti.org. Section 1 was corrected the same day, after reading FtI's own design, to note what FtI already plans.
+A note from 2026-11-21. It applies four research notes to [Funding to Impact (FtI)](https://itfti.org/fti), ItF's funder-side sibling: a file format funders publish on their own sites, at draft 0.1 with no funder adoption yet. It's based on FtI's public pages on itfti.org. Sections 1 and 2 were corrected the same day, after reading FtI's own design, to note what FtI already plans.
 
 These are suggestions drawn from the research, not findings about FtI.
 
