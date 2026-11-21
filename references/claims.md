@@ -43,6 +43,17 @@ Do not expose private source identifiers or sensitive evidence links in a public
 
 If the decision does not justify more evidence, preserve uncertainty rather than expanding collection. Strong causal/financial/legal claims may require qualified review outside this skill's capacity.
 
+## Before a claim goes public: look for what counts against it
+
+The checks above work with what the person supplies. Before a claim goes into a public brief, report or profile, offer one more step. The person can skip it.
+
+1. **Find the strongest objection.** Look in the supplied material first. Search outside it only if the person allows it and the host permits it. Give the objection's source and date, and say whether you inspected it.
+2. **Say who gains if the claim is true,** including the person making it, a partner or a funder. Gaining from a claim doesn't make it false. It changes how much weight an unchecked statement can carry.
+3. **Decide and say which:** keep the claim as it is, narrow it to what still holds, or mark it disputed. Don't drop it silently.
+4. **Record the objection in the private assessment.** Put it in the public version only if the person approves the wording.
+
+Finding an objection doesn't disprove a claim. Finding none doesn't prove it either: it describes this search. See the [fictional examples](../examples/claim-objections.md).
+
 ## Derived measures must retain their definitions
 
 Before calculating a rate, complement or change, establish what the source actually counts, the numerator/denominator, the periods compared, and how missing, cancelled, duplicate or unclassified records are handled. Keep that definition in the conclusion. Correct arithmetic does not establish a different outcome category or causal meaning.
