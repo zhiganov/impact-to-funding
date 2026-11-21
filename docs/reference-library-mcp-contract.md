@@ -6,6 +6,8 @@
 not a released standard. The optional [local implementation](../mcp/README.md)
 provides executable schemas and a stdio server separately from this prose contract.
 It follows the [independent-interface decision](reference-library-mcp-decision.md).
+A later guidance tool family for the hosted connector will have its own contract
+version and leaves this one unchanged; see the [guidance decision](connector-guidance-decision.md).
 The [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md)
 specifies expected behaviour, not observed calls.
 

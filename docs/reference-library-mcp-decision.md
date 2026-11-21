@@ -5,6 +5,8 @@ The [initial application contract](reference-library-mcp-contract.md) is the des
 baseline developed in #44. The optional [stdio server](../mcp/README.md) implements
 that baseline. Hosting and operating arrangements remain separate.
 
+**Amended 2026-11-21:** the hosted connector (#96) will add a separate guidance tool family to the same server. The library tools and their independence don't change. See the [guidance decision](connector-guidance-decision.md).
+
 ## Decision
 
 Provide an independently usable MCP interface for the case–pattern–lens library,

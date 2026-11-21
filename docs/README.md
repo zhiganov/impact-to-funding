@@ -44,6 +44,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 - [Seed collection](../references/library/README.md): the first original, source-linked notes. Its pattern links are provisional, and it covers few domains. The [skill reads relevant notes](../SKILL.md#choose-only-the-resources-needed) when they help.
 - [Library MCP decision](reference-library-mcp-decision.md): why the library gets its own optional MCP interface, separate from funding discovery. Plain Markdown use stays independent of it.
 - [Library MCP contract](reference-library-mcp-contract.md) and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md): the read-only `itf.library/0.1-draft` interface from [#44](https://github.com/zhiganov/impact-to-funding/issues/44).
+- [Connector guidance decision](connector-guidance-decision.md): the hosted connector (#96) will serve the skill's guidance as a second tool family on the library server.
 - [Local library MCP](../mcp/README.md): a local stdio server for that interface, using prepared public snapshots. Its [check record](checks/reference-library-mcp-checks.md) lists what was tested and the limits of each client.
 
 ## Evidence, reporting and support
