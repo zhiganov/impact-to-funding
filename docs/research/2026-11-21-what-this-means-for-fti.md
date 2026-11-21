@@ -1,6 +1,6 @@
 # What ItF's research means for FtI
 
-A note from 2026-11-21. It applies four research notes to [Funding to Impact (FtI)](https://itfti.org/fti), ItF's funder-side sibling: a file format funders publish on their own sites, at draft 0.1 with no funder adoption yet. It's based on FtI's public pages on itfti.org, not on FtI's own repository.
+A note from 2026-11-21. It applies four research notes to [Funding to Impact (FtI)](https://itfti.org/fti), ItF's funder-side sibling: a file format funders publish on their own sites, at draft 0.1 with no funder adoption yet. It's based on FtI's public pages on itfti.org. Section 1 was corrected the same day, after reading FtI's own design, to note what FtI already plans.
 
 These are suggestions drawn from the research, not findings about FtI.
 
@@ -8,25 +8,23 @@ These are suggestions drawn from the research, not findings about FtI.
 
 [Who pays for maintenance and coordination](2026-11-21-maintenance-and-coordination-funding.md) found that most funding pays for new work and research, not for keeping things running. Builders can't easily tell which funders pay for upkeep.
 
-FtI files say whether people can apply (the `intake` fields) and carry amounts and dates through CommonGrants. They don't say what the money may pay for. Possible additions:
+FtI already plans for this. Its own design asks funders to explain support type, amounts, duration, eligible costs and indirect-cost limits, and who can apply, including individuals, informal groups and fiscally sponsored projects. The public draft 0.1 leaves most of that to CommonGrants fields and the funder's linked programme pages, rather than adding new fields. That's a deliberate choice: CommonGrants' cost vocabulary is shaped by US federal grants and doesn't fit every funder.
 
-- restricted, core or unrestricted;
-- single or multi-year;
-- whether upkeep and coordination are eligible;
-- the indirect-cost rate on project grants.
+What the research adds:
 
-Selection criteria, such as the Sovereign Tech Fund's question about what part of a project is underfunded, could go in FtI's existing requirements extension. Check first whether CommonGrants 0.5.0 already covers any of these.
+- **Say how restricted the money is:** project-restricted, core or unrestricted. Builders looking for upkeep money filter on this first, and it's the commitment IVAR's Open and Trusting funders are judged by.
+- **Prompt for upkeep.** Funders could say plainly whether maintaining and coordinating existing work is eligible.
+- Selection criteria, such as the Sovereign Tech Fund's question about what part of a project is underfunded, could go in FtI's existing requirements extension.
 
 ## 2. Say how invitation-only funders find people, and who decides
 
 [How participatory and trust-based funders decide](2026-11-21-participatory-and-trust-based-funders.md) found that many funders don't take applications. They find grantees through current partners, nominations or their own maps of a field. Some hand the decision to community panels or to the applicants.
 
-FtI has an `invitation_only` intake mode. It tells a builder they can't apply, but not how to get noticed. Possible additions:
+FtI has an `invitation_only` intake mode, and its guidance asks funders to say whether they accept unsolicited approaches. That tells a builder they can't apply, but not how to get noticed. Possible additions:
 
 - how the funder finds grantees: partner nominations, its own mapping, or open calls in some years;
 - who decides: staff, board, a community panel, or the applicants themselves;
-- public commitments it has signed, such as IVAR's Open and Trusting Grant-making or Meet the Moment;
-- whether it funds individuals, unregistered groups or fiscally hosted projects.
+- public commitments it has signed, such as IVAR's Open and Trusting Grant-making or Meet the Moment.
 
 ## 3. Grow adoption through a cluster of funders
 
@@ -45,5 +43,5 @@ FtI has an `invitation_only` intake mode. It tells a builder they can't apply, b
 
 ## Limits
 
-- This note uses FtI's public pages, not its private validator or MCP server code.
+- This note doesn't quote FtI's private design documents or code.
 - The research notes are dated 2026-11-21, mostly from Hey Nabu summaries. Check sources before relying on figures.
