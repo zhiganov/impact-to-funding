@@ -33,6 +33,10 @@ These rules hold everywhere in this skill. Later sections don't repeat them.
 
 When the host supplies this skill's actual base directory and permits local execution, read [update-notice instructions](references/update-notice.md) and run the check it describes, once per activation. Skip an unavailable or denied check silently unless the person asks about updates. Never block the conversation, enable notices without consent, retry a denied check, or update during this turn.
 
+## Optional three-month check-back
+
+When the host supplies this skill's actual base directory and permits local execution, read [check-back instructions](references/check-back.md) and run the check it describes, once per activation. Offer the check-back only after finishing a task, at most once per conversation, and never save anything without consent. Skip an unavailable check silently.
+
 ## Start: meet the person where they are
 
 Read existing material you're allowed to read before asking the person to restate it: descriptions, theories, reports, accounts, evidence files or a portfolio. Use host tools only within the requested scope, and say when you can't inspect something. Don't fetch private or signed URLs, or send material to another service, without permission to access and disclose it.

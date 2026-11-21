@@ -47,7 +47,7 @@ test('reciprocal content and MIT software have separate explicit licence scopes'
 
 test('optional notice routing reads the reference, runs the check and preserves the moved rules', () => {
   const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
-  const section = skill.split('## Optional update notice\n\n')[1]?.split('## Start:')[0];
+  const section = skill.split('## Optional update notice\n\n')[1]?.split('\n## ')[0];
   assert.ok(section, 'The core retains the optional notice route');
   assert.ok(section.length < 450, 'Host-specific detail stays outside the core');
   assert.match(section, /actual base directory and permits local execution, read \[update-notice instructions\]\(references\/update-notice\.md\) and run the check it describes, once per activation/);
@@ -62,6 +62,21 @@ test('optional notice routing reads the reference, runs the check and preserves 
   // normalised here back to the form pinned above.
   assert.equal(createHash('sha256').update(moved).digest('hex'),
     'e97ce8801d947a3ac97660c21026ac37e6f2ac65b17b98c0b06f39f0d22d25ab');
+});
+
+test('optional check-back routing reads its reference and keeps consent in the core', () => {
+  const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
+  const section = skill.split('## Optional three-month check-back\n\n')[1]?.split('\n## ')[0];
+  assert.ok(section, 'The core routes to the optional check-back');
+  assert.ok(section.length < 450, 'Host-specific detail stays outside the core');
+  assert.match(section, /read \[check-back instructions\]\(references\/check-back\.md\) and run the check it describes, once per activation/);
+  assert.match(section, /only after finishing a task, at most once per conversation, and never save anything without consent/);
+  assert.doesNotMatch(section, /CHECK_BACK_/);
+  const reference = readFileSync(path.join(root, 'references/check-back.md'), 'utf8');
+  assert.match(reference, /It never contacts a network service/);
+  assert.match(reference, /Never submit anything yourself/);
+  assert.match(reference, /tools\/skill-package\/check-back-entry\.mjs/);
+  assert.ok(statSync(path.join(root, 'tools/skill-package/check-back-entry.mjs')).isFile());
 });
 
 test('all Markdown local links resolve inside the distributable package', () => {
