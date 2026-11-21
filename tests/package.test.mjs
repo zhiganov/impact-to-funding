@@ -221,6 +221,7 @@ test('package includes workflow, templates, provenance and clearly labelled synt
     'examples/builder-case.md', 'examples/builder-assessment.md',
     'examples/portfolio-case.md', 'examples/portfolio-assessment.md',
     'examples/framework-lenses.md',
+    'examples/claim-objections.md',
     'docs/design-scope-2026-11-04.md',
   ]) assert.ok(statSync(path.join(root, relative)).isFile(), relative);
   assert.match(readFileSync(path.join(root, 'examples/builder-case.md'), 'utf8'), /Entirely fictional/);
@@ -229,6 +230,11 @@ test('package includes workflow, templates, provenance and clearly labelled synt
   assert.match(readFileSync(path.join(root, 'examples/portfolio-assessment.md'), 'utf8'), /not a behavioural test result/);
   assert.match(readFileSync(path.join(root, 'examples/framework-lenses.md'), 'utf8'), /Entirely fictional/);
   assert.match(readFileSync(path.join(root, 'examples/framework-lenses.md'), 'utf8'), /not a behavioural test result/);
+  const objections = readFileSync(path.join(root, 'examples/claim-objections.md'), 'utf8');
+  assert.match(objections, /Entirely fictional/);
+  assert.match(objections, /not model responses or a behavioural test result/);
+  assert.match(readFileSync(path.join(root, 'references/claims.md'), 'utf8'),
+    /## Before a claim goes public: look for what counts against it[\s\S]*Finding none doesn't prove it either/);
 });
 
 test('maintainer skills stay outside the ItF skill', () => {

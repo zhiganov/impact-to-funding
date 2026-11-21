@@ -41,7 +41,9 @@ needs no legal identity.
   omit the claim, or mark it provisional; retain uncertainty. If permission to
   state it is missing, use authorised wording or omit it for that audience. See
   [claim review](../references/claims.md) and
-  [evidence and reporting](../references/evidence-reporting-design.md).
+  [evidence and reporting](../references/evidence-reporting-design.md). Before a
+  claim goes into the public brief, offer to look for what counts against it, as
+  claim review describes.
 - **Possible funders:** Research possible funders only when requested or otherwise
   within the authorised task, and the host permits it. Keep research read-only.
   Inspect relevant primary sources and record source and inspection dates, the
