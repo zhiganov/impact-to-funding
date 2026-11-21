@@ -1,6 +1,6 @@
 # Optional writing tools
 
-Two tools can help you polish a brief, report or profile before you share it. Neither is needed to use ItF.
+Two tools can help you polish a brief, report or profile before you share it. A third, Hey Nabu, can help with funder research. None is needed to use ItF.
 
 ## Readability check (local)
 
@@ -30,6 +30,22 @@ There's also a [REST API and Python SDK](https://docs.pangram.com/) that use an 
 
 **Privacy:** checking text sends it to Pangram. Its [privacy policy](https://www.pangram.com/privacy-policy) (last updated 2025-08-14) says submissions aren't used to train its models. It also says content is deleted within 30 days of closing an account, and you can delete individual queries from your history. Send only text you're allowed to share with Pangram. Don't send private evidence or other people's details.
 
+## Hey Nabu (online, invitation only)
+
+[Hey Nabu](https://heynabu.ai/) serves researched experts on making change, including how funders decide and move money. Your agent can ask it which funders pay for a kind of work, and how. It's an early alpha, open by invitation, with a waitlist. Our [assessment](hey-nabu-assessment.md) covers what it held for one funding question, and what it lacked.
+
+**Use it from your agent.** Hey Nabu runs an MCP server at `https://heynabu.ai/api/mcp`. Add that URL to your host's MCP settings, then sign in with the emailed link when asked. In Claude Code:
+
+```sh
+claude mcp add -s user --transport http hey-nabu https://heynabu.ai/api/mcp
+```
+
+Without `-s user`, it's added only for the folder you're in. Then ask, for example: "Use Hey Nabu to find funders that pay for maintaining open tools, and say which leads come from it."
+
+**Treat its leads like an aggregator's.** Label each lead as from Hey Nabu, with the date you asked. Check the funder's own page before relying on terms or round status. Search the web for what it lacks.
+
+**Privacy:** its guidance says it doesn't store what you're deciding or your question. Two of its tools send notes to its editors: coverage requests and suggestions. Don't put private evidence or other people's details in a question.
+
 ## Limits
 
-We haven't tested the Pangram MCP server with ItF. The costs and policy above are Pangram's own statements on the date shown. Pangram's claimed accuracy is its own figure, and every detector sometimes flags human writing.
+We haven't tested the Pangram MCP server with ItF. Hey Nabu was tested once, from Claude Code, on 2026-11-21. The costs and policy above are Pangram's own statements on the date shown. Pangram's claimed accuracy is its own figure, and every detector sometimes flags human writing.

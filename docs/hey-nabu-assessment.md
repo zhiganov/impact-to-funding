@@ -35,7 +35,7 @@ One question, asked through the connector on 2026-11-21 (server version 0.17.0):
 - **Some summaries:** many story results had no summary, only a title and link.
 - **Reliability:** two of five searches failed with a server error. Simpler wording worked.
 
-The full findings are in [Who pays for maintenance and coordination](research/2026-11-21-maintenance-and-coordination-funding.md).
+The full findings are in [Who pays for maintenance and coordination](research/2026-11-21-maintenance-and-coordination-funding.md). Two later questions are in the [research notes](research/README.md).
 
 ## How it fits ItF's funder-research rules
 
@@ -63,7 +63,8 @@ Hey Nabu's guidance says it doesn't store what a person is deciding or their que
 - **One test:** this assessment rests on a single funding question on one day. It doesn't measure coverage across ItF's other tasks.
 - **Editorial judgement:** each expert's focus is set by the organisation it was built for. A lead's absence from Hey Nabu says nothing about whether a funder exists.
 
-## Next steps, if adopted
+## Next steps
 
-- Add a short Hey Nabu section to the [optional writing tools](optional-writing-tools.md) guide, with connection steps and the privacy note above.
-- Once it's open to more builders, consider one line in the support-brief playbook: treat Hey Nabu leads like aggregator leads.
+The [optional writing tools](optional-writing-tools.md) guide now has a Hey Nabu section, with connection steps and the privacy note above.
+
+Once it's open to more builders, consider one line in the support-brief playbook: treat Hey Nabu leads like aggregator leads.
