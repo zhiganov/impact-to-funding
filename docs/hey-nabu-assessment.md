@@ -33,7 +33,7 @@ One question, asked through the connector on 2026-11-21 (server version 0.17.0):
 
 - **Smaller open-source grant programmes:** NLnet's funds, NumFOCUS small grants and Alpha-Omega were missing. A web search found them, so a builder would still need one. I filed this gap with Hey Nabu.
 - **Some summaries:** many story results had no summary, only a title and link.
-- **Reliability:** two of five searches failed with a server error. Simpler wording worked.
+- **Reliability:** two of the first five searches failed with a server error. Simpler wording worked. No later search failed.
 
 The full findings are in [Who pays for maintenance and coordination](research/2026-11-21-maintenance-and-coordination-funding.md). Two later questions are in the [research notes](research/README.md).
 
@@ -41,7 +41,7 @@ The full findings are in [Who pays for maintenance and coordination](research/20
 
 | Tool | What it gave | What it means for ItF |
 |---|---|---|
-| Search (`search_items`) | Stories and structured records: organisations, funders and initiatives with terms, first steps and costs. | The most useful tool for funder leads. Two of seven searches failed with a server error; simpler wording worked. |
+| Search (`search_items`) | Stories and structured records: organisations, funders and initiatives with terms, first steps and costs. | The most useful tool for funder leads. Two searches failed with a server error on the first day; simpler wording worked. |
 | How a field works (`how_it_works`) | A map of the field, plus objections that AI agents found against each claim, who gains from a claim, and known traps. One answer ran to 86,000 characters. | Read it in full. Its objections changed one of our findings: coordination funding is scarce to keep going, not to start. Our first summary missed that. |
 | Expert definitions (`read_definition`) | The Systemic Philanthropy expert is written for wealth holders and their advisers, with members of Forward Global as its archetype. It won't recommend which organisation should receive money. | Its framing is the funder's side. That suits FtI, and helps builders understand funders. It won't pick funders for a builder. |
 | Ladder (`read_ladder`) | Not built for the Systemic Philanthropy expert yet. | Not usable for ItF's questions today. |
