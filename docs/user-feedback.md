@@ -94,6 +94,20 @@ An ask sent is not funding received; funding received is not social impact.
 Your account does not establish that the skill caused either. Follow-up contact
 requires a separate opt-in through an agreed route; it is not automatic.
 
+### Three months later: a short check-back, only if you agreed to be asked
+
+If you agreed to be contacted, we may ask four questions about three months after
+your first use. Each takes a sentence, and "no" is a useful answer.
+
+- **Did you use it again?** For a second task, or not at all?
+- **What for?** The kind of task is enough.
+- **Did you show it to anyone?** For example, did you help someone else set it up?
+- **What stopped you, if you stopped?**
+
+We count someone as an active user if they finished a second task, or helped one
+other person set it up, within three months of their first use. We count by hand
+and track no one. See [#134](https://github.com/zhiganov/impact-to-funding/issues/134).
+
 ## Before returning feedback
 
 Wait for a named collection owner to explain the response channel, who can read
