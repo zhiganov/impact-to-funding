@@ -57,6 +57,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 - [Sponsorship export reporting](github-sponsors-export-reporting.md): private offline period review of supplied CSV transactions, with overlap, source and missing-fact notes. See the [check record](checks/github-sponsors-export-checks.md).
 - [Impact badge contract](impact-badge-contract.md) and [tool](../tools/impact-badge/README.md): a repo badge and card that link to an approved public report and state its evidence basis.
 - [Optional writing tools](optional-writing-tools.md): the readability check and Pangram, an online AI-text detector you can use from your agent through MCP.
+- [Hey Nabu assessment](hey-nabu-assessment.md): whether to use Hey Nabu, an invitation-only research connector, for funder research. Recommended as an optional secondary source.
 - [Standard.site publishing](standard-site-publishing.md): how approved public reports could use existing Standard.site metadata and tools.
 - [AI Registry and Skills CLI](ai-registry-distribution.md): compares registry listings with direct Git distribution.
 
