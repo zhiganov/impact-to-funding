@@ -46,8 +46,21 @@ These are suggestions drawn from the report, not findings about ItF or FtI:
 - **ItF fits the "infrastructure steward" role.** The report's complexity problem is the one ItF works on for builders: plain language about impact and funding.
 - **The November call is the next chance to take part.** The report gives no date. It points to FEST's LinkedIn page and a contact in its footer.
 
+## What Hey Nabu holds on FEST and TransCap
+
+Asked on 2026-11-21 (server version 0.17.0). Each entry is Hey Nabu's own summary of a source, read on the date it gives.
+
+- **FEST** grew out of Catalyst 2030's Working Group 11. In 2023 the community agreed four qualities that define the field, including organising whole financing systems rather than single funds. It says it works on redesign: linking maturing prototypes. It's one of four anchor organisations of the Systemic Investing Field Mapping initiative, launched in November 2025 with TransCap, TWIST and Deep Transitions Lab. The consultancy Omplexity supports that mapping. ([FEST home page](https://www.festfield.finance/), read in part on 2026-09-14)
+- **[TransCap Initiative](https://transformation.capital/)** is a Swiss non-profit that builds the field of "systemic investing": funding one system's change with several kinds of money under one strategy. It calls the coordinating body a "financial backbone".
+  - **Projects:** it's designing a capital orchestrator for regenerative agriculture in the US Midwest. A podcast summary describes $1.4 billion in catalytic capital for it.
+  - **Publications:** a [practice guide](https://transcap-initiative.gitbook.io/systemic-investing-practice-guide/introduction/about-systemic-investing), case studies, and a November 2026 [playbook](https://medium.com/transformation-capital/thinking-about-bringing-systemic-investing-to-your-country-d4e38ddd7a6c) for starting in a new country: phased 12-to-18-month experiments led by an orchestrator and four or five core partners.
+  - **Events:** it runs the annual [Systemic Investing Summit](https://systemicinvestingsummit.org/about/). The 2026 summit was in Rio de Janeiro on 14 to 16 April, with about 250 people, at $700 a ticket.
+  - **Evidence:** Hey Nabu notes that most evidence on financial backbones is TransCap's own account of work it designed or admires.
+- **One of Hey Nabu's tracked measures** fits FtI closely: "understanding among holders of different kinds of capital of each other's constraints and language". It's the same gap the FEST report names.
+- **No critique found.** Hey Nabu found no direct critique of systemic investing or capital orchestration. The nearest are general critiques of blended finance and de-risking, such as Mariana Mazzucato's.
+
 ## Gaps
 
 - The individual reflections and the interactive maps weren't read.
 - The report doesn't say how FEST itself is funded or governed.
-- Hey Nabu wasn't asked about FEST for this note. Its System Change sources cite TransCap, which the report also names.
+- Hey Nabu's FEST entry rests on a partial read of FEST's home page.
