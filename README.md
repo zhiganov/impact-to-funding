@@ -4,10 +4,11 @@
 
 Impact to Funding (ItF) is a skill for your AI agent. It helps you:
 
-- explore where your skills could be useful,
-- develop shared work with others,
-- learn what difference the work makes,
-- explain what would help it continue.
+- **make claims that hold up:** what you did, kept apart from what it caused, and checked against your evidence;
+- **learn from others' work:** a [library](references/library/README.md) of source-linked cases, patterns and lenses, null results included;
+- **ask funders that fit:** a support brief built from funders' own pages, with open or closed status and the date checked.
+
+It also helps you find where your skills could be useful and develop shared work with others.
 
 Start with your situation. You don't need a theory of change, a project, evidence or a fundraising goal.
 
