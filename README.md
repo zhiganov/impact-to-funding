@@ -14,7 +14,7 @@ ItF is one half of [ItFtI](https://itfti.org). The other half, [Funding to Impac
 
 Start with your situation. You don't need a theory of change, a project, evidence or a fundraising goal.
 
-ItF is open source. It's for developers, maintainers and independent builders who already use AI agents. Community organisers, small teams and facilitators may find it useful too. If you're worried about work, you don't need to become a founder or work for free.
+ItF is open source. It's for developers, maintainers and independent builders who already use AI agents. Community organisers, small teams and facilitators may find it useful too.
 
 **Experimental, latest release v0.6.0:** ItF offers conversation, optional templates, reference material and optional local tools. It doesn't find collaborators, provide funding or certify impact. We haven't yet tested how useful it is to people or whether it helps them raise money.
 
