@@ -40,6 +40,8 @@ node --test tests/package.test.mjs
 git diff --check
 ```
 
+The [MCP](mcp/README.md#checks-and-compatibility), [support-profile](tools/support-profile/README.md#local-checks) and [skill metadata](tools/skill-package/README.md#checks) packages have their own optional checks.
+
 Node.js is a development-only requirement; there are no package dependencies to install for these checks. They validate package structure and text/link integrity, not reasoning or privacy completeness.
 
 For host/API installation checks, use the host's supported authenticated client and pass or verify the intended project context. A private or loopback server is not automatically authentication-free; an authentication error does not establish a skill defect. Preserve the captured error and actual discovery result before interpreting capability or changing the test route.
