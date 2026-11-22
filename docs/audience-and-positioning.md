@@ -3,6 +3,19 @@
 **Date:** 2026-11-06
 **Status:** agent-native builders are the agreed initial primary audience for positioning. Employment and income insecurity are one important job to be done, not a condition shared by everyone in that audience. The broader intention is to channel people's energy, skills, experience and wisdom towards real problems and verifiable contributions, with like-minded peers, communities, funders and potential financial support. ItF's usefulness and these intended outcomes remain unvalidated. This note does not select recruitment, connection services or changes to the published product positioning or skill workflow.
 
+## Value propositions
+
+Added 2026-11-22. These are working hypotheses about why someone would use ItF. No user research tests them yet. The site and README should lead with the first three.
+
+1. **Honest claims.** ItF keeps what you did apart from what it caused. It checks each claim against the evidence and asks what counts against it. Most writing tools make work sound bigger; ItF makes it believable.
+2. **Lessons from others' work.** A [reference library](../references/library/README.md) holds source-linked cases, candidate patterns and lenses. A builder can see how other theories of change held up, null findings included. An optional local [MCP server](../mcp/README.md) serves it to any agent.
+3. **The right ask to the right funder.** The support brief turns existing work into a request for support. It uses each funder's own page and records whether a call is open, with the date checked. You don't spend a week on a call you can't win.
+4. **Works where you already work.** It's a skill your own agent runs. There's no account and no ItF server, and your material stays on your machine unless you publish it.
+5. **A record you own.** Profiles and reports live in your own ATProto account, so they outlast any one application. The profile app is live. Reuse across funders isn't tested yet.
+6. **Not alone.** Guilds, mentors and matchmaking would let people find and support each other. These are mostly planned. The [uptake research](research/2026-11-21-tool-uptake-in-communities.md) suggests peers may matter more than any feature.
+
+FtI is the funder side: funders say what they fund, builders say what their work did. That only pays off once funders publish, and none has yet.
+
 ## Initial primary audience: agent-native builders
 
 Developers, open-source maintainers and technically fluent independent builders already working with coding agents are the initial primary audience for a product delivered as an agent skill. Researchers and other practitioners with established agent-skill workflows may also fit; professional title matters less than the existing practice.

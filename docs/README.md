@@ -22,7 +22,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 
 ## Who ItF is for and how it behaves
 
-- [Audience and positioning](audience-and-positioning.md): builders who work with AI agents are the first audience. Others are welcome. Losing a job or struggling to get hired is one reason people come, not a requirement.
+- [Audience and positioning](audience-and-positioning.md): six value propositions, led by honest claims. Builders who work with AI agents are the first audience. Others are welcome. Losing a job or struggling to get hired is one reason people come, not a requirement.
 - [Responsible assistance](../references/responsible-assistance.md): the skill's conduct rules. It doesn't blacklist sectors, screen people or rank causes. See the [nine fictional cases](../examples/responsible-assistance.md).
 - [Task playbooks](task-playbooks-design.md): maps common jobs to guidance. The first playbook is the [support brief](../playbooks/support-brief.md).
 - [Theory reconstruction playbook](../playbooks/reconstruct-theory-of-change.md): infer pathways from existing work and compare intention with practice. The [fictional walkthrough](../examples/theory-reconstruction.md) shows expected treatment; host/model behaviour remains unverified.
