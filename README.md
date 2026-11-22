@@ -18,6 +18,8 @@ ItF is open source. It's for developers, maintainers and independent builders wh
 
 **Experimental, latest release v0.6.0:** ItF offers conversation, optional templates, reference material and optional local tools. It doesn't find collaborators, provide funding or certify impact. We haven't yet tested how useful it is to people or whether it helps them raise money.
 
+**What's new:** [v0.6.0 release notes](docs/releases/v0.6.0.md). `main` is ahead of v0.6.0; rows marked "Not in v0.6.0" below are coming in the next release.
+
 [Get started](#install-and-use) · [Choose a task](#four-ways-to-start) ·
 [See an example](#outputs-and-examples) · [What's available](#what-is-available) ·
 [Together](#together-live-and-planned) ·
@@ -165,7 +167,7 @@ For a public, machine-readable support profile, name the file **`itf-manifest.js
 
 ItF is meant for working with others, not only alone. Belonging, mutual help and shared learning matter in their own right, not only as steps towards funding.
 
-- **Profiles (live):** publish an impact profile at [app.itfti.org](https://app.itfti.org). It's stored in your own ATProto account. The skill doesn't connect to the app yet.
+- **Profiles (being verified):** publish an impact profile at [app.itfti.org](https://app.itfti.org). It's stored in your own ATProto account. Publishing from real accounts is still being checked ([itfti-website#22](https://github.com/zhiganov/itfti-website/issues/22)). The skill doesn't connect to the app yet.
 - **Mentors (live, in conversation):** ItF helps you think of people you already know who could help, and draft a short request. There's no shared mentor pool.
 - **Guilds (planned):** voluntary groups that see each other's work and needs in their community's dashboard. See the [guild concept](docs/guilds-itfti-atproto.md) and the [workflow](docs/guild-workflow-assessment.md) and [curation](docs/guild-curation-assessment.md) assessments.
 - **Matchmaking (planned):** organisations can publish needs in FtI's [needs format](https://itfti.org/fti/needs). Matching builders to them isn't built.
