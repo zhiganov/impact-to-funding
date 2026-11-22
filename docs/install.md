@@ -2,7 +2,7 @@
 
 ItF is a skill made of instructions and reference files. Use your existing Claude Code, Codex CLI or OpenCode, with its normal sign-in, model costs and privacy terms. You need Git for the install route below. Conversation needs no signup, credentials, Node.js, MCP server or plugin. If your host asks you to sign in, do it in your own terminal. Never paste tokens or passwords into an agent conversation.
 
-The optional [managed CLI](managed-skill-updates.md) can install, check, update and roll back copies for you. It needs Node.js 22+, npm and Git, and changes nothing until you add `--apply`. The Git steps below work without it.
+The optional [managed CLI](#optional-the-managed-cli) can install, update and roll back copies for you. The Git steps below work without it.
 
 ## What has been checked
 
@@ -102,6 +102,18 @@ To check that the skill can read its bundled files, invoke it and ask:
 Confirm the agent actually read the file from your chosen copy. A plausible answer, or a path it names without reading, doesn't count. Discovery, invocation, file access and a useful answer are separate checks.
 
 For more prompts, see [Using the skill](usage.md). Read the [privacy guide](../PRIVACY.md) before you use real material: installing locally doesn't mean the model runs locally.
+
+## Optional: the managed CLI
+
+An experimental CLI that installs, checks, updates and rolls back copies, and protects your local work. It needs Node.js 22+, npm and Git. From your project:
+
+```sh
+npx --yes --package=github:zhiganov/impact-to-funding#main itf install --harness codex --scope project --channel prerelease
+```
+
+The first run only shows what it would do. To do it, run the same command again with `--apply` at the end.
+
+This runs the newest CLI code on GitHub. To run the same version every time, replace `#main` with a commit ID you've checked. More in [managed skill updates](managed-skill-updates.md).
 
 ## Optional: install as a Claude Code plugin
 

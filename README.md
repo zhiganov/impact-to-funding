@@ -43,15 +43,7 @@ The [installation guide](docs/install.md) has safe install commands, personal in
 
 You can also turn on an [in-skill update notice](docs/update-notices.md) for managed copies. It never updates the copy itself. We haven't confirmed that hosts show the notice.
 
-### Managed CLI (optional)
-
-The experimental [managed CLI](docs/managed-skill-updates.md) installs, checks, updates and rolls back copies, and protects your local work. From your project:
-
-```sh
-npx --yes --package=github:zhiganov/impact-to-funding#main itf install --harness codex --scope project --channel prerelease
-```
-
-This prints a plan. Nothing changes until you run it again with `--apply`. The command takes the CLI from the GitHub default branch, which changes over time; pin a reviewed CLI commit if you need a repeatable result. The CLI needs Node.js 22+, npm and Git. You can still install with Git or by hand without it.
+An experimental CLI can install, update and roll back copies for you. See the [installation guide](docs/install.md#optional-the-managed-cli).
 
 ### Codex CLI quick start
 
