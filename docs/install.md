@@ -4,13 +4,27 @@ ItF is a skill made of instructions and reference files. Use your existing Claud
 
 The optional [managed CLI](#optional-the-managed-cli) can install, update and roll back copies for you. The Git steps below work without it.
 
+## Quick install
+
+**Claude Code:** the [plugin](#optional-install-as-a-claude-code-plugin) is the shortest route.
+
+**Codex, OpenCode and other agents:** from your project, run `npx skills add zhiganov/impact-to-funding#v0.6.0`. It uses the [skills CLI](https://www.npmjs.com/package/skills), asks which agents to install for and pins the v0.6.0 commit. It sends usage data unless you set `DO_NOT_TRACK=1`. Without Node.js, clone the release into your agent's skill folder from the table below:
+
+```sh
+git clone --depth 1 --branch v0.6.0 https://github.com/zhiganov/impact-to-funding .agents/skills/impact-to-funding
+```
+
+`git clone` stops if the folder already exists. A tag can in principle be moved; to be sure you get exactly what was checked, use the exact-commit steps below. Until the next release, OpenCode may also list a maintainer skill, `itf-release-notes`, from a copy in `.agents/skills`; you can ignore it.
+
 ## What has been checked
 
 Each host's commands pin the newest source checked in that host: `22baeceae63d8090aca1afb71ccf745e3335979b` (v0.6.0) for Claude Code, `4566892ad990131fb36f760e14c73e5f275600cc` for Codex CLI, and `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b` for OpenCode.
 
 - **Codex CLI 0.166.0:** a limited check passed. In one read-only `codex exec` run, `$impact-to-funding` loaded the skill and read its bundled `references/contributions.md`. The file contents matched the source, all 106 tracked files stayed unchanged, and no web or MCP calls happened. User configuration was left out, but user-level agent instructions still applied.
 - **Claude Code 2.1.328:** at `22baece` (v0.6.0), a matching limited check passed. In one non-interactive `claude -p` run, `/impact-to-funding` loaded the skill and read its bundled `references/learning.md`, with no files changed and no MCP calls. An earlier Claude Code 2.1.321 check covers `4566892`.
-- **OpenCode:** not checked at either newer source. Earlier OpenCode v2.2.5 checks cover source `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
+- **OpenCode:** no model run at either newer source. Earlier OpenCode v2.2.5 checks cover source `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
+
+- **2026-11-23, discovery only:** a one-line clone of v0.6.0 was found by Codex 0.171.0 and OpenCode 1.19.6, and `npx skills add` installed it correctly. No model ran. See the [record](checks/install-commands-2026-11-23.md).
 
 These checks cover those exact sources only. They didn't test a clean account, the interactive UI, IDEs or usefulness. Personal installs, manual copying, updates and removal below are documented but not checked. See the [check record](checks/installation-check-2026-11-04.md).
 

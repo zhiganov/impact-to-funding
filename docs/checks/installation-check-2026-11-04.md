@@ -223,7 +223,7 @@ that normal skill activation failed.
 - Raw envelopes and diagnostics remain private; no credentials, feedback or
   personal evidence are distributed with this note. Other hosts remain untested.
 
-For normal installation and invocation, use the [README instructions](../../README.md#install-and-use-in-opencode),
+For normal installation and invocation, use the [README instructions](../install.md),
 not the diagnostic API sequence. This check used source `22d4c8d`; later checks
 and their exact revisions are recorded above. The earlier prerelease is unchanged.
 

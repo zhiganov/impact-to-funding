@@ -21,7 +21,7 @@ A registry can live in a directory or Git repository; the file format does not r
 | Release notes and source history explain changes | Mutable catalog status for draft, active, deprecated or blocked versions, alongside immutable artifact bytes | Package lifecycle only; not an evaluation, impact-review status or automatic recall of deployed copies. |
 
 This is secondary to learning whether the skill is useful. Use the
-[current installation instructions](../README.md#install-and-use-in-opencode) for
+[current installation instructions](install.md) for
 the verified native route. The historical feedback source `87e515a` and the
 `v0.1.0` archive remain distinct from later sources and a registry's `latest` pointer.
 

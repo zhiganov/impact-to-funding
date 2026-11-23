@@ -27,62 +27,40 @@ ItF is open source. It's for developers, maintainers and independent builders wh
 
 ## Install and use
 
-Use the AI agent you already use. Install ItF once, in that agent's folder, and use its command.
+**Claude Code:** install the plugin. It also brings the optional library server, which needs Node.js 22+.
 
-| Agent | Project skill folder | Invoke in the agent | Version checked |
-|---|---|---|---|
-| Codex CLI | `.agents/skills/impact-to-funding` | `$impact-to-funding` or `/skills` | `4566892` on Codex 0.166.0 |
-| Claude Code | `.claude/skills/impact-to-funding` | `/impact-to-funding` | `22baece` (v0.6.0) on Claude Code 2.1.328 |
-| OpenCode V2 | `.opencode/skills/impact-to-funding` | `@impact-to-funding` | `fbb8993` on OpenCode v2.2.5 |
+```sh
+claude plugin marketplace add https://github.com/zhiganov/impact-to-funding.git
+claude plugin install itf@impact-to-funding
+```
 
-The [installation guide](docs/install.md) has safe install commands, personal installs, discovery checks, updates, removal and troubleshooting. Claude Code users can instead [install ItF as a plugin](docs/install.md#optional-install-as-a-claude-code-plugin), which also brings an optional local server your agent can search the library through. Conversation with ItF needs no signup, Node.js, MCP server or plugin. Your agent's model costs and privacy terms still apply.
+Then type `/itf:impact-to-funding`.
+
+**Codex, OpenCode and other agents:** from your project, run
+
+```sh
+npx skills add zhiganov/impact-to-funding#v0.6.0
+```
+
+It asks which agents to install for. Without Node.js, clone the release into your agent's skill folder instead, for example for Codex:
+
+```sh
+git clone --depth 1 --branch v0.6.0 https://github.com/zhiganov/impact-to-funding .agents/skills/impact-to-funding
+```
+
+For OpenCode use `.opencode/skills/impact-to-funding`. Then type `$impact-to-funding` in Codex or `@impact-to-funding` in OpenCode.
+
+**What's been checked:** v0.6.0 ran in Claude Code 2.1.328. Codex 0.171.0 and OpenCode 1.19.6 find it, but no model ran in that check ([record](docs/checks/install-commands-2026-11-23.md)). Until the next release, OpenCode may also list a maintainer skill, `itf-release-notes`, from a copy in `.agents/skills`; you can ignore it.
+
+The [installation guide](docs/install.md) covers installing an exact checked commit, personal installs, updates, removal and troubleshooting. Conversation needs no signup or plugin. Your agent's model costs and privacy terms still apply.
 
 **Official source:** ItF is published only from [this repository](https://github.com/zhiganov/impact-to-funding) and its [releases](https://github.com/zhiganov/impact-to-funding/releases). A copy elsewhere, a similar name or a copied README doesn't make a download official. Check that install commands point here.
 
 **Updates:** on GitHub, choose **Watch → Custom → Releases**, or check the [releases page](https://github.com/zhiganov/impact-to-funding/releases). A notification tells you a version exists. It doesn't change your installed copy. See [release and update guidance](docs/releases.md).
 
-You can also turn on an [in-skill update notice](docs/update-notices.md) for copies installed with the CLI. It never updates the copy itself. We haven't confirmed that agents show the notice.
+You can also turn on an [in-skill update notice](docs/update-notices.md) for copies installed with the managed CLI. It never updates the copy itself. We haven't confirmed that agents show the notice.
 
-An experimental CLI can install, update and roll back copies for you. See the [installation guide](docs/install.md#optional-the-managed-cli).
-
-### Codex CLI quick start
-
-From the project where you want to use ItF, with Git:
-
-```sh
-target='.agents/skills/impact-to-funding'
-if [ -e "$target" ] || [ -L "$target" ]; then
-  echo "Destination already exists; stop and inspect: $target"
-else
-  git clone https://github.com/zhiganov/impact-to-funding.git "$target" &&
-    git -C "$target" checkout --detach 4566892ad990131fb36f760e14c73e5f275600cc
-fi
-```
-
-Open Codex in that project, find ItF with `/skills`, and try:
-
-> $impact-to-funding Help me explore a useful contribution with my skills and available time. Use only what I tell you, say what you're assuming, and keep this private. Do not contact anyone or create files.
-
-Checked on Codex 0.166.0. See [what was tested](docs/checks/installation-check-2026-11-04.md).
-
-### Claude Code
-
-Use the `.claude/skills/impact-to-funding` folder from the guide and invoke `/impact-to-funding`. v0.6.0 was checked on Claude Code 2.1.328. See [what was tested](docs/checks/installation-check-2026-11-04.md).
-
-### Install and use in OpenCode
-
-These commands install an older snapshot that was install-tested in OpenCode. Use an empty destination:
-
-```sh
-git clone https://github.com/zhiganov/impact-to-funding.git .opencode/skills/impact-to-funding
-git -C .opencode/skills/impact-to-funding checkout --detach fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b
-```
-
-This installs the complete package for that project only. It doesn't change global settings. In OpenCode, in the same project, invoke:
-
-> @impact-to-funding Help me compare useful ways to contribute based on my skills, available time and interests. Use only what I tell you, say what you're assuming, and keep the result private. Do not contact anyone.
-
-**Version note:** this OpenCode snapshot is older than the Codex and Claude Code versions. It lacks several later guides and all the local tools. Newer changes on `main` haven't been checked in an agent, and they don't update your copy. See the [check record](docs/checks/installation-check-2026-11-04.md).
+An experimental managed CLI can install, update and roll back copies for you. See the [installation guide](docs/install.md#optional-the-managed-cli).
 
 Read the [privacy guide](PRIVACY.md) before you use real material. You don't need to open the skill's Markdown files yourself.
 

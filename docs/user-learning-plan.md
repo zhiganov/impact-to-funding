@@ -1,7 +1,7 @@
 # Initial-user learning plan
 
 **Historical manual-use preparation, not an active study.** For current native
-onboarding, use the [installation guide](../README.md#install-and-use-in-opencode).
+onboarding, use the [installation guide](install.md).
 The dated proposal below records the earlier feedback approach.
 
 **Prepared 2026-11-05. Scope: feedback preparation and readiness assessment only.**
@@ -45,7 +45,7 @@ improvements. Record existing release users separately, not as a comparison grou
 | End-to-end invocation | Download/open the pinned folder in an existing file-reading assistant, supply the guide's one-task prompt and permitted input, inspect the output, optionally answer a few questions. The guide gives a fictional-input alternative. No automatic skill discovery is involved. |
 | Evidence for that method | Earlier limited fresh-context manual trials are recorded in [validation notes](checks/validation-2026-11-04.md), with their exact older source and limits. They do not prove behaviour at this newer revision or in a participant's host. No new model trial was run for this plan. |
 | Participant guide | Published in the repository and updated for this source choice. Send the current guide alongside the pinned folder: the archived guide still names the previous pin. Public availability does not establish participant receipt or approve an invitation. |
-| Actual participant host | Not established. Access difficulties are useful feedback; the current [installation guide](../README.md#install-and-use-in-opencode) describes the verified native route. |
+| Actual participant host | Not established. Access difficulties are useful feedback; the current [installation guide](install.md) describes the verified native route. |
 | Feedback collection | Not active. A future study needs a named organiser, response channel, clear data handling and consent. Keep private contact details out of public study notes and explain any service processing before requesting feedback. |
 | Outreach | No invitation has been sent through this plan. The public template below requires actual study and contact details before use. |
 
