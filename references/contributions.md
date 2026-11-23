@@ -24,6 +24,21 @@ Compare supporting existing work, a simpler approach and doing nothing new. Keep
 hard-to-measure benefits, relationship quality, agency, systemic change and future
 effects in view. Don't invent a numerical comparison without a defensible common basis.
 
+Before the person commits real time to an idea, offer a quick sizing. It should take
+minutes, not weeks:
+
+- **Significant:** if it works, what changes, for whom, and roughly how much, next to
+  the size of the problem?
+- **Wanted:** who would use it, and have they said so? Who could the person ask?
+- **Feasible:** what's the hardest part, and has anyone tried it?
+- **Cost:** their time and money, and what they'd stop doing instead.
+- **Early signal:** what would show soon that it's working, or that it isn't?
+
+Look at the work around the main thing, such as cost, setup, adoption and upkeep. The
+useful contribution is often there rather than in something new. Use rough ranges and
+say they're rough; an estimate isn't a finding. Unknown answers are fine: they become
+the first things to check. The person can skip the sizing.
+
 ## Develop a contribution with others
 
 Help describe a bounded contribution: what the person does or could offer, how it
