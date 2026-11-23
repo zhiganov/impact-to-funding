@@ -9,3 +9,4 @@ Dated research notes for builders and for ItF's guidance. Each note says where i
 - [What ItF's research means for FtI](2026-11-21-what-this-means-for-fti.md), 2026-11-21: format additions and an adoption approach for Funding to Impact, drawn from the notes above.
 - [FEST State of the Field 2026](2026-11-21-fest-state-of-the-field.md), 2026-11-21: a reading of FEST's first report on financing systemic transformation, and what it suggests for ItF and FtI.
 - [MTM Together](2026-11-21-mtm-together.md), 2026-11-21: an AI community for nonprofit staff, as a place to test ItF in chat apps and to listen to funders.
+- [What can a technologist do about climate change?](2026-11-23-bret-victor-climate-technologist.md), 2026-11-23: Bret Victor's 2015 essay on finding problems, evaluating ideas and model-driven claims, and what it suggests for ItF and FtI.
