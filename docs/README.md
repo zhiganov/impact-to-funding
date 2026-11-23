@@ -14,7 +14,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 ## Install and update
 
 - [Install guide](install.md): install in a project or personal folder, invoke the skill in each host, update, remove and troubleshoot. The [installation check record](checks/installation-check-2026-11-04.md) lists limited command-line checks in Codex, Claude Code and OpenCode.
-- [Releases](releases.md): how to follow releases and pick a version. [v0.6.0](releases/v0.6.0.md) is the current experimental prerelease. [v0.5.0](releases/v0.5.0.md), [v0.4.0](releases/v0.4.0.md), [v0.3.0](releases/v0.3.0.md) and [v0.2.0](releases/v0.2.0.md) are kept for history.
+- [Releases](releases.md): how to follow releases and pick a version. [v0.7.0](releases/v0.7.0.md) is the current experimental prerelease. [v0.6.0](releases/v0.6.0.md), [v0.5.0](releases/v0.5.0.md), [v0.4.0](releases/v0.4.0.md), [v0.3.0](releases/v0.3.0.md) and [v0.2.0](releases/v0.2.0.md) are kept for history.
 - [Version and provenance](skill-version-provenance.md): how released versions, channels and pins are recorded. The [local inspector](../tools/skill-package/README.md) reads them.
 - [Managed updates](managed-skill-updates.md): a command-line tool to install, check, update, adopt, roll back and recover copies of the skill.
 - [Update notices](update-notices.md): optional notices inside the skill. Each copy needs its own consent.
@@ -30,7 +30,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 - [Task-focus repair](checks/task-focus-checks.md): #101 adds a continuation rule and fictional cases for relationship context, an explicit change of task and a material missing fact. Checks cover the source, not observed model behaviour.
 - [Individual theories and shared projects](individual-project-contributions.md): how a person's own theory of change connects to shared projects through bounded contributions. The [contribution reference](../references/contributions.md) is the working guidance. Tracked in [#22](https://github.com/zhiganov/impact-to-funding/issues/22) and [#16](https://github.com/zhiganov/impact-to-funding/issues/16).
 - [Organisation contribution playbook](../playbooks/organisation-contributions.md): source guidance for builders without projects, supplied organisation needs and compatible read-only discovery, with [fictional cases](../examples/organisation-contributions.md). The [design](organisation-contributions-design.md) records the broader path. No live catalogue or placement is supplied.
-- [Mentor pool scoping](mentor-pool-scoping.md): whether ItF should keep a pool of willing mentors. It recommends referring people to communities they know first, with no pool yet.
+- [Mentor pool scoping](mentor-pool-scoping.md): whether ItF should keep a pool of willing mentors. It recommends no pool yet: help people find mentors and communities themselves, including people they don't know.
 - [ItF records for community dashboards](itf-records-sketch.md): a validated sketch of profile, contribution and need records for #102. Placeholder namespace; nothing adopted.
 - [My Community issue draft](my-community-itf-module-issue.md): the proposed ItF module for the My Community dashboard, for #102. Filed as [my-community#140](https://github.com/Citizen-Infra/my-community/issues/140).
 - [Platform handoff](platform-handoff.md): how ItF and a community platform hand off reports, records and funding links, collected from [#29](https://github.com/zhiganov/impact-to-funding/issues/29)'s answers. Design only.
