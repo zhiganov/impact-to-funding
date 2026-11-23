@@ -1,13 +1,9 @@
----
-name: itf-release-notes
-description: "Maintainer workflow for preparing an Impact to Funding release: list the changes since the previous tag from Git history, draft notes in docs/releases/, bump the skill version and open a pull request. Use only when working in the ItF repository on a release. It doesn't tag, publish or announce anything."
----
-
 # Prepare ItF release notes
 
-This is a maintainer skill for the ItF repository. It isn't part of the
+This is a maintainer guide for the ItF repository. It isn't part of the
 Impact to Funding skill, which never loads it. Follow `AGENTS.md` for writing
 style and pull requests, and `docs/releases.md` for the release convention.
+It prepares notes, a version bump and a pull request. It doesn't tag, publish or announce anything.
 
 ## 1. Fix the range
 

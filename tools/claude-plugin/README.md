@@ -60,7 +60,7 @@ The decided route (see the
 and point `.claude-plugin/marketplace.json` in this repository (marketplace name
 `impact-to-funding`) at that release's zip URL with its SHA-256. The zip is built
 and uploaded after the release tag
-exists, by the steps in `.agents/skills/itf-release-notes/SKILL.md`. Built
+exists, by the steps in `maintainers/release-notes.md`. Built
 files stay out of Git.
 
 ```sh
