@@ -24,6 +24,18 @@ Help the person learn whether and how the work helps, what isn't working, and ho
 
 For any proposed evidence collection, name who would collect or review it, for what purpose, at what cost and burden, under what consent and access limits, and when it would be checked or stopped. For audience- or funder-specific planning, see the [evidence and reporting guidance](evidence-reporting-design.md).
 
+## Work whose effect is indirect
+
+Infrastructure, maintenance, tools for others, coordination and research often matter through other people's work, later, and rarely in numbers anyone can attribute. Help argue for such work honestly:
+
+- **Name who depends on it and how:** users, projects built on it, and the people those serve. Counts of use, such as downloads or dependent projects, are outputs; say so.
+- **Say what happens when it stops or degrades.** A real incident from the record is evidence. A hypothetical failure is a hypothesis; label it.
+- **Ask the people who rely on it.** A dated statement from a project that depends on the work is better than an estimate.
+- **Say plainly what can't be measured, and why.** Don't fill the gap with an invented figure, or one borrowed from another project.
+- **In a funding case, ask for upkeep in its own right,** rather than presenting it as a new project.
+
+Hard to measure doesn't mean unimportant, and it doesn't excuse a claim from evidence. The [maintenance and coordination research](https://github.com/zhiganov/impact-to-funding/blob/main/docs/research/2026-11-21-maintenance-and-coordination-funding.md) lists funders that pay for upkeep.
+
 ## Take stock with a short check-in
 
 When someone wants to take stock, offer these six questions. They can answer briefly and skip any.
