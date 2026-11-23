@@ -83,7 +83,7 @@ These examples are authored. They don't show that anyone would use or value a po
 
 ## Recommendation
 
-**Start with no pool: refer, don't match.** When someone wants a mentor, the skill helps them think about who they already know and which communities to approach, and helps them prepare a short request in their own words. This needs no maintainer, records or recruitment.
+**Start with no pool: refer, don't match.** When someone wants a mentor, the skill helps them find people, communities and programmes to approach, including people they don't know yet, and helps them prepare a short first message in their own words. The person sends it. (Widened on 2026-11-22: the first version only covered people they already knew.) This needs no maintainer, records or recruitment.
 
 **Revisit a small manual pool** only when all of these hold:
 
