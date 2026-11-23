@@ -237,15 +237,27 @@ test('package includes workflow, templates, provenance and clearly labelled synt
     /## Before a claim goes public: look for what counts against it[\s\S]*Finding none doesn't prove it either/);
 });
 
-test('maintainer skills stay outside the ItF skill', () => {
+test('maintainer guidance stays outside the ItF skill', () => {
   const skill = readFileSync(path.join(root, 'SKILL.md'), 'utf8');
-  assert.ok(!skill.includes('.agents/'), 'SKILL.md must not route to maintainer skills');
-  const maintainer = readFileSync(path.join(root, '.agents/skills/itf-release-notes/SKILL.md'), 'utf8');
-  const name = maintainer.match(/^---\nname: ([a-z0-9-]+)\n/)?.[1];
-  assert.equal(name, 'itf-release-notes');
-  assert.notEqual(name, path.basename(root));
+  assert.ok(!skill.includes('maintainers/'), 'SKILL.md must not route to maintainer guidance');
+  const maintainer = readFileSync(path.join(root, 'maintainers/release-notes.md'), 'utf8');
   assert.match(maintainer, /It doesn't tag, publish or announce anything/);
   for (const file of files(path.join(root, 'playbooks')).concat(files(path.join(root, 'references')))) {
-    assert.ok(!readFileSync(file, 'utf8').includes('.agents/skills'), `Skill content routes to maintainer skills: ${file}`);
+    assert.ok(!readFileSync(file, 'utf8').includes('maintainers/'), `Skill content routes to maintainer guidance: ${file}`);
   }
+});
+
+test('the package holds exactly one SKILL.md', () => {
+  // Agents such as OpenCode load every SKILL.md inside an installed package.
+  const found = [];
+  const walk = (dir) => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === '.git' || entry.name === 'node_modules') continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name === 'SKILL.md') found.push(path.relative(root, full));
+    }
+  };
+  walk(root);
+  assert.deepEqual(found, ['SKILL.md']);
 });

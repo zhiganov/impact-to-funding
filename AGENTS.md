@@ -35,4 +35,4 @@ This applies to the skill, the docs and issues. Accuracy still matters: keep eve
 
 ## Maintainer skills
 
-- When preparing a release, follow `.agents/skills/itf-release-notes/SKILL.md`. It's for maintainers only: the ItF skill never loads it.
+- When preparing a release, follow `maintainers/release-notes.md`. It's for maintainers only. It isn't named `SKILL.md`, because agents such as OpenCode load every `SKILL.md` inside an installed package.
