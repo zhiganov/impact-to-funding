@@ -7,6 +7,8 @@ that baseline. Hosting and operating arrangements remain separate.
 
 **Amended 2026-11-21:** the hosted connector (#96) will add a separate guidance tool family to the same server. The library tools and their independence don't change. See the [guidance decision](connector-guidance-decision.md).
 
+**Related assessment, 2026-11-25:** [relationship and source navigation](library-relationship-navigation-assessment.md) proposes a separate optional read-only family for typed case–pattern–lens links and claim-specific source roles. It leaves `itf.library/0.1-draft` unchanged. A fictional contract walkthrough and implementation are unselected.
+
 ## Decision
 
 Provide an independently usable MCP interface for the case–pattern–lens library,
