@@ -13,7 +13,13 @@ import Ajv from 'ajv';
 const ROOT = fileURLToPath(new URL('../../', import.meta.url));
 const SERVER = fileURLToPath(new URL('../server.mjs', import.meta.url));
 const PREPARE = fileURLToPath(new URL('../prepare.mjs', import.meta.url));
-const SOURCE_REVISION = 'fa9e91e2601e4656a8d3600db3fc06c1bf5e4fa7';
+const SOURCE_REVISION = execFileSync('git', ['commit-tree', execFileSync('git', ['write-tree'], {
+  cwd: ROOT, encoding: 'utf8', timeout: 5000,
+}).trim(), '-p', 'HEAD', '-m', 'Disposable library test tree'], {
+  cwd: ROOT, encoding: 'utf8', timeout: 5000,
+  env: { ...process.env, GIT_AUTHOR_NAME: 'ItF Test', GIT_AUTHOR_EMAIL: 'test@example.invalid',
+    GIT_COMMITTER_NAME: 'ItF Test', GIT_COMMITTER_EMAIL: 'test@example.invalid' },
+}).trim();
 const CONTRACT_VERSION = 'itf.library/0.1-draft';
 const TOOL_NAMES = ['get_reference', 'library_info', 'search_references'];
 const BOUNDS = {
@@ -143,8 +149,8 @@ test('prepared public snapshot works over official SDK stdio in legacy and moder
       stdio: ['ignore', 'pipe', 'pipe'],
     }));
     assert.equal(preparation.sourceRevision, SOURCE_REVISION);
-    assert.equal(preparation.declaredRecords, 10);
-    assert.equal(preparation.availableRecords, 10);
+    assert.equal(preparation.declaredRecords, 11);
+    assert.equal(preparation.availableRecords, 11);
     const snapshot = JSON.parse(await readFile(snapshotPath, 'utf8'));
     assert.equal(snapshot.snapshotId, preparation.snapshotId);
     // Independent expected committed bytes, read before tool calls; never fetch links.
@@ -160,10 +166,10 @@ test('prepared public snapshot works over official SDK stdio in legacy and moder
         const info = await call('library_info');
         assert.equal(info.snapshotId, snapshot.snapshotId);
         assert.equal(info.coverage.status, 'complete');
-        assert.equal(info.coverage.declaredRecords, 10);
-        assert.equal(info.coverage.availableRecords, 10);
+        assert.equal(info.coverage.declaredRecords, 11);
+        assert.equal(info.coverage.availableRecords, 11);
         assert.equal(info.coverage.unavailableRecords, 0);
-        assert.deepEqual(info.data.availableByKind, { case: 5, pattern: 2, lens: 3 });
+        assert.deepEqual(info.data.availableByKind, { case: 5, pattern: 3, lens: 3 });
         assert.deepEqual(info.data.bounds, BOUNDS);
         assert.equal(info.data.searchMode, 'literal_all_tokens_id_order');
         assert.equal(info.data.history, 'not_guaranteed');

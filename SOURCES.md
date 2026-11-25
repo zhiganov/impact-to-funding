@@ -102,12 +102,14 @@ report/evidence or make the publisher an independent evaluator.
 
 The [seed reference collection](references/library/README.md) contains original
 case summaries, candidate-pattern interpretations and optional framework questions.
-Each case lists the exact sources inspected, dates, evidence and reuse limits;
-programme/evaluator statements are distinguished from ItF's reconstruction or
-interpretation. Source PDFs, diagrams, datasets, stories and long extracts are
-not redistributed. AI-assisted source review is not project-author endorsement,
-practitioner validation or independent impact verification. Source rights and
-any actual adaptation requirements remain separate from the licence on these notes.
+Each record lists its exact sources, inspection date, evidence or method basis and
+reuse limits; programme/evaluator statements are distinguished from ItF's
+reconstruction or interpretation. P003's source basis is three public teaching
+exercises, rather than outcome evidence. Source PDFs, diagrams, datasets, stories
+and long extracts are not redistributed. AI-assisted source review is not
+project-author endorsement, practitioner validation or independent impact
+verification. Source rights and any actual adaptation requirements remain
+separate from the licence on these notes.
 
 Original skill instructions, templates, synthetic prose examples, documentation
 and library notes use [CC BY-SA 4.0](LICENSE-CONTENT.md); original software, package

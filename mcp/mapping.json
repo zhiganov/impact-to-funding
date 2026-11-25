@@ -1,7 +1,7 @@
 {
-  "mappingRevision": "itf.library.mapping/2",
+  "mappingRevision": "itf.library.mapping/3",
   "indexPath": "references/library/README.md",
-  "indexRevision": 3,
+  "indexRevision": 4,
   "limitations": [
     "This is a small, deliberately selected seed collection, not comprehensive coverage, universal best practices or an independent impact assessment. Historical evaluations do not establish current programme operation; candidate patterns are ItF interpretations, not practitioner-validated findings.",
     "Food systems are not represented in this seed. The proposed WFP Purchase for Progress case was omitted because its programme/theory and evaluation texts could not be inspected within the bounded retrieval attempt; this is not a finding of ineffectiveness or absence of worthwhile food-system work.",
@@ -83,6 +83,17 @@
       "contentScope": "record_document",
       "anchor": null,
       "discoveryText": "A learning/design pattern motivated by the different findings across C001–C005, not a reason to dismiss a meaningful outcome or require maximal measurement.",
+      "discoverySource": "references/library/README.md#seed-records"
+    },
+    {
+      "id": "P003",
+      "kind": "pattern",
+      "title": "Rehearse the transfer and the claim",
+      "recordRevision": 1,
+      "documentPath": "references/library/patterns/rehearse-transfer-and-claim.md",
+      "contentScope": "record_document",
+      "anchor": null,
+      "discoveryText": "A method proposal inspired by three public teaching exercises. It offers an optional fictional dry run for analogies, missing perspectives and causal claims; it is not an outcome case or a competence assessment.",
       "discoverySource": "references/library/README.md#seed-records"
     },
     {

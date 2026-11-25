@@ -8,13 +8,19 @@ import test from 'node:test';
 import { prepare } from '../prepare.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
-const revision = 'fa9e91e2601e4656a8d3600db3fc06c1bf5e4fa7';
+const revision = execFileSync('git', ['write-tree'], { cwd: root, encoding: 'utf8', timeout: 5000 }).trim();
+const commitRevision = execFileSync('git', ['commit-tree', revision, '-p', 'HEAD', '-m', 'Disposable library test tree'], {
+  cwd: root, encoding: 'utf8', timeout: 5000,
+  env: { ...process.env, GIT_AUTHOR_NAME: 'ItF Test', GIT_AUTHOR_EMAIL: 'test@example.invalid',
+    GIT_COMMITTER_NAME: 'ItF Test', GIT_COMMITTER_EMAIL: 'test@example.invalid' },
+}).trim();
 
-test('preparation keeps the actual commit and the already-checked public snapshot identity', () => {
-  const snapshot = prepare(revision);
-  assert.equal(snapshot.sourceRevision, revision);
-  assert.equal(snapshot.snapshotId, 'sha256:08a170927779dec20e5d70144c0bcdd0256cba37a471e8d8e175be68d41fea91');
-  assert.equal(snapshot.records.filter((record) => record.available).length, 10);
+test('preparation keeps the actual commit and all mapped library records available', () => {
+  const snapshot = prepare(commitRevision);
+  assert.equal(snapshot.sourceRevision, commitRevision);
+  assert.match(snapshot.snapshotId, /^sha256:[0-9a-f]{64}$/);
+  assert.equal(snapshot.records.length, 11);
+  assert.equal(snapshot.records.filter((record) => record.available).length, 11);
 });
 
 test('annotated tag object hashes are rejected, not peeled and mislabelled as commits', () => {
@@ -29,7 +35,7 @@ test('annotated tag object hashes are rejected, not peeled and mislabelled as co
     const env = { ...process.env, GIT_OBJECT_DIRECTORY: objects, GIT_ALTERNATE_OBJECT_DIRECTORIES: alternate };
     const tag = execFileSync('git', ['mktag'], {
       cwd: root, env, encoding: 'utf8', stdio: 'pipe', timeout: 5000,
-      input: `object ${revision}\ntype commit\ntag fictional-library-test\ntagger Fictional Test <test@example.invalid> 1700000000 +0000\n\nEntirely fictional test object.\n`,
+      input: `object ${commitRevision}\ntype commit\ntag fictional-library-test\ntagger Fictional Test <test@example.invalid> 1700000000 +0000\n\nEntirely fictional test object.\n`,
     }).trim();
     const output = join(directory, 'must-not-exist.json');
     const result = spawnSync(process.execPath, [fileURLToPath(new URL('../prepare.mjs', import.meta.url)),

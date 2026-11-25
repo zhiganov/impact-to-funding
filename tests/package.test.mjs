@@ -252,7 +252,7 @@ test('the package holds exactly one SKILL.md', () => {
   const found = [];
   const walk = (dir) => {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
-      if (entry.name === '.git' || entry.name === 'node_modules') continue;
+      if (entry.name === '.git' || entry.name === 'node_modules' || entry.name === 'outputs') continue;
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(full);
       else if (entry.name === 'SKILL.md') found.push(path.relative(root, full));
