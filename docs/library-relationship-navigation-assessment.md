@@ -3,8 +3,14 @@
 **Assessment, 2026-11-25. Status: proposed bounded extension; implementation not
 selected.** This responds to [#152](https://github.com/zhiganov/impact-to-funding/issues/152).
 It preserves the accepted [three-tool library contract](reference-library-mcp-contract.md)
-and the independently usable local server. No graph database, live collector or
-new source-ingestion route follows from this assessment.
+and the independently usable local server. No graph database or live collector
+follows from this assessment.
+
+**Scope clarification:** importing selected external knowledge is a relevant
+benefit, not merely a future possibility to dismiss. The [import assessment](library-source-import-assessment.md)
+compares curated, source-preserving records from The Necessary Tangle or Converge
+with external links and a read-only provider adapter. It identifies the content,
+rights, provenance, mapping and maintenance needed before selecting an import.
 
 ## The client question
 
