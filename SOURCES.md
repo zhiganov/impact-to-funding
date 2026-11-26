@@ -65,6 +65,14 @@ These source-informed notes are not a hybrid named method, empirical validation
 of ItF or proof that a model applies the perspectives reliably. No source assets,
 live monitoring, paid model evaluation or detailed Cynefin workflow are supplied.
 
+## Reference-library method sources
+
+[P003](references/library/patterns/rehearse-transfer-and-claim.md) is an original ItF pattern inspired by three public teaching exercises. It's a method proposal, not outcome evidence. The source review is in the [check record](docs/checks/network-method-library-2026-11-25.md).
+
+| Source inspected 2026-11-25 | Use here | Rights and inspection limits |
+|---|---|---|
+| The Necessary Tangle, [practice pack](https://transduction.systems/systems-thinking/practice/), published 2026-09-07: [Transposing theory](https://transduction.systems/systems-thinking/practice/transposing-theory/), [Participative inquiry](https://transduction.systems/systems-thinking/practice/participative-inquiry/) and [Evaluation and reflexivity](https://transduction.systems/systems-thinking/practice/evaluation-and-reflexivity/) | The shared teaching arrangement: an attempt, a worked comparison, a model or claim to repair, and a changed case. | The pages state that original practice material is CC BY-SA 4.0. Linked third-party works keep their own terms, and the source repository's software is MIT. P003 paraphrases the method only, with no copied cases, answers, diagrams or assets. The pack calls itself alpha material without independent specialist review. Linked courses and theory sources weren't reviewed. |
+
 ## Reference-library MCP design sources
 
 The [accepted design contract](docs/reference-library-mcp-contract.md) uses the following
@@ -102,12 +110,14 @@ report/evidence or make the publisher an independent evaluator.
 
 The [seed reference collection](references/library/README.md) contains original
 case summaries, candidate-pattern interpretations and optional framework questions.
-Each case lists the exact sources inspected, dates, evidence and reuse limits;
-programme/evaluator statements are distinguished from ItF's reconstruction or
-interpretation. Source PDFs, diagrams, datasets, stories and long extracts are
-not redistributed. AI-assisted source review is not project-author endorsement,
-practitioner validation or independent impact verification. Source rights and
-any actual adaptation requirements remain separate from the licence on these notes.
+Each record lists its exact sources, inspection date, evidence or method basis and
+reuse limits; programme/evaluator statements are distinguished from ItF's
+reconstruction or interpretation. P003's source basis is three public teaching
+exercises, rather than outcome evidence. Source PDFs, diagrams, datasets, stories
+and long extracts are not redistributed. AI-assisted source review is not
+project-author endorsement, practitioner validation or independent impact
+verification. Source rights and any actual adaptation requirements remain
+separate from the licence on these notes.
 
 Original skill instructions, templates, synthetic prose examples, documentation
 and library notes use [CC BY-SA 4.0](LICENSE-CONTENT.md); original software, package
