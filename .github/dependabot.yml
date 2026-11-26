@@ -1,0 +1,16 @@
+# Keep the pinned GitHub Actions up to date. Dependabot keeps them pinned to
+# exact commits and updates the version comment beside each one. One grouped
+# pull request a month at most. Only GitHub Actions: npm dependencies aren't
+# included.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "Update GitHub Actions"
+    open-pull-requests-limit: 2
