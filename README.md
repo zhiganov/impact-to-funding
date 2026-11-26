@@ -135,7 +135,7 @@ This table describes the current source. Older installed versions may not have e
 
 ItF is meant for working with others, not only alone. Belonging, mutual help and shared learning matter in their own right, not only as steps towards funding.
 
-- **Profiles (being verified):** publish an impact profile at [app.itfti.org](https://app.itfti.org). It's stored in your own ATProto account. Publishing from real accounts is still being checked ([itfti-website#22](https://github.com/zhiganov/itfti-website/issues/22)). The skill doesn't connect to the app yet.
+- **Profiles (live):** publish an impact profile at [app.itfti.org](https://app.itfti.org). It's stored in your own ATProto account. Real-account publishing, editing, unpublishing and republishing are verified ([itfti-website#22](https://github.com/zhiganov/itfti-website/issues/22)). See [profile access and demand](docs/profile-access-and-demand.md) for the early adoption evidence and account options. The skill doesn't connect to the app yet.
 - **Mentors (live, in conversation):** ItF helps you find people, communities and mentoring programmes that could help, including people you don't know yet, and draft a short first message you send yourself. Looking beyond people you know isn't in v0.6.0. There's no shared mentor pool.
 - **Guilds (planned):** voluntary groups that see each other's work and needs in their community's dashboard. See the [guild concept](docs/guilds-itfti-atproto.md) and the [workflow](docs/guild-workflow-assessment.md) and [curation](docs/guild-curation-assessment.md) assessments.
 - **Matchmaking (planned):** organisations can publish needs in FtI's [needs format](https://itfti.org/fti/needs). Matching builders to them isn't built.
