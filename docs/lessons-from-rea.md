@@ -166,11 +166,13 @@ Compared on 2026-11-26 from REA's repository at `aa78851` (a shallow clone and i
 
 **Worth adopting:**
 
-- **Tests on every pull request.** ItF has no CI. Tests run only by hand and at release.
-- **Pin actions to exact commits** rather than tags like `@v4`, so a moved tag can't change what runs with write access.
-- **Check after publishing:** download the attached zip and confirm its SHA-256, as was done by hand for v0.7.0.
+- **Tests on every pull request.** ItF has no CI. Tests run only by hand and at release. Filed as [#160](https://github.com/zhiganov/impact-to-funding/issues/160).
+- **Pin actions to exact commits** rather than tags like `@v4`, so a moved tag can't change what runs with write access. Done in [#162](https://github.com/zhiganov/impact-to-funding/pull/162), with Dependabot updating them ([#163](https://github.com/zhiganov/impact-to-funding/pull/163)).
+- **Check after publishing:** download the attached zip and confirm its SHA-256, as was done by hand for v0.7.0. Filed as [#161](https://github.com/zhiganov/impact-to-funding/issues/161).
+- **Qualify before publishing.** Build and validate the plugin before tagging, so a failed build can't leave a release without its plugin. Filed as [#166](https://github.com/zhiganov/impact-to-funding/issues/166).
+- **Signed build provenance** for the plugin zip, the equivalent of REA's npm provenance. Filed as [#167](https://github.com/zhiganov/impact-to-funding/issues/167).
 
-**Not now:** release-please and the recovery workflows suit dozens of releases and many contributors. They would also replace ItF's plain notes with commit-message changelogs.
+**Not now:** CodeQL code scanning, listing in the official MCP registry (the library server is local until hosting, #96, is decided), release-please and the recovery workflows suit dozens of releases and many contributors. They would also replace ItF's plain notes with commit-message changelogs.
 
 See also [lessons from impeccable](lessons-from-impeccable.md).
 
