@@ -8,13 +8,13 @@ The optional [managed CLI](#optional-the-managed-cli) can install, update and ro
 
 **Claude Code:** the [plugin](#optional-install-as-a-claude-code-plugin) is the shortest route.
 
-**Codex, OpenCode and other agents:** from your project, run `npx skills add zhiganov/impact-to-funding#v0.6.0`. It uses the [skills CLI](https://www.npmjs.com/package/skills), asks which agents to install for and pins the v0.6.0 commit. It sends usage data unless you set `DO_NOT_TRACK=1`. Without Node.js, clone the release into your agent's skill folder from the table below:
+**Codex, OpenCode and other agents:** from your project, run `npx skills add zhiganov/impact-to-funding#v0.7.0`. It uses the [skills CLI](https://www.npmjs.com/package/skills), asks which agents to install for and pins the v0.7.0 commit. It sends usage data unless you set `DO_NOT_TRACK=1`. Without Node.js, clone the release into your agent's skill folder from the table below:
 
 ```sh
-git clone --depth 1 --branch v0.6.0 https://github.com/zhiganov/impact-to-funding .agents/skills/impact-to-funding
+git clone --depth 1 --branch v0.7.0 https://github.com/zhiganov/impact-to-funding .agents/skills/impact-to-funding
 ```
 
-`git clone` stops if the folder already exists. A tag can in principle be moved; to be sure you get exactly what was checked, use the exact-commit steps below. Until the next release, OpenCode may also list a maintainer skill, `itf-release-notes`, from a copy in `.agents/skills`; you can ignore it.
+`git clone` stops if the folder already exists. A tag can in principle be moved; to be sure you get exactly what was checked, use the exact-commit steps below.
 
 ## What has been checked
 
@@ -25,6 +25,7 @@ Each host's commands pin the newest source checked in that host: `22baeceae63d80
 - **OpenCode:** no model run at either newer source. Earlier OpenCode v2.2.5 checks cover source `fbb8993060254ef63f5157d3b9ddcbb8bb4cf19b`.
 
 - **2026-11-23, discovery only:** a one-line clone of v0.6.0 was found by Codex 0.171.0 and OpenCode 1.19.6, and `npx skills add` installed it correctly. No model ran. See the [record](checks/install-commands-2026-11-23.md).
+- **2026-11-26, v0.7.0, discovery only:** the same one-line clones and `npx skills add` were found by Codex 0.171.0 and OpenCode 1.19.6, each listing ItF once. The Claude Code plugin installed fresh and updated from 0.6.0 in Claude Code 2.1.331, with its library server connected. No model ran. See the [record](checks/install-commands-2026-11-23.md#v070-recheck-2026-11-26).
 
 These checks cover those exact sources only. They didn't test a clean account, the interactive UI, IDEs or usefulness. Personal installs, manual copying, updates and removal below are documented but not checked. See the [check record](checks/installation-check-2026-11-04.md).
 

@@ -16,9 +16,9 @@ Start with your situation. You don't need a theory of change, a project, evidenc
 
 ItF is open source. It's for developers, maintainers and independent builders who already use AI agents. Community organisers, small teams and facilitators may find it useful too.
 
-**Experimental, latest release v0.6.0:** ItF offers conversation, optional templates, reference material and optional local tools. It doesn't find collaborators, provide funding or certify impact. We haven't yet tested how useful it is to people or whether it helps them raise money.
+**Experimental, latest release v0.7.0:** ItF offers conversation, optional templates, reference material and optional local tools. It doesn't find collaborators, provide funding or certify impact. We haven't yet tested how useful it is to people or whether it helps them raise money.
 
-**What's new:** [v0.6.0 release notes](docs/releases/v0.6.0.md). `main` is ahead of v0.6.0; rows marked "Not in v0.6.0" below are coming in the next release.
+**What's new:** [v0.7.0 release notes](docs/releases/v0.7.0.md).
 
 [Get started](#install-and-use) · [Choose a task](#four-ways-to-start) ·
 [See an example](#outputs-and-examples) · [What's available](#what-is-available) ·
@@ -39,18 +39,18 @@ Then type `/itf:impact-to-funding`.
 **Codex, OpenCode and other agents:** from your project, run
 
 ```sh
-npx skills add zhiganov/impact-to-funding#v0.6.0
+npx skills add zhiganov/impact-to-funding#v0.7.0
 ```
 
 It asks which agents to install for. Without Node.js, clone the release into your agent's skill folder instead, for example for Codex:
 
 ```sh
-git clone --depth 1 --branch v0.6.0 https://github.com/zhiganov/impact-to-funding .agents/skills/impact-to-funding
+git clone --depth 1 --branch v0.7.0 https://github.com/zhiganov/impact-to-funding .agents/skills/impact-to-funding
 ```
 
 For OpenCode use `.opencode/skills/impact-to-funding`. Then type `$impact-to-funding` in Codex or `@impact-to-funding` in OpenCode.
 
-**What's been checked:** v0.6.0 ran in Claude Code 2.1.328. Codex 0.171.0 and OpenCode 1.19.6 find it, but no model ran in that check ([record](docs/checks/install-commands-2026-11-23.md)). Until the next release, OpenCode may also list a maintainer skill, `itf-release-notes`, from a copy in `.agents/skills`; you can ignore it.
+**What's been checked:** v0.6.0 ran in Claude Code 2.1.328. v0.7.0 installs and updates as the Claude Code plugin with its library server connected, and Codex 0.171.0 and OpenCode 1.19.6 find it. No model ran in those checks ([record](docs/checks/install-commands-2026-11-23.md)).
 
 The [installation guide](docs/install.md) covers installing an exact checked commit, personal installs, updates, removal and troubleshooting. Conversation needs no signup or plugin. Your agent's model costs and privacy terms still apply.
 
@@ -118,12 +118,12 @@ This table describes the current source. Older installed versions may not have e
 | [Conversational skill](SKILL.md) and optional templates | Guides you through finding a contribution, working with others, learning what difference it makes and asking for support. | Results vary by agent and model. It doesn't match people, fund work or judge it independently. |
 | [Reference library](references/library/README.md) | Cases, candidate patterns and lenses from others' work, with sources. Your agent reads them as part of the skill, or searches them through an optional [local MCP server](mcp/README.md) (Node.js 22+). | Few domains so far, and patterns aren't recipes. The server runs on your machine, uses a saved copy of the library and doesn't search the web. |
 | [Framework](references/frameworks.md) and [systems](references/systems-and-complexity.md) guidance | Optional questions drawn from frameworks such as Doughnut Economics, and for work where conditions change and effects are delayed. | No framework is required. These aren't official methods. |
-| [Claim objections](references/claims.md#before-a-claim-goes-public-look-for-what-counts-against-it) | Before a claim goes public, the agent asks what counts against it and keeps what it finds. | Not in v0.6.0. It's a prompt to look, not an independent review. |
+| [Claim objections](references/claims.md#before-a-claim-goes-public-look-for-what-counts-against-it) | Before a claim goes public, the agent asks what counts against it and keeps what it finds. | It's a prompt to look, not an independent review. |
 | [Evidence planning](references/evidence-reporting-design.md) | Guidance and an [optional private worksheet](assets/evidence-crosswalk.md) for reusing evidence with different funders. | Whether evidence fits, and whether you may share it, are separate checks. It doesn't collect evidence or contact funders. |
 | [Support profiles](references/support-profile-tools.md) | An optional public file, `itf-manifest.json`, saying what support would help, plus local tools to check it. Needs Node.js 22+. | Not just for open source. Nothing requires the file or finds it automatically. The tools don't fetch, publish, apply or pay. |
 | [Managed CLI and update notices](docs/managed-skill-updates.md) | An optional CLI that installs, checks, updates and rolls back copies, and opt-in [update notices](docs/update-notices.md). Needs Node.js 22+ and Git. | Experimental. It never updates on its own or changes global settings. Agents may not show the notices. |
 | [Impact badge and card](tools/impact-badge/README.md) | Builds a README badge and a small card for one approved public report. Needs Node.js 22+. | Shows what kind of evidence a report rests on, not that the work had impact. The card is text only for now ([#144](https://github.com/zhiganov/impact-to-funding/issues/144)). |
-| [Three-month check-back](references/check-back.md) | If you agree, the agent asks once, three months later, whether ItF was useful. It can turn your answers into a public note you submit yourself. Needs Node.js 22+. | Not in v0.6.0. It never sends anything itself. |
+| [Three-month check-back](references/check-back.md) | If you agree, the agent asks once, three months later, whether ItF was useful. It can turn your answers into a public note you submit yourself. Needs Node.js 22+. | It never sends anything itself. |
 | [Readability check](tools/readability/README.md) | Flags long sentences, passive voice and adverbs in your drafts. Needs Node.js 22+. | Simple rules, English only. Readable writing isn't necessarily accurate. |
 | [Portable records](tools/portable-records/README.md) | Converts versioned records between JSON and Markdown, keeping their review links. Needs Node.js 22+. | Files only. It doesn't publish anywhere. |
 | [GitHub funding-readiness review](docs/github-funding-readiness.md) | Checks the funding links in repos you choose, and drafts private findings and changes. Needs Node.js 22+; remote mode uses your GitHub CLI login. | Changes nothing. A link the API reports doesn't prove what's shown publicly, who's paid, or payouts. |
@@ -136,7 +136,7 @@ This table describes the current source. Older installed versions may not have e
 ItF is meant for working with others, not only alone. Belonging, mutual help and shared learning matter in their own right, not only as steps towards funding.
 
 - **Profiles (being verified):** publish an impact profile at [app.itfti.org](https://app.itfti.org). It's stored in your own ATProto account. Publishing from real accounts is still being checked ([itfti-website#22](https://github.com/zhiganov/itfti-website/issues/22)). The skill doesn't connect to the app yet.
-- **Mentors (live, in conversation):** ItF helps you find people, communities and mentoring programmes that could help, including people you don't know yet, and draft a short first message you send yourself. Looking beyond people you know isn't in v0.6.0. There's no shared mentor pool.
+- **Mentors (live, in conversation):** ItF helps you find people, communities and mentoring programmes that could help, including people you don't know yet, and draft a short first message you send yourself. There's no shared mentor pool.
 - **Guilds (planned):** voluntary groups that see each other's work and needs in their community's dashboard. See the [guild concept](docs/guilds-itfti-atproto.md) and the [workflow](docs/guild-workflow-assessment.md) and [curation](docs/guild-curation-assessment.md) assessments.
 - **Matchmaking (planned):** organisations can publish needs in FtI's [needs format](https://itfti.org/fti/needs). Matching builders to them isn't built.
 
