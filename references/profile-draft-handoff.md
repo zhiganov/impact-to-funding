@@ -37,7 +37,7 @@ Every field inside `changes` is optional, but at least one is required.
 
 Supplied fields replace the corresponding editor fields. Omitted fields stay unchanged. Reports use the app's string fields. Required fields are `id`, `url`, `revision`, `provenance` and `state`. Optional fields are `title`, `period`, `published` and `statusUrl`.
 
-The app rejects unknown fields, non-string values, unsupported format versions and drafts over 48,000 UTF-8 bytes. Do not add account identifiers, timestamps, OAuth data, credentials or instructions to the file.
+The app rejects unknown fields, non-string values, unsupported format versions and drafts over 48,000 UTF-8 bytes. Do not add account identifiers, record-managed timestamps such as `createdAt` or `updatedAt`, OAuth data, credentials or instructions to the file.
 
 See the app's complete [fictional JSON example](https://app.itfti.org/examples/profile-draft-fictional.json) and [format notes](https://github.com/zhiganov/itfti-website/blob/main/app/README.md#agent-prepared-drafts). The example is not evidence about a real person.
 
