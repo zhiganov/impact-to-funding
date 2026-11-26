@@ -24,7 +24,7 @@ It prepares notes, a version bump and a pull request. It doesn't tag, publish or
 
 ## 3. Draft the notes
 
-Copy the structure of the latest file in `docs/releases/`:
+If `docs/releases/v<version>.md` already exists as a draft, build on it and keep its notes. Otherwise copy the structure of the latest released file in `docs/releases/`:
 
 1. A title and a one-line summary, with "Experimental source prerelease" while ItF is `v0`.
 2. **What changed in the skill:** behaviour people will notice, each with its PR.
@@ -54,24 +54,41 @@ Write in the plain style from `AGENTS.md`. Never claim a check you didn't see pa
 
 ## 5. Stop
 
-Don't create the tag, publish the GitHub release or announce it. Give the
-maintainer the exact commands for the merge commit, and offer to check the
-release once it's published.
+Don't create the tag, publish the GitHub release or announce it yourself. Merging
+the release pull request does it: the **Release on merge** workflow
+(`.github/workflows/release-on-merge.yml`) sees the new `metadata.version` on
+`main`, runs the package tests, tags the merge commit `v<version>` and publishes
+the release, as a prerelease while ItF is `v0`. It refuses a version that isn't
+higher than the latest tag, or one whose `docs/releases/v<version>.md` is missing
+or titled for another version. Offer to check the release once the runs finish.
 
-Once the tag exists, build the release-prepared library runtime for the tagged
-commit (see `tools/library-runtime/README.md`) and add its provenance summary to
-the GitHub release text. The notes in `docs/releases/` can't hold it: the release
-commit doesn't exist while they're written.
+Then the **Release plugin** workflow
+(`.github/workflows/release-plugin.yml`) does the rest on its own:
 
-With the same tag, build the Claude Code plugin for the tagged commit (see
-`tools/claude-plugin/README.md`), validate it with `claude plugin validate`, and
-zip the built folder. Attach the zip to the GitHub release, then create or
-update `.claude-plugin/marketplace.json` so the `itf` entry points at that
-release's zip URL with the zip's SHA-256. Name the marketplace
-`impact-to-funding`: `docs/install.md` tells people to install
-`itf@impact-to-funding`. Commit the marketplace update. Built files themselves
-stay out of Git. After the first plugin release, remove the "Available from the
-first release after v0.5.0" line from `docs/install.md`.
+- builds the Claude Code plugin from the tagged commit, with its library runtime,
+  and checks that two builds match;
+- validates it with `claude plugin validate`;
+- zips it with `tools/claude-plugin/zip.mjs` and attaches the zip to the release;
+- rewrites the release page's text from `docs/releases/v<version>.md`, with links
+  pinned to the tagged commit and a "Release files" section (the zip's SHA-256, the
+  run that built it, the runtime's snapshot and dependencies);
+- opens a pull request pointing `.claude-plugin/marketplace.json` at that zip, with
+  its SHA-256.
+
+If you publish a release by hand instead, any release text will do: the workflow replaces it.
+Check the run in the Actions tab and merge the marketplace pull request.
+
+To rewrite a release's text, run the workflow by hand with its tag. It reuses the
+zip already attached, because the marketplace pins its SHA-256. Tick "rebuild" only
+to replace the zip on purpose, and then merge the new marketplace pull request
+straight away.
+
+The workflow needs **Settings → Actions → General → Allow GitHub Actions to create
+and approve pull requests**. Without it, the zip is still attached and the branch is
+pushed; open the pull request by hand.
+
+To build by hand instead, follow `tools/claude-plugin/README.md`, and zip the folder
+with `node tools/claude-plugin/zip.mjs <folder> <zip> --date <tag commit date>`.
 
 ## Contributors
 

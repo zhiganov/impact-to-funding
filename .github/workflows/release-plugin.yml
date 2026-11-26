@@ -1,0 +1,168 @@
+# Build the Claude Code plugin for a published release, attach the zip to the
+# release, open a pull request that lists it in .claude-plugin/marketplace.json,
+# and write the release page's text from docs/releases/ with full links and a
+# "Release files" section. Runs on its own when a release is published. To redo an
+# existing release, run it by hand from the Actions tab with that release's tag.
+# The Release on merge workflow calls it after publishing a release.
+#
+# If the release already has its zip, the run reuses it and only rewrites the text,
+# because the marketplace pins the zip's SHA-256: a rebuild elsewhere can differ by
+# a byte and break installs. Choose "rebuild" only to replace the zip on purpose.
+#
+# Repository setting needed for the pull request: Settings → Actions → General →
+# "Allow GitHub Actions to create and approve pull requests".
+
+name: Release plugin
+
+on:
+  release:
+    types: [published]
+  workflow_call:
+    inputs:
+      tag:
+        description: "Release tag, for example v0.7.0"
+        type: string
+        required: true
+      rebuild:
+        type: boolean
+        default: false
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag, for example v0.7.0"
+        required: true
+      rebuild:
+        description: "Rebuild and replace the zip even if the release already has one"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-plugin-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      REBUILD: ${{ inputs.rebuild || false }}
+      VALIDATOR: 2.1.331
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out main with tags
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Resolve the tag
+        run: |
+          case "$TAG" in v[0-9]*.[0-9]*.[0-9]*) ;; *) echo "Not a release tag: $TAG"; exit 1;; esac
+          git fetch --tags --force
+          commit=$(git rev-parse "refs/tags/$TAG^{commit}")
+          echo "COMMIT=$commit" >> "$GITHUB_ENV"
+          echo "VERSION=${TAG#v}" >> "$GITHUB_ENV"
+          echo "DATE=$(git show -s --format=%cs "$commit")" >> "$GITHUB_ENV"
+          echo "ZIP=itf-claude-plugin-$TAG.zip" >> "$GITHUB_ENV"
+
+      - name: Reuse the release's zip if it has one
+        run: |
+          zip="itf-claude-plugin-$TAG.zip"
+          if [ "$REBUILD" != "true" ] && gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | grep -qx "$zip"; then
+            gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "$zip" --dir "$RUNNER_TEMP"
+            mkdir -p "$RUNNER_TEMP/plugin" && unzip -q "$RUNNER_TEMP/$zip" -d "$RUNNER_TEMP/plugin"
+            echo "REUSE=true" >> "$GITHUB_ENV"
+            echo "BUILT_BY=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/workflows/release-plugin.yml" >> "$GITHUB_ENV"
+            echo "Reusing the zip already attached to $TAG"
+          else
+            echo "REUSE=false" >> "$GITHUB_ENV"
+            echo "BUILT_BY=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> "$GITHUB_ENV"
+          fi
+
+      - name: Install the runtime build's own dependencies
+        if: env.REUSE != 'true'
+        working-directory: tools/library-runtime
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Build the plugin from the tagged commit
+        if: env.REUSE != 'true'
+        run: |
+          node tools/claude-plugin/build.mjs --commit "$COMMIT" --output "$RUNNER_TEMP/plugin/itf" --verify-deterministic | tee "$RUNNER_TEMP/build.json"
+          version=$(node -p "require(process.argv[1]).version" "$RUNNER_TEMP/plugin/itf/.claude-plugin/plugin.json")
+          if [ "$version" != "$VERSION" ]; then echo "plugin.json says $version, tag says $VERSION"; exit 1; fi
+
+      - name: Validate with Claude Code
+        if: env.REUSE != 'true'
+        run: npx --yes "@anthropic-ai/claude-code@$VALIDATOR" plugin validate "$RUNNER_TEMP/plugin/itf"
+
+      - name: Zip
+        if: env.REUSE != 'true'
+        run: node tools/claude-plugin/zip.mjs "$RUNNER_TEMP/plugin/itf" "$RUNNER_TEMP/$ZIP" --date "$DATE"
+
+      - name: Record the zip's SHA-256
+        run: |
+          echo "SHA256=$(sha256sum "$RUNNER_TEMP/$ZIP" | cut -d' ' -f1)" >> "$GITHUB_ENV"
+
+      - name: Attach the zip to the release
+        if: env.REUSE != 'true'
+        run: gh release upload "$TAG" "$RUNNER_TEMP/$ZIP" --clobber --repo "$GITHUB_REPOSITORY"
+
+      - name: Write the release text
+        run: |
+          git show "$COMMIT:docs/releases/$TAG.md" > "$RUNNER_TEMP/notes.md"
+          node tools/claude-plugin/release-text.mjs \
+            --notes "$RUNNER_TEMP/notes.md" --notes-path "docs/releases/$TAG.md" \
+            --repository "$GITHUB_REPOSITORY" --commit "$COMMIT" \
+            --plugin "$RUNNER_TEMP/plugin/itf" --zip "$RUNNER_TEMP/$ZIP" \
+            --run-url "$BUILT_BY" --validator "$VALIDATOR" > "$RUNNER_TEMP/release.md"
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --notes-file "$RUNNER_TEMP/release.md"
+
+      - name: Open a pull request listing it in the marketplace
+        run: |
+          branch="plugin-marketplace-$TAG"
+          git switch -c "$branch" origin/main
+          node -e '
+            const fs = require("fs");
+            const file = ".claude-plugin/marketplace.json";
+            const data = JSON.parse(fs.readFileSync(file, "utf8"));
+            const entry = data.plugins.find((p) => p.name === "itf");
+            entry.version = process.env.VERSION;
+            entry.source = {
+              source: "archive",
+              url: `https://github.com/${process.env.GITHUB_REPOSITORY}/releases/download/${process.env.TAG}/${process.env.ZIP}`,
+              sha256: process.env.SHA256,
+            };
+            fs.writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
+          '
+          if git diff --quiet; then echo "Marketplace already lists $TAG"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -am "List the $TAG plugin in the marketplace"
+          git push --force-with-lease origin "$branch"
+          snapshot=$(node -p "require(process.argv[1]).runtimeCheck.snapshotId" "$RUNNER_TEMP/plugin/itf/provenance.json")
+          files=$(node -p "Object.keys(require(process.argv[1]).files).length + 1" "$RUNNER_TEMP/plugin/itf/provenance.json")
+          gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$branch" \
+            --title "List the $TAG plugin in the marketplace" \
+            --body "Built by the Release plugin workflow from \`$COMMIT\` (tag $TAG): $files files, two builds matched, the library runtime's check passed (snapshot \`$snapshot\`), and \`claude plugin validate\` passed. The zip \`$ZIP\` is attached to the release with SHA-256 \`$SHA256\`. Merging this makes \`claude plugin update itf\` pick up $VERSION." \
+            || echo "Couldn't open the pull request. The branch $branch is pushed; open it by hand."
+
+      - name: Summary
+        run: |
+          {
+            echo "### Plugin for $TAG"
+            echo
+            echo "- Source commit: \`$COMMIT\`"
+            echo "- Zip: \`$ZIP\`, SHA-256 \`$SHA256\`"
+            echo "- Runtime snapshot: \`$(node -p "require(process.argv[1]).runtimeCheck.snapshotId" "$RUNNER_TEMP/plugin/itf/provenance.json")\`"
+            if [ "$REUSE" = "true" ]; then echo "- Reused the zip already attached to the release."; else echo "- Built fresh: two builds matched; \`claude plugin validate\` passed."; fi
+            echo "- Release text rewritten from \`docs/releases/$TAG.md\`."
+          } >> "$GITHUB_STEP_SUMMARY"

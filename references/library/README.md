@@ -1,6 +1,6 @@
 # Case-grounded reference library
 
-**Seed collection, index revision 3, updated 2026-11-11.** Original source-linked
+**Seed collection, index revision 4, updated 2026-11-25.** Original source-linked
 case notes and candidate patterns for exploring contributions and theories of
 change. This is a small, deliberately selected collection, not comprehensive
 coverage, a set of universal best practices or an independent impact assessment.
@@ -14,7 +14,7 @@ publication, observation and retrieval dates are recorded separately in each cas
 ## Seed records
 
 All records below are revision 1. The collection contains five historical case
-notes, two candidate patterns and three optional lens records. It does not imply
+notes, three candidate patterns and three optional lens records. It does not imply
 five successes or five independent evaluations of a shared mechanism.
 
 | Case | Domains | Theory and evidence view |
@@ -39,8 +39,12 @@ Candidate patterns:
 - [P002 — Keep distinct outcomes distinct](patterns/keep-outcomes-distinct.md):
   a learning/design pattern motivated by the different findings across C001–C005,
   not a reason to dismiss a meaningful outcome or require maximal measurement.
+- [P003 — Rehearse the transfer and the claim](patterns/rehearse-transfer-and-claim.md):
+  a method proposal inspired by three public teaching exercises. It offers an
+  optional fictional dry run for analogies, missing perspectives and causal claims;
+  it is not an outcome case or a competence assessment.
 
-The pattern notes explain their complementary relationship and a possible tension
+The first two pattern notes explain their complementary relationship and a possible tension
 between learning burden and delivery capacity. These are authored interpretations,
 not consensus or practitioner-validated links. Optional lenses are
 [L001 — Doughnut Economics](lenses.md#l001--doughnut-economics) and

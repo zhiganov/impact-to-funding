@@ -58,10 +58,18 @@ The decided route (see the
 [plugin plan](../../docs/plans/2026-11-19-claude-code-plugin.md)) is an
 `archive` source: zip the built folder, attach the zip to the GitHub release,
 and point `.claude-plugin/marketplace.json` in this repository (marketplace name
-`impact-to-funding`) at that release's zip URL with its SHA-256. The zip is built
-and uploaded after the release tag
-exists, by the steps in `maintainers/release-notes.md`. Built
-files stay out of Git.
+`impact-to-funding`) at that release's zip URL with its SHA-256. The **Release plugin** workflow
+(`.github/workflows/release-plugin.yml`) does this when a release is published,
+and opens the marketplace pull request. It also writes the release page's text with
+`release-text.mjs`, which pins the notes' links to the tagged commit and adds a
+"Release files" section from the plugin's `provenance.json`. Built files stay out of Git.
+
+`zip.mjs` makes the archive reproducible: entries under `itf/`, sorted, with one
+fixed date and mode 0644, using only Node's built-in zlib:
+
+```sh
+node tools/claude-plugin/zip.mjs outputs/claude-plugin/itf itf-claude-plugin-vX.Y.Z.zip --date YYYY-MM-DD
+```
 
 ```sh
 npm test

@@ -18,6 +18,8 @@ A move into this folder does not refresh the evidence.
 
 ## Guidance and local tools
 
+- [Network and systems-method source review](network-method-library-2026-11-25.md): the source basis and checks for the optional P003 reasoning-rehearsal pattern.
+
 - [Evidence and crosswalk source checks](evidence-reporting-checks.md): source/template review against authored fictional cases.
 - [Task-focus repair and source checks](task-focus-checks.md): source review and fictional continuation cases.
 - [Local reference-library MCP checks](reference-library-mcp-checks.md): local application, protocol and prepared-snapshot checks.

@@ -1,0 +1,111 @@
+# Tag and publish a release when a version bump reaches main.
+#
+# The release pull request (see maintainers/release-notes.md) bumps
+# metadata.version in SKILL.md and adds docs/releases/v<version>.md. When it
+# merges, this workflow runs the package tests, creates tag v<version> on the
+# merge commit, publishes the GitHub release, then calls the Release plugin
+# workflow to build the plugin, write the release text and open the marketplace
+# pull request.
+#
+# It does nothing when the version's tag already exists, so ordinary merges that
+# touch SKILL.md are safe. It refuses a version that isn't higher than the latest
+# release tag, or one with no release notes.
+#
+# Releases published with the built-in token don't trigger other workflows, which
+# is why the plugin workflow is called directly here rather than left to its
+# "release published" trigger.
+
+name: Release on merge
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - SKILL.md
+      - docs/releases/**
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-on-merge
+  cancel-in-progress: false
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
+      created: ${{ steps.publish.outputs.created }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out the pushed commit with tags
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Read the version
+        id: version
+        run: |
+          version=$(sed -n 's/^  version: "\([0-9]*\.[0-9]*\.[0-9]*\)"$/\1/p' SKILL.md | head -1)
+          if [ -z "$version" ]; then echo "No metadata.version in SKILL.md"; exit 1; fi
+          tag="v$version"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "TAG=$tag" >> "$GITHUB_ENV"
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          if git rev-parse -q --verify "refs/tags/$tag" >/dev/null; then
+            echo "Tag $tag already exists; nothing to release."
+            echo "EXISTS=true" >> "$GITHUB_ENV"
+          else
+            echo "EXISTS=false" >> "$GITHUB_ENV"
+          fi
+
+      - name: Check the version and notes
+        if: env.EXISTS == 'false'
+        run: |
+          latest=$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -1)
+          if [ -n "$latest" ] && [ "$(printf '%s\n%s\n' "$latest" "$TAG" | sort -V | tail -1)" != "$TAG" ]; then
+            echo "$TAG isn't higher than the latest release, $latest"; exit 1
+          fi
+          notes="docs/releases/$TAG.md"
+          if [ ! -f "$notes" ]; then echo "Missing $notes"; exit 1; fi
+          title=$(head -1 "$notes" | sed 's/^# //')
+          case "$title" in "$TAG"*) ;; *) echo "The notes' title should start with $TAG: $title"; exit 1;; esac
+          echo "TITLE=$title" >> "$GITHUB_ENV"
+
+      - name: Set up Node
+        if: env.EXISTS == 'false'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Run the package tests
+        if: env.EXISTS == 'false'
+        run: npm test
+
+      - name: Tag and publish
+        id: publish
+        if: env.EXISTS == 'false'
+        run: |
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            tag -a "$TAG" -m "$TITLE" "$GITHUB_SHA"
+          git push origin "refs/tags/$TAG"
+          prerelease=""
+          case "$VERSION" in 0.*) prerelease="--prerelease";; esac
+          gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --verify-tag $prerelease \
+            --title "$TITLE" --notes "Release text and plugin are being prepared."
+          echo "created=true" >> "$GITHUB_OUTPUT"
+          echo "### Published $TAG" >> "$GITHUB_STEP_SUMMARY"
+          echo "Tag on \`$GITHUB_SHA\`. The Release plugin job builds the plugin and writes the text." >> "$GITHUB_STEP_SUMMARY"
+
+  plugin:
+    needs: tag
+    if: needs.tag.outputs.created == 'true'
+    uses: ./.github/workflows/release-plugin.yml
+    with:
+      tag: ${{ needs.tag.outputs.tag }}
+    secrets: inherit
