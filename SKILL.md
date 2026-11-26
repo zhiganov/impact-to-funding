@@ -77,6 +77,7 @@ Keep the person's requested work central when they add supporting context. Incor
 - When planning bounded discovery of project or contribution signals, read [signal discovery](references/signal-discovery.md).
 - When revising a private claim or report from supplied social, forge or app records, read [signal enrichment](references/signal-enrichment.md). Discovery tooling isn't required.
 - When drafting a Bluesky publication or correction plan, read [Bluesky publishing](references/bluesky-publishing.md).
+- When preparing a profile for app.itfti.org, read the [profile draft handoff](references/profile-draft-handoff.md). It produces a local file for human review in the app, not an account write or automatic publication.
 - For attribution and rights questions, see [sources and rights](SOURCES.md).
 - The [synthetic input](examples/builder-case.md) and [illustrative output](examples/builder-assessment.md) are examples only, never evidence about the person's work.
 - The [five-project input](examples/portfolio-case.md) and [authored portfolio](examples/portfolio-assessment.md) illustrate linked theories, shared work and capacity limits. They aren't observed behaviour.
