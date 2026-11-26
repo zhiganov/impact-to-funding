@@ -24,7 +24,7 @@ It prepares notes, a version bump and a pull request. It doesn't tag, publish or
 
 ## 3. Draft the notes
 
-Copy the structure of the latest file in `docs/releases/`:
+If `docs/releases/v<version>.md` already exists as a draft, build on it and keep its notes. Otherwise copy the structure of the latest released file in `docs/releases/`:
 
 1. A title and a one-line summary, with "Experimental source prerelease" while ItF is `v0`.
 2. **What changed in the skill:** behaviour people will notice, each with its PR.
