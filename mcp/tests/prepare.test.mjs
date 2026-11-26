@@ -21,6 +21,9 @@ test('preparation keeps the actual commit and all mapped library records availab
   assert.match(snapshot.snapshotId, /^sha256:[0-9a-f]{64}$/);
   assert.equal(snapshot.records.length, 11);
   assert.equal(snapshot.records.filter((record) => record.available).length, 11);
+  // The mapping only accepts the current library index, so an old commit can't be
+  // pinned here. Check instead that the same commit always prepares the same snapshot.
+  assert.equal(prepare(commitRevision).snapshotId, snapshot.snapshotId);
 });
 
 test('annotated tag object hashes are rejected, not peeled and mislabelled as commits', () => {
