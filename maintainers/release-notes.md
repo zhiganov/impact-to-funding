@@ -58,20 +58,26 @@ Don't create the tag, publish the GitHub release or announce it. Give the
 maintainer the exact commands for the merge commit, and offer to check the
 release once it's published.
 
-Once the tag exists, build the release-prepared library runtime for the tagged
-commit (see `tools/library-runtime/README.md`) and add its provenance summary to
-the GitHub release text. The notes in `docs/releases/` can't hold it: the release
-commit doesn't exist while they're written.
+Once the release is published, the **Release plugin** workflow
+(`.github/workflows/release-plugin.yml`) does the rest on its own:
 
-With the same tag, build the Claude Code plugin for the tagged commit (see
-`tools/claude-plugin/README.md`), validate it with `claude plugin validate`, and
-zip the built folder. Attach the zip to the GitHub release, then create or
-update `.claude-plugin/marketplace.json` so the `itf` entry points at that
-release's zip URL with the zip's SHA-256. Name the marketplace
-`impact-to-funding`: `docs/install.md` tells people to install
-`itf@impact-to-funding`. Commit the marketplace update. Built files themselves
-stay out of Git. After the first plugin release, remove the "Available from the
-first release after v0.5.0" line from `docs/install.md`.
+- builds the Claude Code plugin from the tagged commit, with its library runtime,
+  and checks that two builds match;
+- validates it with `claude plugin validate`;
+- zips it with `tools/claude-plugin/zip.mjs` and attaches the zip to the release;
+- opens a pull request pointing `.claude-plugin/marketplace.json` at that zip, with
+  its SHA-256.
+
+Check the run in the Actions tab, merge the marketplace pull request, and add the
+run summary's provenance (source commit, zip SHA-256, runtime snapshot) to the
+release text. To redo a release's plugin, run the workflow by hand with its tag.
+
+The workflow needs **Settings → Actions → General → Allow GitHub Actions to create
+and approve pull requests**. Without it, the zip is still attached and the branch is
+pushed; open the pull request by hand.
+
+To build by hand instead, follow `tools/claude-plugin/README.md`, and zip the folder
+with `node tools/claude-plugin/zip.mjs <folder> <zip> --date <tag commit date>`.
 
 ## Contributors
 
