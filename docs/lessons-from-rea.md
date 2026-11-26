@@ -145,6 +145,35 @@ native engines, application execution or model behaviour. A successful
 round trip preserves recorded content and uncertainty; it does not validate the
 real-world truth of that content.
 
+## Release engineering
+
+Compared on 2026-11-26 from REA's repository at `aa78851` (a shallow clone and its tag list), after ItF automated its own releases. REA's release pages weren't opened.
+
+**How REA releases.** At v6.10.1 with 43 tags, REA runs 35 workflows. Its release is driven by [release-please](https://github.com/googleapis/release-please):
+
+- **A bot proposes each release.** It reads commit messages ("feat:", "fix:") and keeps a release pull request up to date, with a generated changelog. Maintainers add hand-written highlights that thank contributors.
+- **Publishing comes from a frozen branch.** Merging the proposal is followed by a "publish" step from a `release/x.y` branch.
+- **Checks before and after.** Full CI qualifies the exact commit, and a rehearsal installs the exact package before anything is published. After publishing, a job downloads the package and checks its bytes.
+- **Where it ships:** npm, with provenance (a signed record of which commit built it), and the official MCP registry. Its Claude Code marketplace points at the npm package.
+- **Recovery:** separate workflows recover a half-finished release or abandon an unpublished one.
+- **Pinned actions:** every third-party GitHub Action is pinned to an exact commit.
+
+**How ItF compares.** ItF's setup is the same idea at a much smaller scale:
+
+- merging a release PR that bumps `metadata.version` tags and publishes;
+- a workflow builds the Claude Code plugin reproducibly, attaches the zip, and pins its SHA-256 in the marketplace;
+- ItF's hand-written, plain-language notes are a deliberate difference from a generated changelog.
+
+**Worth adopting:**
+
+- **Tests on every pull request.** ItF has no CI. Tests run only by hand and at release.
+- **Pin actions to exact commits** rather than tags like `@v4`, so a moved tag can't change what runs with write access.
+- **Check after publishing:** download the attached zip and confirm its SHA-256, as was done by hand for v0.7.0.
+
+**Not now:** release-please and the recovery workflows suit dozens of releases and many contributors. They would also replace ItF's plain notes with commit-message changelogs.
+
+See also [lessons from impeccable](lessons-from-impeccable.md).
+
 ## Not worth copying
 
 - **Skill size.** REA's skill is about three times the size of ItF's core, which was trimmed on purpose (#83, #84).
