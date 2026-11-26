@@ -48,6 +48,7 @@ Guides, contracts and design notes stay in this folder. Fictional cases stay in
 - [Library MCP contract](reference-library-mcp-contract.md) and [fictional walkthrough](../examples/reference-library-mcp-walkthrough.md): the read-only `itf.library/0.1-draft` interface from [#44](https://github.com/zhiganov/impact-to-funding/issues/44).
 - [Connector guidance decision](connector-guidance-decision.md): the hosted connector (#96) will serve the skill's guidance as a second tool family on the library server.
 - [Local library MCP](../mcp/README.md): a local stdio server for that interface, using prepared public snapshots. Its [check record](checks/reference-library-mcp-checks.md) lists what was tested and the limits of each client.
+- [Profile-editing MCP assessment](profile-mcp-assessment.md): recommends a browser JSON handoff before an opt-in local profile MCP. Includes the candidate contract, human approval, OAuth storage and bounded prototype plan.
 
 ## Evidence, reporting and support
 
