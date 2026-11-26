@@ -1,0 +1,69 @@
+# Delete branches whose work is already on main. Started by hand from the Actions
+# tab. A branch is deleted only if it has no open pull request and either:
+# - everything in it is already on main, or
+# - it's the unchanged head of a merged pull request (covers squash merges).
+# Anything else is listed and kept. "dry_run" (on by default) only lists.
+#
+# To stop branches piling up, also turn on Settings → General → Pull Requests →
+# "Automatically delete head branches".
+
+name: Delete merged branches
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only list what would be deleted"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      OWNER: ${{ github.repository_owner }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - name: Find and delete merged branches
+        run: |
+          default=$(gh api "repos/$REPO" --jq .default_branch)
+          deleted=0; kept=0
+          {
+            echo "### Branches ($([ "$DRY_RUN" = true ] && echo 'dry run' || echo 'deleting'))"
+            echo
+          } >> "$GITHUB_STEP_SUMMARY"
+          gh api --paginate "repos/$REPO/branches?per_page=100" --jq '.[] | select(.protected | not) | .name' > branches.txt
+          while IFS= read -r branch; do
+            [ "$branch" = "$default" ] && continue
+            enc=$(jq -rn --arg b "$branch" '$b|@uri')
+            sha=$(gh api "repos/$REPO/git/ref/heads/$enc" --jq .object.sha)
+            open=$(gh api "repos/$REPO/pulls?state=open&head=$OWNER:$enc" --jq length)
+            reason=""
+            if [ "$open" != "0" ]; then
+              reason=""; why="has an open pull request"
+            else
+              status=$(gh api "repos/$REPO/compare/$default...$sha" --jq .status)
+              if [ "$status" = "behind" ] || [ "$status" = "identical" ]; then
+                reason="already on $default"
+              else
+                pr=$(gh api "repos/$REPO/pulls?state=closed&head=$OWNER:$enc&per_page=100" \
+                  --jq "[.[] | select(.merged_at != null and .head.sha == \"$sha\")][0].number // empty")
+                if [ -n "$pr" ]; then reason="unchanged head of merged #$pr"; else why="has work not on $default"; fi
+              fi
+            fi
+            if [ -n "$reason" ]; then
+              if [ "$DRY_RUN" != "true" ]; then gh api -X DELETE "repos/$REPO/git/refs/heads/$enc" >/dev/null; fi
+              echo "- delete \`$branch\`: $reason" >> "$GITHUB_STEP_SUMMARY"; deleted=$((deleted+1))
+            else
+              echo "- keep \`$branch\`: $why" >> "$GITHUB_STEP_SUMMARY"; kept=$((kept+1))
+            fi
+          done < branches.txt
+          echo >> "$GITHUB_STEP_SUMMARY"
+          echo "$deleted to delete, $kept kept." | tee -a "$GITHUB_STEP_SUMMARY"
