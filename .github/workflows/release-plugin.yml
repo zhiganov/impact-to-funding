@@ -1,0 +1,115 @@
+# Build the Claude Code plugin for a published release, attach the zip to the
+# release, and open a pull request that lists it in .claude-plugin/marketplace.json.
+# Runs on its own when a release is published. To build for an existing release,
+# run it by hand from the Actions tab with that release's tag.
+#
+# Repository setting needed for the pull request: Settings → Actions → General →
+# "Allow GitHub Actions to create and approve pull requests".
+
+name: Release plugin
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag, for example v0.7.0"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-plugin-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out main with tags
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Resolve the tag
+        run: |
+          case "$TAG" in v[0-9]*.[0-9]*.[0-9]*) ;; *) echo "Not a release tag: $TAG"; exit 1;; esac
+          git fetch --tags --force
+          commit=$(git rev-parse "refs/tags/$TAG^{commit}")
+          echo "COMMIT=$commit" >> "$GITHUB_ENV"
+          echo "VERSION=${TAG#v}" >> "$GITHUB_ENV"
+          echo "DATE=$(git show -s --format=%cs "$commit")" >> "$GITHUB_ENV"
+          echo "ZIP=itf-claude-plugin-$TAG.zip" >> "$GITHUB_ENV"
+
+      - name: Install the runtime build's own dependencies
+        working-directory: tools/library-runtime
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Build the plugin from the tagged commit
+        run: |
+          node tools/claude-plugin/build.mjs --commit "$COMMIT" --output "$RUNNER_TEMP/plugin/itf" --verify-deterministic | tee "$RUNNER_TEMP/build.json"
+          version=$(node -p "require(process.argv[1]).version" "$RUNNER_TEMP/plugin/itf/.claude-plugin/plugin.json")
+          if [ "$version" != "$VERSION" ]; then echo "plugin.json says $version, tag says $VERSION"; exit 1; fi
+
+      - name: Validate with Claude Code
+        run: npx --yes @anthropic-ai/claude-code@2.1.331 plugin validate "$RUNNER_TEMP/plugin/itf"
+
+      - name: Zip
+        run: |
+          node tools/claude-plugin/zip.mjs "$RUNNER_TEMP/plugin/itf" "$RUNNER_TEMP/$ZIP" --date "$DATE" | tee "$RUNNER_TEMP/zip.json"
+          echo "SHA256=$(sha256sum "$RUNNER_TEMP/$ZIP" | cut -d' ' -f1)" >> "$GITHUB_ENV"
+
+      - name: Attach the zip to the release
+        run: gh release upload "$TAG" "$RUNNER_TEMP/$ZIP" --clobber --repo "$GITHUB_REPOSITORY"
+
+      - name: Open a pull request listing it in the marketplace
+        run: |
+          branch="plugin-marketplace-$TAG"
+          git switch -c "$branch" origin/main
+          node -e '
+            const fs = require("fs");
+            const file = ".claude-plugin/marketplace.json";
+            const data = JSON.parse(fs.readFileSync(file, "utf8"));
+            const entry = data.plugins.find((p) => p.name === "itf");
+            entry.version = process.env.VERSION;
+            entry.source = {
+              source: "archive",
+              url: `https://github.com/${process.env.GITHUB_REPOSITORY}/releases/download/${process.env.TAG}/${process.env.ZIP}`,
+              sha256: process.env.SHA256,
+            };
+            fs.writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
+          '
+          if git diff --quiet; then echo "Marketplace already lists $TAG"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -am "List the $TAG plugin in the marketplace"
+          git push --force-with-lease origin "$branch"
+          snapshot=$(node -p "require(process.argv[1]).runtimeCheck.snapshotId" "$RUNNER_TEMP/build.json")
+          files=$(node -p "require(process.argv[1]).fileCount" "$RUNNER_TEMP/build.json")
+          gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$branch" \
+            --title "List the $TAG plugin in the marketplace" \
+            --body "Built by the Release plugin workflow from \`$COMMIT\` (tag $TAG): $files files, two builds matched, the library runtime's check passed (snapshot \`$snapshot\`), and \`claude plugin validate\` passed. The zip \`$ZIP\` is attached to the release with SHA-256 \`$SHA256\`. Merging this makes \`claude plugin update itf\` pick up $VERSION." \
+            || echo "Couldn't open the pull request. The branch $branch is pushed; open it by hand."
+
+      - name: Summary
+        run: |
+          {
+            echo "### Plugin for $TAG"
+            echo
+            echo "- Source commit: \`$COMMIT\`"
+            echo "- Zip: \`$ZIP\`, SHA-256 \`$SHA256\`"
+            echo "- Runtime snapshot: \`$(node -p "require(process.argv[1]).runtimeCheck.snapshotId" "$RUNNER_TEMP/build.json")\`"
+            echo "- Two builds matched; \`claude plugin validate\` passed."
+          } >> "$GITHUB_STEP_SUMMARY"
