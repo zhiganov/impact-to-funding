@@ -8,11 +8,11 @@
     {
       "name": "itf",
       "description": "Impact to Funding: the skill and its optional local reference-library MCP, as one Claude Code plugin.",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "source": {
         "source": "archive",
-        "url": "https://github.com/zhiganov/impact-to-funding/releases/download/v0.6.0/itf-claude-plugin-v0.6.0.zip",
-        "sha256": "15a98190f3496ac30ab79cb10a0bf30283454a8c50eb6cf78ff4e919df071680"
+        "url": "https://github.com/zhiganov/impact-to-funding/releases/download/v0.7.0/itf-claude-plugin-v0.7.0.zip",
+        "sha256": "0f5528d190ea8c7bd407397bcfe2700533deb4a6409434a980d96ba77149d765"
       }
     }
   ]
