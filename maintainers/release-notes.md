@@ -54,11 +54,15 @@ Write in the plain style from `AGENTS.md`. Never claim a check you didn't see pa
 
 ## 5. Stop
 
-Don't create the tag, publish the GitHub release or announce it. Give the
-maintainer the exact commands for the merge commit, and offer to check the
-release once it's published.
+Don't create the tag, publish the GitHub release or announce it yourself. Merging
+the release pull request does it: the **Release on merge** workflow
+(`.github/workflows/release-on-merge.yml`) sees the new `metadata.version` on
+`main`, runs the package tests, tags the merge commit `v<version>` and publishes
+the release, as a prerelease while ItF is `v0`. It refuses a version that isn't
+higher than the latest tag, or one whose `docs/releases/v<version>.md` is missing
+or titled for another version. Offer to check the release once the runs finish.
 
-Once the release is published, the **Release plugin** workflow
+Then the **Release plugin** workflow
 (`.github/workflows/release-plugin.yml`) does the rest on its own:
 
 - builds the Claude Code plugin from the tagged commit, with its library runtime,
@@ -71,7 +75,7 @@ Once the release is published, the **Release plugin** workflow
 - opens a pull request pointing `.claude-plugin/marketplace.json` at that zip, with
   its SHA-256.
 
-So when publishing, paste anything as the release text: the workflow replaces it.
+If you publish a release by hand instead, any release text will do: the workflow replaces it.
 Check the run in the Actions tab and merge the marketplace pull request.
 
 To rewrite a release's text, run the workflow by hand with its tag. It reuses the
