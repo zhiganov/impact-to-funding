@@ -65,12 +65,19 @@ Once the release is published, the **Release plugin** workflow
   and checks that two builds match;
 - validates it with `claude plugin validate`;
 - zips it with `tools/claude-plugin/zip.mjs` and attaches the zip to the release;
+- rewrites the release page's text from `docs/releases/v<version>.md`, with links
+  pinned to the tagged commit and a "Release files" section (the zip's SHA-256, the
+  run that built it, the runtime's snapshot and dependencies);
 - opens a pull request pointing `.claude-plugin/marketplace.json` at that zip, with
   its SHA-256.
 
-Check the run in the Actions tab, merge the marketplace pull request, and add the
-run summary's provenance (source commit, zip SHA-256, runtime snapshot) to the
-release text. To redo a release's plugin, run the workflow by hand with its tag.
+So when publishing, paste anything as the release text: the workflow replaces it.
+Check the run in the Actions tab and merge the marketplace pull request.
+
+To rewrite a release's text, run the workflow by hand with its tag. It reuses the
+zip already attached, because the marketplace pins its SHA-256. Tick "rebuild" only
+to replace the zip on purpose, and then merge the new marketplace pull request
+straight away.
 
 The workflow needs **Settings → Actions → General → Allow GitHub Actions to create
 and approve pull requests**. Without it, the zip is still attached and the branch is

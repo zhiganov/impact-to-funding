@@ -60,7 +60,9 @@ The decided route (see the
 and point `.claude-plugin/marketplace.json` in this repository (marketplace name
 `impact-to-funding`) at that release's zip URL with its SHA-256. The **Release plugin** workflow
 (`.github/workflows/release-plugin.yml`) does this when a release is published,
-and opens the marketplace pull request. Built files stay out of Git.
+and opens the marketplace pull request. It also writes the release page's text with
+`release-text.mjs`, which pins the notes' links to the tagged commit and adds a
+"Release files" section from the plugin's `provenance.json`. Built files stay out of Git.
 
 `zip.mjs` makes the archive reproducible: entries under `itf/`, sorted, with one
 fixed date and mode 0644, using only Node's built-in zlib:
