@@ -172,7 +172,11 @@ Compared on 2026-11-26 from REA's repository at `aa78851` (a shallow clone and i
 - **Qualify before publishing.** Build and validate the plugin before tagging, so a failed build can't leave a release without its plugin. Filed as [#166](https://github.com/zhiganov/impact-to-funding/issues/166).
 - **Signed build provenance** for the plugin zip, the equivalent of REA's npm provenance. Filed as [#167](https://github.com/zhiganov/impact-to-funding/issues/167).
 
-**Not now:** CodeQL code scanning, listing in the official MCP registry (the library server is local until hosting, #96, is decided), release-please and the recovery workflows suit dozens of releases and many contributors. They would also replace ItF's plain notes with commit-message changelogs.
+**Not now:**
+
+- **release-please and the recovery workflows** suit dozens of releases and many contributors. They would also replace ItF's plain notes with commit-message changelogs.
+- **CodeQL code scanning** adds little for ItF's small JavaScript tools, beyond what CI and Dependabot give.
+- **Listing in the official MCP registry** would point at a server that only runs locally, until hosting ([#96](https://github.com/zhiganov/impact-to-funding/issues/96)) is decided.
 
 See also [lessons from impeccable](lessons-from-impeccable.md).
 
