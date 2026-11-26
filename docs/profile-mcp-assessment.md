@@ -25,7 +25,7 @@ A CLI does not remove the difficult work: authenticated publication is harder th
 
 ## Recommendation
 
-**Add the browser JSON handoff first. Do not start MCP implementation yet.**
+**Add the browser JSON handoff first. Do not start MCP implementation yet.** The agent-side contract is the [profile draft handoff](../references/profile-draft-handoff.md), with app implementation tracked in [itfti-website #59](https://github.com/zhiganov/itfti-website/issues/59).
 
 This removes copy/paste work and reuses the app's tested publication boundary. It also gives us a useful comparison. Any remaining file-handoff friction would give a local MCP prototype a concrete problem to solve.
 
